@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import Image from "next/image";
 import EditorialCard from "@/components/EditorialCard";
 
@@ -42,11 +44,14 @@ export default function HomePage() {
         className="max-w-7xl mx-auto px-6 py-32 scroll-mt-24"
       >
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-24">
-          <EditorialCard
+          <Link href="/fashion-story" className="block">
+  <EditorialCard
+          
             category="Fashion story"
             title="Saint Laurent by Anthony Vaccarello"
             image="/images/card-1.jpg"
           />
+          </Link>
           <EditorialCard
             category="Beauty"
             title="Peter Philips + Pierre Debusschere"
