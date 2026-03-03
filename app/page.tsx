@@ -25,14 +25,12 @@ export default function HomePage() {
             </p>
 
             <h1 className="text-[clamp(3rem,8vw,7rem)] leading-none font-semibold">
-              Editorial
-              <br />
-              Issue No. 01
+              THE ISSUE
+             
             </h1>
 
             <p className="mt-6 max-w-md text-neutral-700">
-              A digital magazine exploring fashion, identity, and visual
-              storytelling.
+              An Independent Editorial Platform
             </p>
           </div>
         </div>
