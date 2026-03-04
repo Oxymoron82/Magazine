@@ -23,9 +23,9 @@ export default function HomePage() {
               Online Magazine
             </p>
 
-            <h1 className="text-[clamp(3rem,8vw,7rem)] leading-none font-semibold">
-              THE ISSUE
-            </h1>
+            <h1 className="text-[clamp(3rem,8vw,7rem)] leading-none font-semibold font-serif">
+  THE ISSUE
+</h1>
 
             <p className="mt-6 text-xs tracking-[0.35em] uppercase text-neutral-700">
               An Independent Editorial Platform
@@ -203,11 +203,11 @@ export default function HomePage() {
               Featured editorial
             </p>
 
-            <h2 className="text-[clamp(2.5rem,6vw,5rem)] font-semibold leading-tight">
-              A Study
-              <br />
-              in Silence
-            </h2>
+           <h2 className="text-[clamp(3rem,8vw,7rem)] leading-none font-semibold font-serif">
+  A STUDY
+<br />
+IN SILENCE
+</h2>
           </div>
         </div>
       </section>
