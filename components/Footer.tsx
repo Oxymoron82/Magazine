@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer id="about" className="border-t mt-16">
+    <footer id="contact" className="border-t mt-16 scroll-mt-24">
       <div className="max-w-6xl mx-auto px-4 py-10 grid gap-6 md:grid-cols-3">
         <div>
           <div className="tracking-[0.2em] text-sm font-semibold mb-2">MAGAZINE</div>

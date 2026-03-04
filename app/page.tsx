@@ -113,7 +113,10 @@ export default function HomePage() {
       </section>
 
 {/* EDITOR NOTE */}
-<section className="max-w-7xl mx-auto px-6 py-32">
+<section
+  id="editors-note"
+  className="max-w-7xl mx-auto px-6 py-32 scroll-mt-24"
+>
   <div className="grid md:grid-cols-2 gap-20 items-center">
 
     <div>

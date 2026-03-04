@@ -24,10 +24,10 @@ export default function Header() {
           <a href="#about" className="hover:text-black transition">
             About
           </a>
-<a href="#Editor's Note" className="hover:text-black transition">
-            Editor's Note
-          </a>
-          <a href="#contacts" className="hover:text-black transition">
+<a href="#editors-note" className="hover:text-black transition">
+  Editor&apos;s Note
+</a>
+          <a href="#contact" className="hover:text-black transition">
             Contacts
           </a>
         </nav>
