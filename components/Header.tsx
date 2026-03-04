@@ -1,38 +1,40 @@
+import Link from "next/link";
+
 export default function Header() {
   return (
     <header className="sticky top-0 z-30 bg-[#FFFBEB]/90 backdrop-blur">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* LOGO */}
-        <a
-          href="#home"
-          className="tracking-[0.2em] text-sm font-semibold"
-        >
+        <Link href="/#home" className="tracking-[0.2em] text-sm font-semibold">
           MAGAZINE
-        </a>
+        </Link>
 
-        {/* NAV — как в тёмном варианте */}
+        {/* NAV */}
         <nav className="hidden md:flex gap-6 text-sm text-neutral-700">
-          <a href="#columns" className="hover:text-black transition">
+          <Link href="/#columns" className="hover:text-black transition">
             Columns
-          </a>
-          <a href="#stories" className="hover:text-black transition">
+          </Link>
+          <Link href="/#stories" className="hover:text-black transition">
             Photo Stories
-          </a>
-          <a href="#latest" className="hover:text-black transition">
+          </Link>
+          <Link href="/#latest" className="hover:text-black transition">
             Latest
-          </a>
-          <a href="#about" className="hover:text-black transition">
+          </Link>
+          <Link href="/#about" className="hover:text-black transition">
             About
-          </a>
-<a href="#editors-note" className="hover:text-black transition">
-  Editor&apos;s Note
-</a>
-          <a href="#contact" className="hover:text-black transition">
+          </Link>
+
+          {/* короткий блок Editor’s Note на главной */}
+          <Link href="/#editors-note" className="hover:text-black transition">
+            Editor&apos;s Note
+          </Link>
+
+          {/* футер на главной */}
+          <Link href="/#contact" className="hover:text-black transition">
             Contacts
-          </a>
+          </Link>
         </nav>
 
-        {/* Social / placeholder */}
         <a
           href="#"
           className="text-sm text-neutral-600 hover:text-black transition"
