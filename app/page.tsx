@@ -24,8 +24,8 @@ export default function HomePage() {
             </p>
 
             <h1 className="text-[clamp(3rem,8vw,7rem)] leading-none font-semibold font-serif">
-  THE ISSUE
-</h1>
+              THE ISSUE
+            </h1>
 
             <p className="mt-6 text-xs tracking-[0.35em] uppercase text-neutral-700">
               An Independent Editorial Platform
@@ -73,8 +73,8 @@ export default function HomePage() {
             </p>
 
             <p>
-              The Issue is about people who build themselves. About women and
-              men who change, grow up, lose illusions and gain clarity.
+              The Issue is about people who build themselves. About women and men
+              who change, grow up, lose illusions and gain clarity.
             </p>
 
             <div className="mt-10 border-l border-neutral-300 pl-6 space-y-3">
@@ -112,54 +112,83 @@ export default function HomePage() {
         </div>
       </section>
 
-{/* EDITOR NOTE */}
-<section
-  id="editors-note"
-  className="max-w-7xl mx-auto px-6 py-32 scroll-mt-24"
->
-  <div className="grid md:grid-cols-2 gap-20 items-center">
+      {/* thin divider */}
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="h-px bg-neutral-200/70" />
+      </div>
 
-    <div>
-      <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
-        Editor’s Note
-      </p>
-
-      <h2 className="mt-6 text-3xl md:text-4xl font-serif leading-tight">
-        This is not a journal.
-        <br />
-        It is a continuation of the journey.
-      </h2>
-
-      <p className="mt-6 text-neutral-700 leading-relaxed">
-        I have always been surrounded by beautiful women. Not glossy beauty,
-        but real beauty — strong, confident, alive.
-      </p>
-
-      <a
-        href="/editor"
-        className="inline-block mt-6 text-sm underline"
+      {/* EDITOR NOTE */}
+      <section
+        id="editors-note"
+        className="max-w-7xl mx-auto px-6 py-24 md:py-28 scroll-mt-24"
       >
-        Read the full note →
-      </a>
-    </div>
+        {/* делаем блок компактнее и фото меньше */}
+        <div className="grid md:grid-cols-12 gap-14 items-center">
+          {/* TEXT */}
+          <div className="md:col-span-7 max-w-2xl">
+            <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
+              Editor’s Note
+            </p>
 
-    <div className="relative aspect-[4/5]">
-      <Image
-        src="/images/sonja1.jpeg"
-        alt="Editor portrait"
-        fill
-        className="object-cover rounded-xl"
-      />
-    </div>
+            <h2 className="mt-6 text-4xl md:text-5xl font-serif leading-tight">
+              This is not a journal.
+              <br />
+              It is a continuation of the journey.
+            </h2>
 
-  </div>
-</section>
+            <p className="mt-6 text-neutral-700 leading-relaxed text-lg">
+              I have always been surrounded by beautiful women.
+              <br />
+              Not glossy beauty, but real beauty — strong, confident, alive.
+            </p>
+
+            <p className="mt-4 italic text-neutral-500 text-sm">
+              by Sofia Solas
+            </p>
+
+            <Link
+              href="/editor"
+              className="inline-block mt-6 text-sm underline underline-offset-4 hover:text-black transition"
+            >
+              Read the full note →
+            </Link>
+          </div>
+
+          {/* IMAGE (в 2 раза меньше визуально) */}
+          <div className="md:col-span-5">
+            <div className="relative ml-auto w-full max-w-sm aspect-[4/5]">
+              <Image
+                src="/images/sonja1.jpeg"
+                alt="Editor portrait"
+                fill
+                className="object-cover rounded-xl"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* thin divider */}
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="h-px bg-neutral-200/70" />
+      </div>
 
       {/* FEATURED GRID — Columns */}
       <section
         id="columns"
-        className="max-w-7xl mx-auto px-6 py-32 scroll-mt-24"
+        className="max-w-7xl mx-auto px-6 py-24 md:py-28 scroll-mt-24"
       >
+        <div className="flex items-end justify-between gap-6 mb-10">
+          <div>
+            <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
+              Columns
+            </p>
+            <h2 className="mt-3 text-2xl md:text-3xl font-serif">
+              Essays, voices, and personal angles.
+            </h2>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-24">
           <Link href="/fashion-story" className="block">
             <EditorialCard
@@ -186,7 +215,7 @@ export default function HomePage() {
       {/* FULL WIDTH EDITORIAL — Photo Stories */}
       <section
         id="stories"
-        className="relative h-[80vh] w-full my-32 scroll-mt-24"
+        className="relative h-[80vh] w-full my-28 md:my-32 scroll-mt-24"
       >
         <div className="absolute inset-0">
           <Image
@@ -200,14 +229,14 @@ export default function HomePage() {
         <div className="relative h-full flex items-center justify-center text-center px-6">
           <div>
             <p className="text-xs tracking-[0.35em] uppercase text-black mb-6">
-              Featured editorial
+              Photo Stories
             </p>
 
-           <h2 className="text-[clamp(3rem,8vw,7rem)] leading-none font-semibold font-serif">
-  A STUDY
-<br />
-IN SILENCE
-</h2>
+            <h2 className="text-[clamp(3rem,8vw,7rem)] leading-none font-semibold font-serif">
+              A STUDY
+              <br />
+              IN SILENCE
+            </h2>
           </div>
         </div>
       </section>
@@ -215,8 +244,19 @@ IN SILENCE
       {/* EDITORIAL GRID — Latest */}
       <section
         id="latest"
-        className="max-w-7xl mx-auto px-6 pb-32 scroll-mt-24"
+        className="max-w-7xl mx-auto px-6 pb-28 md:pb-32 scroll-mt-24"
       >
+        <div className="flex items-end justify-between gap-6 mb-10">
+          <div>
+            <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
+              Latest
+            </p>
+            <h2 className="mt-3 text-2xl md:text-3xl font-serif">
+              New pieces and fresh visuals.
+            </h2>
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-4 gap-x-10 gap-y-24">
           <EditorialCard
             category="Issue"
@@ -224,7 +264,6 @@ IN SILENCE
             image="/images/card-4.jpg"
           />
 
-          {/* 1) Первая из пары: дуга к центру — скругление сверху справа */}
           <EditorialCard
             category="Design"
             title="Ronan Bouroullec"
@@ -232,7 +271,6 @@ IN SILENCE
             mediaStyle={{ borderTopRightRadius: "140px" }}
           />
 
-          {/* 2) Вторая из пары: зеркально — скругление сверху слева */}
           <EditorialCard
             category="Fashion story"
             title="Boris Ovin + Imruh Asha"
