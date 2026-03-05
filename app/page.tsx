@@ -122,7 +122,6 @@ export default function HomePage() {
         id="editors-note"
         className="max-w-7xl mx-auto px-6 py-24 md:py-28 scroll-mt-24"
       >
-        {/* делаем блок компактнее и фото меньше */}
         <div className="grid md:grid-cols-12 gap-14 items-center">
           {/* TEXT */}
           <div className="md:col-span-7 max-w-2xl">
@@ -142,9 +141,7 @@ export default function HomePage() {
               Not glossy beauty, but real beauty — strong, confident, alive.
             </p>
 
-            <p className="mt-4 italic text-neutral-500 text-sm">
-              by Sofia Solas
-            </p>
+            <p className="mt-4 italic text-neutral-500 text-sm">by Sofia Solas</p>
 
             <Link
               href="/editor"
@@ -154,7 +151,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          {/* IMAGE (в 2 раза меньше визуально) */}
+          {/* IMAGE */}
           <div className="md:col-span-5">
             <div className="relative ml-auto w-full max-w-sm aspect-[4/5]">
               <Image
@@ -173,7 +170,7 @@ export default function HomePage() {
         <div className="h-px bg-neutral-200/70" />
       </div>
 
-      {/* FEATURED GRID — Columns */}
+      {/* COLUMNS (Rubrics) */}
       <section
         id="columns"
         className="max-w-7xl mx-auto px-6 py-24 md:py-28 scroll-mt-24"
@@ -187,28 +184,39 @@ export default function HomePage() {
               Essays, voices, and personal angles.
             </h2>
           </div>
+
+          <Link
+            href="/columns"
+            className="text-sm underline underline-offset-4 hover:text-black transition"
+          >
+            More →
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-24">
-          <Link href="/fashion-story" className="block">
+          <Link href="/columns/becoming" className="block">
             <EditorialCard
-              category="Fashion story"
-              title="Saint Laurent by Anthony Vaccarello"
+              category="BECOMING"
+              title="Transformation"
               image="/images/card-1.jpg"
             />
           </Link>
 
-          <EditorialCard
-            category="Beauty"
-            title="Peter Philips + Pierre Debusschere"
-            image="/images/card-2.jpg"
-          />
+          <Link href="/columns/work" className="block">
+            <EditorialCard
+              category="WORK"
+              title="Work & Path"
+              image="/images/card-2.jpg"
+            />
+          </Link>
 
-          <EditorialCard
-            category="Exploration"
-            title="Isamaya Ffrench Filter"
-            image="/images/card-3.jpg"
-          />
+          <Link href="/columns/practice" className="block">
+            <EditorialCard
+              category="PRACTICE"
+              title="Creative Practice"
+              image="/images/card-3.jpg"
+            />
+          </Link>
         </div>
       </section>
 
@@ -241,7 +249,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* EDITORIAL GRID — Latest */}
+      {/* LATEST */}
       <section
         id="latest"
         className="max-w-7xl mx-auto px-6 pb-28 md:pb-32 scroll-mt-24"
