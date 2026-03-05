@@ -82,7 +82,7 @@ export const columns: Column[] = [
       "Conversations about body, sexuality and boundaries.",
     description:
       "INTIMACY explores sexuality, closeness, vulnerability and personal boundaries. A thoughtful conversation about embodiment without provocation or clichés.",
-    image: "/images/card-7.jpg",
+    image: "/images/Intimacy/Main.jpeg",
   },
 
   {
