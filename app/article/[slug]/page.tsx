@@ -232,8 +232,8 @@ export default async function ArticlePage({
             <CreditsCard
               title="Credits"
               items={[
-                { label: "Model", value: "Eugenia Zapolnova" },
-                { label: "Photographer", value: "Nikolai Zapolny" },
+                { label: "Model", value: "Evgenia Zapolnova" },
+                { label: "Photographer", value: "Nikolai Zapolnov" },
                 { label: "Column", value: "INTIMACY" },
               ]}
             />

@@ -99,8 +99,8 @@ Personal Story
 
 Why I Choose to Photograph Myself Nude
 
-Model: Eugenia Zapolnova  
-Photographer: Nikolai Zapolny
+Model: Evgenia Zapolnova  
+Photographer: Nikolai Zapolnov
 
 “I am 38 years old and have been in a relationship for nineteen years.
 
