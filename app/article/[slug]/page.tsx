@@ -70,10 +70,10 @@ function CreditsCard({
   items: { label: string; value: string }[];
 }) {
   return (
-    <aside className="mt-12 rounded-2xl border border-neutral-200 bg-white/40 p-8">
-      <div className="grid md:grid-cols-2 gap-10 items-center">
+    <aside className="mt-12 rounded-2xl border border-neutral-200 bg-white/40 p-6 md:p-8 overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
         {/* LEFT */}
-        <div>
+        <div className="min-w-0">
           <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
             Credits
           </p>
@@ -81,15 +81,17 @@ function CreditsCard({
           <dl className="mt-5 space-y-4 text-sm text-neutral-800">
             {items.map((it) => (
               <div key={it.label} className="flex gap-3">
-                <dt className="w-28 shrink-0 text-neutral-500">{it.label}</dt>
+                <dt className="w-24 md:w-28 shrink-0 text-neutral-500">
+                  {it.label}
+                </dt>
 
-                <dd className="font-medium">
+                <dd className="font-medium break-words">
                   {it.label === "Website" ? (
                     <a
                       href={`https://${it.value}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:underline"
+                      className="hover:underline break-all"
                     >
                       {it.value}
                     </a>
@@ -103,19 +105,20 @@ function CreditsCard({
         </div>
 
         {/* RIGHT */}
-        <div className="flex justify-center md:justify-end">
+        <div className="flex justify-center md:justify-end min-w-0">
           <Image
             src="/images/work/radiaatorikeskus/logo.jpeg"
             alt="Radiaatorikeskus logo"
-            width={260}
-            height={120}
-            className="object-contain opacity-90"
+            width={220}
+            height={100}
+            className="w-full max-w-[220px] h-auto object-contain opacity-90"
           />
         </div>
       </div>
     </aside>
   );
 }
+
 function renderBlock(block: ArticleBlock, index: number) {
   switch (block.type) {
     case "h2":
@@ -211,7 +214,16 @@ export default async function ArticlePage({
             </p>
 
             <div className="mt-6 flex items-center gap-5 text-sm text-neutral-700">
-              {article.date ? <span>Published {article.date}</span> : null}
+              {article.date ? (
+                <span>
+                  Published{" "}
+                  {new Date(article.date).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </span>
+              ) : null}
               <span className="opacity-60">•</span>
               <Link
                 href="/#latest"
