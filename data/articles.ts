@@ -226,7 +226,7 @@ For me it is control. It is a challenge. And it is completely, one hundred perce
     excerpt:
       "How an Estonian company turned a functional heating system into a design element shaping modern interiors.",
     image: "/images/work/radiaatorikeskus/1.jpeg",
-    date: "2026-03-06",
+    date: "2026-03-17",
     blocks: [
       {
         type: "p",
