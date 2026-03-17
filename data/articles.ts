@@ -219,7 +219,7 @@ For me it is control. It is a challenge. And it is completely, one hundred perce
   },
 
   {
-    slug: "radiatorikeskus-heating-design",
+    slug: "radiaatorikeskus-heating-design-estonia",
     column: "work",
     title: "When Heating Becomes Design: The Business Behind Radiaatorikeskus",
     category: "Work",
