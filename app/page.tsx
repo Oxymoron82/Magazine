@@ -55,7 +55,7 @@ export default function HomePage() {
               The Issue is not simply a magazine about fashion, business, or
               visuals. It is a space about continuing.
             </p>
-
+ 
             <p>
               About people who don’t move in a straight line. About those who
               begin again — in a new country, a new role, at a new age.

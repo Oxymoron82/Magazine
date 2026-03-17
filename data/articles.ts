@@ -1,4 +1,29 @@
-export const articles = [
+export type ArticleBlock =
+  | { type: "p"; text: string; dropCap?: boolean }
+  | { type: "h2"; text: string }
+  | { type: "quote"; text: string }
+  | {
+      type: "image";
+      src: string;
+      alt: string;
+      caption?: string;
+      fullBleed?: boolean;
+    }
+  | { type: "hr" }
+  | { type: "credits"; items: { label: string; value: string }[] };
+
+export type Article = {
+  slug: string;
+  column: string;
+  title: string;
+  category: string;
+  excerpt: string;
+  image: string;
+  date: string;
+  blocks: ArticleBlock[];
+};
+
+export const articles: Article[] = [
   {
     slug: "sexuality-is-not-a-pose",
     column: "intimacy",
@@ -8,41 +33,66 @@ export const articles = [
       "Sexuality is not something we create. It returns the moment we allow ourselves to feel again.",
     image: "/images/Intimacy/1/1.jpg",
     date: "2026-03-04",
+    blocks: [
+      {
+        type: "p",
+        dropCap: true,
+        text: `Sexuality is not a pose. It is a state.
 
-    content: `
-Sexuality is not a pose.
-It is a state.
-
-I hesitated for a long time before writing about sexuality.
-There is simply too much falseness around it.
+I hesitated for a long time before writing about sexuality. There is simply too much falseness around it.
 
 Too often it looks like a performance: rehearsed gestures, a pulled-in stomach, the correct tilt of the head, and that endless instruction to “be desirable in the right way”.
 
-But real life is different.
+But real life is different.`,
+      },
 
-Real sexuality is not an image.
-It is the way you breathe, the way you touch objects, the way you allow yourself to exist in the moment without constantly worrying about how you appear from the outside.
+      {
+        type: "p",
+        text: `Real sexuality is not an image. It is the way you breathe, the way you touch objects, the way you allow yourself to exist in the moment without constantly worrying about how you appear from the outside.`,
+      },
 
-Over the years of working with visual projects — photo shoots, models, photographers — I began noticing something strange. Many people live as if their body were simply a vehicle for their mind.
+      {
+        type: "quote",
+        text:
+          "Real sexuality is not an image. It is the way you breathe, the way you touch objects, the way you allow yourself to be present.",
+      },
 
-We live in tasks, deadlines, and endless internal dialogue. Meanwhile the body is always postponed — not good enough yet, later, someday when I lose weight, when I am younger, when I finally get enough sleep.
+      {
+        type: "p",
+        text: `Over the years of working with visual projects — photo shoots, models, photographers — I began noticing something strange. Many people live as if their body were simply a vehicle for their mind.
 
-And that is exactly where sexuality quietly fades.
+We live in tasks, deadlines, and endless internal dialogue. Meanwhile the body is always postponed — not good enough yet, later, someday when I lose weight, when I am younger, when I finally get enough sleep.`,
+      },
 
-Not because of wrinkles.
-Not because of numbers on a scale.
+      {
+        type: "image",
+        src: "/images/Intimacy/1/2.jpg",
+        alt: "Intimacy visual study",
+        caption: "Intimacy — visual study",
+        fullBleed: true,
+      },
 
-It disappears because we are simply not at home in our bodies anymore.
+      {
+        type: "p",
+        text: `And that is exactly where sexuality quietly fades.
 
-The most magnetic people I have ever photographed were never the most “perfect” by conventional standards. They were the people most present within themselves.
+Not because of wrinkles. Not because of numbers on a scale.
+
+It disappears because we are simply not at home in our bodies anymore.`,
+      },
+
+      {
+        type: "p",
+        text: `The most magnetic people I have ever photographed were never the most “perfect” by conventional standards. They were the people most present within themselves.
 
 You can see it in a single movement.
 
-In the way someone sits down in a chair without trying to hide anything.
-In the way they hold a gaze.
-In the way they allow themselves to take space in a room.
+In the way someone sits down in a chair without trying to hide anything. In the way they hold a gaze. In the way they allow themselves to take space in a room.`,
+      },
 
-In this column I want to speak not only about beauty, but about restoration.
+      {
+        type: "p",
+        text: `In this column I want to speak not only about beauty, but about restoration.
 
 About how people reconnect with themselves after the hardest moments.
 
@@ -50,14 +100,26 @@ How the desire to live and feel returns after a painful divorce.
 
 How self-perception changes when the body goes through motherhood or through the quiet transformations of age.
 
-How an honest boudoir photoshoot can become a turning point — the moment when, for the first time in a long while, you look in the mirror and see not a function, but a woman.
+How an honest boudoir photoshoot can become a turning point — the moment when, for the first time in a long while, you look in the mirror and see not a function, but a woman.`,
+      },
 
-For some people it will be a story about becoming alive again after a long emotional freeze.
+      {
+        type: "p",
+        text: `For some people it will be a story about becoming alive again after a long emotional freeze.
 
-For others, it will be about accepting a new vulnerability — and discovering that it is, unexpectedly, a form of strength.
+For others, it will be about accepting a new vulnerability — and discovering that it is, unexpectedly, a form of strength.`,
+      },
 
-Boudoir is not about lingerie.
-It is about honesty.
+      {
+        type: "h2",
+        text: "Boudoir: Not About Lingerie, But About Honesty",
+      },
+
+      {
+        type: "p",
+        text: `Why do we begin with boudoir?
+
+Because for me it has never been about seduction.
 
 It is the moment when a person remains alone with themselves — yet allows another person, a photographer, to look.
 
@@ -65,67 +127,236 @@ That is an immense act of trust and courage.
 
 It is not “look how beautiful I am”.
 
-It is:
-"This is me — exactly as I am right now.
-And I do not need to apologise for it."
+It is: “This is me — exactly as I am right now. And I do not need to apologise for it.”`,
+      },
 
-This column will not offer advice.
-It will offer experience.
+      {
+        type: "image",
+        src: "/images/Intimacy/1/3.jpg",
+        alt: "Intimacy portrait",
+        caption: "Body & intimacy — a quiet portrait",
+        fullBleed: true,
+      },
 
-We will invite people to share their stories of returning to themselves.
+      {
+        type: "h2",
+        text: "A Thought To Begin With",
+      },
 
-We will speak with photographers and artists who know how to see beauty where we have learned to see only flaws.
-
-We will search for ways to quiet the inner critic and finally allow our senses to wake up again.
-
-Sexuality is not something that needs to be created or imitated.
+      {
+        type: "p",
+        text: `Sexuality is not something that needs to be created or imitated.
 
 It only needs to stop being blocked.
 
 The moment you allow yourself to feel your body again — the warmth of your skin, the depth of a breath, the freedom of movement — desire returns on its own.
 
-Without instructions.
-Without performance.
+Without instructions. Without performance.
 
 It simply awakens.
 
 Because you have finally come home to yourself.
 
-And perhaps that recognition is where the most important chapter of your life begins.
+And perhaps that recognition is where the most important chapter of your life begins.`,
+      },
 
----
+      {
+        type: "hr",
+      },
 
-Personal Story
+      {
+        type: "h2",
+        text: "Personal Story",
+      },
 
-Why I Choose to Photograph Myself Nude
+      {
+        type: "h2",
+        text: "Why I Choose to Photograph Myself Nude",
+      },
 
-Model: Evgenia Zapolnova  
-Photographer: Nikolai Zapolnov
+      {
+        type: "p",
+        text: `Model: Evgenia Zapolnova
+Photographer: Nikolai Zapolnov`,
+      },
 
-“I am 38 years old and have been in a relationship for nineteen years.
+      {
+        type: "p",
+        text: `“I am 38 years old and have been in a relationship for nineteen years.
 
 When I was younger I experienced harassment, and very early on I learned that male attention could be dangerous.
 
 For years I tried to make myself less sexual in order to feel safe. I hid behind humour and self-irony.
 
-I never believed my body was good enough. I felt that everyone saw only my imperfections. Even when my partner told me I was beautiful, I assumed he simply had bad taste.
+I never believed my body was good enough. I felt that everyone saw only my imperfections. Even when my partner told me I was beautiful, I assumed he simply had bad taste.”`,
+      },
 
-But one day I realised something simple:
-later might never come.
+      {
+        type: "quote",
+        text: "Later might never come. Life has to be lived now.",
+      },
 
-Life has to be lived now.
-
-And suddenly I discovered that I am attractive. That I am strong enough to face my fears.
+      {
+        type: "p",
+        text: `“And suddenly I discovered that I am attractive. That I am strong enough to face my fears.
 
 Today I photograph myself nude because this is me.
 
 Technically my body may look worse than it did at twenty, but in reality I feel far more sexual now than I ever did then.
 
-For me it is control.
+For me it is control. It is a challenge. And it is completely, one hundred percent — about me.”`,
+      },
 
-It is a challenge.
+      {
+        type: "credits",
+        items: [
+          { label: "Model", value: "Evgenia Zapolnova" },
+          { label: "Photographer", value: "Nikolai Zapolnov" },
+          { label: "Column", value: "INTIMACY" },
+        ],
+      },
+    ],
+  },
 
-And it is completely, one hundred percent — about me.”
-`,
+  {
+    slug: "radiatorikeskus-heating-design",
+    column: "work",
+    title: "When Heating Becomes Design: The Business Behind Radiaatorikeskus",
+    category: "Work",
+    excerpt:
+      "How an Estonian company turned a functional heating system into a design element shaping modern interiors.",
+    image: "/images/work/radiaatorikeskus/1.jpg",
+    date: "2026-03-06",
+    blocks: [
+      {
+        type: "p",
+        dropCap: true,
+        text: `In interior architecture, the boundary between function and aesthetics is becoming increasingly blurred. Objects that once existed purely as technical necessities are now expected to contribute to the atmosphere of a space.
+
+Radiators are one of the most interesting examples of this shift.`,
+      },
+
+      {
+        type: "p",
+        text: `Estonian company Radiaatorikeskus has built its business around this idea — that heating solutions can be both practical and visually integrated into contemporary interiors.`,
+      },
+
+      {
+        type: "image",
+        src: "/images/work/radiaatorikeskus/1.jpg",
+        alt: "Radiaatorikeskus showroom",
+        caption:
+          "Radiaatorikeskus showroom and design radiators in contemporary interior spaces.",
+        fullBleed: true,
+      },
+
+      {
+        type: "p",
+        text: `Founded in the early 2000s, Radiaatorikeskus specializes in heating systems and designer radiators for residential and commercial spaces. Over the years, the company has expanded its focus from traditional heating equipment to more thoughtful solutions where engineering meets design.`,
+      },
+
+      {
+        type: "p",
+        text: `Today Radiaatorikeskus collaborates with several leading European manufacturers and represents brands such as Jaga, Arbonia, Zehnder, Licon, Stelrad and others. This allows the company to offer a wide range of products — from practical everyday heating solutions to distinctive design pieces that become part of the interior concept.`,
+      },
+
+      {
+        type: "quote",
+        text:
+          "The goal is not simply to heat a space but to find solutions that respond to the architecture and character of the environment.",
+      },
+
+      {
+        type: "p",
+        text: `As contemporary interiors increasingly emphasize minimalism and visual harmony, heating elements can no longer remain hidden utilities. Designers and architects are looking for solutions that complement materials, colors and spatial composition.`,
+      },
+
+      {
+        type: "image",
+        src: "/images/work/radiaatorikeskus/2.jpg",
+        alt: "Heating solutions integrated into architecture",
+        caption:
+          "Heating systems integrated into contemporary architectural spaces.",
+        fullBleed: true,
+      },
+
+      {
+        type: "p",
+        text: `Radiaatorikeskus also works with custom solutions. Radiators can be integrated with mirrors, lighting elements or unique materials, turning a technical object into an expressive design feature.`,
+      },
+
+      {
+        type: "p",
+        text: `The company continues to expand its presence in the Baltic region. A new showroom in Tallinn will present modern heating solutions within a broader context of interior design and architecture.`,
+      },
+
+      {
+        type: "p",
+        text: `In a world where technology, comfort and aesthetics are becoming inseparable, businesses like Radiaatorikeskus demonstrate how engineering can move beyond function and become part of the visual language of contemporary spaces.`,
+      },
+
+      {
+        type: "credits",
+        items: [
+          { label: "Company", value: "Radiaatorikeskus" },
+          { label: "Location", value: "Tallinn, Estonia" },
+          { label: "Website", value: "radiaatorikeskus.ee" },
+        ],
+      },
+
+      {
+        type: "hr",
+      },
+
+      {
+        type: "h2",
+        text: "Collaborate with The Issue",
+      },
+
+      {
+        type: "p",
+        text: `The Issue collaborates with brands, entrepreneurs and creative professionals whose work shapes contemporary life, business and culture.`,
+      },
+
+      {
+        type: "p",
+        text: `We feature stories about people building companies, creating products, designing spaces and developing ideas that influence how we live and work today.`,
+      },
+
+      {
+        type: "p",
+        text: `Our platform brings together business, design, culture and personal journeys — from emerging brands and independent creators to established companies and founders.`,
+      },
+
+      {
+        type: "h2",
+        text: "We are open to collaborations with:",
+      },
+
+      {
+        type: "p",
+        text: `• brands and companies
+• entrepreneurs and founders
+• designers and creative studios
+• architects and developers
+• hotels, restaurants and concept spaces
+• innovative products and new businesses`,
+      },
+
+      {
+        type: "p",
+        text: `Each collaboration is presented as an editorial story — focusing on people, ideas and the process behind the work.`,
+      },
+
+      {
+        type: "p",
+        text: `If you would like to share your story with The Issue audience, we would be happy to hear from you.`,
+      },
+
+      {
+        type: "p",
+        text: `Contact: collaborate@theissue.xyz`,
+      },
+    ],
   },
 ];

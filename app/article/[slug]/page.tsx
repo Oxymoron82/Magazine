@@ -1,16 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { articles } from "@/data/articles";
-
-function splitParagraphs(text: string) {
-  return text
-    .replace(/\r\n/g, "\n")
-    .trim()
-    .split(/\n\s*\n/g)
-    .map((p) => p.trim())
-    .filter(Boolean);
-}
+import { articles, ArticleBlock } from "@/data/articles";
 
 function PullQuote({ children }: { children: React.ReactNode }) {
   return (
@@ -54,17 +45,34 @@ function FullBleedImage({
   );
 }
 
+function InlineImage({
+  src,
+  alt,
+  caption,
+}: {
+  src: string;
+  alt: string;
+  caption?: string;
+}) {
+  return (
+    <div className="my-10">
+      <div className="relative aspect-[3/2] overflow-hidden rounded-2xl border border-neutral-200 bg-white/30">
+        <Image src={src} alt={alt} fill className="object-cover" />
+      </div>
+      {caption ? <Caption>{caption}</Caption> : null}
+    </div>
+  );
+}
+
 function CreditsCard({
-  title,
   items,
 }: {
-  title: string;
   items: { label: string; value: string }[];
 }) {
   return (
     <aside className="mt-12 rounded-2xl border border-neutral-200 bg-white/40 p-6">
       <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
-        {title}
+        Credits
       </p>
 
       <dl className="mt-5 space-y-3 text-sm text-neutral-800">
@@ -79,6 +87,64 @@ function CreditsCard({
   );
 }
 
+function renderBlock(block: ArticleBlock, index: number) {
+  switch (block.type) {
+    case "h2":
+      return (
+        <h2
+          key={index}
+          className="mt-12 mb-5 font-serif text-2xl md:text-3xl leading-snug text-neutral-900"
+        >
+          {block.text}
+        </h2>
+      );
+
+    case "p":
+      return (
+        <p
+          key={index}
+          className={[
+            "my-6 text-[18px] leading-relaxed text-neutral-800 whitespace-pre-line",
+            block.dropCap
+              ? "first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:font-serif first-letter:text-6xl md:first-letter:text-7xl first-letter:leading-none first-letter:text-neutral-900"
+              : "",
+          ].join(" ")}
+        >
+          {block.text}
+        </p>
+      );
+
+    case "quote":
+      return <PullQuote key={index}>{block.text}</PullQuote>;
+
+    case "image":
+      return block.fullBleed ? (
+        <FullBleedImage
+          key={index}
+          src={block.src}
+          alt={block.alt}
+          caption={block.caption}
+        />
+      ) : (
+        <InlineImage
+          key={index}
+          src={block.src}
+          alt={block.alt}
+          caption={block.caption}
+        />
+      );
+
+    case "hr":
+      return <div key={index} className="my-12 h-px bg-neutral-200/70" />;
+
+    case "credits":
+      return <CreditsCard key={index} items={block.items} />;
+
+    default:
+      return null;
+  }
+}
+
 export default async function ArticlePage({
   params,
 }: {
@@ -89,13 +155,8 @@ export default async function ArticlePage({
   const article = articles.find((a) => a.slug === slug);
   if (!article) notFound();
 
-  const paragraphs = splitParagraphs(article.content);
-
-  const isIntimacy = slug === "sexuality-is-not-a-pose";
-
   return (
     <main className="bg-[#FFFBEB] text-neutral-900">
-      {/* HERO */}
       <section className="relative w-full h-[70vh] md:h-[80vh]">
         <Image
           src={article.image}
@@ -134,119 +195,22 @@ export default async function ArticlePage({
         </div>
       </section>
 
-      {/* BODY */}
       <section className="py-16 md:py-20">
-        {/* верхняя линия */}
         <div className="max-w-2xl mx-auto px-6">
           <div className="h-px bg-neutral-200/70 mb-12" />
         </div>
 
-        {/* текст узкой колонкой */}
-        <article className="max-w-2xl mx-auto px-6 text-[18px] leading-relaxed text-neutral-800">
-          {paragraphs.map((p, idx) => {
-            const insertBefore: React.ReactNode[] = [];
-
-            if (isIntimacy) {
-              // full-bleed фото 2
-              if (idx === 6) {
-                insertBefore.push(
-                  <FullBleedImage
-                    key="img2"
-                    src="/images/Intimacy/1/2.jpg"
-                    alt="Intimacy visual"
-                    caption="Intimacy — visual study"
-                  />
-                );
-              }
-
-              // pull quote 1
-              if (idx === 10) {
-                insertBefore.push(
-                  <PullQuote key="q1">
-                    “Real sexuality is not an image. It is the way you breathe,
-                    the way you touch objects, the way you allow yourself to be
-                    present.”
-                  </PullQuote>
-                );
-              }
-
-              // full-bleed фото 3
-              if (idx === 18) {
-                insertBefore.push(
-                  <FullBleedImage
-                    key="img3"
-                    src="/images/Intimacy/1/3.jpg"
-                    alt="Intimacy portrait"
-                    caption="Body & intimacy — a quiet portrait"
-                  />
-                );
-              }
-
-              // pull quote 2
-              if (idx === 24) {
-                insertBefore.push(
-                  <PullQuote key="q2">
-                    “Later might never come. Life has to be lived now.”
-                  </PullQuote>
-                );
-              }
-            }
-
-            // Drop cap только на первом параграфе
-            const isFirstPara = idx === 0;
-
-            // Мини-заголовки внутри контента (если строка короткая)
-            const looksLikeHeading =
-              p.length < 70 &&
-              !p.includes(".") &&
-              !p.includes("—") &&
-              !p.includes(",") &&
-              p.toLowerCase() === p;
-
-            return (
-              <div key={idx}>
-                {insertBefore}
-
-                {looksLikeHeading ? (
-                  <h2 className="mt-12 mb-5 font-serif text-2xl md:text-3xl leading-snug text-neutral-900">
-                    {p}
-                  </h2>
-                ) : (
-                  <p
-                    className={[
-                      "my-6",
-                      isFirstPara
-                        ? "first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:font-serif first-letter:text-6xl md:first-letter:text-7xl first-letter:leading-none first-letter:text-neutral-900"
-                        : "",
-                    ].join(" ")}
-                  >
-                    {p}
-                  </p>
-                )}
-              </div>
-            );
-          })}
-
-          {/* credits (красивой карточкой) */}
-          {isIntimacy ? (
-            <CreditsCard
-              title="Credits"
-              items={[
-                { label: "Model", value: "Evgenia Zapolnova" },
-                { label: "Photographer", value: "Nikolai Zapolnov" },
-                { label: "Column", value: "INTIMACY" },
-              ]}
-            />
-          ) : null}
+        <article className="max-w-2xl mx-auto px-6">
+          {article.blocks.map((b, i) => renderBlock(b, i))}
 
           <div className="mt-14 h-px bg-neutral-200/70" />
 
           <div className="mt-10 flex items-center justify-between gap-6 text-sm">
             <Link
-              href="/columns/intimacy"
+              href={`/columns/${article.column}`}
               className="underline underline-offset-4 hover:text-black transition"
             >
-              ← Back to INTIMACY
+              ← Back to column
             </Link>
 
             <Link
