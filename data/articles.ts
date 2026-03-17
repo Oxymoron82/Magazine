@@ -225,7 +225,7 @@ For me it is control. It is a challenge. And it is completely, one hundred perce
     category: "Work",
     excerpt:
       "How an Estonian company turned a functional heating system into a design element shaping modern interiors.",
-    image: "/images/work/radiaatorikeskus/1.jpg",
+    image: "/images/work/radiaatorikeskus/1.jpeg",
     date: "2026-03-06",
     blocks: [
       {
@@ -243,7 +243,7 @@ Radiators are one of the most interesting examples of this shift.`,
 
       {
         type: "image",
-        src: "/images/work/radiaatorikeskus/1.jpg",
+        src: "/images/work/radiaatorikeskus/1.jpeg",
         alt: "Radiaatorikeskus showroom",
         caption:
           "Radiaatorikeskus showroom and design radiators in contemporary interior spaces.",
@@ -254,7 +254,13 @@ Radiators are one of the most interesting examples of this shift.`,
         type: "p",
         text: `Founded in the early 2000s, Radiaatorikeskus specializes in heating systems and designer radiators for residential and commercial spaces. Over the years, the company has expanded its focus from traditional heating equipment to more thoughtful solutions where engineering meets design.`,
       },
-
+{
+  type: "image",
+  src: "/images/work/radiaatorikeskus/3.jpeg",
+  alt: "Radiator detail",
+  caption: "Details of contemporary radiator design",
+  fullBleed: true,
+},
       {
         type: "p",
         text: `Today Radiaatorikeskus collaborates with several leading European manufacturers and represents brands such as Jaga, Arbonia, Zehnder, Licon, Stelrad and others. This allows the company to offer a wide range of products — from practical everyday heating solutions to distinctive design pieces that become part of the interior concept.`,
@@ -265,7 +271,13 @@ Radiators are one of the most interesting examples of this shift.`,
         text:
           "The goal is not simply to heat a space but to find solutions that respond to the architecture and character of the environment.",
       },
-
+{
+  type: "image",
+  src: "/images/work/radiaatorikeskus/4.jpeg",
+  alt: "Interior integration",
+  caption: "Radiators integrated into interior architecture",
+  fullBleed: true,
+},
       {
         type: "p",
         text: `As contemporary interiors increasingly emphasize minimalism and visual harmony, heating elements can no longer remain hidden utilities. Designers and architects are looking for solutions that complement materials, colors and spatial composition.`,
@@ -273,7 +285,7 @@ Radiators are one of the most interesting examples of this shift.`,
 
       {
         type: "image",
-        src: "/images/work/radiaatorikeskus/2.jpg",
+        src: "/images/work/radiaatorikeskus/2.jpeg",
         alt: "Heating solutions integrated into architecture",
         caption:
           "Heating systems integrated into contemporary architectural spaces.",

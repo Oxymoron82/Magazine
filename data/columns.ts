@@ -16,7 +16,7 @@ export const columns: Column[] = [
       "Personal stories of change, identity, and becoming.",
     description:
       "BECOMING explores personal transformation. Stories of women and men moving through change, migration, new chapters and inner shifts. Not before and after — but the process of becoming someone else, or returning to yourself.",
-    image: "/images/card-1.jpg",
+    image: "/images/card-2.jpg",
   },
 
   {
@@ -27,7 +27,7 @@ export const columns: Column[] = [
       "Careers, entrepreneurship and building something real.",
     description:
       "WORK is about people who build. Entrepreneurs, founders, creators and professionals speaking about decisions, risks, failures and persistence. Not motivational stories — but the real mechanics of work.",
-    image: "/images/card-2.jpg",
+    image: "/images/card-1.jpg",
   },
 
   {

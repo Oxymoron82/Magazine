@@ -70,23 +70,52 @@ function CreditsCard({
   items: { label: string; value: string }[];
 }) {
   return (
-    <aside className="mt-12 rounded-2xl border border-neutral-200 bg-white/40 p-6">
-      <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
-        Credits
-      </p>
+    <aside className="mt-12 rounded-2xl border border-neutral-200 bg-white/40 p-8">
+      <div className="grid md:grid-cols-2 gap-10 items-center">
+        {/* LEFT */}
+        <div>
+          <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
+            Credits
+          </p>
 
-      <dl className="mt-5 space-y-3 text-sm text-neutral-800">
-        {items.map((it) => (
-          <div key={it.label} className="flex gap-3">
-            <dt className="w-28 shrink-0 text-neutral-500">{it.label}</dt>
-            <dd className="font-medium">{it.value}</dd>
-          </div>
-        ))}
-      </dl>
+          <dl className="mt-5 space-y-4 text-sm text-neutral-800">
+            {items.map((it) => (
+              <div key={it.label} className="flex gap-3">
+                <dt className="w-28 shrink-0 text-neutral-500">{it.label}</dt>
+
+                <dd className="font-medium">
+                  {it.label === "Website" ? (
+                    <a
+                      href={`https://${it.value}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline"
+                    >
+                      {it.value}
+                    </a>
+                  ) : (
+                    it.value
+                  )}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+
+        {/* RIGHT */}
+        <div className="flex justify-center md:justify-end">
+          <Image
+            src="/images/work/radiaatorikeskus/logo.jpeg"
+            alt="Radiaatorikeskus logo"
+            width={260}
+            height={120}
+            className="object-contain opacity-90"
+          />
+        </div>
+      </div>
     </aside>
   );
 }
-
 function renderBlock(block: ArticleBlock, index: number) {
   switch (block.type) {
     case "h2":

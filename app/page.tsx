@@ -198,7 +198,7 @@ export default function HomePage() {
             <EditorialCard
               category="BECOMING"
               title="Transformation"
-              image="/images/card-1.jpg"
+              image="/images/card-2.jpg"
             />
           </Link>
 
@@ -206,7 +206,7 @@ export default function HomePage() {
             <EditorialCard
               category="WORK"
               title="Work & Path"
-              image="/images/card-2.jpg"
+              image="/images/card-1.jpg"
             />
           </Link>
 
