@@ -104,13 +104,20 @@ function CreditsCard({
         </div>
 
         <div className="flex justify-center md:justify-end min-w-0">
-          <Image
-            src="/images/work/radiaatorikeskus/logo.jpeg"
-            alt="Radiaatorikeskus logo"
-            width={220}
-            height={100}
-            className="w-full max-w-[220px] h-auto object-contain opacity-90"
-          />
+          <a
+            href="https://radiaatorikeskus.ee"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block"
+          >
+            <Image
+              src="/images/work/radiaatorikeskus/logo.jpeg"
+              alt="Küttemaailm OÜ logo"
+              width={300}
+              height={140}
+              className="w-full max-w-[280px] h-auto object-contain opacity-95 hover:opacity-100 transition"
+            />
+          </a>
         </div>
       </div>
     </aside>

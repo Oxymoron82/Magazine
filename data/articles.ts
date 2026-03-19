@@ -308,14 +308,13 @@ Radiators are one of the most interesting examples of this shift.`,
       },
 
       {
-        type: "credits",
-        items: [
-          { label: "Company", value: "Radiaatorikeskus" },
-          { label: "Location", value: "Tallinn, Estonia" },
-          { label: "Website", value: "radiaatorikeskus.ee" },
-        ],
-      },
-
+  type: "credits",
+  items: [
+    { label: "Company", value: "Küttemaailm OÜ" },
+    { label: "Location", value: "Tallinn, Estonia" },
+    { label: "Website", value: "radiaatorikeskus.ee" },
+  ],
+},
       {
         type: "hr",
       },
