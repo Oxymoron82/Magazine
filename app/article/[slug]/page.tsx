@@ -111,7 +111,7 @@ function CreditsCard({
             className="block"
           >
             <Image
-              src="/images/work/radiaatorikeskus/logo.jpeg"
+              src="/images/work/radiaatorikeskus/logo2.png"
               alt="Küttemaailm OÜ logo"
               width={300}
               height={140}
