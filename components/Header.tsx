@@ -14,9 +14,9 @@ export default function Header() {
           <Link href="/#columns" className="hover:text-black transition">
             Columns
           </Link>
-          <Link href="/#stories" className="hover:text-black transition">
+       {/*   <Link href="/#stories" className="hover:text-black transition">
             Photo Stories
-          </Link>
+          </Link> */}
           <Link href="/#latest" className="hover:text-black transition">
             Latest
           </Link>

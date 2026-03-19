@@ -221,7 +221,7 @@ export default function HomePage() {
       </section>
 
       {/* FULL WIDTH EDITORIAL — Photo Stories */}
-      <section
+   {/*    <section
         id="stories"
         className="relative h-[80vh] w-full my-28 md:my-32 scroll-mt-24"
       >
@@ -248,6 +248,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      */}
 
       {/* LATEST */}
       <section
