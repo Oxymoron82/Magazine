@@ -84,8 +84,14 @@ function InlineImage({
 
 function CreditsCard({
   items,
+  logo,
 }: {
   items: { label: string; value: string; href?: string }[];
+  logo?: {
+    src: string;
+    href?: string;
+    alt?: string;
+  };
 }) {
   return (
     <aside className="mt-12 rounded-2xl border border-neutral-200 bg-white/40 p-6 md:p-8 overflow-hidden">
@@ -141,11 +147,40 @@ function CreditsCard({
     </aside>
   );
 }
+function GalleryBlock({
+  images,
+  caption,
+}: {
+  images: { src: string; alt: string }[];
+  caption?: string;
+}) {
+  return (
+    <div className="my-12 md:my-14">
+      <div className="grid grid-cols-2 gap-4 md:gap-6">
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-neutral-200 bg-white/30"
+          >
+            <Image
+              src={image.src}
+              alt={image.alt}
+              fill
+              className="object-cover"
+            />
+          </div>
+        ))}
+      </div>
 
+      {caption ? <Caption>{caption}</Caption> : null}
+    </div>
+  );
+}
 function renderBlock(
   block: ArticleBlock,
   index: number,
   imagePosition: "center" | "top"
+  
 ) {
   switch (block.type) {
     case "h2":
@@ -198,6 +233,14 @@ function renderBlock(
     case "hr":
       return <div key={index} className="my-12 h-px bg-neutral-200/70" />;
 
+      case "gallery":
+  return (
+    <GalleryBlock
+      key={index}
+      images={block.images}
+      caption={block.caption}
+    />
+  );
     case "credits":
       return <CreditsCard key={index} items={block.items} />;
 

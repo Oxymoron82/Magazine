@@ -10,8 +10,22 @@ export type ArticleBlock =
   fullBleed?: boolean;
   position?: "center" | "top";
     }
+    | {
+    type: "gallery";
+    images: { src: string; alt: string }[];
+    caption?: string;
+  }
   | { type: "hr" }
-  | { type: "credits"; items: { label: string; value: string; href?: string }[]; };
+  | { type: "credits"; items: { label: string; value: string; href?: string }[]; }
+  | {
+    type: "credits";
+    items: { label: string; value: string; href?: string }[];
+    logo?: {
+      src: string;
+      href?: string;
+      alt?: string;
+    };
+  };
 
 export type Article = {
   slug: string;
@@ -462,7 +476,16 @@ The visual concept reflects the transformation of recycled materials into coutur
       caption: "From reclaimed textile elements to red carpet couture.",
       fullBleed: true,
     },
-
+{
+  type: "gallery",
+  images: [
+    { src: "/images/practice/05.jpg", alt: "Marina Smagin couture look 05" },
+    { src: "/images/practice/06.jpg", alt: "Marina Smagin couture look 06" },
+    { src: "/images/practice/07.jpg", alt: "Marina Smagin couture look 07" },
+    { src: "/images/practice/08.jpg", alt: "Marina Smagin couture look 08" },
+  ],
+  caption: "Additional views of the eco-couture gowns and their sculptural details.",
+},
     {
       type: "credits",
       items: [
