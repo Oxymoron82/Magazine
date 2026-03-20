@@ -4,13 +4,14 @@ export type ArticleBlock =
   | { type: "quote"; text: string }
   | {
       type: "image";
-      src: string;
-      alt: string;
-      caption?: string;
-      fullBleed?: boolean;
+  src: string;
+  alt: string;
+  caption?: string;
+  fullBleed?: boolean;
+  position?: "center" | "top";
     }
   | { type: "hr" }
-  | { type: "credits"; items: { label: string; value: string }[] };
+  | { type: "credits"; items: { label: string; value: string; href?: string }[]; };
 
 export type Article = {
   slug: string;
@@ -312,7 +313,8 @@ Radiators are one of the most interesting examples of this shift.`,
   items: [
     { label: "Company", value: "Küttemaailm OÜ" },
     { label: "Location", value: "Tallinn, Estonia" },
-    { label: "Website", value: "radiaatorikeskus.ee" },
+    { label: "Website", value: "radiaatorikeskus.ee", 
+      href: "https://radiaatorikeskus.ee/en/" },
   ],
 },
       {
@@ -370,4 +372,106 @@ Radiators are one of the most interesting examples of this shift.`,
       },
     ],
   },
+
+  {
+  slug: "marina-smagin-artmari-handmade-dsn",
+  column: "practice",
+  title: "Marina Smagin — Artmari Handmade DSN",
+  category: "Practice",
+  excerpt:
+    "An eco-couture designer transforming recycled textiles into sculptural couture garments through hand craftsmanship and slow fashion principles.",
+  image: "/images/practice/01.jpg",
+  date: "2026-03-20",
+  blocks: [
+    {
+      type: "p",
+      dropCap: true,
+      text: `My name is Marina Smagin, and my brand is Artmari Handmade DSN. I am an eco-couture fashion designer working at the intersection of sustainability and high fashion craftsmanship.
+
+My work focuses on transforming unconventional materials into couture garments. I create pieces using recycled textiles, including neckties and repurposed fabrics, combining ecological design principles with traditional hand couture techniques.
+
+Each garment is created largely by hand, reflecting a slow fashion philosophy where craftsmanship, sustainability, and artistic storytelling meet.`,
+    },
+
+    {
+      type: "image",
+      src: "/images/practice/02.jpg",
+      alt: "Marina Smagin couture editorial",
+      caption: "Eco-couture silhouettes by Artmari Handmade DSN.",
+      fullBleed: true,
+    },
+
+    {
+      type: "h2",
+      text: "Two Gowns for an International Fashion Event",
+    },
+
+    {
+      type: "p",
+      text: `This editorial presents two couture gowns created for an international fashion event in Italy and designed for contestants appearing on the red carpet.
+
+Both dresses are part of my eco-couture concept. The garments combine recycled materials with traditional couture techniques. Approximately 80% of the work was completed entirely by hand.
+
+The creation of the two gowns took nearly five months of intensive craftsmanship. Each layer, structure, and decorative element was carefully constructed to achieve a sculptural silhouette while maintaining sustainable design principles.`,
+    },
+
+    {
+      type: "quote",
+      text:
+        "Sustainability can coexist with haute couture — discarded materials can become the foundation of luxury garments.",
+    },
+
+    {
+      type: "image",
+      src: "/images/practice/03.jpg",
+      alt: "Handcrafted couture details",
+      caption: "Hand construction, layering, and sculptural form.",
+      fullBleed: true,
+    },
+
+    {
+      type: "h2",
+      text: "Design Philosophy",
+    },
+
+    {
+      type: "p",
+      text: `My design philosophy is based on the idea that sustainability can coexist with haute couture. I explore how discarded materials can be transformed into luxury garments.
+
+In my work, materials such as ties and reclaimed fabrics become the foundation for couture silhouettes. Through hand draping, layering, and detailed manual construction, the garments evolve into expressive pieces that combine ecological awareness with artistic fashion design.
+
+The goal is to demonstrate that sustainable fashion can be both innovative and visually striking.`,
+    },
+
+    {
+      type: "h2",
+      text: "About the Photoshoot",
+    },
+
+    {
+      type: "p",
+      text: `The editorial photoshoot highlights the dramatic textures and sculptural volumes of the gowns. Set against bold backgrounds and strong lighting, the images emphasize movement, craftsmanship, and the layered construction of the dresses.
+
+The visual concept reflects the transformation of recycled materials into couture forms — from raw textile elements into refined fashion pieces designed for red carpet presence.`,
+    },
+
+    {
+      type: "image",
+      src: "/images/practice/04.jpg",
+      alt: "Editorial fashion image by Artmari Handmade DSN",
+      caption: "From reclaimed textile elements to red carpet couture.",
+      fullBleed: true,
+    },
+
+    {
+      type: "credits",
+      items: [
+        { label: "Designer", value: "Marina Smagin" },
+        { label: "Brand", value: "Artmari Handmade DSN" },
+        { label: "Instagram", value: "@artmari_handmade_dsn" },
+        { label: "Column", value: "PRACTICE" },
+      ],
+    },
+  ],
+}
 ];

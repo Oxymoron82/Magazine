@@ -26,15 +26,24 @@ function FullBleedImage({
   src,
   alt,
   caption,
+  position = "center",
 }: {
   src: string;
   alt: string;
   caption?: string;
+  position?: "center" | "top";
 }) {
   return (
     <div className="my-12 md:my-14">
       <div className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden bg-white/30">
-        <Image src={src} alt={alt} fill className="object-cover" />
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          className={`object-cover ${
+            position === "top" ? "object-top" : "object-center"
+          }`}
+        />
       </div>
       {caption ? (
         <div className="max-w-2xl mx-auto px-6">
@@ -49,15 +58,24 @@ function InlineImage({
   src,
   alt,
   caption,
+  position = "center",
 }: {
   src: string;
   alt: string;
   caption?: string;
+  position?: "center" | "top";
 }) {
   return (
     <div className="my-10">
       <div className="relative aspect-[3/2] overflow-hidden rounded-2xl border border-neutral-200 bg-white/30">
-        <Image src={src} alt={alt} fill className="object-cover" />
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          className={`object-cover ${
+            position === "top" ? "object-top" : "object-center"
+          }`}
+        />
       </div>
       {caption ? <Caption>{caption}</Caption> : null}
     </div>
@@ -67,7 +85,7 @@ function InlineImage({
 function CreditsCard({
   items,
 }: {
-  items: { label: string; value: string }[];
+  items: { label: string; value: string; href?: string }[];
 }) {
   return (
     <aside className="mt-12 rounded-2xl border border-neutral-200 bg-white/40 p-6 md:p-8 overflow-hidden">
@@ -87,7 +105,7 @@ function CreditsCard({
                 <dd className="font-medium break-words">
                   {it.label === "Website" ? (
                     <a
-                      href={`https://${it.value}`}
+                      href={it.href ?? `https://${it.value}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="hover:underline break-all"
@@ -105,7 +123,7 @@ function CreditsCard({
 
         <div className="flex justify-center md:justify-end min-w-0">
           <a
-            href="https://radiaatorikeskus.ee"
+            href="https://radiaatorikeskus.ee/en/"
             target="_blank"
             rel="noopener noreferrer"
             className="block"
@@ -124,7 +142,11 @@ function CreditsCard({
   );
 }
 
-function renderBlock(block: ArticleBlock, index: number) {
+function renderBlock(
+  block: ArticleBlock,
+  index: number,
+  imagePosition: "center" | "top"
+) {
   switch (block.type) {
     case "h2":
       return (
@@ -161,6 +183,7 @@ function renderBlock(block: ArticleBlock, index: number) {
           src={block.src}
           alt={block.alt}
           caption={block.caption}
+          position={imagePosition}
         />
       ) : (
         <InlineImage
@@ -168,6 +191,7 @@ function renderBlock(block: ArticleBlock, index: number) {
           src={block.src}
           alt={block.alt}
           caption={block.caption}
+          position={imagePosition}
         />
       );
 
@@ -192,6 +216,9 @@ export default async function ArticlePage({
   const article = articles.find((a) => a.slug === slug);
   if (!article) notFound();
 
+  const isMarina = article.slug === "marina-smagin-artmari-handmade-dsn";
+  const imagePosition: "center" | "top" = isMarina ? "top" : "center";
+
   return (
     <main className="bg-[#FFFBEB] text-neutral-900">
       <section className="relative w-full h-[70vh] md:h-[80vh]">
@@ -200,7 +227,9 @@ export default async function ArticlePage({
           alt={article.title}
           fill
           priority
-          className="object-cover"
+          className={`object-cover ${
+            imagePosition === "top" ? "object-top" : "object-center"
+          }`}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-[#FFFBEB]/75 via-transparent to-transparent" />
 
@@ -247,7 +276,7 @@ export default async function ArticlePage({
         </div>
 
         <article className="max-w-2xl mx-auto px-6">
-          {article.blocks.map((b, i) => renderBlock(b, i))}
+          {article.blocks.map((b, i) => renderBlock(b, i, imagePosition))}
 
           <div className="mt-14 h-px bg-neutral-200/70" />
 
