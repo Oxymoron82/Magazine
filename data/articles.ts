@@ -82,8 +82,8 @@ But real life is different.`,
       {
   type: "credits",
   items: [
-    { label: "Model", value: "Eugenia Zapolnova" },
-    { label: "Photographer", value: "Nikolai Zapolny" },
+    { label: "Model", value: "Evgenia Zapolnova" },
+    { label: "Photographer", value: "Nikolai Zapolnov" },
     {
       label: "Website",
       value: "beauty.photo",
