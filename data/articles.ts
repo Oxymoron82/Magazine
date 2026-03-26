@@ -80,11 +80,23 @@ But real life is different.`,
         fullBleed: true,
       },
       {
-        type: "credits",
-        items: [
-          { label: "Column", value: "INTIMACY" },
-        ],
-      },
+  type: "credits",
+  items: [
+    { label: "Model", value: "Eugenia Zapolnova" },
+    { label: "Photographer", value: "Nikolai Zapolny" },
+    {
+      label: "Website",
+      value: "beauty.photo",
+      href: "https://www.beauty.photo/",
+    },
+    { label: "Column", value: "INTIMACY" },
+  ],
+  logo: {
+    src: "/images/Intimacy/1/logo.jpg",
+    href: "https://www.beauty.photo/",
+    alt: "Beauty Photo studio logo",
+  },
+},
     ],
   },
 
@@ -202,22 +214,20 @@ But real life is different.`,
       },
 
       {
-        type: "credits",
-        items: [
-          { label: "Designer", value: "Marina Smagin" },
-          { label: "Brand", value: "Artmari Handmade DSN" },
-          {
-            label: "Website",
-            value: "artmaridsn.com",
-            href: "https://www.artmaridsn.com/",
-          },
-        ],
-        logo: {
-          src: "/images/practice/logo1.jpg",
-          href: "https://www.artmaridsn.com/",
-          alt: "Artmari Handmade DSN logo",
-        },
-      },
+  type: "credits",
+  items: [
+    { label: "Designer", value: "Marina Smagin" },
+    { label: "Brand", value: "Artmari Handmade DSN" },
+    { label: "Instagram", value: "@artmari_handmade_dsn" },
+    { label: "Website", value: "artmaridsn.com", href: "https://www.artmaridsn.com/" },
+    { label: "Column", value: "PRACTICE" },
+  ],
+  logo: {
+    src: "/images/practice/logo1.jpg",
+    href: "https://www.artmaridsn.com/",
+    alt: "Artmari Handmade DSN logo",
+  },
+},
     ],
   },
 ];

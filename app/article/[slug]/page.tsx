@@ -127,22 +127,24 @@ function CreditsCard({
           </dl>
         </div>
 
-        <div className="flex justify-center md:justify-end min-w-0">
-          <a
-            href="https://radiaatorikeskus.ee/en/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block"
-          >
-            <Image
-              src="/images/work/radiaatorikeskus/logo2.png"
-              alt="Küttemaailm OÜ logo"
-              width={300}
-              height={140}
-              className="w-full max-w-[280px] h-auto object-contain opacity-95 hover:opacity-100 transition"
-            />
-          </a>
-        </div>
+        {logo ? (
+  <div className="flex justify-center md:justify-end min-w-0">
+    <a
+      href={logo.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="block"
+    >
+      <Image
+        src={logo.src}
+        alt={logo.alt || "logo"}
+        width={300}
+        height={140}
+        className="w-full max-w-[280px] h-auto object-contain opacity-95 hover:opacity-100 transition"
+      />
+    </a>
+  </div>
+) : null}
       </div>
     </aside>
   );
@@ -242,7 +244,13 @@ function renderBlock(
     />
   );
     case "credits":
-      return <CreditsCard key={index} items={block.items} />;
+  return (
+    <CreditsCard
+      key={index}
+      items={block.items}
+      logo={block.logo}
+    />
+  );
 
     default:
       return null;
