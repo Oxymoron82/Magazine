@@ -2,7 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articles, ArticleBlock } from "@/data/articles";
-import SubmitBlock from "@/components/SubmitBlock";
+
+import SubmitForm from "@/components/SubmitForm";
 
 function PullQuote({ children }: { children: React.ReactNode }) {
   return (
@@ -330,7 +331,7 @@ export default async function ArticlePage({
         <article className="max-w-2xl mx-auto px-6">
   {article.blocks.map((b, i) => renderBlock(b, i, imagePosition))}
 
-  <SubmitBlock />
+  <SubmitForm />
 
   <div className="mt-14 h-px bg-neutral-200/70" />
 
