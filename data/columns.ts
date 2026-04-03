@@ -11,7 +11,7 @@ export const columns: Column[] = [
   {
     slug: "becoming",
     label: "BECOMING",
-    title: "Transformation",
+    title: "Trinity",
     descriptionShort:
       "Personal stories of change, identity, and becoming.",
     description:
