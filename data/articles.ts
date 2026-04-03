@@ -230,4 +230,118 @@ But real life is different.`,
 },
     ],
   },
+
+// ================= BECOMING =================
+ {
+  slug: "trinity-sofia",
+  column: "becoming",
+  title: "Trinity",
+  category: "Becoming",
+  excerpt:
+    "A visual narrative exploring three energies of a modern woman — power, dominance, and vulnerability.",
+  image: "/images/becoming/trinity/cover.jpg", // пока можно оставить, потом заменишь
+  date: "2026-04-03",
+  blocks: [
+    {
+      type: "h2",
+      text: "THE STORY OF ONE TRANSFORMATION",
+    },
+    {
+      type: "p",
+      text: "PROJECT TRINITY. SOFIA S.",
+    },
+
+    {
+      type: "p",
+      dropCap: true,
+      text: `Your story is waiting to be told. Our magazine isn’t just about glossy pages; it’s a sandbox for your inner transformation. We believe everyone carries a hidden universe of personas that rarely get the chance to breathe.`,
+    },
+
+    {
+      type: "p",
+      text: `The TRINITY project was born to help you live out your own unique narrative. We take a hero or heroine and—just like in this editorial—craft a conceptual script tailored specifically to your character, your ambitions, and those edges you usually keep in the shadows.`,
+    },
+
+    {
+      type: "p",
+      text: `From the first moodboard to the final shutter click, we create a space where you can finally take up the room you deserve.`,
+    },
+
+    {
+      type: "h2",
+      text: "THREE FACES OF THE SOUL",
+    },
+
+    {
+      type: "p",
+      text: `In this session, we tracked a modern woman’s journey through three distinct energies that live harmoniously within one person:`,
+    },
+
+    {
+      type: "p",
+      text: `PHASE 1: Social Drive. The red supercar and a sharp, defiant silhouette—this is the "urban armor." Here, the heroine dictates the rules; she is electric and untouchable.`,
+    },
+
+    {
+      type: "p",
+      text: `PHASE 2: The Power Manifesto. Leopard prints and crimson silk. This is the moment a woman gives herself permission to be dominant and occupy the entire frame.`,
+    },
+
+    {
+      type: "p",
+      text: `PHASE 3: True Vulnerability. As the bold colors fade into sheer lace and soft textures, only raw honesty remains.`,
+    },
+
+    {
+      type: "quote",
+      text: `"Allowing oneself to be soft in a world of constant hustle is the ultimate form of bravery."`,
+    },
+
+    {
+      type: "h2",
+      text: "FROM THE HEROINE: MARIA",
+    },
+
+    {
+      type: "p",
+      text: `"When I signed up for TRINITY, I expected a beautiful photoshoot. I didn't expect to meet so many different versions of myself in the mirror."`,
+    },
+
+    {
+      type: "p",
+      text: `At first, I felt like an 'Iron Lady' next to that red machine—it was my familiar mask of control. But moving into the red gown, I suddenly felt a surge of power I hadn't tapped into in years.`,
+    },
+
+    {
+      type: "p",
+      text: `The finale in lace... it was almost overwhelming. It felt so strange, yet so right, to let myself be fragile and feel completely safe doing so.`,
+    },
+
+    {
+      type: "p",
+      text: `A massive thank you to the crew! This is a world-class team. They guided me through every detail—from the high-fashion styling to every micro-adjustment in my posing.`,
+    },
+
+    {
+      type: "p",
+      text: `The icing on the cake? We landed a feature in the Spanish magazine Lovely! It was a level of success I hadn't even dared to dream of.`,
+    },
+
+    {
+      type: "h2",
+      text: "READY TO BE OUR NEXT HERO?",
+    },
+
+    {
+      type: "p",
+      text: `We are looking for those ready to meet their own many faces. We don’t just take photos; we write your visual biography in three acts and help you step onto the international stage.`,
+    },
+
+    {
+      type: "p",
+      text: `Ready to script your own transformation? Email us to apply for the TRINITY project.`,
+    },
+  ],
+},
+
 ];

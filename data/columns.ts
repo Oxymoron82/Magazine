@@ -10,12 +10,12 @@ export type Column = {
 export const columns: Column[] = [
   {
     slug: "becoming",
-    label: "BECOMING",
+    label: "Becoming",
     title: "Trinity",
     descriptionShort:
       "Personal stories of change, identity, and becoming.",
     description:
-      "BECOMING explores personal transformation. Stories of women and men moving through change, migration, new chapters and inner shifts. Not before and after — but the process of becoming someone else, or returning to yourself.",
+      "TRINITY explores personal transformation. Stories of women and men moving through change, migration, new chapters and inner shifts. Not before and after — but the process of becoming someone else, or returning to yourself.",
     image: "/images/card-2.jpg",
   },
 

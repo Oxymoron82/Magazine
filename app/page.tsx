@@ -197,7 +197,7 @@ export default function HomePage() {
           <Link href="/columns/becoming" className="block">
             <EditorialCard
               category="BECOMING"
-              title="Transformation"
+              title="Trinity"
               image="/images/card-2.jpg"
             />
           </Link>
