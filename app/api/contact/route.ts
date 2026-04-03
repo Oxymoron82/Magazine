@@ -1,8 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(req: Request) {
   try {
     const body = await req.json();
@@ -28,9 +26,20 @@ export async function POST(req: Request) {
       );
     }
 
-    await resend.emails.send({
-      from: process.env.CONTACT_FROM_EMAIL || "The Issue <onboarding@resend.dev>",
-      to: process.env.CONTACT_TO_EMAIL || "submissions@theissue.xyz",
+    const apiKey = process.env.RESEND_API_KEY;
+
+    if (!apiKey) {
+      return NextResponse.json(
+        { error: "Missing RESEND_API_KEY." },
+        { status: 500 }
+      );
+    }
+
+    const resend = new Resend(apiKey);
+
+    const result = await resend.emails.send({
+      from: process.env.CONTACT_FROM_EMAIL || "The Issue <editor@theissue.xyz>",
+      to: process.env.CONTACT_TO_EMAIL || "theissue.submissions@gmail.com",
       replyTo: email,
       subject: `New submission: ${title}`,
       text: `
@@ -50,6 +59,17 @@ ${message}
         <p>${escapeHtml(message).replace(/\n/g, "<br />")}</p>
       `,
     });
+
+    if (result.error) {
+      console.error("Resend error:", result.error);
+
+      return NextResponse.json(
+        { error: result.error.message || "Failed to send email." },
+        { status: 500 }
+      );
+    }
+
+    console.log("Resend success:", result.data);
 
     return NextResponse.json({ ok: true });
   } catch (error) {

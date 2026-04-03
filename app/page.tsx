@@ -9,7 +9,7 @@ export default function HomePage() {
       <section id="home" className="relative h-[90vh] w-full scroll-mt-24">
         <div className="absolute inset-0">
           <Image
-            src="/images/editorial-1.jpg"
+            src="/images/editorial-2.jpg"
             alt="Editorial cover"
             fill
             className="object-cover"
@@ -18,19 +18,19 @@ export default function HomePage() {
         </div>
 
         <div className="relative h-full max-w-7xl mx-auto px-6 flex items-end pb-24">
-          <div className="max-w-2xl">
-            <p className="text-xs tracking-[0.35em] uppercase text-neutral-700 mb-6">
-              Online Magazine
-            </p>
+         <div className="max-w-2xl">
+  <p className="text-xs tracking-[0.35em] uppercase text-white mb-6">
+    Online Magazine
+  </p>
 
-            <h1 className="text-[clamp(3rem,8vw,7rem)] leading-none font-semibold font-serif">
-              THE ISSUE
-            </h1>
+  <h1 className="text-[clamp(3rem,8vw,7rem)] leading-none font-semibold font-serif text-white">
+    THE ISSUE
+  </h1>
 
-            <p className="mt-6 text-xs tracking-[0.35em] uppercase text-neutral-700">
-              An Independent Editorial Platform
-            </p>
-          </div>
+  <p className="mt-6 text-xs tracking-[0.35em] uppercase text-white">
+    An Independent Editorial Platform
+  </p>
+</div>
         </div>
       </section>
 
