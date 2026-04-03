@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { articles, ArticleBlock } from "@/data/articles";
+import SubmitBlock from "@/components/SubmitBlock";
 
 function PullQuote({ children }: { children: React.ReactNode }) {
   return (
@@ -327,9 +328,11 @@ export default async function ArticlePage({
         </div>
 
         <article className="max-w-2xl mx-auto px-6">
-          {article.blocks.map((b, i) => renderBlock(b, i, imagePosition))}
+  {article.blocks.map((b, i) => renderBlock(b, i, imagePosition))}
 
-          <div className="mt-14 h-px bg-neutral-200/70" />
+  <SubmitBlock />
+
+  <div className="mt-14 h-px bg-neutral-200/70" />
 
           <div className="mt-10 flex items-center justify-between gap-6 text-sm">
             <Link
