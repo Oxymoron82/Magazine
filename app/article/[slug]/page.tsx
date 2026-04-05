@@ -42,7 +42,7 @@ function FullBleedImage({
           src={src}
           alt={alt}
           fill
-          className={`object-cover ${
+          className={`object-cover transition duration-500 hover:scale-[1.02] ${
             position === "top" ? "object-top" : "object-center"
           }`}
         />
@@ -74,7 +74,7 @@ function InlineImage({
           src={src}
           alt={alt}
           fill
-          className={`object-cover ${
+          className={`object-cover transition duration-500 hover:scale-[1.03] ${
             position === "top" ? "object-top" : "object-center"
           }`}
         />
@@ -130,27 +130,28 @@ function CreditsCard({
         </div>
 
         {logo ? (
-  <div className="flex justify-center md:justify-end min-w-0">
-    <a
-      href={logo.href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="block"
-    >
-      <Image
-        src={logo.src}
-        alt={logo.alt || "logo"}
-        width={300}
-        height={140}
-        className="w-full max-w-[280px] h-auto object-contain opacity-95 hover:opacity-100 transition"
-      />
-    </a>
-  </div>
-) : null}
+          <div className="flex justify-center md:justify-end min-w-0">
+            <a
+              href={logo.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <Image
+                src={logo.src}
+                alt={logo.alt || "logo"}
+                width={300}
+                height={140}
+                className="w-full max-w-[280px] h-auto object-contain opacity-95 hover:opacity-100 transition"
+              />
+            </a>
+          </div>
+        ) : null}
       </div>
     </aside>
   );
 }
+
 function GalleryBlock({
   images,
   caption,
@@ -170,7 +171,7 @@ function GalleryBlock({
               src={image.src}
               alt={image.alt}
               fill
-              className="object-cover"
+              className="object-cover transition duration-500 hover:scale-[1.04]"
             />
           </div>
         ))}
@@ -180,11 +181,11 @@ function GalleryBlock({
     </div>
   );
 }
+
 function renderBlock(
   block: ArticleBlock,
   index: number,
   imagePosition: "center" | "top"
-  
 ) {
   switch (block.type) {
     case "h2":
@@ -195,6 +196,41 @@ function renderBlock(
         >
           {block.text}
         </h2>
+      );
+
+    case "video":
+      return (
+        <div
+          key={index}
+          className="my-12 grid grid-cols-1 md:grid-cols-[0.9fr_1.1fr] gap-6 md:gap-10 items-center"
+        >
+          <div className="md:pt-8">
+            <p className="font-serif text-[22px] leading-[1.5] text-neutral-900 tracking-tight">
+              From the first moodboard to the final shutter click, we create a
+              space where you can finally take up the room you deserve.
+            </p>
+          </div>
+
+          <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-black">
+            <video
+              src={block.src}
+              poster="/images/trinity/6.jpg"
+              controls
+              playsInline
+              className="w-full max-w-[520px] h-auto transition duration-500 hover:scale-[1.02]"
+              {...(block.autoplay && {
+                autoPlay: true,
+                muted: true,
+                loop: true,
+              })}
+            />
+            {block.caption ? (
+              <p className="mt-3 text-sm text-neutral-500 text-center">
+                {block.caption}
+              </p>
+            ) : null}
+          </div>
+        </div>
       );
 
     case "p":
@@ -237,22 +273,17 @@ function renderBlock(
     case "hr":
       return <div key={index} className="my-12 h-px bg-neutral-200/70" />;
 
-      case "gallery":
-  return (
-    <GalleryBlock
-      key={index}
-      images={block.images}
-      caption={block.caption}
-    />
-  );
+    case "gallery":
+      return (
+        <GalleryBlock
+          key={index}
+          images={block.images}
+          caption={block.caption}
+        />
+      );
+
     case "credits":
-  return (
-    <CreditsCard
-      key={index}
-      items={block.items}
-      logo={block.logo}
-    />
-  );
+      return <CreditsCard key={index} items={block.items} logo={block.logo} />;
 
     default:
       return null;
@@ -329,11 +360,11 @@ export default async function ArticlePage({
         </div>
 
         <article className="max-w-2xl mx-auto px-6">
-  {article.blocks.map((b, i) => renderBlock(b, i, imagePosition))}
+          {article.blocks.map((b, i) => renderBlock(b, i, imagePosition))}
 
-  <SubmitForm />
+          <SubmitForm />
 
-  <div className="mt-14 h-px bg-neutral-200/70" />
+          <div className="mt-14 h-px bg-neutral-200/70" />
 
           <div className="mt-10 flex items-center justify-between gap-6 text-sm">
             <Link
