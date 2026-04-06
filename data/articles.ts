@@ -212,7 +212,7 @@ But real life is different.`,
 
     {
       type: "image",
-      src: "/images/practice/03.jpg",
+      src: "/images/practice/17.jpg",
       alt: "Details",
       fullBleed: true,
     },
@@ -255,7 +255,7 @@ But real life is different.`,
         { src: "/images/practice/05.jpg", alt: "Practice look 05" },
         { src: "/images/practice/06.jpg", alt: "Practice look 06" },
         { src: "/images/practice/07.jpg", alt: "Practice look 07" },
-        { src: "/images/practice/08.jpg", alt: "Practice look 08" },
+        { src: "/images/practice/16.jpg", alt: "Practice look 08" },
       ],
     },
 
