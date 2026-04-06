@@ -315,23 +315,23 @@ export default async function ArticlePage({
             imagePosition === "top" ? "object-top" : "object-center"
           }`}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#FFFBEB]/75 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
 
         <div className="absolute bottom-0 left-0 right-0">
           <div className="max-w-5xl mx-auto px-6 pb-10 md:pb-14">
-            <p className="text-xs uppercase tracking-[0.35em] text-neutral-700">
+            <p className="text-xs uppercase tracking-[0.35em] text-white/80">
               {article.category}
             </p>
 
-            <h1 className="mt-4 text-4xl md:text-6xl font-serif leading-tight">
+            <h1 className="mt-4 text-4xl md:text-6xl font-serif leading-tight text-white">
               {article.title}
             </h1>
 
-            <p className="mt-5 max-w-2xl text-lg text-neutral-800 leading-relaxed">
+            <p className="mt-5 max-w-2xl text-lg text-white/90 leading-relaxed">
               {article.excerpt}
             </p>
 
-            <div className="mt-6 flex items-center gap-5 text-sm text-neutral-700">
+            <div className="mt-6 flex items-center gap-5 text-sm text-white/80">
               {article.date ? (
                 <span>
                   Published{" "}
@@ -345,7 +345,7 @@ export default async function ArticlePage({
               <span className="opacity-60">•</span>
               <Link
                 href="/#latest"
-                className="underline underline-offset-4 hover:text-black transition"
+                className="underline underline-offset-4 hover:text-white transition"
               >
                 Back to home
               </Link>

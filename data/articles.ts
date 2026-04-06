@@ -308,7 +308,7 @@ But real life is different.`,
     category: "Becoming",
     excerpt:
       "A visual narrative exploring three energies of a modern woman — power, dominance, and vulnerability.",
-    image: "/images/trinity/15.jpg",
+    image: "/images/trinity/115.jpg",
     date: "2026-04-03",
     blocks: [
       {
@@ -350,8 +350,9 @@ But real life is different.`,
         type: "gallery",
         images: [
           { src: "/images/trinity/11.jpeg", alt: "Trinity phase 1 image 1" },
-          { src: "/images/trinity/2.jpeg", alt: "Trinity phase 1 image 2" },
+          { src: "/images/trinity/58.jpeg", alt: "Trinity phase 1 image 2" },
           { src: "/images/trinity/1.jpeg", alt: "Trinity phase 1 image 3" },
+          { src: "/images/trinity/55.jpeg", alt: "Trinity phase 1 image 4" },
         ],
       },
       {
@@ -363,8 +364,10 @@ But real life is different.`,
         images: [
           { src: "/images/trinity/27.jpeg", alt: "Trinity phase 2 image 1" },
           { src: "/images/trinity/22.jpeg", alt: "Trinity phase 2 image 2" },
-          { src: "/images/trinity/8.jpeg", alt: "Trinity phase 2 image 3" },
+          { src: "/images/trinity/57.jpeg", alt: "Trinity phase 2 image 3" },
           { src: "/images/trinity/25.jpeg", alt: "Trinity phase 2 image 4" },
+          { src: "/images/trinity/56.jpeg", alt: "Trinity phase 2 image 5" },
+           { src: "/images/trinity/4.jpeg", alt: "Trinity phase 2 image 6" },
         ],
       },
       {
