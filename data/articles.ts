@@ -168,69 +168,138 @@ But real life is different.`,
 
   // ================= PRACTICE =================
   {
-    slug: "marina-smagin-artmari-handmade-dsn",
-    column: "practice",
-    title: "Marina Smagin — Artmari Handmade DSN",
-    category: "Practice",
-    excerpt:
-      "An eco-couture designer transforming recycled textiles into sculptural couture garments.",
-    image: "/images/practice/10.jpg",
-    date: "2026-03-20",
-    blocks: [
-      {
-        type: "p",
-        dropCap: true,
-        text: `My name is Marina Smagin, and my brand is Artmari Handmade DSN.`,
-      },
-      {
-        type: "image",
-        src: "/images/practice/02.jpg",
-        alt: "Look",
-        fullBleed: true,
-      },
-      {
-        type: "image",
-        src: "/images/practice/03.jpg",
-        alt: "Details",
-        fullBleed: true,
-      },
-      {
-        type: "image",
-        src: "/images/practice/04.jpg",
-        alt: "Editorial",
-        fullBleed: true,
-      },
-      {
-        type: "gallery",
-        images: [
-          { src: "/images/practice/05.jpg", alt: "Practice look 05" },
-          { src: "/images/practice/06.jpg", alt: "Practice look 06" },
-          { src: "/images/practice/07.jpg", alt: "Practice look 07" },
-          { src: "/images/practice/08.jpg", alt: "Practice look 08" },
-        ],
-      },
-      {
-        type: "credits",
-        items: [
-          { label: "Designer", value: "Marina Smagin" },
-          { label: "Brand", value: "Artmari Handmade DSN" },
-          { label: "Instagram", value: "@artmari_handmade_dsn" },
-          {
-            label: "Website",
-            value: "artmaridsn.com",
-            href: "https://www.artmaridsn.com/",
-          },
-          { label: "Column", value: "PRACTICE" },
-        ],
-        logo: {
-          src: "/images/practice/logo1.jpg",
-          href: "https://www.artmaridsn.com/",
-          alt: "Artmari Handmade DSN logo",
-        },
-      },
-    ],
-  },
+  slug: "marina-smagin-artmari-handmade-dsn",
+  column: "practice",
+  title: "Marina Smagin — Artmari Handmade DSN",
+  category: "Practice",
+  excerpt:
+    "An eco-couture designer transforming recycled textiles into sculptural couture garments.",
+  image: "/images/practice/10.jpg",
+  date: "2026-03-20",
+  blocks: [
+    {
+      type: "p",
+      dropCap: true,
+      text: `My name is Marina Smagin, and my brand is Artmari Handmade DSN (Instagram @artmari_handmade_dsn). I am an eco-couture fashion designer working at the intersection of sustainability and high fashion craftsmanship.`,
+    },
 
+    {
+      type: "p",
+      text: `My work focuses on transforming unconventional materials into couture garments. I create pieces using recycled textiles, including neckties and repurposed fabrics, combining ecological design principles with traditional hand couture techniques.`,
+    },
+
+    {
+      type: "image",
+      src: "/images/practice/02.jpg",
+      alt: "Look",
+      fullBleed: true,
+    },
+
+    {
+      type: "p",
+      text: `Each garment is created largely by hand, reflecting a slow fashion philosophy where craftsmanship, sustainability, and artistic storytelling meet.`,
+    },
+
+    {
+      type: "h2",
+      text: "PROJECT",
+    },
+
+    {
+      type: "p",
+      text: `This editorial presents two couture gowns created for an international fashion event in Italy and designed for contestants appearing on the red carpet.`,
+    },
+
+    {
+      type: "image",
+      src: "/images/practice/03.jpg",
+      alt: "Details",
+      fullBleed: true,
+    },
+
+    {
+      type: "p",
+      text: `Both dresses are part of my eco-couture concept. The garments combine recycled materials with traditional couture techniques. Approximately 80% of the work was completed entirely by hand.`,
+    },
+
+    {
+      type: "p",
+      text: `The creation of the two gowns took nearly five months of intensive craftsmanship. Each layer, structure, and decorative element was carefully constructed to achieve a sculptural silhouette while maintaining sustainable design principles.`,
+    },
+
+    {
+      type: "h2",
+      text: "DESIGN CONCEPT",
+    },
+
+    {
+      type: "image",
+      src: "/images/practice/04.jpg",
+      alt: "Editorial",
+      fullBleed: true,
+    },
+
+    {
+      type: "p",
+      text: `My design philosophy is based on the idea that sustainability can coexist with haute couture. I explore how discarded materials can be transformed into luxury garments.`,
+    },
+
+    {
+      type: "p",
+      text: `In my work, materials such as ties and reclaimed fabrics become the foundation for couture silhouettes. Through hand draping, layering, and detailed manual construction, the garments evolve into expressive pieces that combine ecological awareness with artistic fashion design.`,
+    },
+
+    {
+      type: "gallery",
+      images: [
+        { src: "/images/practice/05.jpg", alt: "Practice look 05" },
+        { src: "/images/practice/06.jpg", alt: "Practice look 06" },
+        { src: "/images/practice/07.jpg", alt: "Practice look 07" },
+        { src: "/images/practice/08.jpg", alt: "Practice look 08" },
+      ],
+    },
+
+    {
+      type: "p",
+      text: `The goal is to demonstrate that sustainable fashion can be both innovative and visually striking.`,
+    },
+
+    {
+      type: "h2",
+      text: "EDITORIAL",
+    },
+
+    {
+      type: "p",
+      text: `The editorial photoshoot highlights the dramatic textures and sculptural volumes of the gowns. Set against bold backgrounds and strong lighting, the images emphasize movement, craftsmanship, and the layered construction of the dresses.`,
+    },
+
+    {
+      type: "p",
+      text: `The visual concept reflects the transformation of recycled materials into couture forms — from raw textile elements into refined fashion pieces designed for red carpet presence.`,
+    },
+
+    {
+      type: "credits",
+      items: [
+        { label: "Designer", value: "Marina Smagin" },
+        { label: "Brand", value: "Artmari Handmade DSN" },
+        { label: "Instagram", value: "@artmari_handmade_dsn" },
+        {
+          label: "Website",
+          value: "artmaridsn.com",
+          href: "https://www.artmaridsn.com/",
+        },
+        { label: "Column", value: "PRACTICE" },
+      ],
+      logo: {
+        src: "/images/practice/logo1.jpg",
+        href: "https://www.artmaridsn.com/",
+        alt: "Artmari Handmade DSN logo",
+      },
+    },
+  ],
+},
   // ================= BECOMING =================
   {
     slug: "trinity-sofia",
