@@ -308,7 +308,7 @@ But real life is different.`,
     category: "Becoming",
     excerpt:
       "A visual narrative exploring three energies of a modern woman — power, dominance, and vulnerability.",
-    image: "/images/trinity/30.jpeg",
+    image: "/images/trinity/15.jpg",
     date: "2026-04-03",
     blocks: [
       {
