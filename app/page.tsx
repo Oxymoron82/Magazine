@@ -1,8 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import EditorialCard from "@/components/EditorialCard";
+import { articles } from "@/data/articles";
 
 export default function HomePage() {
+  const latestArticles = [...articles]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 4);
+
   return (
     <main className="bg-[#FFFBEB] text-neutral-900">
       {/* HERO */}
@@ -18,19 +23,19 @@ export default function HomePage() {
         </div>
 
         <div className="relative h-full max-w-7xl mx-auto px-6 flex items-end pb-24">
-         <div className="max-w-2xl">
-  <p className="text-xs tracking-[0.35em] uppercase text-white mb-6">
-    Online Magazine
-  </p>
+          <div className="max-w-2xl">
+            <p className="text-xs tracking-[0.35em] uppercase text-white mb-6">
+              Online Magazine
+            </p>
 
-  <h1 className="text-[clamp(3rem,8vw,7rem)] leading-none font-semibold font-serif text-white">
-    THE ISSUE
-  </h1>
+            <h1 className="text-[clamp(3rem,8vw,7rem)] leading-none font-semibold font-serif text-white">
+              THE ISSUE
+            </h1>
 
-  <p className="mt-6 text-xs tracking-[0.35em] uppercase text-white">
-    An Independent Editorial Platform
-  </p>
-</div>
+            <p className="mt-6 text-xs tracking-[0.35em] uppercase text-white">
+              An Independent Editorial Platform
+            </p>
+          </div>
         </div>
       </section>
 
@@ -55,7 +60,7 @@ export default function HomePage() {
               The Issue is not simply a magazine about fashion, business, or
               visuals. It is a space about continuing.
             </p>
- 
+
             <p>
               About people who don’t move in a straight line. About those who
               begin again — in a new country, a new role, at a new age.
@@ -112,7 +117,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* thin divider */}
       <div className="max-w-7xl mx-auto px-6">
         <div className="h-px bg-neutral-200/70" />
       </div>
@@ -123,7 +127,6 @@ export default function HomePage() {
         className="max-w-7xl mx-auto px-6 py-24 md:py-28 scroll-mt-24"
       >
         <div className="grid md:grid-cols-12 gap-14 items-center">
-          {/* TEXT */}
           <div className="md:col-span-7 max-w-2xl">
             <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
               Editor’s Note
@@ -151,7 +154,6 @@ export default function HomePage() {
             </Link>
           </div>
 
-          {/* IMAGE */}
           <div className="md:col-span-5">
             <div className="relative ml-auto w-full max-w-sm aspect-[4/5]">
               <Image
@@ -165,12 +167,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* thin divider */}
       <div className="max-w-7xl mx-auto px-6">
         <div className="h-px bg-neutral-200/70" />
       </div>
 
-      {/* COLUMNS (Rubrics) */}
+      {/* COLUMNS */}
       <section
         id="columns"
         className="max-w-7xl mx-auto px-6 py-24 md:py-28 scroll-mt-24"
@@ -220,36 +221,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* FULL WIDTH EDITORIAL — Photo Stories */}
-   {/*    <section
-        id="stories"
-        className="relative h-[80vh] w-full my-28 md:my-32 scroll-mt-24"
-      >
-        <div className="absolute inset-0">
-          <Image
-            src="/images/hero.jpg"
-            alt="Featured editorial"
-            fill
-            className="object-cover"
-          />
-        </div>
-
-        <div className="relative h-full flex items-center justify-center text-center px-6">
-          <div>
-            <p className="text-xs tracking-[0.35em] uppercase text-black mb-6">
-              Photo Stories
-            </p>
-
-            <h2 className="text-[clamp(3rem,8vw,7rem)] leading-none font-semibold font-serif">
-              A STUDY
-              <br />
-              IN SILENCE
-            </h2>
-          </div>
-        </div>
-      </section>
-      */}
-
       {/* LATEST */}
       <section
         id="latest"
@@ -267,31 +238,15 @@ export default function HomePage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-x-10 gap-y-24">
-          <EditorialCard
-            category="Issue"
-            title="Loewe × Castor Fleuriste"
-            image="/images/card-4.jpg"
-          />
-
-          <EditorialCard
-            category="Design"
-            title="Ronan Bouroullec"
-            image="/images/card-5.jpg"
-            mediaStyle={{ borderTopRightRadius: "140px" }}
-          />
-
-          <EditorialCard
-            category="Fashion story"
-            title="Boris Ovin + Imruh Asha"
-            image="/images/card-6.jpg"
-            mediaStyle={{ borderTopLeftRadius: "140px" }}
-          />
-
-          <EditorialCard
-            category="Portrait"
-            title="Bibi Borthwick + Jasmine Hassett"
-            image="/images/card-7.jpg"
-          />
+          {latestArticles.map((article) => (
+            <Link key={article.slug} href={`/article/${article.slug}`} className="block">
+              <EditorialCard
+                category={article.category}
+                title={article.title}
+                image={article.image}
+              />
+            </Link>
+          ))}
         </div>
       </section>
     </main>
