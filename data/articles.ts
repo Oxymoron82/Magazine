@@ -393,24 +393,47 @@ But real life is different.`,
       },
       {
         type: "p",
-        text: `"When I signed up for TRINITY, I expected a beautiful photoshoot. I didn't expect to meet so many different versions of myself in the mirror."`,
+        text: `“When I came to the TRINITY project, I thought it would be just a beautiful photoshoot. I didn’t know it would become a meeting with myself.”`,
       },
       {
         type: "p",
-        text: `At first, I felt like an 'Iron Lady' next to that red machine—it was my familiar mask of control. But moving into the red gown, I suddenly felt a surge of power I hadn't tapped into in years.`,
+        text: `At first, it felt like I was stepping back into a familiar role. Next to the red car, I felt strong, composed — the version of me that always keeps everything under control. It felt familiar, even safe.`,
+      },
+
+
+      {
+        type: "p",
+        text: `But then something began to shift.`,
       },
       {
         type: "p",
-        text: `The finale in lace... it was almost overwhelming. It felt so strange, yet so right, to let myself be fragile and feel completely safe doing so.`,
+        text: `In the red dress, I suddenly felt a kind of strength I hadn’t noticed in myself for a long time. Not the kind you perform, but the kind you simply allow yourself to feel — without effort.`,
       },
       {
         type: "p",
-        text: `A massive thank you to the crew! This is a world-class team. They guided me through every detail—from the high-fashion styling to every micro-adjustment in my posing.`,
+        text: `And in the final scene, in lace, everything became quiet. As if there was no longer a need to prove anything. What remained was just a feeling — to be. To feel. To allow softness without hiding it.`,
       },
+{
+        type: "p",
+        text: `It was a little scary. And at the same time, it felt completely right.`,
+      },
+
       {
         type: "p",
-        text: `The icing on the cake? We landed a feature in the Spanish magazine Lovely! It was a level of success I hadn't even dared to dream of.`,
+        text: `I am deeply grateful to the team for the way they guided me through this process. For the attention to detail, for the support, for creating a space where I could be different versions of myself.`,
       },
+
+       {
+        type: "p",
+        text: `And it still feels almost unreal that this story found its continuation — being featured in the Spanish magazine Lovely became something more than just a result of the shoot.`,
+      },
+
+       {
+        type: "p",
+        text: `It felt like a confirmation: when you allow yourself to be real, it always resonates.`,
+      },
+
+
       {
         type: "h2",
         text: "READY TO BE OUR NEXT HERO?",

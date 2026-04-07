@@ -28,9 +28,13 @@ export default function HomePage() {
               Online Magazine
             </p>
 
-            <h1 className="text-[clamp(3rem,8vw,7rem)] leading-none font-semibold font-serif text-white">
-              THE ISSUE
-            </h1>
+            <h1 className="font-sans text-[clamp(3rem,8vw,7rem)] leading-none font-light text-white">
+  <span className="tracking-[0.2em]">THE</span>{" "}
+  <span className="text-[clamp(2.6rem,7vw,6.4rem)] tracking-[0.02em]">
+    issue
+  </span>{" "}
+  <span className="tracking-[0.2em]">№</span>
+</h1>
 
             <p className="mt-6 text-xs tracking-[0.35em] uppercase text-white">
               An Independent Editorial Platform
