@@ -3,6 +3,21 @@ import Image from "next/image";
 import EditorialCard from "@/components/EditorialCard";
 import { articles } from "@/data/articles";
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const article = articles.find((a) => a.slug === params.slug);
+
+  if (!article) return {};
+
+  return {
+    title: `${article.title} | The Issue N`,
+    description: article.excerpt,
+  };
+}
+
 export default function HomePage() {
   const latestArticles = [...articles]
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
@@ -122,8 +137,7 @@ export default function HomePage() {
 
             <p className="pt-4 font-serif text-[20px] md:text-[22px] leading-snug">
               This magazine is for those who understand:
-              <br />
-              a new chapter doesn’t arrive by itself —
+              <br />a new chapter doesn’t arrive by itself —
               <br />
               it is created.
             </p>
@@ -158,7 +172,9 @@ export default function HomePage() {
               Not glossy beauty, but real beauty — strong, confident, alive.
             </p>
 
-            <p className="mt-4 italic text-neutral-500 text-sm">by Sofia Solas</p>
+            <p className="mt-4 italic text-neutral-500 text-sm">
+              by Sofia Solas
+            </p>
 
             <Link
               href="/editor"
@@ -266,6 +282,41 @@ export default function HomePage() {
             </Link>
           ))}
         </div>
+      </section>
+
+      {/* SEO / ABOUT BLOCK */}
+      <section className="max-w-7xl mx-auto px-6 pb-24 md:pb-32">
+        <div className="h-px bg-neutral-200/70 mb-12" />
+
+        <div className="group rounded-[28px] border border-neutral-200/70 bg-white/30 px-8 py-12 md:px-14 md:py-16 transition-all duration-500 hover:bg-white/45 hover:shadow-[0_10px_40px_rgba(0,0,0,0.04)]">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+            <div className="lg:col-span-4">
+              <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
+                About
+              </p>
+
+              <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-[1.05] text-neutral-900 transition-transform duration-500 group-hover:translate-x-1">
+                The Issue N
+              </h2>
+            </div>
+
+            <div className="lg:col-span-8">
+              <p className="text-[22px] md:text-[30px] leading-[1.45] text-neutral-800 max-w-none">
+                The Issue N is an independent fashion and editorial magazine
+                exploring contemporary culture through visual storytelling,
+                photography, and design.
+              </p>
+
+              <p className="mt-6 text-[17px] md:text-[20px] leading-[1.75] text-neutral-700 max-w-[1100px]">
+                Based in Northern Europe, the magazine features designers,
+                photographers, and creative entrepreneurs working at the
+                intersection of aesthetics, sustainability, and identity.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="h-px bg-neutral-200/70 mt-12" />
       </section>
     </main>
   );
