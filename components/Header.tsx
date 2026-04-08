@@ -1,44 +1,37 @@
+"use client";
+
 import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-30 bg-[#FFFBEB]/90 backdrop-blur">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* LOGO */}
-        <Link href="/#home" className="tracking-[0.2em] text-sm font-semibold">
+    <header className="fixed top-0 left-0 right-0 z-40 bg-black/25 backdrop-blur-md">
+      <div className="w-full px-8 md:px-12 py-5 flex items-center justify-between">
+        <Link
+          href="/#home"
+          className="tracking-[0.2em] text-base md:text-lg font-semibold text-white"
+        >
           MAGAZINE
         </Link>
 
-        {/* NAV */}
-        <nav className="hidden md:flex gap-6 text-sm text-neutral-700">
-          <Link href="/#columns" className="hover:text-black transition">
+        <nav className="hidden md:flex gap-8 text-base font-semibold text-white/95">
+          <Link href="/#columns" className="hover:text-white transition">
             Columns
           </Link>
-       {/*   <Link href="/#stories" className="hover:text-black transition">
-            Photo Stories
-          </Link> */}
-          <Link href="/#latest" className="hover:text-black transition">
+          <Link href="/#latest" className="hover:text-white transition">
             Latest
           </Link>
-          <Link href="/#about" className="hover:text-black transition">
+          <Link href="/#about" className="hover:text-white transition">
             About
           </Link>
-
-          {/* короткий блок Editor’s Note на главной */}
-          <Link href="/#editors-note" className="hover:text-black transition">
+          <Link href="/#editors-note" className="hover:text-white transition">
             Editor&apos;s Note
           </Link>
-
-          {/* футер на главной */}
-          <Link href="/#contact" className="hover:text-black transition">
+          <Link href="/#contact" className="hover:text-white transition">
             Contacts
           </Link>
         </nav>
 
-        <a
-          href="#"
-          className="text-sm text-neutral-600 hover:text-black transition"
-        >
+        <a href="#" className="text-base font-semibold text-white/95 hover:text-white transition">
           IG
         </a>
       </div>

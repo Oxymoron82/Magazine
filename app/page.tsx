@@ -11,34 +11,44 @@ export default function HomePage() {
   return (
     <main className="bg-[#FFFBEB] text-neutral-900">
       {/* HERO */}
-      <section id="home" className="relative h-[90vh] w-full scroll-mt-24">
-        <div className="absolute inset-0">
-          <Image
-            src="/images/editorial-2.jpg"
-            alt="Editorial cover"
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
+      <section
+        id="home"
+        className="relative h-[100svh] min-h-[720px] w-full scroll-mt-24"
+      >
+        <div className="grid h-full grid-cols-1 md:grid-cols-2">
+          {/* LEFT SIDE — PHOTO */}
+          <div className="relative h-[55vh] md:h-full">
+            <Image
+              src="/images/editorial-2.jpg"
+              alt="Editorial cover"
+              fill
+              priority
+              className="object-cover"
+            />
 
-        <div className="relative h-full max-w-7xl mx-auto px-6 flex items-end pb-24">
-          <div className="max-w-2xl">
-            <p className="text-xs tracking-[0.35em] uppercase text-white mb-6">
-              Online Magazine
-            </p>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/5 to-transparent" />
 
-            <h1 className="font-sans text-[clamp(3rem,8vw,7rem)] leading-none font-light text-white">
-  <span className="tracking-[0.2em]">THE</span>{" "}
-  <span className="text-[clamp(2.6rem,7vw,6.4rem)] tracking-[0.02em]">
-    issue
-  </span>{" "}
-  <span className="tracking-[0.2em]">№</span>
-</h1>
+            {/* CENTERED TAGLINE */}
+            <div className="absolute inset-0 flex items-center justify-center px-6 md:px-10">
+              <p className="font-didot text-[16px] md:text-[22px] tracking-[0.03em] text-white whitespace-nowrap text-center">
+                An Independent Editorial Platform
+              </p>
+            </div>
+          </div>
 
-            <p className="mt-6 text-xs tracking-[0.35em] uppercase text-white">
-              An Independent Editorial Platform
-            </p>
+          {/* RIGHT SIDE — LOGO PANEL */}
+          <div className="relative h-[45vh] md:h-full bg-[#E1D5D5]">
+            <div className="flex h-full items-center justify-center px-8 md:px-12 pt-20 md:pt-24 pb-10">
+              <div className="relative w-full max-w-[760px] aspect-[3/4]">
+                <Image
+                  src="/images/logo_main.jpg"
+                  alt="the ISSUE N logo"
+                  fill
+                  priority
+                  className="object-contain"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -186,7 +196,7 @@ export default function HomePage() {
               Columns
             </p>
             <h2 className="mt-3 text-2xl md:text-3xl font-serif">
-              Essays, voices, and personal angles.
+              Essays, voices and personal angles.
             </h2>
           </div>
 
@@ -243,7 +253,11 @@ export default function HomePage() {
 
         <div className="grid grid-cols-1 md:grid-cols-4 gap-x-10 gap-y-24">
           {latestArticles.map((article) => (
-            <Link key={article.slug} href={`/article/${article.slug}`} className="block">
+            <Link
+              key={article.slug}
+              href={`/article/${article.slug}`}
+              className="block"
+            >
               <EditorialCard
                 category={article.category}
                 title={article.title}

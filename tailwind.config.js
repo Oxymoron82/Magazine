@@ -10,6 +10,8 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-inter)"],
         serif: ["var(--font-playfair)"],
+        didot: ["var(--font-didot)"],
+        bebas: ["var(--font-bebas)"], // 🔥 добавили
       },
     },
   },
