@@ -50,7 +50,7 @@ export const articles: Article[] = [
     title: "Sexuality Is Not a Pose — It Is a State",
     category: "Intimacy",
     excerpt:
-      "Sexuality is not something we create. It returns the moment we allow ourselves to feel again.",
+      "An editorial feature on intimacy, sensuality, and identity, exploring how sexuality returns through presence, feeling, and contemporary visual storytelling.",
     image: "/images/Intimacy/1/1.jpg",
     date: "2026-03-04",
     blocks: [
@@ -72,7 +72,7 @@ But real life is different.`,
       {
         type: "image",
         src: "/images/Intimacy/1/2.jpg",
-        alt: "Intimacy visual study",
+        alt: "Editorial intimacy photography with a sensual visual study",
         fullBleed: true,
       },
       {
@@ -82,7 +82,7 @@ But real life is different.`,
       {
         type: "image",
         src: "/images/Intimacy/1/3.jpg",
-        alt: "Intimacy portrait",
+        alt: "Intimacy portrait for an editorial fashion and photography feature",
         fullBleed: true,
       },
       {
@@ -113,7 +113,7 @@ But real life is different.`,
     title: "When Heating Becomes Design: The Business Behind Radiaatorikeskus",
     category: "Work",
     excerpt:
-      "How an Estonian company turned a functional heating system into a design element shaping modern interiors.",
+      "A business and design feature on Radiaatorikeskus, an Estonian company transforming heating systems into interior design elements through architecture, entrepreneurship, and modern aesthetics.",
     image: "/images/work/radiaatorikeskus/1.jpeg",
     date: "2026-03-17",
     blocks: [
@@ -125,25 +125,25 @@ But real life is different.`,
       {
         type: "image",
         src: "/images/work/radiaatorikeskus/1.jpeg",
-        alt: "Showroom",
+        alt: "Radiaatorikeskus showroom interior design in Estonia",
         fullBleed: true,
       },
       {
         type: "image",
         src: "/images/work/radiaatorikeskus/3.jpeg",
-        alt: "Detail",
+        alt: "Heating design detail by Radiaatorikeskus",
         fullBleed: true,
       },
       {
         type: "image",
         src: "/images/work/radiaatorikeskus/4.jpeg",
-        alt: "Interior",
+        alt: "Modern interior featuring designer heating solutions",
         fullBleed: true,
       },
       {
         type: "image",
         src: "/images/work/radiaatorikeskus/2.jpeg",
-        alt: "Architecture",
+        alt: "Architectural heating and interior design feature in Estonia",
         fullBleed: true,
       },
       {
@@ -168,138 +168,151 @@ But real life is different.`,
 
   // ================= PRACTICE =================
   {
-  slug: "marina-smagin-artmari-handmade-dsn",
-  column: "practice",
-  title: "Marina Smagin — Artmari Handmade DSN",
-  category: "Practice",
-  excerpt:
-    "An eco-couture designer transforming recycled textiles into sculptural couture garments.",
-  image: "/images/practice/10.jpg",
-  date: "2026-03-20",
-  blocks: [
-    {
-      type: "p",
-      dropCap: true,
-      text: `My name is Marina Smagin, and my brand is Artmari Handmade DSN (Instagram @artmari_handmade_dsn). I am an eco-couture fashion designer working at the intersection of sustainability and high fashion craftsmanship.`,
-    },
-
-    {
-      type: "p",
-      text: `My work focuses on transforming unconventional materials into couture garments. I create pieces using recycled textiles, including neckties and repurposed fabrics, combining ecological design principles with traditional hand couture techniques.`,
-    },
-
-    {
-      type: "image",
-      src: "/images/practice/02.jpg",
-      alt: "Look",
-      fullBleed: true,
-    },
-
-    {
-      type: "p",
-      text: `Each garment is created largely by hand, reflecting a slow fashion philosophy where craftsmanship, sustainability, and artistic storytelling meet.`,
-    },
-
-    {
-      type: "h2",
-      text: "PROJECT",
-    },
-
-    {
-      type: "p",
-      text: `This editorial presents two couture gowns created for an international fashion event in Italy and designed for contestants appearing on the red carpet.`,
-    },
-
-    {
-      type: "image",
-      src: "/images/practice/17.jpg",
-      alt: "Details",
-      fullBleed: true,
-    },
-
-    {
-      type: "p",
-      text: `Both dresses are part of my eco-couture concept. The garments combine recycled materials with traditional couture techniques. Approximately 80% of the work was completed entirely by hand.`,
-    },
-
-    {
-      type: "p",
-      text: `The creation of the two gowns took nearly five months of intensive craftsmanship. Each layer, structure, and decorative element was carefully constructed to achieve a sculptural silhouette while maintaining sustainable design principles.`,
-    },
-
-    {
-      type: "h2",
-      text: "DESIGN CONCEPT",
-    },
-
-    {
-      type: "image",
-      src: "/images/practice/04.jpg",
-      alt: "Editorial",
-      fullBleed: true,
-    },
-
-    {
-      type: "p",
-      text: `My design philosophy is based on the idea that sustainability can coexist with haute couture. I explore how discarded materials can be transformed into luxury garments.`,
-    },
-
-    {
-      type: "p",
-      text: `In my work, materials such as ties and reclaimed fabrics become the foundation for couture silhouettes. Through hand draping, layering, and detailed manual construction, the garments evolve into expressive pieces that combine ecological awareness with artistic fashion design.`,
-    },
-
-    {
-      type: "gallery",
-      images: [
-        { src: "/images/practice/05.jpg", alt: "Practice look 05" },
-        { src: "/images/practice/06.jpg", alt: "Practice look 06" },
-        { src: "/images/practice/07.jpg", alt: "Practice look 07" },
-        { src: "/images/practice/16.jpg", alt: "Practice look 08" },
-      ],
-    },
-
-    {
-      type: "p",
-      text: `The goal is to demonstrate that sustainable fashion can be both innovative and visually striking.`,
-    },
-
-    {
-      type: "h2",
-      text: "EDITORIAL",
-    },
-
-    {
-      type: "p",
-      text: `The editorial photoshoot highlights the dramatic textures and sculptural volumes of the gowns. Set against bold backgrounds and strong lighting, the images emphasize movement, craftsmanship, and the layered construction of the dresses.`,
-    },
-
-    {
-      type: "p",
-      text: `The visual concept reflects the transformation of recycled materials into couture forms — from raw textile elements into refined fashion pieces designed for red carpet presence.`,
-    },
-
-    {
-      type: "credits",
-      items: [
-        { label: "Designer", value: "Marina Smagin" },
-        { label: "Brand", value: "Artmari Handmade DSN" },
-        { label: "Instagram", value: "@artmari_handmade_dsn" },
-        {
-          label: "Website",
-          value: "artmaridsn.com",
-          href: "https://www.artmaridsn.com/",
-        },
-        { label: "Column", value: "PRACTICE" },
-      ],
-      logo: {
-        src: "/images/practice/logo1.jpg",
-        href: "https://www.artmaridsn.com/",
-        alt: "Artmari Handmade DSN logo",
+    slug: "marina-smagin-artmari-handmade-dsn",
+    column: "practice",
+    title: "Marina Smagin — Artmari Handmade DSN",
+    category: "Practice",
+    excerpt:
+      "An editorial interview with eco-couture designer Marina Smagin on sustainable fashion, recycled textiles, handmade couture, and creative practice in contemporary design.",
+    image: "/images/practice/10.jpg",
+    date: "2026-03-20",
+    blocks: [
+      {
+        type: "p",
+        dropCap: true,
+        text: `My name is Marina Smagin, and my brand is Artmari Handmade DSN (Instagram @artmari_handmade_dsn). I am an eco-couture fashion designer working at the intersection of sustainability and high fashion craftsmanship.`,
       },
-    },
-  ],
-},
+
+      {
+        type: "p",
+        text: `My work focuses on transforming unconventional materials into couture garments. I create pieces using recycled textiles, including neckties and repurposed fabrics, combining ecological design principles with traditional hand couture techniques.`,
+      },
+
+      {
+        type: "image",
+        src: "/images/practice/02.jpg",
+        alt: "Eco couture fashion look by Marina Smagin",
+        fullBleed: true,
+      },
+
+      {
+        type: "p",
+        text: `Each garment is created largely by hand, reflecting a slow fashion philosophy where craftsmanship, sustainability, and artistic storytelling meet.`,
+      },
+
+      {
+        type: "h2",
+        text: "PROJECT",
+      },
+
+      {
+        type: "p",
+        text: `This editorial presents two couture gowns created for an international fashion event in Italy and designed for contestants appearing on the red carpet.`,
+      },
+
+      {
+        type: "image",
+        src: "/images/practice/17.jpg",
+        alt: "Handmade couture details in sustainable fashion design",
+        fullBleed: true,
+      },
+
+      {
+        type: "p",
+        text: `Both dresses are part of my eco-couture concept. The garments combine recycled materials with traditional couture techniques. Approximately 80% of the work was completed entirely by hand.`,
+      },
+
+      {
+        type: "p",
+        text: `The creation of the two gowns took nearly five months of intensive craftsmanship. Each layer, structure, and decorative element was carefully constructed to achieve a sculptural silhouette while maintaining sustainable design principles.`,
+      },
+
+      {
+        type: "h2",
+        text: "DESIGN CONCEPT",
+      },
+
+      {
+        type: "image",
+        src: "/images/practice/04.jpg",
+        alt: "Editorial sustainable fashion portrait by Marina Smagin",
+        fullBleed: true,
+      },
+
+      {
+        type: "p",
+        text: `My design philosophy is based on the idea that sustainability can coexist with haute couture. I explore how discarded materials can be transformed into luxury garments.`,
+      },
+
+      {
+        type: "p",
+        text: `In my work, materials such as ties and reclaimed fabrics become the foundation for couture silhouettes. Through hand draping, layering, and detailed manual construction, the garments evolve into expressive pieces that combine ecological awareness with artistic fashion design.`,
+      },
+
+      {
+        type: "gallery",
+        images: [
+          {
+            src: "/images/practice/05.jpg",
+            alt: "Sustainable couture garment by Marina Smagin",
+          },
+          {
+            src: "/images/practice/06.jpg",
+            alt: "Eco couture fashion detail in editorial photography",
+          },
+          {
+            src: "/images/practice/07.jpg",
+            alt: "Handmade designer gown created from recycled textiles",
+          },
+          {
+            src: "/images/practice/16.jpg",
+            alt: "Creative fashion editorial featuring sculptural couture",
+          },
+        ],
+      },
+
+      {
+        type: "p",
+        text: `The goal is to demonstrate that sustainable fashion can be both innovative and visually striking.`,
+      },
+
+      {
+        type: "h2",
+        text: "EDITORIAL",
+      },
+
+      {
+        type: "p",
+        text: `The editorial photoshoot highlights the dramatic textures and sculptural volumes of the gowns. Set against bold backgrounds and strong lighting, the images emphasize movement, craftsmanship, and the layered construction of the dresses.`,
+      },
+
+      {
+        type: "p",
+        text: `The visual concept reflects the transformation of recycled materials into couture forms — from raw textile elements into refined fashion pieces designed for red carpet presence.`,
+      },
+
+      {
+        type: "credits",
+        items: [
+          { label: "Designer", value: "Marina Smagin" },
+          { label: "Brand", value: "Artmari Handmade DSN" },
+          { label: "Instagram", value: "@artmari_handmade_dsn" },
+          {
+            label: "Website",
+            value: "artmaridsn.com",
+            href: "https://www.artmaridsn.com/",
+          },
+          { label: "Column", value: "PRACTICE" },
+        ],
+        logo: {
+          src: "/images/practice/logo1.jpg",
+          href: "https://www.artmaridsn.com/",
+          alt: "Artmari Handmade DSN logo",
+        },
+      },
+    ],
+  },
+
   // ================= BECOMING =================
   {
     slug: "trinity-sofia",
@@ -307,7 +320,7 @@ But real life is different.`,
     title: "Trinity",
     category: "Becoming",
     excerpt:
-      "A visual narrative exploring three energies of a modern woman — power, dominance, and vulnerability.",
+      "A visual editorial story about feminine transformation, identity, fashion photography, and personal evolution through the three emotional phases of Project Trinity.",
     image: "/images/trinity/115.jpg",
     date: "2026-04-03",
     blocks: [
@@ -333,7 +346,7 @@ But real life is different.`,
         src: "/images/trinity/video_trinity.mp4",
         autoplay: false,
       },
-      
+
       {
         type: "h2",
         text: "THREE FACES OF THE SOUL",
@@ -349,10 +362,22 @@ But real life is different.`,
       {
         type: "gallery",
         images: [
-          { src: "/images/trinity/11.jpeg", alt: "Trinity phase 1 image 1" },
-          { src: "/images/trinity/58.jpeg", alt: "Trinity phase 1 image 2" },
-          { src: "/images/trinity/1.jpeg", alt: "Trinity phase 1 image 3" },
-          { src: "/images/trinity/55.jpeg", alt: "Trinity phase 1 image 4" },
+          {
+            src: "/images/trinity/11.jpeg",
+            alt: "Trinity phase one fashion editorial with red car",
+          },
+          {
+            src: "/images/trinity/58.jpeg",
+            alt: "Powerful female portrait from Project Trinity phase one",
+          },
+          {
+            src: "/images/trinity/1.jpeg",
+            alt: "Editorial fashion image of feminine social drive",
+          },
+          {
+            src: "/images/trinity/55.jpeg",
+            alt: "Contemporary visual storytelling in Trinity phase one",
+          },
         ],
       },
       {
@@ -362,12 +387,30 @@ But real life is different.`,
       {
         type: "gallery",
         images: [
-          { src: "/images/trinity/27.jpeg", alt: "Trinity phase 2 image 1" },
-          { src: "/images/trinity/22.jpeg", alt: "Trinity phase 2 image 2" },
-          { src: "/images/trinity/57.jpeg", alt: "Trinity phase 2 image 3" },
-          { src: "/images/trinity/25.jpeg", alt: "Trinity phase 2 image 4" },
-          { src: "/images/trinity/56.jpeg", alt: "Trinity phase 2 image 5" },
-           { src: "/images/trinity/4.jpeg", alt: "Trinity phase 2 image 6" },
+          {
+            src: "/images/trinity/27.jpeg",
+            alt: "Crimson silk editorial look in Trinity phase two",
+          },
+          {
+            src: "/images/trinity/22.jpeg",
+            alt: "Leopard print fashion styling in Project Trinity",
+          },
+          {
+            src: "/images/trinity/57.jpeg",
+            alt: "Female empowerment editorial portrait in phase two",
+          },
+          {
+            src: "/images/trinity/25.jpeg",
+            alt: "Dominant fashion pose in Trinity visual story",
+          },
+          {
+            src: "/images/trinity/56.jpeg",
+            alt: "Contemporary editorial image of feminine power",
+          },
+          {
+            src: "/images/trinity/4.jpeg",
+            alt: "High-fashion visual storytelling in Trinity phase two",
+          },
         ],
       },
       {
@@ -377,10 +420,22 @@ But real life is different.`,
       {
         type: "gallery",
         images: [
-          { src: "/images/trinity/21.jpeg", alt: "Trinity phase 3 image 1" },
-          { src: "/images/trinity/20.jpeg", alt: "Trinity phase 3 image 2" },
-          { src: "/images/trinity/5.jpeg", alt: "Trinity phase 3 image 3" },
-          { src: "/images/trinity/3.jpeg", alt: "Trinity phase 3 image 4" },
+          {
+            src: "/images/trinity/21.jpeg",
+            alt: "Soft lace editorial portrait in Trinity phase three",
+          },
+          {
+            src: "/images/trinity/20.jpeg",
+            alt: "Vulnerable feminine fashion image from Project Trinity",
+          },
+          {
+            src: "/images/trinity/5.jpeg",
+            alt: "Delicate editorial styling in the final Trinity phase",
+          },
+          {
+            src: "/images/trinity/3.jpeg",
+            alt: "Intimate visual storytelling in Trinity phase three",
+          },
         ],
       },
       {
@@ -400,7 +455,6 @@ But real life is different.`,
         text: `At first, it felt like I was stepping back into a familiar role. Next to the red car, I felt strong, composed — the version of me that always keeps everything under control. It felt familiar, even safe.`,
       },
 
-
       {
         type: "p",
         text: `But then something began to shift.`,
@@ -413,7 +467,7 @@ But real life is different.`,
         type: "p",
         text: `And in the final scene, in lace, everything became quiet. As if there was no longer a need to prove anything. What remained was just a feeling — to be. To feel. To allow softness without hiding it.`,
       },
-{
+      {
         type: "p",
         text: `It was a little scary. And at the same time, it felt completely right.`,
       },
@@ -423,16 +477,15 @@ But real life is different.`,
         text: `I am deeply grateful to the team for the way they guided me through this process. For the attention to detail, for the support, for creating a space where I could be different versions of myself.`,
       },
 
-       {
+      {
         type: "p",
         text: `And it still feels almost unreal that this story found its continuation — being featured in the Spanish magazine Lovely became something more than just a result of the shoot.`,
       },
 
-       {
+      {
         type: "p",
         text: `It felt like a confirmation: when you allow yourself to be real, it always resonates.`,
       },
-
 
       {
         type: "h2",

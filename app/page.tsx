@@ -13,7 +13,7 @@ export async function generateMetadata({
   if (!article) return {};
 
   return {
-    title: `${article.title} | The Issue N`,
+    title: `${article.title} | The Issue №`,
     description: article.excerpt,
   };
 }
@@ -296,13 +296,13 @@ export default function HomePage() {
               </p>
 
               <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-[1.05] text-neutral-900 transition-transform duration-500 group-hover:translate-x-1">
-                The Issue N
+                The Issue №
               </h2>
             </div>
 
             <div className="lg:col-span-8">
               <p className="text-[22px] md:text-[30px] leading-[1.45] text-neutral-800 max-w-none">
-                The Issue N is an independent fashion and editorial magazine
+                The Issue № is an independent fashion and editorial magazine
                 exploring contemporary culture through visual storytelling,
                 photography, and design.
               </p>

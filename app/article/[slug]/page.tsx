@@ -289,7 +289,21 @@ function renderBlock(
       return null;
   }
 }
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  const article = articles.find((a) => a.slug === slug);
 
+  if (!article) return {};
+
+  return {
+    title: `${article.title} | The Issue N`,
+    description: article.excerpt,
+  };
+}
 export default async function ArticlePage({
   params,
 }: {
