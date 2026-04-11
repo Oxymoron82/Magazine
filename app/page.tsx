@@ -1,22 +1,45 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import EditorialCard from "@/components/EditorialCard";
 import { articles } from "@/data/articles";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const article = articles.find((a) => a.slug === params.slug);
-
-  if (!article) return {};
-
-  return {
-    title: `${article.title} | The Issue №`,
-    description: article.excerpt,
-  };
-}
+export const metadata: Metadata = {
+  title: "The Issue N | Independent Fashion and Editorial Magazine",
+  description:
+    "The Issue N is an independent fashion and editorial magazine exploring contemporary culture through visual storytelling, photography, design, creative practice, and modern identity.",
+  alternates: {
+    canonical: "https://theissue.xyz",
+  },
+  openGraph: {
+    title: "The Issue N | Independent Fashion and Editorial Magazine",
+    description:
+      "An independent editorial platform exploring fashion, photography, design, creative practice, and modern identity through visual storytelling.",
+    url: "https://theissue.xyz",
+    siteName: "The Issue N",
+    type: "website",
+    locale: "en_US",
+    images: [
+      {
+        url: "https://theissue.xyz/images/editorial-2.jpg",
+        width: 1200,
+        height: 630,
+        alt: "The Issue N editorial magazine homepage cover",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Issue N | Independent Fashion and Editorial Magazine",
+    description:
+      "An independent editorial platform exploring fashion, photography, design, creative practice, and modern identity through visual storytelling.",
+    images: ["https://theissue.xyz/images/editorial-2.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function HomePage() {
   const latestArticles = [...articles]
@@ -57,7 +80,7 @@ export default function HomePage() {
               <div className="relative w-full max-w-[760px] aspect-[3/4]">
                 <Image
                   src="/images/logo_main.jpg"
-                  alt="the ISSUE N logo"
+                  alt="The Issue N logo"
                   fill
                   priority
                   className="object-contain"
@@ -296,13 +319,13 @@ export default function HomePage() {
               </p>
 
               <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-[1.05] text-neutral-900 transition-transform duration-500 group-hover:translate-x-1">
-                The Issue №
+                The Issue N
               </h2>
             </div>
 
             <div className="lg:col-span-8">
               <p className="text-[22px] md:text-[30px] leading-[1.45] text-neutral-800 max-w-none">
-                The Issue № is an independent fashion and editorial magazine
+                The Issue N is an independent fashion and editorial magazine
                 exploring contemporary culture through visual storytelling,
                 photography, and design.
               </p>

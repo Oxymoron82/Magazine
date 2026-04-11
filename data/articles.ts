@@ -50,7 +50,7 @@ export const articles: Article[] = [
     title: "Sexuality Is Not a Pose — It Is a State",
     category: "Intimacy",
     excerpt:
-      "An editorial feature on intimacy, sensuality, and identity, exploring how sexuality returns through presence, feeling, and contemporary visual storytelling.",
+      "An intimacy and fashion editorial on sensuality, identity, and presence, exploring how sexuality returns through feeling, embodiment, and contemporary visual storytelling.",
     image: "/images/Intimacy/1/1.jpg",
     date: "2026-03-04",
     blocks: [
@@ -72,7 +72,7 @@ But real life is different.`,
       {
         type: "image",
         src: "/images/Intimacy/1/2.jpg",
-        alt: "Editorial intimacy photography with a sensual visual study",
+        alt: "Sensual intimacy fashion editorial photography and visual study",
         fullBleed: true,
       },
       {
@@ -82,7 +82,7 @@ But real life is different.`,
       {
         type: "image",
         src: "/images/Intimacy/1/3.jpg",
-        alt: "Intimacy portrait for an editorial fashion and photography feature",
+        alt: "Editorial portrait about intimacy, identity, and feminine presence",
         fullBleed: true,
       },
       {
@@ -113,7 +113,7 @@ But real life is different.`,
     title: "When Heating Becomes Design: The Business Behind Radiaatorikeskus",
     category: "Work",
     excerpt:
-      "A business and design feature on Radiaatorikeskus, an Estonian company transforming heating systems into interior design elements through architecture, entrepreneurship, and modern aesthetics.",
+      "A business and interior design feature on Radiaatorikeskus, an Estonian company turning heating systems into architectural design elements through entrepreneurship, modern interiors, and functional aesthetics.",
     image: "/images/work/radiaatorikeskus/1.jpeg",
     date: "2026-03-17",
     blocks: [
@@ -125,25 +125,25 @@ But real life is different.`,
       {
         type: "image",
         src: "/images/work/radiaatorikeskus/1.jpeg",
-        alt: "Radiaatorikeskus showroom interior design in Estonia",
+        alt: "Radiaatorikeskus showroom with interior design and heating solutions in Estonia",
         fullBleed: true,
       },
       {
         type: "image",
         src: "/images/work/radiaatorikeskus/3.jpeg",
-        alt: "Heating design detail by Radiaatorikeskus",
+        alt: "Designer heating detail by Radiaatorikeskus for modern interiors",
         fullBleed: true,
       },
       {
         type: "image",
         src: "/images/work/radiaatorikeskus/4.jpeg",
-        alt: "Modern interior featuring designer heating solutions",
+        alt: "Modern interior architecture featuring designer heating elements",
         fullBleed: true,
       },
       {
         type: "image",
         src: "/images/work/radiaatorikeskus/2.jpeg",
-        alt: "Architectural heating and interior design feature in Estonia",
+        alt: "Architectural heating and interior design project in Tallinn Estonia",
         fullBleed: true,
       },
       {
@@ -173,7 +173,7 @@ But real life is different.`,
     title: "Marina Smagin — Artmari Handmade DSN",
     category: "Practice",
     excerpt:
-      "An editorial interview with eco-couture designer Marina Smagin on sustainable fashion, recycled textiles, handmade couture, and creative practice in contemporary design.",
+      "An editorial interview with eco-couture designer Marina Smagin on sustainable fashion, handmade couture, recycled textiles, and contemporary creative practice in fashion design.",
     image: "/images/practice/10.jpg",
     date: "2026-03-20",
     blocks: [
@@ -191,7 +191,7 @@ But real life is different.`,
       {
         type: "image",
         src: "/images/practice/02.jpg",
-        alt: "Eco couture fashion look by Marina Smagin",
+        alt: "Eco couture fashion editorial look by designer Marina Smagin",
         fullBleed: true,
       },
 
@@ -213,7 +213,7 @@ But real life is different.`,
       {
         type: "image",
         src: "/images/practice/17.jpg",
-        alt: "Handmade couture details in sustainable fashion design",
+        alt: "Handmade couture details in sustainable fashion and eco couture design",
         fullBleed: true,
       },
 
@@ -235,7 +235,7 @@ But real life is different.`,
       {
         type: "image",
         src: "/images/practice/04.jpg",
-        alt: "Editorial sustainable fashion portrait by Marina Smagin",
+        alt: "Sustainable fashion editorial portrait by eco couture designer Marina Smagin",
         fullBleed: true,
       },
 
@@ -254,7 +254,7 @@ But real life is different.`,
         images: [
           {
             src: "/images/practice/05.jpg",
-            alt: "Sustainable couture garment by Marina Smagin",
+            alt: "Sustainable couture garment by designer Marina Smagin",
           },
           {
             src: "/images/practice/06.jpg",
@@ -262,11 +262,11 @@ But real life is different.`,
           },
           {
             src: "/images/practice/07.jpg",
-            alt: "Handmade designer gown created from recycled textiles",
+            alt: "Handmade designer gown created from recycled textiles for fashion editorial",
           },
           {
             src: "/images/practice/16.jpg",
-            alt: "Creative fashion editorial featuring sculptural couture",
+            alt: "Creative fashion editorial featuring sculptural sustainable couture",
           },
         ],
       },
@@ -317,10 +317,10 @@ But real life is different.`,
   {
     slug: "trinity-sofia",
     column: "becoming",
-    title: "Trinity",
+    title: "Trinity — Fashion Editorial Photography Story",
     category: "Becoming",
     excerpt:
-      "A visual editorial story about feminine transformation, identity, fashion photography, and personal evolution through the three emotional phases of Project Trinity.",
+      "A fashion editorial photography story about feminine transformation, identity, empowerment, and personal evolution through the three emotional phases of Project Trinity.",
     image: "/images/trinity/115.jpg",
     date: "2026-04-03",
     blocks: [
@@ -364,19 +364,19 @@ But real life is different.`,
         images: [
           {
             src: "/images/trinity/11.jpeg",
-            alt: "Trinity phase one fashion editorial with red car",
+            alt: "Fashion editorial photography with red car in Trinity phase one",
           },
           {
             src: "/images/trinity/58.jpeg",
-            alt: "Powerful female portrait from Project Trinity phase one",
+            alt: "Empowered female portrait from Project Trinity phase one",
           },
           {
             src: "/images/trinity/1.jpeg",
-            alt: "Editorial fashion image of feminine social drive",
+            alt: "Fashion editorial image of feminine confidence and social drive",
           },
           {
             src: "/images/trinity/55.jpeg",
-            alt: "Contemporary visual storytelling in Trinity phase one",
+            alt: "Contemporary visual storytelling in Trinity fashion editorial phase one",
           },
         ],
       },
@@ -389,23 +389,23 @@ But real life is different.`,
         images: [
           {
             src: "/images/trinity/27.jpeg",
-            alt: "Crimson silk editorial look in Trinity phase two",
+            alt: "Crimson silk fashion editorial look in Trinity phase two",
           },
           {
             src: "/images/trinity/22.jpeg",
-            alt: "Leopard print fashion styling in Project Trinity",
+            alt: "Leopard print fashion styling in Project Trinity photography story",
           },
           {
             src: "/images/trinity/57.jpeg",
-            alt: "Female empowerment editorial portrait in phase two",
+            alt: "Female empowerment editorial portrait in Trinity phase two",
           },
           {
             src: "/images/trinity/25.jpeg",
-            alt: "Dominant fashion pose in Trinity visual story",
+            alt: "Dominant fashion pose in Trinity editorial photography story",
           },
           {
             src: "/images/trinity/56.jpeg",
-            alt: "Contemporary editorial image of feminine power",
+            alt: "Contemporary editorial image of feminine power and identity",
           },
           {
             src: "/images/trinity/4.jpeg",
@@ -422,19 +422,19 @@ But real life is different.`,
         images: [
           {
             src: "/images/trinity/21.jpeg",
-            alt: "Soft lace editorial portrait in Trinity phase three",
+            alt: "Soft lace fashion editorial portrait in Trinity phase three",
           },
           {
             src: "/images/trinity/20.jpeg",
-            alt: "Vulnerable feminine fashion image from Project Trinity",
+            alt: "Vulnerable feminine fashion image from Project Trinity editorial story",
           },
           {
             src: "/images/trinity/5.jpeg",
-            alt: "Delicate editorial styling in the final Trinity phase",
+            alt: "Delicate editorial styling in the final Trinity transformation phase",
           },
           {
             src: "/images/trinity/3.jpeg",
-            alt: "Intimate visual storytelling in Trinity phase three",
+            alt: "Intimate visual storytelling in Trinity phase three photography editorial",
           },
         ],
       },
