@@ -1,43 +1,28 @@
+import { MetadataRoute } from "next";
 import { articles } from "@/data/articles";
 
-const siteUrl = "https://theissue.xyz";
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = "https://theissue.xyz";
 
-export default function sitemap() {
   const articleUrls = articles.map((article) => ({
-    url: `${siteUrl}/article/${article.slug}`,
-    lastModified: article.date,
+    url: `${baseUrl}/article/${article.slug}`,
+    lastModified: new Date(article.date),
   }));
 
-  const staticUrls = [
+  return [
     {
-      url: siteUrl,
-      lastModified: new Date().toISOString(),
+      url: baseUrl,
+      lastModified: new Date(),
     },
     {
-      url: `${siteUrl}/columns`,
-      lastModified: new Date().toISOString(),
+      url: `${baseUrl}/#about`,
     },
     {
-      url: `${siteUrl}/columns/becoming`,
-      lastModified: new Date().toISOString(),
+      url: `${baseUrl}/#columns`,
     },
     {
-      url: `${siteUrl}/columns/work`,
-      lastModified: new Date().toISOString(),
+      url: `${baseUrl}/#latest`,
     },
-    {
-      url: `${siteUrl}/columns/practice`,
-      lastModified: new Date().toISOString(),
-    },
-    {
-      url: `${siteUrl}/columns/intimacy`,
-      lastModified: new Date().toISOString(),
-    },
-    {
-      url: `${siteUrl}/editor`,
-      lastModified: new Date().toISOString(),
-    },
+    ...articleUrls,
   ];
-
-  return [...staticUrls, ...articleUrls];
 }
