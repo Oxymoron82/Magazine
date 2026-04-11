@@ -48,13 +48,13 @@ export default function HomePage() {
 
   return (
     <main className="bg-[#FFFBEB] text-neutral-900">
-      {/* HERO */}
+      {/* HERO FIXED */}
       <section
         id="home"
         className="relative w-full scroll-mt-24 md:h-[100svh] md:min-h-[720px]"
       >
         <div className="grid md:grid-cols-2">
-          {/* LEFT SIDE — PHOTO */}
+          {/* LEFT */}
           <div className="relative h-[38vh] min-h-[260px] md:h-full">
             <Image
               src="/images/editorial-2.jpg"
@@ -67,13 +67,13 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-black/5 to-transparent" />
 
             <div className="absolute inset-0 flex items-center justify-center px-6 md:px-10">
-              <p className="font-didot text-[14px] md:text-[22px] tracking-[0.03em] text-white text-center">
+              <p className="font-didot text-[14px] md:text-[22px] text-white text-center">
                 An Independent Editorial Platform
               </p>
             </div>
           </div>
 
-          {/* RIGHT SIDE — LOGO PANEL (FIXED MOBILE) */}
+          {/* RIGHT */}
           <div className="relative bg-[#E1D5D5] py-10 md:h-full md:py-0">
             <div className="flex h-full items-center justify-center px-6 md:px-12 md:pt-24 md:pb-10">
               <div className="relative w-[72vw] max-w-[320px] aspect-[3/4] md:w-full md:max-w-[760px]">
@@ -90,84 +90,89 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* MANIFESTO / ABOUT */}
+      {/* DIVIDER */}
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="h-px bg-neutral-200/70" />
+      </div>
+
+      {/* COLUMNS */}
       <section
-        id="about"
-        className="max-w-5xl mx-auto px-6 py-28 md:py-36 scroll-mt-24"
+        id="columns"
+        className="max-w-7xl mx-auto px-6 py-24 md:py-28 scroll-mt-24"
       >
-        <div className="max-w-3xl">
-          <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
-            About The Issue
-          </p>
-
-          <h2 className="mt-6 text-4xl md:text-5xl leading-tight font-semibold font-serif">
-            The Issue is not just a magazine.
-            <br />
-            It is a continuation.
-          </h2>
-
-          <div className="mt-10 space-y-7 text-[17px] md:text-[18px] leading-relaxed text-neutral-800">
-            <p>
-              The Issue is not simply a magazine about fashion, business, or
-              visuals. It is a space about continuing.
+        <div className="flex items-end justify-between gap-6 mb-10">
+          <div>
+            <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
+              Columns
             </p>
-
-            <p>
-              About people who don’t move in a straight line. About those who
-              begin again — in a new country, a new role, at a new age.
-            </p>
-
-            <p>
-              This magazine didn’t grow out of an idea to “create media.” It grew
-              out of lived experience — falls and restarts, relocations, work
-              from zero, returning to yourself and to what truly matters.
-            </p>
-
-            <p>
-              Here, beauty is not about perfection. It is about inner strength.
-              About posture, even when it’s hard. About a gaze that doesn’t drop.
-            </p>
-
-            <p>
-              The Issue is about people who build themselves. About women and men
-              who change, grow up, lose illusions and gain clarity.
-            </p>
-
-            <div className="mt-10 border-l border-neutral-300 pl-6 space-y-3">
-              <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
-                This is a magazine
-              </p>
-              <ul className="space-y-2 text-neutral-800">
-                <li>— about transformation, without spectacle</li>
-                <li>— about business, without a cold mask</li>
-                <li>— about fashion, as a language — not a trend</li>
-                <li>— about space and cities that shape us</li>
-                <li>— about work that teaches respect for every kind of labor</li>
-                <li>— about people who remain real</li>
-              </ul>
-            </div>
-
-            <p>
-              Here, visuals are not decoration. They are a way to speak about
-              character, choice, and path.
-            </p>
-
-            <p>
-              The Issue is the continuation of movement. Not proof of success,
-              but evidence of growth. Not a showcase, but a process.
-            </p>
-
-            <p className="pt-4 font-serif text-[20px] md:text-[22px] leading-snug">
-              This magazine is for those who understand:
-              <br />a new chapter doesn’t arrive by itself —
-              <br />
-              it is created.
-            </p>
+            <h2 className="mt-3 text-2xl md:text-3xl font-serif">
+              Essays, voices and personal angles.
+            </h2>
           </div>
+
+          <Link
+            href="/columns"
+            className="text-sm underline underline-offset-4 hover:text-black transition"
+          >
+            More →
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-24">
+          <Link href="/columns/becoming">
+            <EditorialCard
+              category="BECOMING"
+              title="Trinity"
+              image="/images/card-2.jpg"
+            />
+          </Link>
+
+          <Link href="/columns/work">
+            <EditorialCard
+              category="WORK"
+              title="Work & Path"
+              image="/images/card-1.jpg"
+            />
+          </Link>
+
+          <Link href="/columns/practice">
+            <EditorialCard
+              category="PRACTICE"
+              title="Creative Practice"
+              image="/images/card-3.jpg"
+            />
+          </Link>
         </div>
       </section>
 
-      {/* дальше код без изменений */}
+      {/* LATEST */}
+      <section
+        id="latest"
+        className="max-w-7xl mx-auto px-6 pb-28 md:pb-32 scroll-mt-24"
+      >
+        <div className="flex items-end justify-between gap-6 mb-10">
+          <div>
+            <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
+              Latest
+            </p>
+            <h2 className="mt-3 text-2xl md:text-3xl font-serif">
+              New pieces and fresh visuals.
+            </h2>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-x-10 gap-y-24">
+          {latestArticles.map((article) => (
+            <Link key={article.slug} href={`/article/${article.slug}`}>
+              <EditorialCard
+                category={article.category}
+                title={article.title}
+                image={article.image}
+              />
+            </Link>
+          ))}
+        </div>
+      </section>
     </main>
   );
 }
