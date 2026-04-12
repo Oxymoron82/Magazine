@@ -93,6 +93,6 @@ export const columns: Column[] = [
       "Fragments, notes and short pieces.",
     description:
       "VARIA is a flexible space for shorter texts, reflections, fragments and experimental formats that don't fit traditional categories.",
-    image: "/images/card-1.jpg",
+    image: "/images/card-8.jpg",
   },
 ];
