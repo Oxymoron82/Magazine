@@ -19,6 +19,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   verification: {
     google: "GpHgqBE_vaKUdIqV",
+    other: {
+      "p:domain_verify": "c0282f57a5bf9225bba2f1ddfeb5e36d",
+    },
   },
 };
 
@@ -29,6 +32,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ru">
+      <head>
+        <meta
+          name="p:domain_verify"
+          content="c0282f57a5bf9225bba2f1ddfeb5e36d"
+        />
+      </head>
+
       <body
         suppressHydrationWarning
         className={`${inter.variable} ${playfair.variable} bg-[#FFFBEB] text-neutral-900`}
