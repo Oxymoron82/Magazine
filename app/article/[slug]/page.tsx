@@ -362,86 +362,121 @@ export default async function ArticlePage({
   const isMarina = article.slug === "marina-smagin-artmari-handmade-dsn";
   const imagePosition: "center" | "top" = isMarina ? "top" : "center";
 
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: article.title,
+    description: article.excerpt,
+    image: [`${siteUrl}${article.image}`],
+    datePublished: article.date,
+    dateModified: article.date,
+    author: {
+      "@type": "Organization",
+      name: "The Issue N",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "The Issue N",
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/images/logo_main.jpg`,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${siteUrl}/article/${article.slug}`,
+    },
+  };
+
   return (
-    <main className="bg-[#FFFBEB] text-neutral-900">
-      <section className="relative w-full h-[70vh] md:h-[80vh]">
-        <Image
-          src={article.image}
-          alt={article.title}
-          fill
-          priority
-          className={`object-cover ${
-            imagePosition === "top" ? "object-top" : "object-center"
-          }`}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleJsonLd),
+        }}
+      />
 
-        <div className="absolute bottom-0 left-0 right-0">
-          <div className="max-w-5xl mx-auto px-6 pb-10 md:pb-14">
-            <p className="text-xs uppercase tracking-[0.35em] text-white/80">
-              {article.category}
-            </p>
+      <main className="bg-[#FFFBEB] text-neutral-900">
+        <section className="relative w-full h-[70vh] md:h-[80vh]">
+          <Image
+            src={article.image}
+            alt={article.title}
+            fill
+            priority
+            className={`object-cover ${
+              imagePosition === "top" ? "object-top" : "object-center"
+            }`}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
 
-            <h1 className="mt-4 text-4xl md:text-6xl font-serif leading-tight text-white">
-              {article.title}
-            </h1>
+          <div className="absolute bottom-0 left-0 right-0">
+            <div className="max-w-5xl mx-auto px-6 pb-10 md:pb-14">
+              <p className="text-xs uppercase tracking-[0.35em] text-white/80">
+                {article.category}
+              </p>
 
-            <p className="mt-5 max-w-2xl text-lg text-white/90 leading-relaxed">
-              {article.excerpt}
-            </p>
+              <h1 className="mt-4 text-4xl md:text-6xl font-serif leading-tight text-white">
+                {article.title}
+              </h1>
 
-            <div className="mt-6 flex items-center gap-5 text-sm text-white/80">
-              {article.date ? (
-                <span>
-                  Published{" "}
-                  {new Date(article.date).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </span>
-              ) : null}
-              <span className="opacity-60">•</span>
-              <Link
-                href="/#latest"
-                className="underline underline-offset-4 hover:text-white transition"
-              >
-                Back to home
-              </Link>
+              <p className="mt-5 max-w-2xl text-lg text-white/90 leading-relaxed">
+                {article.excerpt}
+              </p>
+
+              <div className="mt-6 flex items-center gap-5 text-sm text-white/80">
+                {article.date ? (
+                  <span>
+                    Published{" "}
+                    {new Date(article.date).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </span>
+                ) : null}
+                <span className="opacity-60">•</span>
+                <Link
+                  href="/#latest"
+                  className="underline underline-offset-4 hover:text-white transition"
+                >
+                  Back to home
+                </Link>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="py-16 md:py-20">
-        <div className="max-w-2xl mx-auto px-6">
-          <div className="h-px bg-neutral-200/70 mb-12" />
-        </div>
-
-        <article className="max-w-2xl mx-auto px-6">
-          {article.blocks.map((b, i) => renderBlock(b, i, imagePosition))}
-
-          <SubmitForm />
-
-          <div className="mt-14 h-px bg-neutral-200/70" />
-
-          <div className="mt-10 flex items-center justify-between gap-6 text-sm">
-            <Link
-              href={`/columns/${article.column}`}
-              className="underline underline-offset-4 hover:text-black transition"
-            >
-              ← Back to column
-            </Link>
-
-            <Link
-              href="/#columns"
-              className="underline underline-offset-4 hover:text-black transition"
-            >
-              Explore columns →
-            </Link>
+        <section className="py-16 md:py-20">
+          <div className="max-w-2xl mx-auto px-6">
+            <div className="h-px bg-neutral-200/70 mb-12" />
           </div>
-        </article>
-      </section>
-    </main>
+
+          <article className="max-w-2xl mx-auto px-6">
+            {article.blocks.map((b, i) => renderBlock(b, i, imagePosition))}
+
+            <SubmitForm />
+
+            <div className="mt-14 h-px bg-neutral-200/70" />
+
+            <div className="mt-10 flex items-center justify-between gap-6 text-sm">
+              <Link
+                href={`/columns/${article.column}`}
+                className="underline underline-offset-4 hover:text-black transition"
+              >
+                ← Back to column
+              </Link>
+
+              <Link
+                href="/#columns"
+                className="underline underline-offset-4 hover:text-black transition"
+              >
+                Explore columns →
+              </Link>
+            </div>
+          </article>
+        </section>
+      </main>
+    </>
   );
 }
