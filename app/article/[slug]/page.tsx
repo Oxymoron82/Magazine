@@ -236,20 +236,37 @@ function renderBlock(
         </div>
       );
 
-    case "p":
-      return (
-        <p
-          key={index}
-          className={[
-            "my-6 text-[18px] leading-relaxed text-neutral-800 whitespace-pre-line",
-            block.dropCap
-              ? "first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:font-serif first-letter:text-6xl md:first-letter:text-7xl first-letter:leading-none first-letter:text-neutral-900"
-              : "",
-          ].join(" ")}
+ case "p":
+  // 👇 авто-линк на вторую статью
+  if (block.text.includes("Continue reading")) {
+    return (
+      <p
+        key={index}
+        className="my-6 text-[18px] leading-relaxed text-neutral-800"
+      >
+        <Link
+          href="/article/anastassija-balak-silent-guardian-falling-petals"
+          className="underline underline-offset-4 hover:text-black transition"
         >
-          {block.text}
-        </p>
-      );
+          Continue reading →
+        </Link>
+      </p>
+    );
+  }
+
+  return (
+    <p
+      key={index}
+      className={[
+        "my-6 text-[18px] leading-relaxed text-neutral-800 whitespace-pre-line",
+        block.dropCap
+          ? "first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:font-serif first-letter:text-6xl md:first-letter:text-7xl first-letter:leading-none first-letter:text-neutral-900"
+          : "",
+      ].join(" ")}
+    >
+      {block.text}
+    </p>
+  );
 
     case "quote":
       return <PullQuote key={index}>{block.text}</PullQuote>;

@@ -43,6 +43,195 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+  // ================= PLACE =================
+  {
+    slug: "tallinn-fashion-week-between-space-movement-and-form",
+    column: "place",
+    title: "Tallinn Fashion Week: Between Space, Movement and Form",
+    category: "Place",
+    excerpt:
+      "An editorial observation of Tallinn Fashion Week at T1 Venue in Tallinn, where fashion, atmosphere, and the presence of people shaped the event beyond the runway.",
+    image: "/images/place/tfw/main.jpg",
+    date: "2026-04-10",
+    blocks: [
+      {
+        type: "p",
+        dropCap: true,
+        text: `Tallinn Fashion Week took place on April 9–10 at T1 Venue in Tallinn.
+
+The event brought together designers, guests and industry professionals around new collections and ideas. From the very beginning, there was a clear attention to detail — the audience arrived dressed with intention, each interpreting the mood of the event in their own way. The space was shaped not only by what was happening on the runway, but also by the people within it.`,
+      },
+      {
+        type: "p",
+        text: `Over the course of two days, more than 15 designers presented their collections — both established names and emerging voices. Each show approached form, material and contemporary fashion from a different perspective.`,
+      },
+      {
+        type: "image",
+        src: "/images/place/tfw/1.jpg",
+        alt: "Audience and atmosphere at Tallinn Fashion Week at T1 Venue",
+        fullBleed: true,
+      },
+      {
+        type: "p",
+        text: `Tallinn Fashion Week this season was not only about runway presentations, but about observation — of people, of style, and of how fashion exists in real life.`,
+      },
+      {
+        type: "p",
+        text: `Among the designers this season was Anastasija Balak, whose work is deeply rooted in the relationship between body and form.`,
+      },
+      {
+        type: "p",
+        text: `Her collection did not attempt to create immediate impact. Instead, it moved through subtle tension — between protection and vulnerability, softness and inner strength.`,
+      },
+      {
+        type: "quote",
+        text: "The space was shaped not only by the runway, but by the people within it.",
+      },
+      {
+        type: "p",
+        text: `Continue reading in the Work column: “Anastasija Balak — Silent Guardian / Falling Petals.”`,
+      },
+    ],
+  },
+
+  // ================= WORK =================
+  {
+    slug: "anastasija-balak-silent-guardian-falling-petals",
+    column: "work",
+    title: "Anastasija Balak — Silent Guardian / Falling Petals",
+    category: "Work",
+    excerpt:
+      "A conversation with designer Anastasija Balak on body, form, vulnerability, and the quiet balance between structure and intuition in her collection Silent Guardian / Falling Petals.",
+    image: "/images/work/balak/main.jpg",
+    date: "2026-04-10",
+    blocks: [
+      {
+        type: "p",
+        text: `Presented during Tallinn Fashion Week 2026.`,
+      },
+      {
+        type: "p",
+        dropCap: true,
+        text: `Anastasija Balak’s work is deeply rooted in the relationship between body and form.
+
+Her practice began with swimwear — working closely with the body, its lines and its openness. Over time, this evolved into a broader exploration, where clothing is no longer only a visual object, but a way of expressing a certain state.`,
+      },
+      {
+        type: "p",
+        text: `Her new collection, Silent Guardian / Falling Petals, continues this direction.
+
+There is no attempt to create immediate impact. Instead, the collection works through subtle tension — between protection and vulnerability, softness and inner strength. Materials are not decorative; they become part of the concept itself. Clothing acts as a boundary, as a layer, as a space surrounding the body.`,
+      },
+      {
+        type: "image",
+        src: "/images/work/balak/1.jpg",
+        alt: "Anastasija Balak collection Silent Guardian Falling Petals at Tallinn Fashion Week",
+        fullBleed: true,
+      },
+      {
+        type: "p",
+        text: `References to Japanese aesthetics appear gently — not through direct quotation, but through rhythm, repetition and restraint. Prints combine animal motifs with sakura, creating a sense of strength and fragility existing at the same time.
+
+The collection feels calm, without pressure, leaving space for interpretation.`,
+      },
+      {
+        type: "quote",
+        text: "Intuition gives direction, and structure allows it to take form.",
+      },
+      {
+        type: "h2",
+        text: "Conversation with Anastassija Balak",
+      },
+      {
+        type: "p",
+        text: `Can you briefly introduce your project — what is your work today?
+
+I’m a tailor and fashion designer, the creator of ABFD Swimwear and the founder of the AVANTGARD atelier. For over fifteen years, I’ve been developing my own brand, AB Fashion Design, working on both collections and custom-made pieces tailored to the individual.`,
+      },
+      {
+        type: "p",
+        text: `When did your project start, and how would you describe it today?
+
+It started with working closely with the body — through swimwear. Over time, it became something broader. Today it’s less about a specific category and more about creating a certain state through clothing.`,
+      },
+      {
+        type: "p",
+        text: `What does “work” mean to you today?
+
+Work is a continuous process of searching. It’s not only about making garments, but about understanding form, sensation and inner state.`,
+      },
+      {
+        type: "p",
+        text: `What part of your work do people not see or often misunderstand?
+
+The depth of the process. A lot of time goes into working with materials, finding balance between aesthetics and function, and maintaining internal discipline.`,
+      },
+      {
+        type: "p",
+        text: `How does your creative process usually start?
+
+It begins with a feeling. Not with a fixed idea, but with a state that gradually takes shape through material and construction.`,
+      },
+      {
+        type: "p",
+        text: `Do you work more from structure or intuition?
+
+Both. Intuition gives direction, and structure allows it to take form.`,
+      },
+      {
+        type: "p",
+        text: `What inspired you to combine swimwear with Japanese aesthetics and sakura symbolism?
+
+I’m interested in vulnerability, especially in relation to the body. Japanese aesthetics, and sakura in particular, reflect this feeling — beauty that exists in its impermanence.
+
+The prints combine leopard, tiger and blooming sakura on a python texture. It’s about coexistence — strength and fragility at the same time.`,
+      },
+      {
+        type: "p",
+        text: `What kind of feeling did you want to create through this collection?
+
+A sense of quiet strength. Something internal, not demonstrative. A balance between softness and stability.`,
+      },
+      {
+        type: "p",
+        text: `What were the main challenges in creating this collection?
+
+To stay precise and avoid superficial interpretation. It was a process of refinement — removing what wasn’t necessary and focusing on essence.`,
+      },
+      {
+        type: "p",
+        text: `What are you building right now?
+
+I continue to develop a language where form and feeling exist together.`,
+      },
+      {
+        type: "p",
+        text: `What does the next phase look like for you?
+
+Moving towards more abstraction — less direct references, more focus on texture, color and atmosphere.`,
+      },
+      {
+        type: "h2",
+        text: "Final Note",
+      },
+      {
+        type: "p",
+        text: `In the context of Tallinn Fashion Week, Anastassija Balak’s work feels precise and composed — not seeking attention, but holding it through its internal clarity and rhythm.`,
+      },
+      {
+        type: "credits",
+        items: [
+          { label: "Designer", value: "Anastassija Balak" },
+          { label: "Brand", value: "AB Fashion Design" },
+          { label: "Atelier", value: "AVANTGARD" },
+          { label: "Event", value: "Tallinn Fashion Week" },
+          { label: "Location", value: "Tallinn, Estonia" },
+          { label: "Column", value: "WORK" },
+        ],
+      },
+    ],
+  },
+
   // ================= INTIMACY =================
   {
     slug: "sexuality-is-not-a-pose",
@@ -109,65 +298,97 @@ But real life is different.`,
   // ================= WORK =================
   {
     slug: "radiaatorikeskus-heating-design-estonia",
-    column: "work",
-    title: "When Heating Becomes Design: The Business Behind Radiaatorikeskus",
-    category: "Work",
-    excerpt:
-      "A business and interior design feature on Radiaatorikeskus, an Estonian company turning heating systems into architectural design elements through entrepreneurship, modern interiors, and functional aesthetics.",
-    image: "/images/work/radiaatorikeskus/1.jpeg",
-    date: "2026-03-17",
-    blocks: [
-      {
-        type: "p",
-        dropCap: true,
-        text: `In interior architecture, the boundary between function and aesthetics is becoming increasingly blurred.`,
-      },
-      {
-        type: "image",
-        src: "/images/work/radiaatorikeskus/1.jpeg",
-        alt: "Radiaatorikeskus showroom with interior design and heating solutions in Estonia",
-        fullBleed: true,
-      },
-      {
-        type: "image",
-        src: "/images/work/radiaatorikeskus/3.jpeg",
-        alt: "Designer heating detail by Radiaatorikeskus for modern interiors",
-        fullBleed: true,
-      },
-      {
-        type: "image",
-        src: "/images/work/radiaatorikeskus/4.jpeg",
-        alt: "Modern interior architecture featuring designer heating elements",
-        fullBleed: true,
-      },
-      {
-        type: "image",
-        src: "/images/work/radiaatorikeskus/2.jpeg",
-        alt: "Architectural heating and interior design project in Tallinn Estonia",
-        fullBleed: true,
-      },
-      {
-        type: "credits",
-        items: [
-          { label: "Company", value: "Küttemaailm OÜ" },
-          { label: "Location", value: "Tallinn, Estonia" },
-          {
-            label: "Website",
-            value: "radiaatorikeskus.ee",
-            href: "https://radiaatorikeskus.ee/en/",
-          },
-        ],
-        logo: {
-          src: "/images/work/radiaatorikeskus/logo2.png",
+  column: "work",
+  title: "When Heating Becomes Design: The Business Behind Radiaatorikeskus",
+  category: "Work",
+  excerpt:
+    "A business and interior design feature on Radiaatorikeskus, an Estonian company turning heating systems into architectural design elements through entrepreneurship, modern interiors, and functional aesthetics.",
+  image: "/images/work/radiaatorikeskus/1.jpeg",
+  date: "2026-03-17",
+  blocks: [
+    {
+      type: "p",
+      dropCap: true,
+      text: `In interior architecture, the boundary between function and aesthetics is becoming increasingly blurred.`,
+    },
+    {
+      type: "p",
+      text: `What was once hidden behind function now becomes part of the visual language of a space. Heating systems, traditionally perceived as purely technical, are increasingly treated as objects of form, rhythm, and atmosphere.`,
+    },
+    {
+      type: "image",
+      src: "/images/work/radiaatorikeskus/1.jpeg",
+      alt: "Radiaatorikeskus showroom with interior design and heating solutions in Estonia",
+      fullBleed: true,
+    },
+    {
+      type: "p",
+      text: `Radiaatorikeskus is an Estonian company working at exactly this intersection — where technical necessity meets contemporary interior design. Their work demonstrates how heating can move beyond utility and become part of the architectural composition itself.`,
+    },
+    {
+      type: "p",
+      text: `Rather than treating radiators as something to disguise, the company approaches them as elements that can support the visual identity of a room. Shape, finish, proportion, and placement all become part of the design conversation.`,
+    },
+    {
+      type: "image",
+      src: "/images/work/radiaatorikeskus/3.jpeg",
+      alt: "Designer heating detail by Radiaatorikeskus for modern interiors",
+      fullBleed: true,
+    },
+    {
+      type: "p",
+      text: `This approach reflects a wider shift in contemporary living: people are no longer separating function from beauty as strictly as before. Interiors are expected to work technically, emotionally, and visually at once.`,
+    },
+    {
+      type: "image",
+      src: "/images/work/radiaatorikeskus/4.jpeg",
+      alt: "Modern interior architecture featuring designer heating elements",
+      fullBleed: true,
+    },
+    {
+      type: "p",
+      text: `In this sense, Radiaatorikeskus operates not only as a supplier, but as part of a broader design culture — one that understands comfort as something structured through details.`,
+    },
+    {
+      type: "p",
+      text: `What makes the company especially relevant today is its ability to position a technical product inside a more sophisticated spatial narrative. The radiator is no longer an interruption. It becomes part of the room’s balance.`,
+    },
+    {
+      type: "image",
+      src: "/images/work/radiaatorikeskus/2.jpeg",
+      alt: "Architectural heating and interior design project in Tallinn Estonia",
+      fullBleed: true,
+    },
+    {
+      type: "p",
+      text: `In a market where design-conscious clients are increasingly attentive to every visible element, this shift matters. It changes not only how interiors look, but how they are conceived from the beginning.`,
+    },
+    {
+      type: "p",
+      text: `Radiaatorikeskus offers a clear example of how a business rooted in function can evolve into something more layered — practical, aesthetic, and culturally aligned with the way contemporary spaces are imagined today.`,
+    },
+    {
+      type: "credits",
+      items: [
+        { label: "Company", value: "Küttemaailm OÜ" },
+        { label: "Location", value: "Tallinn, Estonia" },
+        {
+          label: "Website",
+          value: "radiaatorikeskus.ee",
           href: "https://radiaatorikeskus.ee/en/",
-          alt: "Küttemaailm OÜ logo",
         },
+      ],
+      logo: {
+        src: "/images/work/radiaatorikeskus/logo2.png",
+        href: "https://radiaatorikeskus.ee/en/",
+        alt: "Küttemaailm OÜ logo",
       },
-    ],
-  },
+    },
+  ],
+},
 
-  // ================= PRACTICE =================
-  {
+// ================= PRACTICE =================
+{
     slug: "marina-smagin-artmari-handmade-dsn",
     column: "practice",
     title: "Marina Smagin — Artmari Handmade DSN",
