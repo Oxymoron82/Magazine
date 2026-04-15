@@ -51,7 +51,7 @@ export const articles: Article[] = [
     category: "Place",
     excerpt:
       "An editorial observation of Tallinn Fashion Week at T1 Venue in Tallinn, where fashion, atmosphere, and the presence of people shaped the event beyond the runway.",
-    image: "/images/place/tfw/main.jpg",
+    image: "/images/places/tallinweek/2.jpeg",
     date: "2026-04-10",
     blocks: [
       {
@@ -61,20 +61,38 @@ export const articles: Article[] = [
 
 The event brought together designers, guests and industry professionals around new collections and ideas. From the very beginning, there was a clear attention to detail — the audience arrived dressed with intention, each interpreting the mood of the event in their own way. The space was shaped not only by what was happening on the runway, but also by the people within it.`,
       },
+
+       {
+        type: "gallery",
+        images: [
+          {
+            src: "/images/places/tallinweek/4.jpeg",
+            alt: "Audience and atmosphere at Tallinn Fashion Week at T1 Venue",
+          },
+          {
+            src: "/images/places/tallinweek/6.jpg",
+            alt: "Audience and atmosphere at Tallinn Fashion Week at T1 Venue",
+          },
+          {
+            src: "/images/places/tallinweek/7.jpg",
+            alt: "Audience and atmosphere at Tallinn Fashion Week at T1 Venue",
+          },
+          {
+            src: "/images/places/tallinweek/3.jpeg",
+            alt: "Audience and atmosphere at Tallinn Fashion Week at T1 Venue",
+          },
+        ],
+      },
       {
         type: "p",
         text: `Over the course of two days, more than 15 designers presented their collections — both established names and emerging voices. Each show approached form, material and contemporary fashion from a different perspective.`,
       },
       {
-        type: "image",
-        src: "/images/place/tfw/1.jpg",
-        alt: "Audience and atmosphere at Tallinn Fashion Week at T1 Venue",
-        fullBleed: true,
+        type: "video",
+        src: "/images/places/tallinweek/video1.mp4",
+        autoplay: false,
       },
-      {
-        type: "p",
-        text: `Tallinn Fashion Week this season was not only about runway presentations, but about observation — of people, of style, and of how fashion exists in real life.`,
-      },
+      
       {
         type: "p",
         text: `Among the designers this season was Anastasija Balak, whose work is deeply rooted in the relationship between body and form.`,
@@ -102,8 +120,8 @@ The event brought together designers, guests and industry professionals around n
     category: "Practice",
     excerpt:
       "A conversation with designer Anastasija Balak on body, form, vulnerability, and the quiet balance between structure and intuition in her collection Silent Guardian / Falling Petals.",
-    image: "/images/work/balak/main.jpg",
-    date: "2026-04-10",
+    image: "/images/practice/balak/main.jpeg",
+    date: "2026-04-15",
     blocks: [
       {
         type: "p",
@@ -122,11 +140,26 @@ Her practice began with swimwear — working closely with the body, its lines an
 
 There is no attempt to create immediate impact. Instead, the collection works through subtle tension — between protection and vulnerability, softness and inner strength. Materials are not decorative; they become part of the concept itself. Clothing acts as a boundary, as a layer, as a space surrounding the body.`,
       },
-      {
-        type: "image",
-        src: "/images/work/balak/1.jpg",
-        alt: "Anastasija Balak collection Silent Guardian Falling Petals at Tallinn Fashion Week",
-        fullBleed: true,
+     {
+        type: "gallery",
+        images: [
+          {
+            src: "/images/practice/balak/14.jpeg",
+            alt: "Fashion editorial photography of Anastasija Balak's collection Silent Guardian / Falling Petals at Tallinn Fashion Week",
+          },
+          {
+            src: "/images/practice/balak/13.jpeg",
+            alt: "Fashion editorial photography of Anastasija Balak's collection Silent Guardian / Falling Petals at Tallinn Fashion Week",
+          },
+          {
+            src: "/images/practice/balak/12.jpeg",
+            alt: "Fashion editorial photography of Anastasija Balak's collection Silent Guardian / Falling Petals at Tallinn Fashion Week",
+          },
+          {
+            src: "/images/practice/balak/11.jpeg",
+            alt: "Fashion editorial photography of Anastasija Balak's collection Silent Guardian / Falling Petals at Tallinn Fashion Week",
+          },
+        ],
       },
       {
         type: "p",
@@ -140,49 +173,79 @@ The collection feels calm, without pressure, leaving space for interpretation.`,
       },
       {
         type: "h2",
-        text: "Conversation with Anastassija Balak",
+        text: "Conversation with Anastasija Balak",
       },
       {
         type: "p",
         text: `Can you briefly introduce your project — what is your work today?
 
-I’m a tailor and fashion designer, the creator of ABFD Swimwear and the founder of the AVANTGARD atelier. For over fifteen years, I’ve been developing my own brand, AB Fashion Design, working on both collections and custom-made pieces tailored to the individual.`,
+- I’m a tailor and fashion designer, the creator of ABFD Swimwear and the founder of the AVANTGARD atelier. For over fifteen years, I’ve been developing my own brand, AB Fashion Design, working on both collections and custom-made pieces tailored to the individual.`,
       },
       {
         type: "p",
         text: `When did your project start, and how would you describe it today?
 
-It started with working closely with the body — through swimwear. Over time, it became something broader. Today it’s less about a specific category and more about creating a certain state through clothing.`,
+- It started with working closely with the body — through swimwear. Over time, it became something broader. Today it’s less about a specific category and more about creating a certain state through clothing.`,
       },
+
+      {
+        type: "image",
+        src: "/images/practice/balak/8.jpeg",
+        alt: "Audience and atmosphere at Tallinn Fashion Week at T1 Venue",
+        fullBleed: true,
+      },
+
       {
         type: "p",
         text: `What does “work” mean to you today?
 
-Work is a continuous process of searching. It’s not only about making garments, but about understanding form, sensation and inner state.`,
+- Work is a continuous process of searching. It’s not only about making garments, but about understanding form, sensation and inner state.`,
       },
       {
         type: "p",
         text: `What part of your work do people not see or often misunderstand?
 
-The depth of the process. A lot of time goes into working with materials, finding balance between aesthetics and function, and maintaining internal discipline.`,
+- The depth of the process. A lot of time goes into working with materials, finding balance between aesthetics and function, and maintaining internal discipline.`,
+      },
+
+      {
+        type: "gallery",
+        images: [
+          {
+            src: "/images/practice/balak/4.jpeg",
+            alt: "Fashion editorial photography of Anastasija Balak's collection Silent Guardian / Falling Petals at Tallinn Fashion Week",
+          },
+          {
+            src: "/images/practice/balak/5.jpeg",
+            alt: "Fashion editorial photography of Anastasija Balak's collection Silent Guardian / Falling Petals at Tallinn Fashion Week",
+          },
+          {
+            src: "/images/practice/balak/6.jpeg",
+            alt: "Fashion editorial photography of Anastasija Balak's collection Silent Guardian / Falling Petals at Tallinn Fashion Week",
+          },
+          {
+            src: "/images/practice/balak/7.jpeg",
+            alt: "Fashion editorial photography of Anastasija Balak's collection Silent Guardian / Falling Petals at Tallinn Fashion Week",
+          },
+        ],
       },
       {
         type: "p",
         text: `How does your creative process usually start?
 
-It begins with a feeling. Not with a fixed idea, but with a state that gradually takes shape through material and construction.`,
+- It begins with a feeling. Not with a fixed idea, but with a state that gradually takes shape through material and construction.`,
       },
       {
         type: "p",
         text: `Do you work more from structure or intuition?
 
-Both. Intuition gives direction, and structure allows it to take form.`,
+- Both. Intuition gives direction, and structure allows it to take form.`,
       },
       {
         type: "p",
         text: `What inspired you to combine swimwear with Japanese aesthetics and sakura symbolism?
 
-I’m interested in vulnerability, especially in relation to the body. Japanese aesthetics, and sakura in particular, reflect this feeling — beauty that exists in its impermanence.
+- I’m interested in vulnerability, especially in relation to the body. Japanese aesthetics, and sakura in particular, reflect this feeling — beauty that exists in its impermanence.
 
 The prints combine leopard, tiger and blooming sakura on a python texture. It’s about coexistence — strength and fragility at the same time.`,
       },
@@ -190,25 +253,25 @@ The prints combine leopard, tiger and blooming sakura on a python texture. It’
         type: "p",
         text: `What kind of feeling did you want to create through this collection?
 
-A sense of quiet strength. Something internal, not demonstrative. A balance between softness and stability.`,
+- A sense of quiet strength. Something internal, not demonstrative. A balance between softness and stability.`,
       },
       {
         type: "p",
         text: `What were the main challenges in creating this collection?
 
-To stay precise and avoid superficial interpretation. It was a process of refinement — removing what wasn’t necessary and focusing on essence.`,
+- To stay precise and avoid superficial interpretation. It was a process of refinement — removing what wasn’t necessary and focusing on essence.`,
       },
       {
         type: "p",
         text: `What are you building right now?
 
-I continue to develop a language where form and feeling exist together.`,
+- I continue to develop a language where form and feeling exist together.`,
       },
       {
         type: "p",
         text: `What does the next phase look like for you?
 
-Moving towards more abstraction — less direct references, more focus on texture, color and atmosphere.`,
+- Moving towards more abstraction — less direct references, more focus on texture, color and atmosphere.`,
       },
       {
         type: "h2",
@@ -216,14 +279,19 @@ Moving towards more abstraction — less direct references, more focus on textur
       },
       {
         type: "p",
-        text: `In the context of Tallinn Fashion Week, Anastassija Balak’s work feels precise and composed — not seeking attention, but holding it through its internal clarity and rhythm.`,
+        text: `In the context of Tallinn Fashion Week, Anastasija Balak’s work feels precise and composed — not seeking attention, but holding it through its internal clarity and rhythm.`,
       },
       {
         type: "credits",
         items: [
-          { label: "Designer", value: "Anastassija Balak" },
+          { label: "Designer", value: "Anastasija Balak" },
           { label: "Brand", value: "AB Fashion Design" },
           { label: "Atelier", value: "AVANTGARD" },
+          {
+            label: "Website",
+            value: "avantgard.ee", 
+            href: "https://avantgard.ee/en",
+          },
           { label: "Event", value: "Tallinn Fashion Week" },
           { label: "Location", value: "Tallinn, Estonia" },
           { label: "Column", value: "WORK" },

@@ -31,7 +31,13 @@ export default function Header() {
           </Link>
         </nav>
 
-        <a href="#" className="text-base font-semibold text-white/95 hover:text-white transition">
+        {/* 🔥 Instagram link */}
+        <a
+          href="https://www.instagram.com/the_issue_n/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-base font-semibold text-white/95 hover:text-white transition"
+        >
           IG
         </a>
       </div>

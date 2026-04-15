@@ -201,7 +201,18 @@ function renderBlock(
         </h2>
       );
 
-    case "video":
+    case "video": {
+      const isTallinnWeekVideo =
+        block.src === "/images/places/tallinweek/video1.mp4";
+
+      const videoText = isTallinnWeekVideo
+        ? "Tallinn Fashion Week this season was not only about runway presentations, but about observation — of people, of style, and of how fashion exists in real life."
+        : "From the first moodboard to the final shutter click, we create a space where you can finally take up the room you deserve.";
+
+      const videoPoster = isTallinnWeekVideo
+        ? "/images/places/tallinweek/poster.jpg"
+        : "/images/trinity/6.jpg";
+
       return (
         <div
           key={index}
@@ -209,15 +220,14 @@ function renderBlock(
         >
           <div className="md:pt-8">
             <p className="font-serif text-[22px] leading-[1.5] text-neutral-900 tracking-tight">
-              From the first moodboard to the final shutter click, we create a
-              space where you can finally take up the room you deserve.
+              {videoText}
             </p>
           </div>
 
           <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-black">
             <video
               src={block.src}
-              poster="/images/trinity/6.jpg"
+              poster={videoPoster}
               controls
               playsInline
               className="w-full max-w-[520px] h-auto transition duration-500 hover:scale-[1.02]"
@@ -235,38 +245,38 @@ function renderBlock(
           </div>
         </div>
       );
+    }
 
- case "p":
-  // 👇 авто-линк на вторую статью
-  if (block.text.includes("Continue reading")) {
-    return (
-      <p
-        key={index}
-        className="my-6 text-[18px] leading-relaxed text-neutral-800"
-      >
-        <Link
-          href="/article/anastassija-balak-silent-guardian-falling-petals"
-          className="underline underline-offset-4 hover:text-black transition"
+    case "p":
+      if (block.text.includes("Continue reading")) {
+        return (
+          <p
+            key={index}
+            className="my-6 text-[18px] leading-relaxed text-neutral-800"
+          >
+            <Link
+              href="/article/anastasija-balak-silent-guardian-falling-petals"
+              className="underline underline-offset-4 hover:text-black transition"
+            >
+              Continue reading →
+            </Link>
+          </p>
+        );
+      }
+
+      return (
+        <p
+          key={index}
+          className={[
+            "my-6 text-[18px] leading-relaxed text-neutral-800 whitespace-pre-line",
+            block.dropCap
+              ? "first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:font-serif first-letter:text-6xl md:first-letter:text-7xl first-letter:leading-none first-letter:text-neutral-900"
+              : "",
+          ].join(" ")}
         >
-          Continue reading →
-        </Link>
-      </p>
-    );
-  }
-
-  return (
-    <p
-      key={index}
-      className={[
-        "my-6 text-[18px] leading-relaxed text-neutral-800 whitespace-pre-line",
-        block.dropCap
-          ? "first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:font-serif first-letter:text-6xl md:first-letter:text-7xl first-letter:leading-none first-letter:text-neutral-900"
-          : "",
-      ].join(" ")}
-    >
-      {block.text}
-    </p>
-  );
+          {block.text}
+        </p>
+      );
 
     case "quote":
       return <PullQuote key={index}>{block.text}</PullQuote>;
@@ -377,6 +387,9 @@ export default async function ArticlePage({
   if (!article) notFound();
 
   const isMarina = article.slug === "marina-smagin-artmari-handmade-dsn";
+  const isBalak =
+    article.slug === "anastasija-balak-silent-guardian-falling-petals";
+
   const imagePosition: "center" | "top" = isMarina ? "top" : "center";
 
   const articleJsonLd = {
@@ -415,17 +428,31 @@ export default async function ArticlePage({
       />
 
       <main className="bg-[#FFFBEB] text-neutral-900">
-        <section className="relative w-full h-[70vh] md:h-[80vh]">
+        <section
+          className={`relative w-full ${
+            isBalak ? "h-[85vh] md:h-[90vh] bg-black" : "h-[70vh] md:h-[80vh]"
+          }`}
+        >
           <Image
             src={article.image}
             alt={article.title}
             fill
             priority
-            className={`object-cover ${
-              imagePosition === "top" ? "object-top" : "object-center"
+            className={
+              isBalak
+                ? "object-contain"
+                : `object-cover ${
+                    imagePosition === "top" ? "object-top" : "object-center"
+                  }`
+            }
+          />
+          <div
+            className={`absolute inset-0 ${
+              isBalak
+                ? "bg-gradient-to-t from-black/70 via-black/20 to-black/20"
+                : "bg-gradient-to-t from-black/60 via-black/10 to-transparent"
             }`}
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
 
           <div className="absolute bottom-0 left-0 right-0">
             <div className="max-w-5xl mx-auto px-6 pb-10 md:pb-14">
