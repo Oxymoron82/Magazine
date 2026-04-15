@@ -89,7 +89,7 @@ The event brought together designers, guests and industry professionals around n
       },
       {
         type: "p",
-        text: `Continue reading in the Work column: “Anastasija Balak — Silent Guardian / Falling Petals.”`,
+        text: `Continue reading in the Practice column: “Anastasija Balak — Silent Guardian / Falling Petals.”`,
       },
     ],
   },
@@ -97,9 +97,9 @@ The event brought together designers, guests and industry professionals around n
   // ================= WORK =================
   {
     slug: "anastasija-balak-silent-guardian-falling-petals",
-    column: "work",
+    column: "practice",
     title: "Anastasija Balak — Silent Guardian / Falling Petals",
-    category: "Work",
+    category: "Practice",
     excerpt:
       "A conversation with designer Anastasija Balak on body, form, vulnerability, and the quiet balance between structure and intuition in her collection Silent Guardian / Falling Petals.",
     image: "/images/work/balak/main.jpg",
