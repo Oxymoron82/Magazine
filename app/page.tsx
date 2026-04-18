@@ -97,39 +97,38 @@ export default function HomePage() {
       >
         <div className="max-w-3xl">
           <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
-            About The Issue
+            About The Issue №
           </p>
 
           <h2 className="mt-6 text-4xl md:text-5xl leading-tight font-semibold font-serif">
-            The Issue is not just a magazine.
+            The Issue № is not about fashion, business or visuals.
+
             <br />
-            It is a continuation.
+            It is about continuing.
           </h2>
 
           <div className="mt-10 space-y-7 text-[17px] md:text-[18px] leading-relaxed text-neutral-800">
             <p>
-              The Issue is not simply a magazine about fashion, business, or
-              visuals. It is a space about continuing.
+              The Issue № is an independent editorial platform exploring people, work and contemporary life.
+
             </p>
 
             <p>
-              About people who don’t move in a straight line. About those who
-              begin again — in a new country, a new role, at a new age.
+              Based in Northern Europe, the magazine moves between fashion, business and personal transformation - focusing on process, presence and the way individuals shape themselves over time.
+
             </p>
 
             <p>
-              This magazine didn’t grow out of an idea to “create media.” It grew
-              out of lived experience — falls and restarts, relocations, work
-              from zero, returning to yourself and to what truly matters.
+              The Issue № is not built around trends or fast content.
+It is a space for observation - where image, narrative and experience exist together.
             </p>
 
             <p>
-              Here, beauty is not about perfection. It is about inner strength.
-              About posture, even when it’s hard. About a gaze that doesn’t drop.
+              Each story begins with a question - not to provide quick answers, but to understand what is at stake.
             </p>
 
             <p>
-              The Issue is about people who build themselves. About women and men
+              The Issue № is about people who build themselves. About women and men
               who change, grow up, lose illusions and gain clarity.
             </p>
 
@@ -153,13 +152,13 @@ export default function HomePage() {
             </p>
 
             <p>
-              The Issue is the continuation of movement. Not proof of success,
+              The Issue № is the continuation of movement. Not proof of success,
               but evidence of growth. Not a showcase, but a process.
             </p>
 
             <p className="pt-4 font-serif text-[20px] md:text-[22px] leading-snug">
               This magazine is for those who understand:
-              <br />a new chapter doesn’t arrive by itself —
+              <br />a new chapter doesn’t arrive by itself -
               <br />
               it is created.
             </p>
@@ -189,10 +188,25 @@ export default function HomePage() {
             </h2>
 
             <p className="mt-6 text-neutral-700 leading-relaxed text-lg">
-              I have always been surrounded by beautiful women.
+              The Issue № began as a collection of separate ideas —
+about work, presence and the way people shape their environment.
               <br />
-              Not glossy beauty, but real beauty — strong, confident, alive.
+             Over time, it became something more connected.
+Not a finished statement, but a process.
+
+ <br />
+ Over time, it became something more connected.
+Not a finished statement, but a process.
+
+<br />
+
+There is no single narrative here.
+Only moments, observations and people —
+each carrying their own direction.
+
             </p>
+
+
 
             <p className="mt-4 italic text-neutral-500 text-sm">by Sofia Solas</p>
 

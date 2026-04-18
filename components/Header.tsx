@@ -1,45 +1,53 @@
 "use client";
 
 import Link from "next/link";
+import { FaInstagram } from "react-icons/fa";
 
 export default function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 bg-black/25 backdrop-blur-md">
-      <div className="w-full px-8 md:px-12 py-5 flex items-center justify-between">
+    <header className="fixed top-0 left-0 right-0 z-40">
+      <div className="relative w-full px-8 md:px-12 py-5 flex items-center justify-between">
+        
+        {/* 🔹 LOGO */}
         <Link
           href="/#home"
-          className="tracking-[0.2em] text-base md:text-lg font-semibold text-white"
+          className="text-[12px] md:text-sm tracking-[0.35em] uppercase text-white/90 hover:text-white transition"
         >
-          MAGAZINE
+          The Issue N
         </Link>
 
-        <nav className="hidden md:flex gap-8 text-base font-semibold text-white/95">
-          <Link href="/#columns" className="hover:text-white transition">
-            Columns
-          </Link>
-          <Link href="/#latest" className="hover:text-white transition">
-            Latest
-          </Link>
-          <Link href="/#about" className="hover:text-white transition">
-            About
-          </Link>
-          <Link href="/#editors-note" className="hover:text-white transition">
-            Editor&apos;s Note
-          </Link>
-          <Link href="/#contact" className="hover:text-white transition">
-            Contacts
-          </Link>
+        {/* 🔹 NAV */}
+        <nav className="hidden md:flex items-center gap-8 lg:gap-10">
+          {[
+            ["Columns", "#columns"],
+            ["Latest", "#latest"],
+            ["About", "#about"],
+            ["Editor’s Note", "#editors-note"],
+            ["Contact", "#contact"],
+          ].map(([label, href]) => (
+            <Link
+              key={href}
+              href={`/${href}`}
+              className="text-[11px] tracking-[0.28em] uppercase text-white/70 hover:text-white transition"
+            >
+              {label}
+            </Link>
+          ))}
         </nav>
 
-        {/* 🔥 Instagram link */}
+        {/* 🔹 INSTAGRAM */}
         <a
           href="https://www.instagram.com/the_issue_n/"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-base font-semibold text-white/95 hover:text-white transition"
+          aria-label="Instagram"
+          className="flex items-center justify-center text-white/70 hover:text-white transition duration-300 hover:scale-110"
         >
-          IG
+          <FaInstagram className="w-[18px] h-[18px]" />
         </a>
+
+        {/* 🔹 BACKGROUND GRADIENT */}
+        <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-black/40 via-black/10 to-transparent backdrop-blur-md" />
       </div>
     </header>
   );

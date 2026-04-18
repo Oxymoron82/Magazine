@@ -41,7 +41,7 @@ export default function EditorPage() {
                 src="/images/sonja1.jpeg"
                 alt="Editor portrait"
                 fill
-                className="object-cover"
+                className="object-cover object-[center_22%]"
                 priority
               />
             </div>

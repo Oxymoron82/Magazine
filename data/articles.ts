@@ -62,7 +62,7 @@ export const articles: Article[] = [
 The event brought together designers, guests and industry professionals around new collections and ideas. From the very beginning, there was a clear attention to detail — the audience arrived dressed with intention, each interpreting the mood of the event in their own way. The space was shaped not only by what was happening on the runway, but also by the people within it.`,
       },
 
-       {
+      {
         type: "gallery",
         images: [
           {
@@ -92,7 +92,7 @@ The event brought together designers, guests and industry professionals around n
         src: "/images/places/tallinweek/video1.mp4",
         autoplay: false,
       },
-      
+
       {
         type: "p",
         text: `Among the designers this season was Anastasija Balak, whose work is deeply rooted in the relationship between body and form.`,
@@ -140,7 +140,7 @@ Her practice began with swimwear — working closely with the body, its lines an
 
 There is no attempt to create immediate impact. Instead, the collection works through subtle tension — between protection and vulnerability, softness and inner strength. Materials are not decorative; they become part of the concept itself. Clothing acts as a boundary, as a layer, as a space surrounding the body.`,
       },
-     {
+      {
         type: "gallery",
         images: [
           {
@@ -289,7 +289,7 @@ The prints combine leopard, tiger and blooming sakura on a python texture. It’
           { label: "Atelier", value: "AVANTGARD" },
           {
             label: "Website",
-            value: "avantgard.ee", 
+            value: "avantgard.ee",
             href: "https://avantgard.ee/en",
           },
           { label: "Event", value: "Tallinn Fashion Week" },
@@ -314,17 +314,68 @@ The prints combine leopard, tiger and blooming sakura on a python texture. It’
       {
         type: "p",
         dropCap: true,
-        text: `Sexuality is not a pose. It is a state.
-
-I hesitated for a long time before writing about sexuality. There is simply too much falseness around it.
-
-Too often it looks like a performance: rehearsed gestures, a pulled-in stomach, the correct tilt of the head, and that endless instruction to “be desirable in the right way”.
-
-But real life is different.`,
+        text: `Sexuality is not a pose. It is a state.`,
       },
       {
         type: "p",
-        text: `Real sexuality is not an image. It is the way you breathe, the way you touch objects, the way you allow yourself to exist in the moment without constantly worrying about how you appear from the outside.`,
+        text: `I resisted writing about sexuality for a long time.`,
+      },
+      {
+        type: "p",
+        text: `There’s too much performance around it. Too much imitation. It often looks like something rehearsed — a certain way of standing, a controlled gesture, the “right” angle of the body. As if desire has rules, and you just need to follow them correctly.`,
+      },
+      {
+        type: "p",
+        text: `But in real life, it doesn’t work like that.`,
+      },
+      {
+        type: "p",
+        text: `Real sexuality isn’t an image. It’s not something you construct for others to see. It’s in the way you breathe. The way you move. The way you touch things without thinking about how it looks from the outside.`,
+      },
+      {
+        type: "p",
+        text: `Over the years, working with visuals — shoots, models, photographers — I’ve noticed something strange.`,
+      },
+      {
+        type: "gallery",
+        images: [
+          {
+            src: "/images/Intimacy/1/gallery-1.jpg",
+            alt: "Intimacy editorial placeholder image 1",
+          },
+          {
+            src: "/images/Intimacy/1/gallery-2.jpg",
+            alt: "Intimacy editorial placeholder image 2",
+          },
+          {
+            src: "/images/Intimacy/1/gallery-3.jpg",
+            alt: "Intimacy editorial placeholder image 3",
+          },
+          {
+            src: "/images/Intimacy/1/gallery-4.jpg",
+            alt: "Intimacy editorial placeholder image 4",
+          },
+        ],
+      },
+      {
+        type: "p",
+        text: `Many people live as if their body is just a vehicle for their mind. We’re in constant motion: tasks, deadlines, internal noise. And the body becomes something secondary. Something “not good enough,” or “later,” or “when I finally lose weight / look younger / get enough rest.”`,
+      },
+      {
+        type: "p",
+        text: `And that’s exactly where sexuality disappears.`,
+      },
+      {
+        type: "p",
+        text: `Not because of age. Not because of imperfections. But because we’re simply not present in ourselves.`,
+      },
+      {
+        type: "p",
+        text: `The most magnetic people I’ve seen through the lens were never the most “perfect” ones. They were the most present.`,
+      },
+      {
+        type: "p",
+        text: `You see it immediately — in a single movement. In the way someone sits down without trying to hide. In the way they hold eye contact. In the way they allow themselves to take up space.`,
       },
       {
         type: "image",
@@ -333,8 +384,184 @@ But real life is different.`,
         fullBleed: true,
       },
       {
+        type: "h2",
+        text: "What this is really about",
+      },
+      {
         type: "p",
-        text: `The most magnetic people are those who are present within themselves.`,
+        text: `This space is not about beauty in the conventional sense.`,
+      },
+      {
+        type: "p",
+        text: `It’s about returning.`,
+      },
+      {
+        type: "p",
+        text: `About how people find their way back to themselves after difficult moments. How desire comes back after loss. How perception shifts after motherhood, after time, after change.`,
+      },
+      {
+        type: "p",
+        text: `Sometimes, it happens through something as simple — and as difficult — as an honest photoshoot. A moment where, for the first time in a long time, you don’t see a function in the mirror, but a woman.`,
+      },
+      {
+        type: "p",
+        text: `For some, this will be about becoming alive again after a period of emotional stillness.`,
+      },
+      {
+        type: "p",
+        text: `For others, it’s about accepting a new kind of vulnerability — and realizing that it’s not weakness, but strength.`,
+      },
+      {
+        type: "h2",
+        text: "Boudoir is not about lingerie",
+      },
+      {
+        type: "p",
+        text: `So why begin with boudoir?`,
+      },
+      {
+        type: "p",
+        text: `Because for me, it has nothing to do with seduction.`,
+      },
+      {
+        type: "p",
+        text: `It’s a moment of being alone with yourself — while allowing someone else to see you at the same time. A photographer, a witness. That requires trust. And a certain kind of courage.`,
+      },
+      {
+        type: "p",
+        text: `It’s not “look at me.” It’s “this is me — as I am right now. And I don’t need to apologize for it.”`,
+      },
+      {
+        type: "gallery",
+        images: [
+          {
+            src: "/images/Intimacy/1/gallery-5.jpg",
+            alt: "Intimacy editorial placeholder image 5",
+          },
+          {
+            src: "/images/Intimacy/1/gallery-6.jpg",
+            alt: "Intimacy editorial placeholder image 6",
+          },
+          {
+            src: "/images/Intimacy/1/gallery-7.jpg",
+            alt: "Intimacy editorial placeholder image 7",
+          },
+          {
+            src: "/images/Intimacy/1/gallery-8.jpg",
+            alt: "Intimacy editorial placeholder image 8",
+          },
+        ],
+      },
+      {
+        type: "h2",
+        text: "What comes next",
+      },
+      {
+        type: "p",
+        text: `This won’t be about advice.`,
+      },
+      {
+        type: "p",
+        text: `It will be about experience.`,
+      },
+      {
+        type: "p",
+        text: `We’ll invite people to share their stories — how they lost connection with themselves, and how they found it again. We’ll speak with photographers and artists who know how to see beauty where most of us only see flaws.`,
+      },
+      {
+        type: "p",
+        text: `We’ll look for ways to quiet the internal critic — and reconnect with something more instinctive.`,
+      },
+      {
+        type: "hr",
+      },
+      {
+        type: "h2",
+        text: "A simple starting point",
+      },
+      {
+        type: "p",
+        text: `Sexuality doesn’t need to be created.`,
+      },
+      {
+        type: "p",
+        text: `It doesn’t need to be performed or imitated.`,
+      },
+      {
+        type: "p",
+        text: `Most of the time, it’s already there — just blocked.`,
+      },
+      {
+        type: "p",
+        text: `The moment you allow yourself to feel your body again — the warmth of your skin, the depth of your breath, the ease of movement — something shifts.`,
+      },
+      {
+        type: "p",
+        text: `Desire doesn’t need instructions.`,
+      },
+      {
+        type: "p",
+        text: `It returns on its own.`,
+      },
+      {
+        type: "p",
+        text: `Quietly. Naturally.`,
+      },
+      {
+        type: "p",
+        text: `Because you are finally back.`,
+      },
+      {
+        type: "p",
+        text: `And maybe that’s where something important begins.`,
+      },
+      {
+        type: "hr",
+      },
+      {
+        type: "h2",
+        text: "Personal Story: Why I Choose to Be Seen",
+      },
+      {
+        type: "p",
+        text: `Model: Evgeniya Zapolnova
+Photographer: Nikolai Zapolny`,
+      },
+      {
+        type: "p",
+        text: `“I’m 38. I’ve been in a relationship for 19 years.`,
+      },
+      {
+        type: "p",
+        text: `As a child, I experienced harassment, and very early on I learned that male attention wasn’t safe. For years, I tried not to be sexual — it felt like a way to protect myself. I hid behind humor and self-irony.`,
+      },
+      {
+        type: "p",
+        text: `I never thought my body was ‘good enough.’ I believed that people only saw my imperfections. Even when my partner told me I was beautiful, I assumed he just had bad taste.`,
+      },
+      {
+        type: "p",
+        text: `At some point, I realized something simple: ‘later’ might never come. Life is happening now.`,
+      },
+      {
+        type: "p",
+        text: `And I started to see myself differently.`,
+      },
+      {
+        type: "p",
+        text: `I realized I am attractive. That I am strong enough to face my fears.`,
+      },
+      {
+        type: "p",
+        text: `Now I choose to be photographed nude because this is me.`,
+      },
+      {
+        type: "p",
+        text: `Yes, technically my body may look ‘worse’ than it did at twenty. But I feel more sexual now than I ever did then.`,
+      },
+      {
+        type: "p",
+        text: `For me, this is about control. It’s a challenge. And it’s completely, entirely mine.”`,
       },
       {
         type: "image",
@@ -366,97 +593,97 @@ But real life is different.`,
   // ================= WORK =================
   {
     slug: "radiaatorikeskus-heating-design-estonia",
-  column: "work",
-  title: "When Heating Becomes Design: The Business Behind Radiaatorikeskus",
-  category: "Work",
-  excerpt:
-    "A business and interior design feature on Radiaatorikeskus, an Estonian company turning heating systems into architectural design elements through entrepreneurship, modern interiors, and functional aesthetics.",
-  image: "/images/work/radiaatorikeskus/1.jpeg",
-  date: "2026-03-17",
-  blocks: [
-    {
-      type: "p",
-      dropCap: true,
-      text: `In interior architecture, the boundary between function and aesthetics is becoming increasingly blurred.`,
-    },
-    {
-      type: "p",
-      text: `What was once hidden behind function now becomes part of the visual language of a space. Heating systems, traditionally perceived as purely technical, are increasingly treated as objects of form, rhythm, and atmosphere.`,
-    },
-    {
-      type: "image",
-      src: "/images/work/radiaatorikeskus/1.jpeg",
-      alt: "Radiaatorikeskus showroom with interior design and heating solutions in Estonia",
-      fullBleed: true,
-    },
-    {
-      type: "p",
-      text: `Radiaatorikeskus is an Estonian company working at exactly this intersection — where technical necessity meets contemporary interior design. Their work demonstrates how heating can move beyond utility and become part of the architectural composition itself.`,
-    },
-    {
-      type: "p",
-      text: `Rather than treating radiators as something to disguise, the company approaches them as elements that can support the visual identity of a room. Shape, finish, proportion, and placement all become part of the design conversation.`,
-    },
-    {
-      type: "image",
-      src: "/images/work/radiaatorikeskus/3.jpeg",
-      alt: "Designer heating detail by Radiaatorikeskus for modern interiors",
-      fullBleed: true,
-    },
-    {
-      type: "p",
-      text: `This approach reflects a wider shift in contemporary living: people are no longer separating function from beauty as strictly as before. Interiors are expected to work technically, emotionally, and visually at once.`,
-    },
-    {
-      type: "image",
-      src: "/images/work/radiaatorikeskus/4.jpeg",
-      alt: "Modern interior architecture featuring designer heating elements",
-      fullBleed: true,
-    },
-    {
-      type: "p",
-      text: `In this sense, Radiaatorikeskus operates not only as a supplier, but as part of a broader design culture — one that understands comfort as something structured through details.`,
-    },
-    {
-      type: "p",
-      text: `What makes the company especially relevant today is its ability to position a technical product inside a more sophisticated spatial narrative. The radiator is no longer an interruption. It becomes part of the room’s balance.`,
-    },
-    {
-      type: "image",
-      src: "/images/work/radiaatorikeskus/2.jpeg",
-      alt: "Architectural heating and interior design project in Tallinn Estonia",
-      fullBleed: true,
-    },
-    {
-      type: "p",
-      text: `In a market where design-conscious clients are increasingly attentive to every visible element, this shift matters. It changes not only how interiors look, but how they are conceived from the beginning.`,
-    },
-    {
-      type: "p",
-      text: `Radiaatorikeskus offers a clear example of how a business rooted in function can evolve into something more layered — practical, aesthetic, and culturally aligned with the way contemporary spaces are imagined today.`,
-    },
-    {
-      type: "credits",
-      items: [
-        { label: "Company", value: "Küttemaailm OÜ" },
-        { label: "Location", value: "Tallinn, Estonia" },
-        {
-          label: "Website",
-          value: "radiaatorikeskus.ee",
-          href: "https://radiaatorikeskus.ee/en/",
-        },
-      ],
-      logo: {
-        src: "/images/work/radiaatorikeskus/logo2.png",
-        href: "https://radiaatorikeskus.ee/en/",
-        alt: "Küttemaailm OÜ logo",
+    column: "work",
+    title: "When Heating Becomes Design: The Business Behind Radiaatorikeskus",
+    category: "Work",
+    excerpt:
+      "A business and interior design feature on Radiaatorikeskus, an Estonian company turning heating systems into architectural design elements through entrepreneurship, modern interiors, and functional aesthetics.",
+    image: "/images/work/radiaatorikeskus/1.jpeg",
+    date: "2026-03-17",
+    blocks: [
+      {
+        type: "p",
+        dropCap: true,
+        text: `In interior architecture, the boundary between function and aesthetics is becoming increasingly blurred.`,
       },
-    },
-  ],
-},
+      {
+        type: "p",
+        text: `What was once hidden behind function now becomes part of the visual language of a space. Heating systems, traditionally perceived as purely technical, are increasingly treated as objects of form, rhythm, and atmosphere.`,
+      },
+      {
+        type: "image",
+        src: "/images/work/radiaatorikeskus/1.jpeg",
+        alt: "Radiaatorikeskus showroom with interior design and heating solutions in Estonia",
+        fullBleed: true,
+      },
+      {
+        type: "p",
+        text: `Radiaatorikeskus is an Estonian company working at exactly this intersection — where technical necessity meets contemporary interior design. Their work demonstrates how heating can move beyond utility and become part of the architectural composition itself.`,
+      },
+      {
+        type: "p",
+        text: `Rather than treating radiators as something to disguise, the company approaches them as elements that can support the visual identity of a room. Shape, finish, proportion, and placement all become part of the design conversation.`,
+      },
+      {
+        type: "image",
+        src: "/images/work/radiaatorikeskus/3.jpeg",
+        alt: "Designer heating detail by Radiaatorikeskus for modern interiors",
+        fullBleed: true,
+      },
+      {
+        type: "p",
+        text: `This approach reflects a wider shift in contemporary living: people are no longer separating function from beauty as strictly as before. Interiors are expected to work technically, emotionally, and visually at once.`,
+      },
+      {
+        type: "image",
+        src: "/images/work/radiaatorikeskus/4.jpeg",
+        alt: "Modern interior architecture featuring designer heating elements",
+        fullBleed: true,
+      },
+      {
+        type: "p",
+        text: `In this sense, Radiaatorikeskus operates not only as a supplier, but as part of a broader design culture — one that understands comfort as something structured through details.`,
+      },
+      {
+        type: "p",
+        text: `What makes the company especially relevant today is its ability to position a technical product inside a more sophisticated spatial narrative. The radiator is no longer an interruption. It becomes part of the room’s balance.`,
+      },
+      {
+        type: "image",
+        src: "/images/work/radiaatorikeskus/2.jpeg",
+        alt: "Architectural heating and interior design project in Tallinn Estonia",
+        fullBleed: true,
+      },
+      {
+        type: "p",
+        text: `In a market where design-conscious clients are increasingly attentive to every visible element, this shift matters. It changes not only how interiors look, but how they are conceived from the beginning.`,
+      },
+      {
+        type: "p",
+        text: `Radiaatorikeskus offers a clear example of how a business rooted in function can evolve into something more layered — practical, aesthetic, and culturally aligned with the way contemporary spaces are imagined today.`,
+      },
+      {
+        type: "credits",
+        items: [
+          { label: "Company", value: "Küttemaailm OÜ" },
+          { label: "Location", value: "Tallinn, Estonia" },
+          {
+            label: "Website",
+            value: "radiaatorikeskus.ee",
+            href: "https://radiaatorikeskus.ee/en/",
+          },
+        ],
+        logo: {
+          src: "/images/work/radiaatorikeskus/logo2.png",
+          href: "https://radiaatorikeskus.ee/en/",
+          alt: "Küttemaailm OÜ logo",
+        },
+      },
+    ],
+  },
 
-// ================= PRACTICE =================
-{
+  // ================= PRACTICE =================
+  {
     slug: "marina-smagin-artmari-handmade-dsn",
     column: "practice",
     title: "Marina Smagin — Artmari Handmade DSN",
@@ -550,7 +777,7 @@ But real life is different.`,
             alt: "Eco couture fashion detail in editorial photography",
           },
           {
-            src: "/images/practice/07.jpg",
+            src: "/images/practice/077.jpg",
             alt: "Handmade designer gown created from recycled textiles for fashion editorial",
           },
           {
