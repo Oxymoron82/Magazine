@@ -17,6 +17,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://theissue.xyz"),
+  title: {
+    default: "The Issue",
+    template: "%s | The Issue",
+  },
+  description:
+    "The Issue is an independent online magazine about transformation, business, visual culture, and personal stories.",
+  alternates: {
+    canonical: "https://theissue.xyz",
+  },
   verification: {
     google: "GpHgqBE_vaKUdIqV",
     other: {

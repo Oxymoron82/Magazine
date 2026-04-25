@@ -294,7 +294,7 @@ The prints combine leopard, tiger and blooming sakura on a python texture. It’
           },
           { label: "Event", value: "Tallinn Fashion Week" },
           { label: "Location", value: "Tallinn, Estonia" },
-          { label: "Column", value: "WORK" },
+          { label: "Column", value: "PRACTICE" },
         ],
       },
     ],
@@ -340,19 +340,19 @@ The prints combine leopard, tiger and blooming sakura on a python texture. It’
         type: "gallery",
         images: [
           {
-            src: "/images/Intimacy/1/gallery-1.jpg",
+            src: "/images/Intimacy/1/4.jpg",
             alt: "Intimacy editorial placeholder image 1",
           },
           {
-            src: "/images/Intimacy/1/gallery-2.jpg",
+            src: "/images/Intimacy/1/5.jpg",
             alt: "Intimacy editorial placeholder image 2",
           },
           {
-            src: "/images/Intimacy/1/gallery-3.jpg",
+            src: "/images/Intimacy/1/6.jpg",
             alt: "Intimacy editorial placeholder image 3",
           },
           {
-            src: "/images/Intimacy/1/gallery-4.jpg",
+            src: "/images/Intimacy/1/7.jpg",
             alt: "Intimacy editorial placeholder image 4",
           },
         ],
@@ -435,19 +435,19 @@ The prints combine leopard, tiger and blooming sakura on a python texture. It’
         type: "gallery",
         images: [
           {
-            src: "/images/Intimacy/1/gallery-5.jpg",
+            src: "/images/Intimacy/1/8.jpg",
             alt: "Intimacy editorial placeholder image 5",
           },
           {
-            src: "/images/Intimacy/1/gallery-6.jpg",
+            src: "/images/Intimacy/1/9.jpg",
             alt: "Intimacy editorial placeholder image 6",
           },
           {
-            src: "/images/Intimacy/1/gallery-7.jpg",
+            src: "/images/Intimacy/1/10.jpg",
             alt: "Intimacy editorial placeholder image 7",
           },
           {
-            src: "/images/Intimacy/1/gallery-8.jpg",
+            src: "/images/Intimacy/1/11.jpg",
             alt: "Intimacy editorial placeholder image 8",
           },
         ],

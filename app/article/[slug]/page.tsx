@@ -2,11 +2,109 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { articles, ArticleBlock } from "@/data/articles";
+import { Fragment } from "react";
+import { articles, ArticleBlock, Article } from "@/data/articles";
 
 import SubmitForm from "@/components/SubmitForm";
 
 const siteUrl = "https://theissue.xyz";
+
+const inlineLinkMap: { phrase: string; href: string }[] = [
+  {
+    phrase: "Anastasija Balak",
+    href: "/article/anastasija-balak-silent-guardian-falling-petals",
+  },
+  {
+    phrase: "Tallinn Fashion Week",
+    href: "/article/tallinn-fashion-week-between-space-movement-and-form",
+  },
+  {
+    phrase: "Marina Smagin",
+    href: "/article/marina-smagin-artmari-handmade-dsn",
+  },
+  {
+    phrase: "TRINITY project",
+    href: "/article/trinity-sofia",
+  },
+  {
+    phrase: "Sexuality Is Not a Pose — It Is a State",
+    href: "/article/sexuality-is-not-a-pose",
+  },
+];
+
+const relatedArticlesMap: Record<string, string[]> = {
+  "tallinn-fashion-week-between-space-movement-and-form": [
+    "anastasija-balak-silent-guardian-falling-petals",
+    "marina-smagin-artmari-handmade-dsn",
+  ],
+  "anastasija-balak-silent-guardian-falling-petals": [
+    "tallinn-fashion-week-between-space-movement-and-form",
+    "marina-smagin-artmari-handmade-dsn",
+  ],
+  "marina-smagin-artmari-handmade-dsn": [
+    "anastasija-balak-silent-guardian-falling-petals",
+    "tallinn-fashion-week-between-space-movement-and-form",
+  ],
+  "sexuality-is-not-a-pose": ["trinity-sofia"],
+  "trinity-sofia": ["sexuality-is-not-a-pose"],
+  "radiaatorikeskus-heating-design-estonia": [
+    "tallinn-fashion-week-between-space-movement-and-form",
+    "anastasija-balak-silent-guardian-falling-petals",
+  ],
+};
+
+function escapeRegExp(value: string) {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+function renderLinkedLine(line: string) {
+  if (!line) return null;
+
+  const matches = inlineLinkMap
+    .map((item) => {
+      const match = line.match(new RegExp(escapeRegExp(item.phrase), "g"));
+      return match ? { ...item, count: match.length } : null;
+    })
+    .filter(Boolean) as { phrase: string; href: string; count: number }[];
+
+  if (matches.length === 0) return line;
+
+  const pattern = new RegExp(
+    `(${inlineLinkMap.map((item) => escapeRegExp(item.phrase)).join("|")})`,
+    "g"
+  );
+
+  const parts = line.split(pattern);
+
+  return parts.map((part, index) => {
+    const linkItem = inlineLinkMap.find((item) => item.phrase === part);
+
+    if (linkItem) {
+      return (
+        <Link
+          key={`${part}-${index}`}
+          href={linkItem.href}
+          className="underline underline-offset-4 hover:text-black transition"
+        >
+          {part}
+        </Link>
+      );
+    }
+
+    return <Fragment key={`${part}-${index}`}>{part}</Fragment>;
+  });
+}
+
+function renderLinkedText(text: string) {
+  const lines = text.split("\n");
+
+  return lines.map((line, index) => (
+    <Fragment key={`${line}-${index}`}>
+      {renderLinkedLine(line)}
+      {index < lines.length - 1 ? <br /> : null}
+    </Fragment>
+  ));
+}
 
 function PullQuote({ children }: { children: React.ReactNode }) {
   return (
@@ -185,6 +283,56 @@ function GalleryBlock({
   );
 }
 
+function RelatedArticles({ items }: { items: Article[] }) {
+  if (!items.length) return null;
+
+  return (
+    <section className="mt-16 md:mt-20">
+      <div className="h-px bg-neutral-200/70 mb-10" />
+
+      <div className="flex items-end justify-between gap-6 mb-8">
+        <div>
+          <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
+            Related Reading
+          </p>
+          <h2 className="mt-3 text-2xl md:text-3xl font-serif">
+            Continue exploring
+          </h2>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {items.map((item) => (
+          <Link key={item.slug} href={`/article/${item.slug}`} className="group">
+            <article className="space-y-4">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-neutral-200 bg-white/30">
+                <Image
+                  src={item.image}
+                  alt={item.title}
+                  fill
+                  className="object-cover transition duration-500 group-hover:scale-[1.03]"
+                />
+              </div>
+
+              <p className="text-xs uppercase tracking-[0.3em] text-neutral-600">
+                {item.category}
+              </p>
+
+              <h3 className="text-xl font-medium leading-snug">{item.title}</h3>
+
+              <p className="text-neutral-700 leading-relaxed">{item.excerpt}</p>
+
+              <p className="text-sm underline underline-offset-4">
+                Read article →
+              </p>
+            </article>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function renderBlock(
   block: ArticleBlock,
   index: number,
@@ -254,12 +402,7 @@ function renderBlock(
             key={index}
             className="my-6 text-[18px] leading-relaxed text-neutral-800"
           >
-            <Link
-              href="/article/anastasija-balak-silent-guardian-falling-petals"
-              className="underline underline-offset-4 hover:text-black transition"
-            >
-              Continue reading →
-            </Link>
+            {renderLinkedText(block.text)}
           </p>
         );
       }
@@ -274,7 +417,7 @@ function renderBlock(
               : "",
           ].join(" ")}
         >
-          {block.text}
+          {renderLinkedText(block.text)}
         </p>
       );
 
@@ -392,6 +535,11 @@ export default async function ArticlePage({
 
   const imagePosition: "center" | "top" = isMarina ? "top" : "center";
 
+  const relatedArticles =
+    relatedArticlesMap[article.slug]
+      ?.map((relatedSlug) => articles.find((item) => item.slug === relatedSlug))
+      .filter(Boolean) as Article[] | undefined;
+
   const articleJsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -498,6 +646,8 @@ export default async function ArticlePage({
 
           <article className="max-w-2xl mx-auto px-6">
             {article.blocks.map((b, i) => renderBlock(b, i, imagePosition))}
+
+            <RelatedArticles items={relatedArticles ?? []} />
 
             <SubmitForm />
 
