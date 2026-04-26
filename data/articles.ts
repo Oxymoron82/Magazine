@@ -525,7 +525,7 @@ The prints combine leopard, tiger and blooming sakura on a python texture. It’
       {
         type: "p",
         text: `Model: Evgeniya Zapolnova
-Photographer: Nikolai Zapolny`,
+Photographer: Nikolai Zapolnov`,
       },
       {
         type: "p",
@@ -830,6 +830,177 @@ Photographer: Nikolai Zapolny`,
   },
 
   // ================= BECOMING =================
+{
+  slug: "starting-again-in-another-country",
+  column: "becoming",
+  title: "Starting Again, in Another Country",
+  category: "Becoming",
+  excerpt:
+    "A personal editorial essay by Sofia Solas on migration, motherhood, work, visual storytelling, and the quiet strength of beginning again in another country.",
+  image: "/images/becoming/starting-again/main.jpeg",
+  date: "2026-04-20",
+  blocks: [
+    {
+      type: "p",
+      dropCap: true,
+      text: `Beauty is not perfection.
+
+It is posture — especially when it’s hard.`,
+    },
+    {
+      type: "p",
+      text: `I grew up surrounded by women who understood this without explaining it.
+
+Not glossy beauty, not something constructed for attention — but something quieter and more grounded. Presence. Confidence. A way of holding yourself, even when no one is looking.`,
+    },
+    {
+      type: "p",
+      text: `My mother was a director and ran a modeling agency. For her, it was work. For me, it was an environment I observed from a distance — fittings, rehearsals, the rhythm before a show, the moment just before stepping into light. I remember watching more than participating. Trying to understand what made someone visible.`,
+    },
+    {
+      type: "p",
+      text: `That’s where my idea of beauty began — not as appearance, but as a form of strength.
+
+Over time, observation turned into intention. Fashion stopped being something external. It became a language — a way to speak about character, femininity, vulnerability and control.`,
+    },
+    {
+      type: "gallery",
+      images: [
+        {
+          src: "/images/becoming/starting-again/1.jpeg",
+          alt: "Editorial portrait about migration, identity, and starting again in another country",
+        },
+        {
+          src: "/images/becoming/starting-again/2.jpeg",
+          alt: "Visual storytelling image about feminine strength and personal transformation",
+        },
+        {
+          src: "/images/becoming/starting-again/3.jpeg",
+          alt: "Editorial image about rebuilding life and identity in Helsinki",
+        },
+      ],
+    },
+    {
+      type: "h2",
+      text: "Starting from zero",
+    },
+    {
+      type: "p",
+      text: `Moving to another country changes your sense of direction.
+
+I came to Helsinki with a small child and the idea that a different life was possible. But relocation removes structure very quickly. You arrive without context — no network, no history, no position. Things that once defined you no longer exist in the same way.`,
+    },
+    {
+      type: "p",
+      text: `You start again.
+
+When the relationship ended, that reset became more concrete. Responsibility stayed — for my child and for myself. There is a moment where you realise there are only two options: stop, or continue. There is no in-between.`,
+    },
+    {
+      type: "h2",
+      text: "Work, in its simplest form",
+    },
+    {
+      type: "p",
+      text: `My first job in Finland was cleaning.
+
+There is a certain clarity in that kind of work. It is direct, physical, repetitive. It gives structure to the day. It teaches discipline without needing to explain it.`,
+    },
+    {
+      type: "p",
+      text: `I never saw it as something to hide. It was part of the process — a stage that builds endurance and respect for work in any form.
+
+From there, things moved slowly. I began working within a hotel group in Scandinavia. I studied hospitality and event management. I received Finnish citizenship after four years.
+
+Nothing happened quickly. And maybe that’s why it stayed.`,
+    },
+    {
+      type: "quote",
+      text: "You either stop, or you begin again.",
+    },
+    {
+      type: "h2",
+      text: "Returning to image",
+    },
+    {
+      type: "p",
+      text: `At some point, I felt that something was still unresolved.
+
+I returned to visual work — not as an observer this time, but as someone building from inside. I started training in posing and fashion production. Then styling. Then visual concepts.`,
+    },
+    {
+      type: "p",
+      text: `It became clear that I didn’t want to wait for opportunities. I wanted to create them.
+
+I began producing shoots — bringing together photographers, designers, makeup artists. Working through the entire process: from the initial idea to the final image.`,
+    },
+    {
+      type: "p",
+      text: `Later, I studied fashion styling in Italy. At the same time, I started learning finance — because creating something is only part of the work. Sustaining it is another.`,
+    },
+    {
+      type: "gallery",
+      images: [
+        {
+          src: "/images/becoming/starting-again/77.jpeg",
+          alt: "Editorial portrait about returning to visual storytelling and creative work",
+        },
+        {
+          src: "/images/becoming/starting-again/5.jpeg",
+          alt: "Fashion editorial image about creative direction and personal growth",
+        },
+        {
+          src: "/images/becoming/starting-again/6.jpeg",
+          alt: "Editorial image about Sofia Solas and the development of The Issue N",
+        },
+      ],
+    },
+    {
+      type: "h2",
+      text: "People",
+    },
+    {
+      type: "p",
+      text: `The work gradually became more defined. Projects started forming. Publications followed — across Europe, the US and the UK.
+
+But the most important part was always the same.
+
+Women.`,
+    },
+    {
+      type: "p",
+      text: `Different ages, different bodies, different experiences. Each one carrying something specific, something not always visible at first. Working with them was never only about image. It was about presence — how a person enters a frame, and what remains after.`,
+    },
+    {
+      type: "h2",
+      text: "The Issue №",
+    },
+    {
+      type: "p",
+      text: `This project didn’t begin as a fixed idea.
+
+It grew out of process — from working, observing, building, and returning again. From understanding that not everything needs to be explained, and not everything needs to be visible immediately.`,
+    },
+    {
+      type: "p",
+      text: `The Issue № is not a showcase.
+
+It is a continuation. A structure that holds different stories, without forcing them into one direction.
+
+Something that remains open.`,
+    },
+    {
+      type: "p",
+      text: `— Sofia Solas
+Helsinki`,
+    },
+    {
+      type: "p",
+      text: `For another story of transformation through visual identity, continue with the TRINITY project.`,
+    },
+  ],
+},
+
   {
     slug: "trinity-sofia",
     column: "becoming",

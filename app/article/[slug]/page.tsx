@@ -19,6 +19,10 @@ const inlineLinkMap: { phrase: string; href: string }[] = [
     href: "/article/tallinn-fashion-week-between-space-movement-and-form",
   },
   {
+  phrase: "Starting Again, in Another Country",
+  href: "/article/starting-again-in-another-country",
+},
+  {
     phrase: "Marina Smagin",
     href: "/article/marina-smagin-artmari-handmade-dsn",
   },
@@ -41,6 +45,8 @@ const relatedArticlesMap: Record<string, string[]> = {
     "tallinn-fashion-week-between-space-movement-and-form",
     "marina-smagin-artmari-handmade-dsn",
   ],
+  "starting-again-in-another-country": ["trinity-sofia", "sexuality-is-not-a-pose"],
+
   "marina-smagin-artmari-handmade-dsn": [
     "anastasija-balak-silent-guardian-falling-petals",
     "tallinn-fashion-week-between-space-movement-and-form",
@@ -531,7 +537,12 @@ export default async function ArticlePage({
 
   const isMarina = article.slug === "marina-smagin-artmari-handmade-dsn";
   const isBalak =
-    article.slug === "anastasija-balak-silent-guardian-falling-petals";
+  article.slug === "anastasija-balak-silent-guardian-falling-petals";
+
+const isStartingAgain =
+  article.slug === "starting-again-in-another-country";
+
+const useContainHero = isBalak || isStartingAgain;
 
   const imagePosition: "center" | "top" = isMarina ? "top" : "center";
 
@@ -578,7 +589,7 @@ export default async function ArticlePage({
       <main className="bg-[#FFFBEB] text-neutral-900">
         <section
           className={`relative w-full ${
-            isBalak ? "h-[85vh] md:h-[90vh] bg-black" : "h-[70vh] md:h-[80vh]"
+           useContainHero ? "h-[85vh] md:h-[90vh] bg-black" : "h-[70vh] md:h-[80vh]"
           }`}
         >
           <Image
@@ -587,18 +598,18 @@ export default async function ArticlePage({
             fill
             priority
             className={
-              isBalak
-                ? "object-contain"
-                : `object-cover ${
-                    imagePosition === "top" ? "object-top" : "object-center"
-                  }`
+             useContainHero
+  ? "object-contain"
+  : `object-cover ${
+      imagePosition === "top" ? "object-top" : "object-center"
+    }`
             }
           />
           <div
             className={`absolute inset-0 ${
-              isBalak
-                ? "bg-gradient-to-t from-black/70 via-black/20 to-black/20"
-                : "bg-gradient-to-t from-black/60 via-black/10 to-transparent"
+              useContainHero
+  ? "bg-gradient-to-t from-black/70 via-black/20 to-black/20"
+  : "bg-gradient-to-t from-black/60 via-black/10 to-transparent"
             }`}
           />
 

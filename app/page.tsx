@@ -210,12 +210,12 @@ each carrying their own direction.
 
             <p className="mt-4 italic text-neutral-500 text-sm">by Sofia Solas</p>
 
-            <Link
-              href="/editor"
-              className="inline-block mt-6 text-sm underline underline-offset-4 hover:text-black transition"
-            >
-              Read the full note →
-            </Link>
+           <Link
+  href="/article/starting-again-in-another-country"
+  className="inline-block mt-6 text-sm underline underline-offset-4 hover:text-black transition"
+>
+  read more →
+</Link>
           </div>
 
           <div className="md:col-span-5">
