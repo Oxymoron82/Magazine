@@ -683,6 +683,179 @@ Photographer: Nikolai Zapolnov`,
   },
 
   // ================= PRACTICE =================
+
+{
+  slug: "about-elegance-musical-fuad-oranski",
+  column: "practice",
+  title: "About Elegance Musical — A Conversation with Fuäd Oranski",
+  category: "Practice",
+  excerpt:
+    "A conversation with Fuäd Oranski on About Elegance Musical, a Finnish rock-pop venture built around collaboration, multilingual sound, live performance, and creative exchange.",
+  image: "/images/practice/about-elegance-musical/main.jpg",
+  date: "2026-04-26",
+  blocks: [
+    {
+      type: "p",
+      dropCap: true,
+      text: `The Issue №: Hello Fuäd Oranski, nice to have you with us. Can you briefly introduce your project — what is About Elegance Musical?
+
+Fuäd Oranski: Hello, thank you for inviting me here. About Elegance Musical is a Finnish mainly rock/pop venture, playing in other styles too — funk, soul, hard rock. It is my creation and my foundation, and it happened in Helsinki.`,
+    },
+    {
+      type: "p",
+      text: `About Elegance is much more than a band. It is an open platform to share music through gigs, different collaborations, digital musical works, recordings, exchanges with musicians, and online streams.`,
+    },
+    {
+      type: "p",
+      text: `By the way, I invite people from all artistic areas for different kinds of collaborations with AEM — musicians, singers, models, photographers, actors, dancers.
+
+Official website: https://www.aboutelegancemusical.com/`,
+    },
+    {
+      type: "image",
+      src: "/images/practice/about-elegance-musical/1.jpg",
+      alt: "About Elegance Musical Finnish rock pop band editorial portrait",
+      fullBleed: true,
+    },
+    {
+      type: "p",
+      text: `The Issue №: When did it start, and how would you describe your format today?
+
+Fuäd Oranski: It started in May 2023 as a musical venture. Concerning the format as a band, it changes sometimes, but usually it is the classical one: vocal, bass guitar, drums, electric guitar, and keyboards. When there is a possibility, I prefer to play acoustic piano, and if acoustic guitar can join the band, it sounds perfect.`,
+    },
+    {
+      type: "p",
+      text: `The Issue №: How would you define your sound or direction?
+
+Fuäd Oranski: About Elegance Musical is a rock-pop fusion band, but I like to add some soul taste, funk, and often hard rock or metal drums. All those rhythms and tastes give a special original sound. I call it a “very specific cocktail sound”.`,
+    },
+    {
+      type: "p",
+      text: `It is specific also in terms of our singing languages. I usually sing in English, but also in French, sometimes in Finnish, and on rare occasions in Russian and Arabic. I had a chance to be born to multicultural parents, and had the privilege to live in different countries and continents. That is why all these languages are inside of me forever.`,
+    },
+    {
+      type: "quote",
+      text: "About Elegance is much more than a band. It is an open platform to share music.",
+    },
+    {
+      type: "p",
+      text: `The Issue №: How did your project begin — and what has changed since then?
+
+Fuäd Oranski: In the beginning it was a project. Today it is more like a musical venture, a mission to share the best of what we can offer to the audience — our music, our message, our love through all of this.`,
+    },
+    {
+      type: "p",
+      text: `The Issue №: What does “work” mean to you today?
+
+Fuäd Oranski: Work means a lot of things at the same time: creativity, the right timing, positive connection between everyone helping and working inside the band and around it.`,
+    },
+    {
+      type: "p",
+      text: `I would like to thank our manager Sami, who gave an incredible re-boost to the whole process, and a special thanks to Ilari, our bassist, who is giving his best to the band, and Oliver, a great drummer and musician who is always with AEM when needed. Big thanks to Sofia Sol, such an adorable model, for her collaboration with us — and a million thanks to many other people.`,
+    },
+    {
+      type: "p",
+      text: `Work is a magical process. It takes a lot of energy, and you have to sacrifice a lot. But in the end, there is always satisfaction, because the result is mainly positive.`,
+    },
+    {
+      type: "image",
+      src: "/images/practice/about-elegance-musical/2.jpg",
+      alt: "Fuäd Oranski About Elegance Musical creative process and performance editorial",
+      fullBleed: true,
+    },
+    {
+      type: "p",
+      text: `The Issue №: What part of your work do people not see or misunderstand?
+
+Fuäd Oranski: We try to share a lot with the crowd. Maybe I am not yet ready to share the moment of creation. It is still something private for me. But who knows — maybe in the future I will share that part with the audience too.`,
+    },
+    {
+      type: "p",
+      text: `The Issue №: How does your creative process usually start?
+
+Fuäd Oranski: It starts in a million different ways — from personal life moments, past memories, moments of meeting great people, receiving great lyrics from nice people or even from someone unknown, or after living through a beautiful or dramatic personal moment.`,
+    },
+    {
+      type: "p",
+      text: `The Issue №: Do you work more from structure or intuition?
+
+Fuäd Oranski: More from intuition, but I like to work from structure too sometimes.`,
+    },
+    {
+      type: "p",
+      text: `The Issue №: What has changed in your approach to music over time?
+
+Fuäd Oranski: Music is not only creating, recording, or performing. Music is an incredible world where you meet people, discover sounds and rhythms, and connect in real time or through social media with millions of different things.`,
+    },
+    {
+      type: "p",
+      text: `That is why I am in love with all that process. I try to reach the ideal everywhere and every time, even if I know that it is impossible. But the most valuable thing is sharing your creativity.`,
+    },
+    {
+      type: "quote",
+      text: "The most valuable thing is sharing your creativity.",
+    },
+    {
+      type: "p",
+      text: `The Issue №: How do you feel about being visible as artists today?
+
+Fuäd Oranski: Being visible is not so complicated in our era. Everyone can create their own music, their own image, if they have a bit of skill. The most important thing is to understand that you do something unique, and that you can give the audience something that makes people happy or boosts them emotionally in a positive way.`,
+    },
+    {
+      type: "p",
+      text: `The Issue №: What do you want people to feel when they listen to your music?
+
+Fuäd Oranski: Love, happiness, various feelings — mostly positive ones, and sometimes sad ones too.`,
+    },
+    {
+      type: "image",
+      src: "/images/practice/about-elegance-musical/3.jpg",
+      alt: "About Elegance Musical rock pop project Helsinki editorial image",
+      fullBleed: true,
+    },
+    {
+      type: "p",
+      text: `The Issue №: What are you building right now?
+
+Fuäd Oranski: Starting from December 2025, we are preparing three different singles and two music videos. I am also in a non-stop process of creating new songs for our first album.`,
+    },
+    {
+      type: "p",
+      text: `I am lucky to be surrounded by great people, without whom it would be impossible to achieve the intended goals. There will also be some amazing surprises. The deadline is May or June 2026, and I am so excited to launch that sharing process with the audience.`,
+    },
+    {
+      type: "p",
+      text: `Of course, there will be a lot of gigs — mainly in Finland, but in Estonia and France too. We will inform the world about all the dates when the right time comes.`,
+    },
+    {
+      type: "p",
+      text: `The Issue №: What does the next phase look like for you?
+
+Fuäd Oranski: The next phase is the launching process of everything we are preparing in terms of musical material — sharing it with the audience through social media, radio, TV, gigs, mainstream platforms, or interviews on platforms like yours, The Issue №.`,
+    },
+    {
+      type: "p",
+      text: `The Issue №: Thank you.
+
+Fuäd Oranski: Thank you. It was a real pleasure.`,
+    },
+    {
+      type: "credits",
+      items: [
+        { label: "Project", value: "About Elegance Musical" },
+        { label: "Artist", value: "Fuäd Oranski" },
+        { label: "Location", value: "Helsinki, Finland" },
+        {
+          label: "Website",
+          value: "aboutelegancemusical.com",
+          href: "https://www.aboutelegancemusical.com/",
+        },
+        { label: "Column", value: "PRACTICE" },
+      ],
+    },
+  ],
+},
+
   {
     slug: "marina-smagin-artmari-handmade-dsn",
     column: "practice",

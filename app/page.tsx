@@ -51,32 +51,34 @@ export default function HomePage() {
       {/* HERO */}
       <section
         id="home"
-        className="relative w-full overflow-hidden scroll-mt-24 md:h-[100svh] md:min-h-[720px]"
+        className="relative w-full overflow-hidden scroll-mt-24"
       >
-        <div className="grid md:h-full md:grid-cols-2">
+        <div className="grid md:grid-cols-2">
           {/* LEFT SIDE */}
-          <div className="relative h-[34vh] min-h-[240px] md:h-full">
+          <div className="relative h-[52vh] min-h-[360px] md:h-[72vh] md:min-h-[560px] bg-black overflow-hidden">
             <Image
               src="/images/editorial-2.jpg"
               alt="Editorial cover"
               fill
               priority
-              className="object-cover"
+              className="object-contain"
             />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/35 via-black/10 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-black/20" />
 
-            <div className="absolute inset-x-0 bottom-6 px-6 text-center md:bottom-auto md:inset-0 md:flex md:items-center md:justify-center md:px-10">
-              <p className="font-didot text-[13px] leading-none tracking-[0.04em] text-white md:text-[22px]">
-                An Independent Editorial Platform
+            <div className="absolute inset-0 z-10 flex items-center justify-center px-6 text-center">
+              <p className="font-serif text-white text-[24px] md:text-[42px] leading-[1.18] tracking-[0.08em] max-w-[520px] drop-shadow-[0_2px_16px_rgba(0,0,0,0.55)]">
+                Individual stories
+                <br />
+                and fashion identity
               </p>
             </div>
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="relative bg-[#E1D5D5]">
-            <div className="flex items-center justify-center px-6 py-8 md:h-full md:px-12 md:py-12">
-              <div className="relative aspect-[3/4] w-full max-w-[290px] md:max-w-[760px]">
+          <div className="relative h-[52vh] min-h-[360px] md:h-[72vh] md:min-h-[560px] bg-[#E1D5D5] overflow-hidden">
+            <div className="flex h-full items-center justify-center px-6 py-8 md:px-12 md:py-12">
+              <div className="relative aspect-[3/4] w-full max-w-[290px] md:max-w-[620px]">
                 <Image
                   src="/images/logo_main.jpg"
                   alt="The Issue N logo"
@@ -93,7 +95,7 @@ export default function HomePage() {
       {/* MANIFESTO / ABOUT */}
       <section
         id="about"
-        className="max-w-5xl mx-auto px-6 py-28 md:py-36 scroll-mt-24"
+        className="max-w-5xl mx-auto px-6 py-16 md:py-24 scroll-mt-24"
       >
         <div className="max-w-3xl">
           <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
@@ -102,34 +104,36 @@ export default function HomePage() {
 
           <h2 className="mt-6 text-4xl md:text-5xl leading-tight font-semibold font-serif">
             The Issue № is not about fashion, business or visuals.
-
             <br />
             It is about continuing.
           </h2>
 
           <div className="mt-10 space-y-7 text-[17px] md:text-[18px] leading-relaxed text-neutral-800">
             <p>
-              The Issue № is an independent editorial platform exploring people, work and contemporary life.
-
+              The Issue № is an independent editorial platform exploring people,
+              work and contemporary life.
             </p>
 
             <p>
-              Based in Northern Europe, the magazine moves between fashion, business and personal transformation - focusing on process, presence and the way individuals shape themselves over time.
-
+              Based in Northern Europe, the magazine moves between fashion,
+              business and personal transformation - focusing on process,
+              presence and the way individuals shape themselves over time.
             </p>
 
             <p>
-              The Issue № is not built around trends or fast content.
-It is a space for observation - where image, narrative and experience exist together.
+              The Issue № is not built around trends or fast content. It is a
+              space for observation - where image, narrative and experience
+              exist together.
             </p>
 
             <p>
-              Each story begins with a question - not to provide quick answers, but to understand what is at stake.
+              Each story begins with a question - not to provide quick answers,
+              but to understand what is at stake.
             </p>
 
             <p>
-              The Issue № is about people who build themselves. About women and men
-              who change, grow up, lose illusions and gain clarity.
+              The Issue № is about people who build themselves. About women and
+              men who change, grow up, lose illusions and gain clarity.
             </p>
 
             <div className="mt-10 border-l border-neutral-300 pl-6 space-y-3">
@@ -188,34 +192,27 @@ It is a space for observation - where image, narrative and experience exist toge
             </h2>
 
             <p className="mt-6 text-neutral-700 leading-relaxed text-lg">
-              The Issue № began as a collection of separate ideas —
-about work, presence and the way people shape their environment.
+              The Issue № began as a collection of separate ideas — about work,
+              presence and the way people shape their environment.
               <br />
-             Over time, it became something more connected.
-Not a finished statement, but a process.
-
- <br />
- Over time, it became something more connected.
-Not a finished statement, but a process.
-
-<br />
-
-There is no single narrative here.
-Only moments, observations and people —
-each carrying their own direction.
-
+              Over time, it became something more connected. Not a finished
+              statement, but a process.
+              <br />
+              <br />
+              There is no single narrative here. Only moments, observations and
+              people — each carrying their own direction.
             </p>
 
+            <p className="mt-4 italic text-neutral-500 text-sm">
+              by Sofia Solas
+            </p>
 
-
-            <p className="mt-4 italic text-neutral-500 text-sm">by Sofia Solas</p>
-
-           <Link
-  href="/article/starting-again-in-another-country"
-  className="inline-block mt-6 text-sm underline underline-offset-4 hover:text-black transition"
->
-  read more →
-</Link>
+            <Link
+              href="/article/starting-again-in-another-country"
+              className="inline-block mt-6 text-sm underline underline-offset-4 hover:text-black transition"
+            >
+              read more →
+            </Link>
           </div>
 
           <div className="md:col-span-5">
