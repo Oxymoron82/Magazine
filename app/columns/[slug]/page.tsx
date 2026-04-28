@@ -24,8 +24,8 @@ export async function generateMetadata({
 
   if (!column) {
     return {
-      title: "Column | The Issue N",
-      description: "Editorial columns from The Issue N.",
+      title: "Column | The Issue №",
+      description: "Editorial columns from The Issue №.",
       robots: {
         index: false,
         follow: false,
@@ -37,16 +37,16 @@ export async function generateMetadata({
   const description = column.descriptionShort || column.description;
 
   return {
-    title: `${column.title} | ${column.label} | The Issue N`,
+    title: `${column.label} | The Issue №`,
     description,
     alternates: {
       canonical: columnUrl,
     },
     openGraph: {
-      title: `${column.title} | ${column.label} | The Issue N`,
+      title: `${column.label} | The Issue №`,
       description,
       url: columnUrl,
-      siteName: "The Issue N",
+      siteName: "The Issue №",
       type: "website",
       locale: "en_US",
       images: [
@@ -54,13 +54,13 @@ export async function generateMetadata({
           url: `${siteUrl}${column.image}`,
           width: 1200,
           height: 630,
-          alt: `${column.title} column in The Issue N editorial magazine`,
+          alt: `${column.label} column in The Issue № editorial magazine`,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: `${column.title} | ${column.label} | The Issue N`,
+      title: `${column.label} | The Issue №`,
       description,
       images: [`${siteUrl}${column.image}`],
     },
@@ -94,14 +94,12 @@ export default async function ColumnPage({
     <main className="bg-[#FFFBEB] text-neutral-900">
       <section className="max-w-7xl mx-auto px-6 pt-20 pb-10">
         <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
-          Column
+          {column.label}
         </p>
 
         <div className="mt-4 grid md:grid-cols-12 gap-10 items-start">
           <div className="md:col-span-7">
             <h1 className="text-4xl md:text-5xl font-serif leading-tight">
-              {column.label}
-              <span className="text-neutral-400"> — </span>
               {column.title}
             </h1>
 
@@ -130,7 +128,7 @@ export default async function ColumnPage({
             <div className="relative ml-auto w-full max-w-sm aspect-[4/5]">
               <Image
                 src={column.image}
-                alt={`${column.title} column in The Issue N editorial magazine`}
+                alt={`${column.label} column in The Issue № editorial magazine`}
                 fill
                 className="object-cover rounded-xl"
               />
@@ -167,7 +165,7 @@ export default async function ColumnPage({
               <div className="md:col-span-7 relative aspect-[16/10] md:aspect-[4/3]">
                 <Image
                   src={featured.image}
-                  alt={`${featured.title} featured editorial story in ${column.title}`}
+                  alt={`${featured.title} featured editorial story in ${column.label}`}
                   fill
                   className="object-cover group-hover:scale-[1.01] transition"
                 />
@@ -215,7 +213,7 @@ export default async function ColumnPage({
                   <div className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-neutral-200">
                     <Image
                       src={a.image}
-                      alt={`${a.title} editorial feature in The Issue N`}
+                      alt={`${a.title} editorial feature in The Issue №`}
                       fill
                       className="object-cover transition duration-500 group-hover:scale-[1.03]"
                     />

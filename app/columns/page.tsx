@@ -6,18 +6,18 @@ import { columns } from "@/data/columns";
 const siteUrl = "https://theissue.xyz";
 
 export const metadata: Metadata = {
-  title: "Columns | The Issue N Editorial Magazine",
+  title: "Columns | The Issue № Editorial Magazine",
   description:
-    "Explore all columns of The Issue N — an independent editorial magazine covering fashion, photography, creative practice, business, and contemporary culture.",
+    "Explore all columns of The Issue № — an independent editorial magazine covering fashion, photography, creative practice, business, and contemporary culture.",
   alternates: {
     canonical: `${siteUrl}/columns`,
   },
   openGraph: {
-    title: "Columns | The Issue N",
+    title: "Columns | The Issue №",
     description:
-      "Discover editorial columns on fashion, photography, design, business, and identity in The Issue N magazine.",
+      "Discover editorial columns on fashion, photography, design, business, and identity in The Issue № magazine.",
     url: `${siteUrl}/columns`,
-    siteName: "The Issue N",
+    siteName: "The Issue №",
     type: "website",
     locale: "en_US",
     images: [
@@ -25,15 +25,15 @@ export const metadata: Metadata = {
         url: `${siteUrl}/images/editorial-2.jpg`,
         width: 1200,
         height: 630,
-        alt: "The Issue N editorial columns overview",
+        alt: "The Issue № editorial columns overview",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Columns | The Issue N",
+    title: "Columns | The Issue №",
     description:
-      "Explore fashion, photography, design, and creative columns in The Issue N editorial platform.",
+      "Explore fashion, photography, design, and creative columns in The Issue № editorial platform.",
     images: [`${siteUrl}/images/editorial-2.jpg`],
   },
   robots: {
@@ -64,7 +64,7 @@ export default function ColumnsPage() {
         </div>
 
         <p className="mt-6 max-w-2xl text-neutral-700 leading-relaxed">
-          The Issue N is structured around editorial columns — each one exploring
+          The Issue № is structured around editorial columns — each one exploring
           fashion, photography, creative practice, business, and contemporary
           identity through visual storytelling and independent publishing.
         </p>
@@ -78,22 +78,18 @@ export default function ColumnsPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-20">
           {columns.map((c) => (
             <Link key={c.slug} href={`/columns/${c.slug}`} className="block">
-              <article className="space-y-4 group">
+              <article className="space-y-5 group">
                 <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
                   <Image
                     src={c.image}
-                    alt={`${c.title} column in The Issue N editorial magazine`}
+                    alt={`${c.label} column in The Issue № editorial magazine`}
                     fill
                     className="object-cover transition duration-500 group-hover:scale-[1.03]"
                   />
                 </div>
 
-                <p className="text-xs uppercase tracking-[0.3em] text-neutral-600">
+                <h3 className="font-serif text-4xl md:text-5xl leading-tight">
                   {c.label}
-                </p>
-
-                <h3 className="text-xl font-medium leading-snug">
-                  {c.title}
                 </h3>
 
                 <p className="text-sm text-neutral-700 leading-relaxed">

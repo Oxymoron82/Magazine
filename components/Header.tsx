@@ -13,7 +13,7 @@ export default function Header() {
           href="/#home"
           className="text-[12px] md:text-sm tracking-[0.35em] uppercase text-white/90 hover:text-white transition"
         >
-          The Issue N
+          The Issue №
         </Link>
 
         {/* 🔹 NAV */}
