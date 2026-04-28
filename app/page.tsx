@@ -327,7 +327,7 @@ export default function HomePage() {
               </p>
 
               <h2 className="mt-5 font-serif text-4xl md:text-5xl leading-[1.05] text-neutral-900 transition-transform duration-500 group-hover:translate-x-1">
-                The Issue N
+                The Issue №
               </h2>
             </div>
 
@@ -350,13 +350,13 @@ export default function HomePage() {
   </div>
 
   <div className="border-l border-neutral-300 pl-6 space-y-3">
-    <p>— about people who build themselves</p>
-    <p>— about those who change, grow, lose illusions and gain clarity</p>
-    <p>— about transformation without spectacle</p>
-    <p>— about work without a cold mask</p>
-    <p>— about fashion as a language, not a trend</p>
-    <p>— about cities and spaces that shape us</p>
-    <p>— about people who remain real</p>
+    <p> about people who build themselves</p>
+    <p> about those who change, grow, lose illusions and gain clarity</p>
+    <p> about transformation without spectacle</p>
+    <p> about work without a cold mask</p>
+    <p> about fashion as a language, not a trend</p>
+    <p> about cities and spaces that shape us</p>
+    <p> about people who remain real</p>
   </div>
 
   <div>
