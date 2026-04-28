@@ -333,11 +333,86 @@ export default function HomePage() {
 
             <div className="lg:col-span-8">
               <p className="text-[22px] md:text-[30px] leading-[1.45] text-neutral-800 max-w-none">
-                The Issue N is an independent fashion and editorial magazine
+                The Issue № is an independent fashion and editorial magazine
                 exploring contemporary culture through visual storytelling,
                 photography, and design.
               </p>
+<div className="mt-10 space-y-10 text-neutral-800">
 
+  <div>
+    <p className="text-[18px] leading-relaxed">
+      The Issue № is an independent editorial platform exploring people, work and contemporary life.
+    </p>
+
+    <p className="mt-5 text-[18px] leading-relaxed">
+      It is built around observation — of how individuals shape themselves, how work evolves over time, and how environment influences both.
+    </p>
+  </div>
+
+  <div className="border-l border-neutral-300 pl-6 space-y-3">
+    <p>— about people who build themselves</p>
+    <p>— about those who change, grow, lose illusions and gain clarity</p>
+    <p>— about transformation without spectacle</p>
+    <p>— about work without a cold mask</p>
+    <p>— about fashion as a language, not a trend</p>
+    <p>— about cities and spaces that shape us</p>
+    <p>— about people who remain real</p>
+  </div>
+
+  <div>
+    <p className="text-[18px] leading-relaxed">
+      We approach stories through process rather than outcome.
+    </p>
+
+    <p className="mt-5 text-[18px] leading-relaxed">
+      Each piece is developed with attention to detail, image and narrative — not to explain, but to reveal.
+    </p>
+
+    <p className="mt-5 text-[18px] leading-relaxed">
+      Visuals are not decoration. They are part of the language.
+    </p>
+  </div>
+
+  {/* TEAM */}
+  <div className="mt-12">
+    <p className="text-xs uppercase tracking-[0.35em] text-neutral-500 mb-6">
+      Team
+    </p>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+      <div className="space-y-3">
+        <div className="relative w-full aspect-[3/4] rounded-xl overflow-hidden">
+          <Image
+            src="/images/team/sofia.jpg"
+            alt="Sofia Solas"
+            fill
+            className="object-cover"
+          />
+        </div>
+        <p className="font-medium">Sofia Solas</p>
+        <p className="text-sm text-neutral-500">Founder & Editor</p>
+      </div>
+
+      <div className="space-y-3">
+        <div className="relative w-full aspect-[3/4] rounded-xl overflow-hidden">
+          <Image
+            src="/images/team/maria.jpeg"
+            alt="Maria"
+            fill
+            className="object-cover"
+          />
+        </div>
+        <p className="font-medium">Maria</p>
+        <p className="text-sm text-neutral-500">
+          Co-Founder & Editorial Director
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+</div>
               <p className="mt-6 text-[17px] md:text-[20px] leading-[1.75] text-neutral-700 max-w-[1100px]">
                 Based in Northern Europe, the magazine features designers,
                 photographers, and creative entrepreneurs working at the
