@@ -69,21 +69,35 @@ export default function HomePage() {
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-black/25" />
 
-            <div className="absolute inset-0 z-10 flex items-center justify-start px-8 md:px-20 text-left">
-              <p className="font-serif text-white text-[28px] md:text-[54px] leading-[1.05] tracking-[0.07em] max-w-[660px] drop-shadow-[0_2px_16px_rgba(0,0,0,0.55)]">
-                Individual stories
-                <br />
-                and fashion identity
-              </p>
-            </div>
+            <div className="absolute inset-0 z-10 flex items-end px-8 pb-10 md:px-20 md:pb-20 text-left">
+  <div className="max-w-[760px]">
+    <p className="mb-6 text-xs uppercase tracking-[0.4em] text-white/75">
+      The Issue № / Editorial Platform
+    </p>
+
+    <h1 className="font-serif text-white text-[46px] md:text-[86px] lg:text-[104px] leading-[0.92] tracking-[-0.04em] drop-shadow-[0_3px_20px_rgba(0,0,0,0.5)]">
+      Individual
+      <br />
+      stories.
+      <br />
+      Fashion
+      <br />
+      identity.
+    </h1>
+
+    <p className="mt-7 max-w-md text-sm md:text-base leading-relaxed text-white/80">
+      A visual magazine about people, work, transformation and contemporary culture.
+    </p>
+  </div>
+</div>
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="relative h-[56vh] min-h-[390px] md:h-[78vh] md:min-h-[620px] bg-[#E1D5D5] overflow-hidden">
+          <div className="relative h-[56vh] min-h-[390px] md:h-[78vh] md:min-h-[620px] bg-[#D6C6B8] overflow-hidden">
             <div className="flex h-full items-center justify-center px-6 py-8 md:px-12 md:py-12">
               <div className="relative aspect-[3/4] w-full max-w-[290px] md:max-w-[620px]">
                 <Image
-                  src="/images/logo_main.jpg"
+                  src="/images/logo_main2.jpg"
                   alt="The Issue № logo"
                   fill
                   priority

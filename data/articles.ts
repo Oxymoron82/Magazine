@@ -687,11 +687,11 @@ Photographer: Nikolai Zapolnov`,
 {
   slug: "about-elegance-musical-fuad-oranski",
   column: "practice",
-  title: "About Elegance Musical — A Conversation with Fuäd Oranski",
+  title: "About Elegance Musical  —  A Conversation with Fuäd Oranski",
   category: "Practice",
   excerpt:
     "A conversation with Fuäd Oranski on About Elegance Musical, a Finnish rock-pop venture built around collaboration, multilingual sound, live performance, and creative exchange.",
-  image: "/images/practice/about-elegance-musical/2.jpg",
+  image: "/images/practice/about-elegance-musical/.jpeg",
   date: "2026-04-26",
   blocks: [
     {
@@ -713,8 +713,9 @@ Official website: https://www.aboutelegancemusical.com/`,
     },
     {
       type: "image",
-      src: "/images/practice/about-elegance-musical/1.jpg",
+      src: "/images/practice/about-elegance-musical/1.jpeg",
       alt: "About Elegance Musical Finnish rock pop band editorial portrait",
+      caption: "Photo: Aleksi Lausti",
       fullBleed: true,
     },
     {
@@ -754,13 +755,22 @@ Fuäd Oranski: Work means a lot of things at the same time: creativity, the righ
       text: `I would like to thank our manager Sami, who gave an incredible re-boost to the whole process, and a special thanks to Ilari, our bassist, who is giving his best to the band, and Oliver, a great drummer and musician who is always with AEM when needed. Big thanks to Sofia Sol, such an adorable model, for her collaboration with us — and a million thanks to many other people.`,
     },
     {
+      type: "image",
+      src: "/images/practice/about-elegance-musical/5.jpeg",
+      alt: "About Elegance Musical rock pop project Helsinki editorial image",
+
+      fullBleed: true,
+    },
+
+    {
       type: "p",
       text: `Work is a magical process. It takes a lot of energy, and you have to sacrifice a lot. But in the end, there is always satisfaction, because the result is mainly positive.`,
     },
     {
       type: "image",
-      src: "/images/practice/about-elegance-musical/2.jpg",
+      src: "/images/practice/about-elegance-musical/2.jpeg",
       alt: "Fuäd Oranski About Elegance Musical creative process and performance editorial",
+      caption: "Photo: Aleksi Lausti",
       fullBleed: true,
     },
     {
@@ -809,8 +819,9 @@ Fuäd Oranski: Love, happiness, various feelings — mostly positive ones, and s
     },
     {
       type: "image",
-      src: "/images/practice/about-elegance-musical/3.jpg",
+      src: "/images/practice/about-elegance-musical/3.jpeg",
       alt: "About Elegance Musical rock pop project Helsinki editorial image",
+      caption: "Photo: Aleksi Lausti",
       fullBleed: true,
     },
     {
@@ -826,6 +837,13 @@ Fuäd Oranski: Starting from December 2025, we are preparing three different sin
     {
       type: "p",
       text: `Of course, there will be a lot of gigs — mainly in Finland, but in Estonia and France too. We will inform the world about all the dates when the right time comes.`,
+    },
+    {
+      type: "image",
+      src: "/images/practice/about-elegance-musical/4.jpeg",
+      alt: "About Elegance Musical rock pop project Helsinki editorial image",
+      caption: "Photo: Aleksi Lausti",
+      fullBleed: true,
     },
     {
       type: "p",

@@ -144,16 +144,15 @@ function FullBleedImage({
 }) {
   return (
     <div className="my-12 md:my-14">
-      <div className="relative w-full h-[60vh] md:h-[70vh] overflow-hidden bg-white/30">
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          className={`object-cover transition duration-500 hover:scale-[1.02] ${
-            position === "top" ? "object-top" : "object-center"
-          }`}
-        />
-      </div>
+      <div className="relative w-full overflow-hidden bg-white/30">
+  <Image
+    src={src}
+    alt={alt}
+    width={1400}
+    height={1800}
+    className="w-full h-auto transition duration-500 hover:scale-[1.01]"
+  />
+</div>
       {caption ? (
         <div className="max-w-2xl mx-auto px-6">
           <Caption>{caption}</Caption>
