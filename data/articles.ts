@@ -691,7 +691,7 @@ Photographer: Nikolai Zapolnov`,
   category: "Practice",
   excerpt:
     "A conversation with Fuäd Oranski on About Elegance Musical, a Finnish rock-pop venture built around collaboration, multilingual sound, live performance, and creative exchange.",
-  image: "/images/practice/about-elegance-musical/main.jpg",
+  image: "/images/practice/about-elegance-musical/2.jpg",
   date: "2026-04-26",
   blocks: [
     {

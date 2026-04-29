@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+
 export default function EditorPage() {
   return (
     <main className="bg-[#FFFBEB] text-neutral-900">
