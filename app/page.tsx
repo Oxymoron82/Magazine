@@ -92,84 +92,43 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* MANIFESTO / ABOUT */}
+      <div className="max-w-7xl mx-auto px-6 mt-16 md:mt-20">
+  <div className="h-px bg-neutral-200/70" />
+</div>
+
+      {/* LATEST */}
       <section
-        id="about"
-        className="max-w-5xl mx-auto px-6 py-16 md:py-24 scroll-mt-24"
+        id="latest"
+        className="max-w-7xl mx-auto px-6 pb-28 md:pb-32 scroll-mt-24"
       >
-        <div className="max-w-3xl">
-          <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
-            About The Issue №
-          </p>
-
-          <h2 className="mt-6 text-4xl md:text-5xl leading-tight font-semibold font-serif">
-            The Issue № is not about fashion, business or visuals.
-            <br />
-            It is about continuing.
-          </h2>
-
-          <div className="mt-10 space-y-7 text-[17px] md:text-[18px] leading-relaxed text-neutral-800">
-            <p>
-              The Issue № is an independent editorial platform exploring people,
-              work and contemporary life.
+        <div className="flex items-end justify-between gap-6 mb-10">
+          <div>
+            <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
+              Latest
             </p>
-
-            <p>
-              Based in Northern Europe, the magazine moves between fashion,
-              business and personal transformation - focusing on process,
-              presence and the way individuals shape themselves over time.
-            </p>
-
-            <p>
-              The Issue № is not built around trends or fast content. It is a
-              space for observation - where image, narrative and experience
-              exist together.
-            </p>
-
-            <p>
-              Each story begins with a question - not to provide quick answers,
-              but to understand what is at stake.
-            </p>
-
-            <p>
-              The Issue № is about people who build themselves. About women and
-              men who change, grow up, lose illusions and gain clarity.
-            </p>
-
-            <div className="mt-10 border-l border-neutral-300 pl-6 space-y-3">
-              <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
-                This is a magazine
-              </p>
-              <ul className="space-y-2 text-neutral-800">
-                <li>— about transformation, without spectacle</li>
-                <li>— about business, without a cold mask</li>
-                <li>— about fashion, as a language — not a trend</li>
-                <li>— about space and cities that shape us</li>
-                <li>— about work that teaches respect for every kind of labor</li>
-                <li>— about people who remain real</li>
-              </ul>
-            </div>
-
-            <p>
-              Here, visuals are not decoration. They are a way to speak about
-              character, choice, and path.
-            </p>
-
-            <p>
-              The Issue № is the continuation of movement. Not proof of success,
-              but evidence of growth. Not a showcase, but a process.
-            </p>
-
-            <p className="pt-4 font-serif text-[20px] md:text-[22px] leading-snug">
-              This magazine is for those who understand:
-              <br />a new chapter doesn’t arrive by itself -
-              <br />
-              it is created.
-            </p>
+            <h2 className="mt-3 text-2xl md:text-3xl font-serif">
+              New pieces and fresh visuals
+            </h2>
           </div>
         </div>
-      </section>
 
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-x-10 gap-y-24">
+          {latestArticles.map((article) => (
+            <Link
+              key={article.slug}
+              href={`/article/${article.slug}`}
+              className="block"
+            >
+              <EditorialCard
+                category={article.category}
+                title={article.title}
+                image={article.image}
+              />
+            </Link>
+          ))}
+        </div>
+      </section>
+     
       <div className="max-w-7xl mx-auto px-6">
         <div className="h-px bg-neutral-200/70" />
       </div>
@@ -282,41 +241,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* LATEST */}
-      <section
-        id="latest"
-        className="max-w-7xl mx-auto px-6 pb-28 md:pb-32 scroll-mt-24"
-      >
-        <div className="flex items-end justify-between gap-6 mb-10">
-          <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
-              Latest
-            </p>
-            <h2 className="mt-3 text-2xl md:text-3xl font-serif">
-              New pieces and fresh visuals.
-            </h2>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-x-10 gap-y-24">
-          {latestArticles.map((article) => (
-            <Link
-              key={article.slug}
-              href={`/article/${article.slug}`}
-              className="block"
-            >
-              <EditorialCard
-                category={article.category}
-                title={article.title}
-                image={article.image}
-              />
-            </Link>
-          ))}
-        </div>
-      </section>
+      
 
       {/* SEO / ABOUT BLOCK */}
-      <section className="max-w-7xl mx-auto px-6 pb-24 md:pb-32">
+      <section id="about" className="max-w-7xl mx-auto px-6 pb-24 md:pb-32 scroll-mt-24">
         <div className="h-px bg-neutral-200/70 mb-12" />
 
         <div className="group rounded-[28px] border border-neutral-200/70 bg-white/30 px-8 py-12 md:px-14 md:py-16 transition-all duration-500 hover:bg-white/45 hover:shadow-[0_10px_40px_rgba(0,0,0,0.04)]">
@@ -384,7 +312,7 @@ export default function HomePage() {
       <div className="space-y-3">
         <div className="relative w-full aspect-[3/4] rounded-xl overflow-hidden">
           <Image
-            src="/images/team/sofia.jpg"
+            src="/images/team/sofia.jpeg"
             alt="Sofia Solas"
             fill
             className="object-cover"

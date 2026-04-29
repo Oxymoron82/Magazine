@@ -18,21 +18,40 @@ export default function Header() {
 
         {/* 🔹 NAV */}
         <nav className="hidden md:flex items-center gap-8 lg:gap-10">
-          {[
-            ["Columns", "#columns"],
-            ["Latest", "#latest"],
-            ["About", "#about"],
-            ["Editor’s Note", "#editors-note"],
-            ["Contact", "#contact"],
-          ].map(([label, href]) => (
-            <Link
-              key={href}
-              href={`/${href}`}
-              className="text-[11px] tracking-[0.28em] uppercase text-white/70 hover:text-white transition"
-            >
-              {label}
-            </Link>
-          ))}
+          <Link
+            href="/#columns"
+            className="text-[11px] tracking-[0.28em] uppercase text-white/70 hover:text-white transition"
+          >
+            Columns
+          </Link>
+
+          <Link
+            href="/#latest"
+            className="text-[11px] tracking-[0.28em] uppercase text-white/70 hover:text-white transition"
+          >
+            Latest
+          </Link>
+
+          <Link
+            href="/#about"
+            className="text-[11px] tracking-[0.28em] uppercase text-white/70 hover:text-white transition"
+          >
+            About
+          </Link>
+
+          <Link
+            href="/#editors-note"
+            className="text-[11px] tracking-[0.28em] uppercase text-white/70 hover:text-white transition"
+          >
+            Editor’s Note
+          </Link>
+
+          <Link
+            href="/#contact"
+            className="text-[11px] tracking-[0.28em] uppercase text-white/70 hover:text-white transition"
+          >
+            Contact
+          </Link>
         </nav>
 
         {/* 🔹 INSTAGRAM */}
