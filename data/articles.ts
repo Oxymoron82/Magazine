@@ -853,20 +853,34 @@ Fuäd Oranski: The next phase is the launching process of everything we are prep
 
 Fuäd Oranski: Thank you. It was a real pleasure.`,
     },
+   {
+  type: "credits",
+  items: [
+    { label: "Project", value: "About Elegance Musical" },
+    { label: "Artist", value: "Fuäd Oranski" },
+    { label: "Location", value: "Helsinki, Finland" },
+
     {
-      type: "credits",
-      items: [
-        { label: "Project", value: "About Elegance Musical" },
-        { label: "Artist", value: "Fuäd Oranski" },
-        { label: "Location", value: "Helsinki, Finland" },
-        {
-          label: "Website",
-          value: "aboutelegancemusical.com",
-          href: "https://www.aboutelegancemusical.com/",
-        },
-        { label: "Column", value: "PRACTICE" },
-      ],
+      label: "Website",
+      value: "aboutelegancemusical.com",
+      href: "https://www.aboutelegancemusical.com/",
     },
+
+    {
+      label: "Instagram",
+      value: "@aboutelegance_musical",
+      href: "https://www.instagram.com/aboutelegance_musical",
+    },
+
+    {
+      label: "Aleksi Lausti",
+      value: "aleksilausti.com",
+      href: "https://www.aleksilausti.com/",
+    },
+
+    { label: "Column", value: "PRACTICE" },
+  ],
+},
   ],
 },
 
