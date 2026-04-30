@@ -691,7 +691,7 @@ Photographer: Nikolai Zapolnov`,
   category: "Practice",
   excerpt:
     "A conversation with Fuäd Oranski on About Elegance Musical, a Finnish rock-pop venture built around collaboration, multilingual sound, live performance, and creative exchange.",
-  image: "/images/practice/about-elegance-musical/.jpeg",
+  image: "/images/practice/about-elegance-musical/5.jpeg",
   date: "2026-04-26",
   blocks: [
     {
@@ -713,7 +713,7 @@ Official website: https://www.aboutelegancemusical.com/`,
     },
     {
       type: "image",
-      src: "/images/practice/about-elegance-musical/1.jpeg",
+      src: "/images/practice/about-elegance-musical/11.jpeg",
       alt: "About Elegance Musical Finnish rock pop band editorial portrait",
       caption: "Photo: Aleksi Lausti",
       fullBleed: true,
@@ -738,6 +738,7 @@ Fuäd Oranski: About Elegance Musical is a rock-pop fusion band, but I like to a
       type: "quote",
       text: "About Elegance is much more than a band. It is an open platform to share music.",
     },
+    
     {
       type: "p",
       text: `The Issue №: How did your project begin — and what has changed since then?
@@ -754,13 +755,7 @@ Fuäd Oranski: Work means a lot of things at the same time: creativity, the righ
       type: "p",
       text: `I would like to thank our manager Sami, who gave an incredible re-boost to the whole process, and a special thanks to Ilari, our bassist, who is giving his best to the band, and Oliver, a great drummer and musician who is always with AEM when needed. Big thanks to Sofia Sol, such an adorable model, for her collaboration with us — and a million thanks to many other people.`,
     },
-    {
-      type: "image",
-      src: "/images/practice/about-elegance-musical/5.jpeg",
-      alt: "About Elegance Musical rock pop project Helsinki editorial image",
-
-      fullBleed: true,
-    },
+    
 
     {
       type: "p",
@@ -768,9 +763,9 @@ Fuäd Oranski: Work means a lot of things at the same time: creativity, the righ
     },
     {
       type: "image",
-      src: "/images/practice/about-elegance-musical/2.jpeg",
+      src: "/images/practice/about-elegance-musical/22.jpeg",
       alt: "Fuäd Oranski About Elegance Musical creative process and performance editorial",
-      caption: "Photo: Aleksi Lausti",
+     
       fullBleed: true,
     },
     {
@@ -797,6 +792,13 @@ Fuäd Oranski: More from intuition, but I like to work from structure too someti
 
 Fuäd Oranski: Music is not only creating, recording, or performing. Music is an incredible world where you meet people, discover sounds and rhythms, and connect in real time or through social media with millions of different things.`,
     },
+     {
+      type: "image",
+      src: "/images/practice/about-elegance-musical/3.jpeg",
+      alt: "Fuäd Oranski About Elegance Musical creative process and performance editorial",
+     
+      fullBleed: true,
+    },
     {
       type: "p",
       text: `That is why I am in love with all that process. I try to reach the ideal everywhere and every time, even if I know that it is impossible. But the most valuable thing is sharing your creativity.`,
@@ -819,7 +821,7 @@ Fuäd Oranski: Love, happiness, various feelings — mostly positive ones, and s
     },
     {
       type: "image",
-      src: "/images/practice/about-elegance-musical/3.jpeg",
+      src: "/images/practice/about-elegance-musical/4.jpeg",
       alt: "About Elegance Musical rock pop project Helsinki editorial image",
       caption: "Photo: Aleksi Lausti",
       fullBleed: true,
@@ -838,13 +840,7 @@ Fuäd Oranski: Starting from December 2025, we are preparing three different sin
       type: "p",
       text: `Of course, there will be a lot of gigs — mainly in Finland, but in Estonia and France too. We will inform the world about all the dates when the right time comes.`,
     },
-    {
-      type: "image",
-      src: "/images/practice/about-elegance-musical/4.jpeg",
-      alt: "About Elegance Musical rock pop project Helsinki editorial image",
-      caption: "Photo: Aleksi Lausti",
-      fullBleed: true,
-    },
+   
     {
       type: "p",
       text: `The Issue №: What does the next phase look like for you?

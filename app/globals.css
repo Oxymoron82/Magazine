@@ -24,3 +24,6 @@ body {
     Arial,
     sans-serif;
 }
+h1 {
+  text-wrap: balance;
+}
