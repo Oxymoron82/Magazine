@@ -60,7 +60,7 @@ export default function HomePage() {
           {/* LEFT SIDE */}
           <div className="relative h-[56vh] min-h-[390px] md:h-[78vh] md:min-h-[620px] bg-black overflow-hidden">
             <Image
-              src="/images/editorial-2.jpg"
+              src="/images/editorial-main.jpg"
               alt="Editorial cover"
               fill
               priority
