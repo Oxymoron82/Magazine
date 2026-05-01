@@ -17,6 +17,36 @@ function renderText(text: string) {
     </Fragment>
   ));
 }
+function renderTextWithLinks(text: string) {
+  const urlRegex = /(https?:\/\/[^\s]+)/g;
+
+  return text.split("\n").map((line, i) => {
+    const parts = line.split(urlRegex);
+
+    return (
+      <Fragment key={i}>
+        {parts.map((part, index) => {
+          if (urlRegex.test(part)) {
+            return (
+              <a
+                key={index}
+                href={part}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="italic underline underline-offset-4 hover:text-black"
+              >
+                {part}
+              </a>
+            );
+          }
+
+          return <Fragment key={index}>{part}</Fragment>;
+        })}
+        <br />
+      </Fragment>
+    );
+  });
+}
 
 /* ---------------- SMALL UI ---------------- */
 
@@ -241,7 +271,7 @@ function renderBlock(block: ArticleBlock, index: number) {
               : "",
           ].join(" ")}
         >
-          {renderText(block.text)}
+         {renderTextWithLinks(block.text)}
         </p>
       );
 

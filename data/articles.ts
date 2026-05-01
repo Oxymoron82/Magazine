@@ -851,7 +851,13 @@ Fuäd Oranski: The next phase is the launching process of everything we are prep
       type: "p",
       text: `The Issue №: Thank you.
 
-Fuäd Oranski: Thank you. It was a real pleasure.`,
+Fuäd Oranski: Thank you. It was a real pleasure.
+
+About Elegance Website: https://www.aboutelegancemusical.com/
+About Elegance Instagram:
+https://www.instagram.com/aboutelegance_musical
+Aleksi Lausti Website:
+https://www.aleksilausti.com/ `,
     },
    {
   type: "credits",
