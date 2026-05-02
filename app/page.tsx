@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import EditorialCard from "@/components/EditorialCard";
 import { articles } from "@/data/articles";
 import { columns } from "@/data/columns";
 
@@ -50,65 +49,63 @@ export default function HomePage() {
   const [featuredLatest, ...secondaryLatest] = latestArticles;
 
   return (
-    <main className="bg-[#FFFBEB] text-neutral-900">
-     {/* HERO */}
-<section
-  id="home"
-  className="relative w-full overflow-hidden scroll-mt-24 bg-[#FFFBEB]"
->
-  <div className="grid md:grid-cols-2">
-    {/* LEFT SIDE */}
-    <div className="relative h-[62vh] min-h-[460px] md:h-[78vh] md:min-h-[620px] overflow-hidden">
-      <Image
-        src="/images/editorial-2.jpg"
-        alt="Editorial cover"
-        fill
-        priority
-        className="object-cover"
-      />
+    <main className="bg-editorial-bg text-neutral-900">
+      {/* HERO */}
+      <section
+        id="home"
+        className="relative w-full overflow-hidden scroll-mt-24 bg-editorial-bg"
+      >
+        <div className="grid md:grid-cols-2">
+       {/* LEFT SIDE */}
+<div className="relative h-[62vh] min-h-[460px] md:h-[78vh] md:min-h-[620px] overflow-hidden">
+  <Image
+    src="/images/editorial-2.jpg"
+    alt="Editorial cover"
+    fill
+    priority
+    className="object-cover opacity-70"
+  />
 
-      <div className="absolute inset-0 bg-white/35" />
+  <div className="absolute inset-0 bg-[#FFFBEB]/35" />
 
-      <div className="absolute inset-0 z-10 flex flex-col justify-center px-10 md:px-20">
-        <p className="text-xs uppercase tracking-[0.35em] text-neutral-700 mb-8">
-          The Issue №
-        </p>
+  <div className="absolute inset-0 z-10 flex flex-col justify-center px-10 md:px-24">
+    <p className="mb-10 text-xs uppercase tracking-[0.35em] text-[#4A3F3C]/75">
+      The Issue №
+    </p>
 
-        <h1 className="font-serif text-white text-[54px] md:text-[86px] leading-[0.92] tracking-[-0.04em] max-w-[560px] drop-shadow-[0_2px_18px_rgba(0,0,0,0.22)]">
-          Individual
-          <br />
-          stories.
-          <br />
-          Fashion
-          <br />
-          identity.
-        </h1>
+    <h1 className="font-editorial text-[#4A3F3C] text-[44px] md:text-[68px] leading-[0.95] tracking-[-0.04em] whitespace-nowrap">
+      Individual stories.
+    </h1>
 
-        <div className="mt-8 h-px w-16 bg-white/80" />
+    <h1 className="mt-4 font-editorial text-[#4A3F3C] text-[44px] md:text-[68px] leading-[0.95] tracking-[-0.04em] whitespace-nowrap">
+      Fashion identity.
+    </h1>
 
-        <p className="mt-6 max-w-[360px] text-[16px] md:text-[18px] leading-relaxed text-white drop-shadow-[0_1px_12px_rgba(0,0,0,0.25)]">
-          A visual magazine about people, work, transformation and contemporary culture.
-        </p>
-      </div>
-    </div>
+    <div className="mt-8 h-px w-16 bg-[#4A3F3C]/55" />
 
-    {/* RIGHT SIDE */}
-    <div className="relative h-[62vh] min-h-[460px] md:h-[78vh] md:min-h-[620px] bg-[#FFFBEB]">
-      <div className="absolute inset-0 flex items-start justify-center pt-[18vh] md:pt-[22vh] px-8">
-        <div className="relative w-full max-w-[300px] md:max-w-[420px] aspect-[3/4]">
-          <Image
-            src="/images/logo_main2.jpg"
-            alt="The Issue № logo"
-            fill
-            priority
-            className="object-contain mix-blend-multiply"
-          />
-        </div>
-      </div>
-    </div>
+    <p className="mt-6 max-w-[320px] text-[15px] md:text-[16px] leading-[1.75] text-[#4A3F3C]/80">
+      A visual magazine about people, work, transformation and contemporary
+      culture.
+    </p>
   </div>
-</section>
-      
+</div>
+
+          {/* RIGHT SIDE */}
+          <div className="relative h-[62vh] min-h-[460px] md:h-[78vh] md:min-h-[620px] bg-editorial-bg">
+            <div className="absolute inset-0 flex items-start justify-center pt-[18vh] md:pt-[22vh] px-8">
+              <div className="relative w-full max-w-[300px] md:max-w-[420px] aspect-[3/4]">
+                <Image
+                  src="/images/logo_main2.jpg"
+                  alt="The Issue № logo"
+                  fill
+                  priority
+                  className="object-contain mix-blend-multiply"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* LATEST */}
       <section
@@ -120,7 +117,7 @@ export default function HomePage() {
             <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
               Latest
             </p>
-            <h2 className="mt-3 text-3xl md:text-5xl font-serif leading-tight">
+            <h2 className="mt-3 text-3xl md:text-5xl font-serif leading-tight text-[#4A3F3C]">
               New pieces and fresh visuals
             </h2>
           </div>
@@ -146,16 +143,12 @@ export default function HomePage() {
                   {featuredLatest.category}
                 </p>
 
-                <h3 className="font-serif text-3xl md:text-5xl leading-tight">
+                <h3 className="font-serif text-3xl md:text-5xl leading-tight text-[#4A3F3C]">
                   {featuredLatest.title}
                 </h3>
 
-                <p className="max-w-2xl text-neutral-700 leading-relaxed">
+                <p className="max-w-[42ch] text-neutral-700 leading-[1.75]">
                   {featuredLatest.excerpt}
-                </p>
-
-                <p className="text-sm underline underline-offset-4">
-                  Read article →
                 </p>
               </article>
             </Link>
@@ -167,7 +160,7 @@ export default function HomePage() {
                   href={`/article/${article.slug}`}
                   className="block group"
                 >
-                  <article className="grid grid-cols-[0.9fr_1.1fr] gap-5 items-start">
+                  <article className="grid grid-cols-1 md:grid-cols-[0.9fr_1.1fr] gap-5 items-start">
                     <div className="relative aspect-[3/4] overflow-hidden bg-white/30">
                       <Image
                         src={article.image}
@@ -182,13 +175,9 @@ export default function HomePage() {
                         {article.category}
                       </p>
 
-                      <h3 className="mt-3 text-xl md:text-2xl font-serif leading-tight">
+                      <h3 className="mt-3 text-xl md:text-2xl font-serif leading-tight text-[#4A3F3C]">
                         {article.title}
                       </h3>
-
-                      <p className="mt-4 text-sm text-neutral-700 leading-relaxed line-clamp-4">
-                        {article.excerpt}
-                      </p>
                     </div>
                   </article>
                 </Link>
@@ -213,7 +202,7 @@ export default function HomePage() {
               Editor’s Note
             </p>
 
-            <h2 className="mt-6 text-5xl md:text-7xl font-serif leading-[1.02]">
+            <h2 className="mt-6 text-5xl md:text-7xl font-serif leading-[1.02] text-[#4A3F3C]">
               This is not a journal.
               <br />
               It is a continuation of the journey.
@@ -221,8 +210,8 @@ export default function HomePage() {
 
             <div className="mt-8 space-y-6 text-neutral-700 leading-[1.85] text-lg max-w-2xl">
               <p>
-                The Issue № began as a collection of separate ideas — about work,
-                presence and the way people shape their environment.
+                The Issue № began as a collection of separate ideas — about
+                work, presence and the way people shape their environment.
               </p>
 
               <p>
@@ -266,65 +255,65 @@ export default function HomePage() {
       </div>
 
       {/* COLUMNS */}
-<section
-  id="columns"
-  className="max-w-7xl mx-auto px-6 py-24 md:py-28 scroll-mt-24"
->
-  <div className="flex items-end justify-between gap-6 mb-12">
-    <div>
-      <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
-        Columns
-      </p>
-      <h2 className="mt-3 text-3xl md:text-5xl font-serif leading-tight">
-        Editorial structure
-      </h2>
-    </div>
-
-    <Link
-      href="/columns"
-      className="text-sm underline underline-offset-4 hover:text-black transition"
-    >
-      All columns →
-    </Link>
-  </div>
-
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-x-8 gap-y-14">
-    {columns.slice(0, 5).map((column, index) => (
-      <Link
-        key={column.slug}
-        href={`/columns/${column.slug}`}
-        className="block group"
+      <section
+        id="columns"
+        className="max-w-7xl mx-auto px-6 py-24 md:py-28 scroll-mt-24"
       >
-        <article
-          className={`space-y-4 ${
-            index === 1 || index === 3 ? "lg:pt-10" : ""
-          }`}
-        >
-          <div className="relative aspect-[4/5] overflow-hidden bg-white/30">
-            <Image
-              src={column.image}
-              alt={column.label}
-              fill
-              className="object-cover transition duration-700 group-hover:scale-[1.03]"
-            />
+        <div className="flex items-end justify-between gap-6 mb-12">
+          <div>
+            <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
+              Columns
+            </p>
+            <h2 className="mt-3 text-3xl md:text-5xl font-serif leading-tight text-[#4A3F3C]">
+              Editorial structure
+            </h2>
           </div>
 
-          <p className="text-[10px] uppercase tracking-[0.32em] text-neutral-600">
-            {column.label}
-          </p>
+          <Link
+            href="/columns"
+            className="text-sm underline underline-offset-4 hover:text-black transition"
+          >
+            All columns →
+          </Link>
+        </div>
 
-          <h3 className="font-serif text-2xl leading-tight">
-            {column.title}
-          </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-x-8 gap-y-14">
+          {columns.slice(0, 5).map((column, index) => (
+            <Link
+              key={column.slug}
+              href={`/columns/${column.slug}`}
+              className="block group"
+            >
+              <article
+                className={`space-y-4 ${
+                  index === 1 || index === 3 ? "lg:pt-10" : ""
+                }`}
+              >
+                <div className="relative aspect-[4/5] overflow-hidden bg-white/30">
+                  <Image
+                    src={column.image}
+                    alt={column.label}
+                    fill
+                    className="object-cover transition duration-700 group-hover:scale-[1.03]"
+                  />
+                </div>
 
-          <p className="text-sm text-neutral-700 leading-relaxed">
-            {column.descriptionShort}
-          </p>
-        </article>
-      </Link>
-    ))}
-  </div>
-</section>
+                <p className="text-[10px] uppercase tracking-[0.32em] text-neutral-600">
+                  {column.label}
+                </p>
+
+                <h3 className="font-serif text-2xl leading-tight text-[#4A3F3C]">
+                  {column.title}
+                </h3>
+
+                <p className="text-sm text-neutral-700 leading-relaxed">
+                  {column.descriptionShort}
+                </p>
+              </article>
+            </Link>
+          ))}
+        </div>
+      </section>
 
       {/* ABOUT */}
       <section
@@ -339,13 +328,13 @@ export default function HomePage() {
               About
             </p>
 
-            <h2 className="mt-5 font-serif text-5xl md:text-6xl leading-[1.02] text-neutral-900">
+            <h2 className="mt-5 font-serif text-5xl md:text-6xl leading-[1.02] text-[#4A3F3C]">
               The Issue №
             </h2>
           </div>
 
           <div className="lg:col-span-8">
-            <p className="text-[26px] md:text-[38px] leading-[1.28] text-neutral-900 max-w-none font-serif">
+            <p className="text-[26px] md:text-[38px] leading-[1.28] text-[#4A3F3C] max-w-none font-serif">
               The Issue № is an independent fashion and editorial magazine
               exploring contemporary culture through visual storytelling,
               photography, and design.
@@ -367,7 +356,9 @@ export default function HomePage() {
 
               <div className="border-l border-neutral-300 pl-6 space-y-3 text-[17px] leading-relaxed">
                 <p>about people who build themselves</p>
-                <p>about those who change, grow, lose illusions and gain clarity</p>
+                <p>
+                  about those who change, grow, lose illusions and gain clarity
+                </p>
                 <p>about transformation without spectacle</p>
                 <p>about work without a cold mask</p>
                 <p>about fashion as a language, not a trend</p>

@@ -7,11 +7,18 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        editorial: {
+          text: "#4A3F3C",
+          bg: "#FFFBEB",
+        },
+      },
       fontFamily: {
-        sans: ["var(--font-inter)"],
-        serif: ["var(--font-playfair)"],
-        didot: ["var(--font-didot)"],
-        bebas: ["var(--font-bebas)"], // 🔥 добавили
+        sans: ["var(--font-inter)", "sans-serif"],
+        serif: ["var(--font-playfair)", "serif"],
+        editorial: ["var(--font-bodoni)", "serif"],
+        didot: ["var(--font-didot)", "serif"],
+        bebas: ["var(--font-bebas)", "sans-serif"],
       },
     },
   },

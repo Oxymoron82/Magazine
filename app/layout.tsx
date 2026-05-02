@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Playfair_Display, Inter } from "next/font/google";
 import type { Metadata } from "next";
+import { Bodoni_Moda } from "next/font/google";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -13,6 +14,12 @@ const playfair = Playfair_Display({
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
+});
+
+const bodoni = Bodoni_Moda({
+  subsets: ["latin"],
+  variable: "--font-bodoni",
   display: "swap",
 });
 
@@ -51,8 +58,9 @@ export default function RootLayout({
 
       <body
         suppressHydrationWarning
-        className={`${inter.variable} ${playfair.variable} bg-[#FFFBEB] text-neutral-900`}
-      >
+       
+        className={`${bodoni.variable}`}>
+      
         <Header />
         {children}
         <Footer />

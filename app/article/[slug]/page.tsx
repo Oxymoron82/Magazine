@@ -279,7 +279,7 @@ function renderBlock(block: ArticleBlock, index: number) {
       return (
         <h2
           key={index}
-          className="mt-12 mb-5 font-serif text-2xl md:text-3xl leading-snug text-neutral-900"
+          className="mt-12 mb-5 font-serif text-2xl md:text-3xl leading-snug text-editorial-text"
         >
           {block.text}
         </h2>
