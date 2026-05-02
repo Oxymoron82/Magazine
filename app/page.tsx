@@ -51,71 +51,64 @@ export default function HomePage() {
 
   return (
     <main className="bg-[#FFFBEB] text-neutral-900">
-      {/* HERO */}
-      <section
-        id="home"
-        className="relative w-full overflow-hidden scroll-mt-24"
-      >
-        <div className="grid md:grid-cols-2">
-          {/* LEFT SIDE */}
-          <div className="relative h-[56vh] min-h-[390px] md:h-[78vh] md:min-h-[620px] bg-black overflow-hidden">
-            <Image
-              src="/images/editorial-main.jpg"
-              alt="Editorial cover"
-              fill
-              priority
-              className="object-contain"
-            />
+     {/* HERO */}
+<section
+  id="home"
+  className="relative w-full overflow-hidden scroll-mt-24 bg-[#FFFBEB]"
+>
+  <div className="grid md:grid-cols-2">
+    {/* LEFT SIDE */}
+    <div className="relative h-[62vh] min-h-[460px] md:h-[78vh] md:min-h-[620px] overflow-hidden">
+      <Image
+        src="/images/editorial-2.jpg"
+        alt="Editorial cover"
+        fill
+        priority
+        className="object-cover"
+      />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-black/25" />
+      <div className="absolute inset-0 bg-white/35" />
 
-            <div className="absolute inset-0 z-10 flex items-end px-8 pb-10 md:px-20 md:pb-20 text-left">
-  <div className="max-w-[760px]">
-    <p className="mb-6 text-xs uppercase tracking-[0.4em] text-white/75">
-      The Issue № / Editorial Platform
-    </p>
-
-    <h1 className="font-serif text-white text-[46px] md:text-[86px] lg:text-[104px] leading-[0.92] tracking-[-0.04em] drop-shadow-[0_3px_20px_rgba(0,0,0,0.5)]">
-      Individual
-      <br />
-      stories.
-      <br />
-      Fashion
-      <br />
-      identity.
-    </h1>
-
-    <p className="mt-7 max-w-md text-sm md:text-base leading-relaxed text-white/80">
-      A visual magazine about people, work, transformation and contemporary culture.
-    </p>
-  </div>
-</div>
-          </div>
-
-          {/* RIGHT SIDE */}
-          <div className="relative h-[56vh] min-h-[390px] md:h-[78vh] md:min-h-[620px] bg-[#D6C6B8] overflow-hidden">
-            <div className="flex h-full items-center justify-center px-6 py-8 md:px-12 md:py-12">
-              <div className="relative aspect-[3/4] w-full max-w-[290px] md:max-w-[620px]">
-                <Image
-                  src="/images/logo_main2.jpg"
-                  alt="The Issue № logo"
-                  fill
-                  priority
-                  className="object-contain"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* HERO / LATEST DIVIDER */}
-      <div className="max-w-7xl mx-auto px-6 mt-24 md:mt-32 mb-10">
-        <p className="mb-4 text-xs uppercase tracking-[0.35em] text-neutral-500">
-          New
+      <div className="absolute inset-0 z-10 flex flex-col justify-center px-10 md:px-20">
+        <p className="text-xs uppercase tracking-[0.35em] text-neutral-700 mb-8">
+          The Issue №
         </p>
-        <div className="h-px bg-neutral-300/60" />
+
+        <h1 className="font-serif text-white text-[54px] md:text-[86px] leading-[0.92] tracking-[-0.04em] max-w-[560px] drop-shadow-[0_2px_18px_rgba(0,0,0,0.22)]">
+          Individual
+          <br />
+          stories.
+          <br />
+          Fashion
+          <br />
+          identity.
+        </h1>
+
+        <div className="mt-8 h-px w-16 bg-white/80" />
+
+        <p className="mt-6 max-w-[360px] text-[16px] md:text-[18px] leading-relaxed text-white drop-shadow-[0_1px_12px_rgba(0,0,0,0.25)]">
+          A visual magazine about people, work, transformation and contemporary culture.
+        </p>
       </div>
+    </div>
+
+    {/* RIGHT SIDE */}
+    <div className="relative h-[62vh] min-h-[460px] md:h-[78vh] md:min-h-[620px] bg-[#FFFBEB]">
+      <div className="absolute inset-0 flex items-start justify-center pt-[18vh] md:pt-[22vh] px-8">
+        <div className="relative w-full max-w-[300px] md:max-w-[420px] aspect-[3/4]">
+          <Image
+            src="/images/logo_main2.jpg"
+            alt="The Issue № logo"
+            fill
+            priority
+            className="object-contain mix-blend-multiply"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+      
 
       {/* LATEST */}
       <section
