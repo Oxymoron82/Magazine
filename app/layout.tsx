@@ -1,9 +1,13 @@
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Playfair_Display, Inter } from "next/font/google";
+import {
+  Playfair_Display,
+  Inter,
+  Bodoni_Moda,
+  Inria_Serif,
+} from "next/font/google";
 import type { Metadata } from "next";
-import { Bodoni_Moda } from "next/font/google";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -20,6 +24,13 @@ const inter = Inter({
 const bodoni = Bodoni_Moda({
   subsets: ["latin"],
   variable: "--font-bodoni",
+  display: "swap",
+});
+
+const inria = Inria_Serif({
+  subsets: ["latin"],
+  weight: ["300", "400", "700"],
+  variable: "--font-inria",
   display: "swap",
 });
 
@@ -48,19 +59,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru">
-      <head>
-        <meta
-          name="p:domain_verify"
-          content="c0282f57a5bf9225bba2f1ddfeb5e36d"
-        />
-      </head>
-
+    <html lang="en">
       <body
         suppressHydrationWarning
-       
-        className={`${bodoni.variable}`}>
-      
+        className={`${inter.variable} ${playfair.variable} ${bodoni.variable} ${inria.variable}`}
+      >
         <Header />
         {children}
         <Footer />

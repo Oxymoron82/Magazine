@@ -56,39 +56,41 @@ export default function HomePage() {
         className="relative w-full overflow-hidden scroll-mt-24 bg-editorial-bg"
       >
         <div className="grid md:grid-cols-2">
-       {/* LEFT SIDE */}
-<div className="relative h-[62vh] min-h-[460px] md:h-[78vh] md:min-h-[620px] overflow-hidden">
-  <Image
-    src="/images/editorial-2.jpg"
-    alt="Editorial cover"
-    fill
-    priority
-    className="object-cover opacity-70"
-  />
+          {/* LEFT SIDE */}
+          <div className="relative h-[62vh] min-h-[460px] md:h-[78vh] md:min-h-[620px] overflow-hidden">
+            <Image
+              src="/images/editorial-2.jpg"
+              alt="Editorial cover"
+              fill
+              priority
+              className="object-cover opacity-65"
+            />
 
-  <div className="absolute inset-0 bg-[#FFFBEB]/35" />
+            <div className="absolute inset-0 bg-editorial-bg/45" />
+            <div className="absolute inset-0 bg-gradient-to-r from-editorial-bg/65 via-editorial-bg/35 to-transparent" />
 
-  <div className="absolute inset-0 z-10 flex flex-col justify-center px-10 md:px-24">
-    <p className="mb-10 text-xs uppercase tracking-[0.35em] text-[#4A3F3C]/75">
-      The Issue №
-    </p>
+            <div className="absolute inset-0 z-10 flex flex-col justify-center px-8 md:px-20 lg:px-24">
+              <p className="mb-8 text-[11px] uppercase tracking-[0.35em] text-editorial-text/75">
+                The Issue №
+              </p>
 
-    <h1 className="font-editorial text-[#4A3F3C] text-[44px] md:text-[68px] leading-[0.95] tracking-[-0.04em] whitespace-nowrap">
-      Individual stories.
-    </h1>
+              <h1 className="font-inria text-editorial-text text-[40px] sm:text-[52px] md:text-[64px] lg:text-[72px] leading-[0.95] tracking-[-0.035em] max-w-[11ch] md:max-w-[15ch]">
+                <span className="block md:whitespace-nowrap">
+                  Individual stories.
+                </span>
+                <span className="block mt-3 md:mt-4 md:whitespace-nowrap">
+                  Fashion identity.
+                </span>
+              </h1>
 
-    <h1 className="mt-4 font-editorial text-[#4A3F3C] text-[44px] md:text-[68px] leading-[0.95] tracking-[-0.04em] whitespace-nowrap">
-      Fashion identity.
-    </h1>
+              <div className="mt-8 h-px w-16 bg-editorial-text/55" />
 
-    <div className="mt-8 h-px w-16 bg-[#4A3F3C]/55" />
-
-    <p className="mt-6 max-w-[320px] text-[15px] md:text-[16px] leading-[1.75] text-[#4A3F3C]/80">
-      A visual magazine about people, work, transformation and contemporary
-      culture.
-    </p>
-  </div>
-</div>
+              <p className="mt-6 max-w-[310px] text-[15px] md:text-[16px] leading-[1.75] text-editorial-text/85">
+                A visual magazine about people, work, transformation and
+                contemporary culture.
+              </p>
+            </div>
+          </div>
 
           {/* RIGHT SIDE */}
           <div className="relative h-[62vh] min-h-[460px] md:h-[78vh] md:min-h-[620px] bg-editorial-bg">
@@ -117,7 +119,7 @@ export default function HomePage() {
             <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
               Latest
             </p>
-            <h2 className="mt-3 text-3xl md:text-5xl font-serif leading-tight text-[#4A3F3C]">
+            <h2 className="mt-3 text-3xl md:text-5xl font-serif leading-tight text-editorial-text">
               New pieces and fresh visuals
             </h2>
           </div>
@@ -143,7 +145,7 @@ export default function HomePage() {
                   {featuredLatest.category}
                 </p>
 
-                <h3 className="font-serif text-3xl md:text-5xl leading-tight text-[#4A3F3C]">
+                <h3 className="font-serif text-3xl md:text-5xl leading-tight text-editorial-text">
                   {featuredLatest.title}
                 </h3>
 
@@ -175,7 +177,7 @@ export default function HomePage() {
                         {article.category}
                       </p>
 
-                      <h3 className="mt-3 text-xl md:text-2xl font-serif leading-tight text-[#4A3F3C]">
+                      <h3 className="mt-3 text-xl md:text-2xl font-serif leading-tight text-editorial-text">
                         {article.title}
                       </h3>
                     </div>
@@ -202,7 +204,7 @@ export default function HomePage() {
               Editor’s Note
             </p>
 
-            <h2 className="mt-6 text-5xl md:text-7xl font-serif leading-[1.02] text-[#4A3F3C]">
+            <h2 className="mt-6 text-5xl md:text-7xl font-serif leading-[1.02] text-editorial-text">
               This is not a journal.
               <br />
               It is a continuation of the journey.
@@ -264,7 +266,7 @@ export default function HomePage() {
             <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
               Columns
             </p>
-            <h2 className="mt-3 text-3xl md:text-5xl font-serif leading-tight text-[#4A3F3C]">
+            <h2 className="mt-3 text-3xl md:text-5xl font-serif leading-tight text-editorial-text">
               Editorial structure
             </h2>
           </div>
@@ -302,7 +304,7 @@ export default function HomePage() {
                   {column.label}
                 </p>
 
-                <h3 className="font-serif text-2xl leading-tight text-[#4A3F3C]">
+                <h3 className="font-serif text-2xl leading-tight text-editorial-text">
                   {column.title}
                 </h3>
 
@@ -328,13 +330,13 @@ export default function HomePage() {
               About
             </p>
 
-            <h2 className="mt-5 font-serif text-5xl md:text-6xl leading-[1.02] text-[#4A3F3C]">
+            <h2 className="mt-5 font-serif text-5xl md:text-6xl leading-[1.02] text-editorial-text">
               The Issue №
             </h2>
           </div>
 
           <div className="lg:col-span-8">
-            <p className="text-[26px] md:text-[38px] leading-[1.28] text-[#4A3F3C] max-w-none font-serif">
+            <p className="text-[26px] md:text-[38px] leading-[1.28] text-editorial-text max-w-none font-serif">
               The Issue № is an independent fashion and editorial magazine
               exploring contemporary culture through visual storytelling,
               photography, and design.
