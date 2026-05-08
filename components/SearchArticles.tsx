@@ -47,12 +47,28 @@ export default function SearchArticles() {
           </div>
 
           <div>
-            <input
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search the magazine"
-              className="w-full border-b border-[#4A3F3C]/40 bg-transparent py-3 text-lg outline-none placeholder:text-neutral-400"
-            />
+           <input
+  value={query}
+  onChange={(e) => setQuery(e.target.value)}
+  placeholder="Search an article..."
+  className="
+    w-full
+    rounded-none
+    bg-white
+    border
+    border-[#4A3F3C]/12
+    px-5
+    py-4
+    text-base
+    md:text-lg
+    text-[#4A3F3C]
+    outline-none
+    transition
+    placeholder:text-neutral-400
+    focus:border-[#4A3F3C]/40
+    focus:shadow-[0_4px_30px_rgba(74,63,60,0.06)]
+  "
+/>
 
             {query.trim().length >= 2 ? (
               <div className="mt-6 space-y-4">
