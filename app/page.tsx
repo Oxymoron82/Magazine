@@ -187,6 +187,32 @@ export default function HomePage() {
             </div>
           </div>
         ) : null}
+
+        {/* MOBILE ALL ARTICLES CTA */}
+<div className="mt-14 md:hidden">
+  <Link
+    href="/columns"
+    className="block border-t border-b border-[#4A3F3C]/20 py-6"
+  >
+    <p className="text-[11px] uppercase tracking-[0.35em] text-neutral-500">
+      Explore
+    </p>
+
+    <div className="mt-3 flex items-center justify-between gap-6">
+      <p className="font-serif text-3xl leading-tight text-[#4A3F3C]">
+        All stories
+      </p>
+
+      <span className="text-2xl text-[#4A3F3C]">→</span>
+    </div>
+
+    <p className="mt-3 text-sm leading-relaxed text-neutral-600">
+      Browse the full magazine archive by column: Practice, Work, Intimacy,
+      Becoming and Place.
+    </p>
+  </Link>
+</div>
+
       </section>
 
       <div className="max-w-7xl mx-auto px-6">
