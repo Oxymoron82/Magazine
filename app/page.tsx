@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { articles } from "@/data/articles";
 import { columns } from "@/data/columns";
+import SearchArticles from "@/components/SearchArticles";
 
 export const metadata: Metadata = {
   title: "The Issue № | Independent Fashion and Editorial Magazine",
@@ -109,10 +110,12 @@ export default function HomePage() {
         </div>
       </section>
 
+       <SearchArticles />
+
       {/* LATEST */}
       <section
         id="latest"
-        className="max-w-7xl mx-auto px-6 pt-4 pb-24 md:pb-32 scroll-mt-24"
+       className="max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-24 md:pb-32 scroll-mt-24"
       >
         <div className="flex items-end justify-between gap-6 mb-12">
           <div>
