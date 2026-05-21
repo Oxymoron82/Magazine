@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://theissue.xyz
+
+# Sitemaps
+Sitemap: https://theissue.xyz/sitemap.xml
