@@ -309,7 +309,10 @@ export default function HomePage() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-x-8 gap-y-14">
-          {columns.slice(0, 5).map((column, index) => (
+          {columns
+  .filter((column) => column.active)
+  .slice(0, 5)
+  .map((column, index) => (
             <Link
               key={column.slug}
               href={`/columns/${column.slug}`}
