@@ -2,7 +2,6 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Fragment } from "react";
 import { articles, ArticleBlock } from "@/data/articles";
-
 import SubmitForm from "@/components/SubmitForm";
 
 /* ---------------- HELPERS ---------------- */
@@ -17,6 +16,7 @@ function renderText(text: string) {
     </Fragment>
   ));
 }
+
 function renderTextWithLinks(text: string) {
   const urlRegex = /(https?:\/\/[^\s]+)/g;
 
@@ -211,69 +211,53 @@ function VideoBlock({
   caption?: string;
   autoplay?: boolean;
 }) {
-  const isTallinnWeekVideo =
-    src === "/images/places/tallinweek/video1.mp4";
-
-  const isTrinityVideo =
-    src === "/images/trinity/video_trinity.mp4";
-
-  const videoText = isTallinnWeekVideo
-    ? "Tallinn Fashion Week this season was not only about runway presentations, but about observation — of people, of style, and of how fashion exists in real life."
-    : "From the first moodboard to the final shutter click, we create a space where you can finally take up the room you deserve.";
-
-  const videoPoster = isTallinnWeekVideo
-    ? "/images/places/tallinweek/poster.jpg"
-    : "/images/trinity/6.jpg";
+  const videoPoster =
+    src === "/images/places/tallinweek/video1.mp4"
+      ? "/images/places/tallinweek/poster.jpg"
+      : "/images/trinity/6.jpg";
 
   return (
-    <div className="my-12 grid grid-cols-1 md:grid-cols-[0.9fr_1.1fr] gap-6 md:gap-10 items-center">
-      <div className="md:pt-8">
-        <p className="font-serif text-[22px] leading-[1.5] text-neutral-900 tracking-tight">
-          {videoText}
+    <div className="my-12">
+      <video
+        src={src}
+        poster={videoPoster}
+        controls
+        playsInline
+        className="w-full rounded-2xl"
+        {...(autoplay && {
+          autoPlay: true,
+          muted: true,
+          loop: true,
+        })}
+      />
+      {caption ? (
+        <p className="mt-3 text-sm text-neutral-500 text-center">
+          {caption}
         </p>
-      </div>
-
-      <div className="overflow-hidden rounded-2xl border border-neutral-200 bg-black">
-        <video
-          src={src}
-          poster={videoPoster}
-          controls
-          playsInline
-          className="w-full max-w-[520px] h-auto transition duration-500 hover:scale-[1.02]"
-          {...(autoplay && {
-            autoPlay: true,
-            muted: true,
-            loop: true,
-          })}
-        />
-
-        {caption ? (
-          <p className="mt-3 text-sm text-neutral-500 text-center">
-            {caption}
-          </p>
-        ) : null}
-      </div>
+      ) : null}
     </div>
   );
 }
+
 /* ---------------- BLOCK RENDER ---------------- */
 
 function renderBlock(block: ArticleBlock, index: number) {
   switch (block.type) {
     case "p":
-      return (
-        <p
-          key={index}
-          className={[
-            "my-6 text-[18px] leading-relaxed text-neutral-800 whitespace-pre-line",
-            block.dropCap
-              ? "first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:font-serif first-letter:text-6xl md:first-letter:text-7xl first-letter:leading-none"
-              : "",
-          ].join(" ")}
-        >
-         {renderTextWithLinks(block.text)}
-        </p>
-      );
+  return (
+    <p
+      key={index}
+      className={[
+        block.className ||
+          "my-6 text-[18px] leading-relaxed text-neutral-800 whitespace-pre-line",
+        block.dropCap
+          ? "first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:font-serif first-letter:text-6xl md:first-letter:text-7xl first-letter:leading-none"
+          : "",
+      ].join(" ")}
+    >
+      {renderTextWithLinks(block.text)}
+    </p>
+  );
 
     case "h2":
       return (
@@ -344,113 +328,16 @@ export default async function ArticlePage({
 
   if (!article) notFound();
 
-  const isAboutElegance =
-    article.slug === "about-elegance-musical-fuad-oranski";
-
-  const isContainedHero =
-    article.slug === "anastasija-balak-silent-guardian-falling-petals" ||
-    article.slug === "starting-again-in-another-country";
-
   return (
     <main className="bg-[#FFFBEB] text-neutral-900">
-      {/* HERO */}
-      {isAboutElegance ? (
-        <section className="relative w-full bg-black text-white">
-          <div className="max-w-7xl mx-auto px-6 pt-28 pb-16 md:pt-32 md:pb-20 grid grid-cols-1 md:grid-cols-2 items-center gap-12">
-            <div className="relative z-10">
-              <p className="text-xs uppercase tracking-[0.35em] text-white/60">
-                {article.category}
-              </p>
-
-              <h1 className="mt-4 font-serif text-[34px] md:text-[56px] leading-[1.05] tracking-[-0.01em] max-w-[20ch] text-balance">
-                {article.title}
-              </h1>
-
-              <p className="mt-6 text-lg text-white/80 max-w-[45ch] leading-relaxed">
-                {article.excerpt}
-              </p>
-
-              <div className="mt-6 text-sm text-white/60">
-                {new Date(article.date).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </div>
-            </div>
-
-            <div className="relative w-full flex justify-end">
-              <Image
-                src={article.image}
-                alt={article.title}
-                width={1000}
-                height={900}
-                priority
-                className="w-full max-w-[640px] h-auto object-contain"
-              />
-            </div>
-          </div>
-        </section>
-      ) : (
-        <section
-          className={`relative w-full ${
-            isContainedHero
-              ? "h-[85vh] md:h-[90vh] bg-black flex items-center justify-center"
-              : "h-[70vh] md:h-[80vh]"
-          }`}
-        >
-          <Image
-            src={article.image}
-            alt={article.title}
-            fill={!isContainedHero}
-            width={isContainedHero ? 1200 : undefined}
-            height={isContainedHero ? 900 : undefined}
-            priority
-            className={
-              isContainedHero
-                ? "object-contain max-h-[80vh]"
-                : "object-cover"
-            }
-          />
-
-          <div
-            className={`absolute inset-0 ${
-              isContainedHero
-                ? "bg-gradient-to-t from-black/70 via-black/20 to-black/20"
-                : "bg-gradient-to-t from-black/60 via-black/10 to-transparent"
-            }`}
-          />
-
-          <div className="absolute bottom-0 left-0 right-0">
-            <div className="max-w-5xl mx-auto px-6 pb-10 md:pb-14">
-              <p className="text-xs uppercase tracking-[0.35em] text-white/80">
-                {article.category}
-              </p>
-
-              <h1 className="mt-4 font-serif text-[34px] md:text-[56px] leading-[1.05] tracking-[-0.01em] text-white max-w-[22ch] md:max-w-[20ch] text-balance">
-                {article.title}
-              </h1>
-
-              <p className="mt-5 max-w-[55ch] text-lg text-white/90 leading-relaxed">
-                {article.excerpt}
-              </p>
-
-              <div className="mt-6 text-sm text-white/80">
-                {new Date(article.date).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* CONTENT */}
       <section className="py-16 md:py-20">
         <article className="max-w-2xl mx-auto px-6">
+          <h1 className="font-serif text-4xl md:text-6xl mb-8">
+            {article.title}
+          </h1>
+
           {article.blocks.map((b, i) => renderBlock(b, i))}
+
           <SubmitForm />
         </article>
       </section>

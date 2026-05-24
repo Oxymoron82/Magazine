@@ -1,5 +1,5 @@
 export type ArticleBlock =
-  | { type: "p"; text: string; dropCap?: boolean }
+  | { type: "p"; text: string; dropCap?: boolean; className?: string }
   | { type: "h2"; text: string }
   | { type: "quote"; text: string }
   | {
@@ -515,9 +515,18 @@ The prints combine leopard, tiger and blooming sakura on a python texture. It’
         type: "p",
         text: `And maybe that’s where something important begins.`,
       },
+    
+
+    {
+  type: "p",
+  text: `by Sofia Solas`,
+  className: "mt-6 italic text-neutral-500 text-sm",
+},
+
       {
         type: "hr",
       },
+
       {
         type: "h2",
         text: "Personal Story: Why I Choose to Be Seen",
