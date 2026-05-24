@@ -47,6 +47,8 @@ export default function HomePage() {
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 5);
 
+  const activeColumns = columns.filter((column) => column.active);
+
   const [featuredLatest, ...secondaryLatest] = latestArticles;
 
   return (
@@ -110,12 +112,12 @@ export default function HomePage() {
         </div>
       </section>
 
-       <SearchArticles />
+      <SearchArticles />
 
       {/* LATEST */}
       <section
         id="latest"
-       className="max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-24 md:pb-32 scroll-mt-24"
+        className="max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-24 md:pb-32 scroll-mt-24"
       >
         <div className="flex items-end justify-between gap-6 mb-12">
           <div>
@@ -192,30 +194,29 @@ export default function HomePage() {
         ) : null}
 
         {/* MOBILE ALL ARTICLES CTA */}
-<div className="mt-14 md:hidden">
-  <Link
-    href="/columns"
-    className="block border-t border-b border-[#4A3F3C]/20 py-6"
-  >
-    <p className="text-[11px] uppercase tracking-[0.35em] text-neutral-500">
-      Explore
-    </p>
+        <div className="mt-14 md:hidden">
+          <Link
+            href="/columns"
+            className="block border-t border-b border-[#4A3F3C]/20 py-6"
+          >
+            <p className="text-[11px] uppercase tracking-[0.35em] text-neutral-500">
+              Explore
+            </p>
 
-    <div className="mt-3 flex items-center justify-between gap-6">
-      <p className="font-serif text-3xl leading-tight text-[#4A3F3C]">
-        All stories
-      </p>
+            <div className="mt-3 flex items-center justify-between gap-6">
+              <p className="font-serif text-3xl leading-tight text-[#4A3F3C]">
+                All stories
+              </p>
 
-      <span className="text-2xl text-[#4A3F3C]">→</span>
-    </div>
+              <span className="text-2xl text-[#4A3F3C]">→</span>
+            </div>
 
-    <p className="mt-3 text-sm leading-relaxed text-neutral-600">
-      Browse the full magazine archive by column: Practice, Work, Intimacy,
-      Becoming and Place.
-    </p>
-  </Link>
-</div>
-
+            <p className="mt-3 text-sm leading-relaxed text-neutral-600">
+              Browse the full magazine archive by column: Practice, Work,
+              Intimacy, Becoming and Place.
+            </p>
+          </Link>
+        </div>
       </section>
 
       <div className="max-w-7xl mx-auto px-6">
@@ -309,10 +310,7 @@ export default function HomePage() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-x-8 gap-y-14">
-          {columns
-  .filter((column) => column.active)
-  .slice(0, 5)
-  .map((column, index) => (
+          {activeColumns.slice(0, 5).map((column, index) => (
             <Link
               key={column.slug}
               href={`/columns/${column.slug}`}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { columns } from "@/data/columns";
+import { notFound } from "next/navigation";
 
 const siteUrl = "https://theissue.xyz";
 
@@ -76,7 +77,9 @@ export default function ColumnsPage() {
 
       <section className="max-w-7xl mx-auto px-6 py-14 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-20">
-          {columns.map((c) => (
+         {columns
+  .filter((c) => c.active)
+  .map((c) => (
             <Link key={c.slug} href={`/columns/${c.slug}`} className="block">
               <article className="space-y-5 group">
                 <div className="relative aspect-[3/4] overflow-hidden rounded-xl">
