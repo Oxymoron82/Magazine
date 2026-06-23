@@ -69,15 +69,12 @@ export default function HomePage() {
               className="object-cover opacity-65"
             />
 
-            <div className="absolute inset-0 bg-editorial-bg/45" />
-            <div className="absolute inset-0 bg-gradient-to-r from-editorial-bg/65 via-editorial-bg/35 to-transparent" />
+            <div className="absolute inset-0 bg-black/35 md:bg-editorial-bg/45" />
+<div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/25 to-transparent md:from-editorial-bg/65 md:via-editorial-bg/35 md:to-transparent" />
 
             <div className="absolute inset-0 z-10 flex flex-col justify-center px-8 md:px-20 lg:px-24">
-              <p className="mb-8 text-[11px] uppercase tracking-[0.35em] text-editorial-text/75">
-                The Issue №
-              </p>
-
-              <h1 className="font-inria text-editorial-text text-[40px] sm:text-[52px] md:text-[64px] lg:text-[72px] leading-[0.95] tracking-[-0.035em] max-w-[11ch] md:max-w-[15ch]">
+              
+              <h1 className="font-inria text-white md:text-editorial-text text-[40px] sm:text-[52px] md:text-[64px] lg:text-[72px] leading-[0.95] tracking-[-0.035em] max-w-[11ch] md:max-w-[15ch]">
                 <span className="block md:whitespace-nowrap">
                   Individual stories.
                 </span>
@@ -86,9 +83,9 @@ export default function HomePage() {
                 </span>
               </h1>
 
-              <div className="mt-8 h-px w-16 bg-editorial-text/55" />
+              <div className="mt-8 h-px w-16 bg-white/70 md:bg-editorial-text/55" />
 
-              <p className="mt-6 max-w-[310px] text-[15px] md:text-[16px] leading-[1.75] text-editorial-text/85">
+              <p className="mt-6 max-w-[310px] text-[15px] md:text-[16px] leading-[1.75] text-white/90 md:text-editorial-text/85">
                 A visual magazine about people, work, transformation and
                 contemporary culture.
               </p>
