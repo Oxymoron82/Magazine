@@ -39,11 +39,11 @@ export type Article = {
   excerpt: string;
   image: string;
   date: string;
+  author?: string;
   blocks: ArticleBlock[];
 };
 
 export const articles: Article[] = [
-  // ================= PLACE =================
   {
     slug: "tallinn-fashion-week-between-space-movement-and-form",
     column: "place",
@@ -53,6 +53,7 @@ export const articles: Article[] = [
       "An editorial observation of Tallinn Fashion Week at T1 Venue in Tallinn, where fashion, atmosphere, and the presence of people shaped the event beyond the runway.",
     image: "/images/places/tallinweek/2.jpeg",
     date: "2026-04-10",
+    author: "The Issue № Editorial Team",
     blocks: [
       {
         type: "p",
@@ -61,7 +62,6 @@ export const articles: Article[] = [
 
 The event brought together designers, guests and industry professionals around new collections and ideas. From the very beginning, there was a clear attention to detail — the audience arrived dressed with intention, each interpreting the mood of the event in their own way. The space was shaped not only by what was happening on the runway, but also by the people within it.`,
       },
-
       {
         type: "gallery",
         images: [
@@ -92,7 +92,6 @@ The event brought together designers, guests and industry professionals around n
         src: "/images/places/tallinweek/video1.mp4",
         autoplay: false,
       },
-
       {
         type: "p",
         text: `Among the designers this season was Anastasija Balak, whose work is deeply rooted in the relationship between body and form.`,
@@ -112,7 +111,6 @@ The event brought together designers, guests and industry professionals around n
     ],
   },
 
-  // ================= WORK =================
   {
     slug: "anastasija-balak-silent-guardian-falling-petals",
     column: "practice",
@@ -122,6 +120,7 @@ The event brought together designers, guests and industry professionals around n
       "A conversation with designer Anastasija Balak on body, form, vulnerability, and the quiet balance between structure and intuition in her collection Silent Guardian / Falling Petals.",
     image: "/images/practice/balak/main.jpeg",
     date: "2026-04-15",
+    author: "The Issue № Editorial Team",
     blocks: [
       {
         type: "p",
@@ -187,14 +186,12 @@ The collection feels calm, without pressure, leaving space for interpretation.`,
 
 - It started with working closely with the body — through swimwear. Over time, it became something broader. Today it’s less about a specific category and more about creating a certain state through clothing.`,
       },
-
       {
         type: "image",
         src: "/images/practice/balak/8.jpeg",
         alt: "Audience and atmosphere at Tallinn Fashion Week at T1 Venue",
         fullBleed: true,
       },
-
       {
         type: "p",
         text: `What does “work” mean to you today?
@@ -207,7 +204,6 @@ The collection feels calm, without pressure, leaving space for interpretation.`,
 
 - The depth of the process. A lot of time goes into working with materials, finding balance between aesthetics and function, and maintaining internal discipline.`,
       },
-
       {
         type: "gallery",
         images: [
@@ -300,7 +296,6 @@ The prints combine leopard, tiger and blooming sakura on a python texture. It’
     ],
   },
 
-  // ================= INTIMACY =================
   {
     slug: "sexuality-is-not-a-pose",
     column: "intimacy",
@@ -310,6 +305,7 @@ The prints combine leopard, tiger and blooming sakura on a python texture. It’
       "An intimacy and fashion editorial on sensuality, identity, and presence, exploring how sexuality returns through feeling, embodiment, and contemporary visual storytelling.",
     image: "/images/Intimacy/1/1.jpg",
     date: "2026-03-04",
+    author: "Sofia Solas",
     blocks: [
       {
         type: "p",
@@ -341,19 +337,19 @@ The prints combine leopard, tiger and blooming sakura on a python texture. It’
         images: [
           {
             src: "/images/Intimacy/1/4.jpg",
-            alt: "Intimacy editorial placeholder image 1",
+            alt: "Intimacy editorial image about body, sensuality and presence",
           },
           {
             src: "/images/Intimacy/1/5.jpg",
-            alt: "Intimacy editorial placeholder image 2",
+            alt: "Intimacy editorial portrait exploring feminine identity",
           },
           {
             src: "/images/Intimacy/1/6.jpg",
-            alt: "Intimacy editorial placeholder image 3",
+            alt: "Visual essay image about sexuality and embodiment",
           },
           {
             src: "/images/Intimacy/1/7.jpg",
-            alt: "Intimacy editorial placeholder image 4",
+            alt: "Editorial photography about intimacy and personal presence",
           },
         ],
       },
@@ -436,19 +432,19 @@ The prints combine leopard, tiger and blooming sakura on a python texture. It’
         images: [
           {
             src: "/images/Intimacy/1/8.jpg",
-            alt: "Intimacy editorial placeholder image 5",
+            alt: "Intimacy editorial image about self-acceptance and body presence",
           },
           {
             src: "/images/Intimacy/1/9.jpg",
-            alt: "Intimacy editorial placeholder image 6",
+            alt: "Fashion editorial image exploring vulnerability and confidence",
           },
           {
             src: "/images/Intimacy/1/10.jpg",
-            alt: "Intimacy editorial placeholder image 7",
+            alt: "Visual storytelling image about feminine sensuality and identity",
           },
           {
             src: "/images/Intimacy/1/11.jpg",
-            alt: "Intimacy editorial placeholder image 8",
+            alt: "Editorial portrait about intimacy, body and personal story",
           },
         ],
       },
@@ -515,18 +511,14 @@ The prints combine leopard, tiger and blooming sakura on a python texture. It’
         type: "p",
         text: `And maybe that’s where something important begins.`,
       },
-    
-
-    {
-  type: "p",
-  text: `by Sofia Solas`,
-  className: "mt-6 italic text-neutral-500 text-sm",
-},
-
+      {
+        type: "p",
+        text: `by Sofia Solas`,
+        className: "mt-6 italic text-neutral-500 text-sm",
+      },
       {
         type: "hr",
       },
-
       {
         type: "h2",
         text: "Personal Story: Why I Choose to Be Seen",
@@ -599,7 +591,6 @@ Photographer: Nikolai Zapolnov`,
     ],
   },
 
-  // ================= WORK =================
   {
     slug: "radiaatorikeskus-heating-design-estonia",
     column: "work",
@@ -609,6 +600,7 @@ Photographer: Nikolai Zapolnov`,
       "A business and interior design feature on Radiaatorikeskus, an Estonian company turning heating systems into architectural design elements through entrepreneurship, modern interiors, and functional aesthetics.",
     image: "/images/work/radiaatorikeskus/1.jpeg",
     date: "2026-03-17",
+    author: "The Issue № Editorial Team",
     blocks: [
       {
         type: "p",
@@ -691,174 +683,167 @@ Photographer: Nikolai Zapolnov`,
     ],
   },
 
-  // ================= PRACTICE =================
-
-{
-  slug: "about-elegance-musical-fuad-oranski",
-  column: "practice",
-  title: "About Elegance Musical  —  A Conversation with Fuäd Oranski",
-  category: "Practice",
-  excerpt:
-    "A conversation with Fuäd Oranski on About Elegance Musical, a Finnish rock-pop venture built around collaboration, multilingual sound, live performance, and creative exchange.",
-  image: "/images/practice/about-elegance-musical/5.jpeg",
-  date: "2026-04-26",
-  blocks: [
-    {
-      type: "p",
-      dropCap: true,
-      text: `The Issue №: Hello Fuäd Oranski, nice to have you with us. Can you briefly introduce your project — what is About Elegance Musical?
+  {
+    slug: "about-elegance-musical-fuad-oranski",
+    column: "practice",
+    title: "About Elegance Musical  —  A Conversation with Fuäd Oranski",
+    category: "Practice",
+    excerpt:
+      "A conversation with Fuäd Oranski on About Elegance Musical, a Finnish rock-pop venture built around collaboration, multilingual sound, live performance, and creative exchange.",
+    image: "/images/practice/about-elegance-musical/5.jpeg",
+    date: "2026-04-26",
+    author: "The Issue № Editorial Team",
+    blocks: [
+      {
+        type: "p",
+        dropCap: true,
+        text: `The Issue №: Hello Fuäd Oranski, nice to have you with us. Can you briefly introduce your project — what is About Elegance Musical?
 
 Fuäd Oranski: Hello, thank you for inviting me here. About Elegance Musical is a Finnish mainly rock/pop venture, playing in other styles too — funk, soul, hard rock. It is my creation and my foundation, and it happened in Helsinki.`,
-    },
-    {
-      type: "p",
-      text: `About Elegance is much more than a band. It is an open platform to share music through gigs, different collaborations, digital musical works, recordings, exchanges with musicians, and online streams.`,
-    },
-    {
-      type: "p",
-      text: `By the way, I invite people from all artistic areas for different kinds of collaborations with AEM — musicians, singers, models, photographers, actors, dancers.
+      },
+      {
+        type: "p",
+        text: `About Elegance is much more than a band. It is an open platform to share music through gigs, different collaborations, digital musical works, recordings, exchanges with musicians, and online streams.`,
+      },
+      {
+        type: "p",
+        text: `By the way, I invite people from all artistic areas for different kinds of collaborations with AEM — musicians, singers, models, photographers, actors, dancers.
 
 Official website: https://www.aboutelegancemusical.com/`,
-    },
-    {
-      type: "image",
-      src: "/images/practice/about-elegance-musical/11.jpeg",
-      alt: "About Elegance Musical Finnish rock pop band editorial portrait",
-      caption: "Photo: Aleksi Lausti",
-      fullBleed: true,
-    },
-    {
-      type: "p",
-      text: `The Issue №: When did it start, and how would you describe your format today?
+      },
+      {
+        type: "image",
+        src: "/images/practice/about-elegance-musical/11.jpeg",
+        alt: "About Elegance Musical Finnish rock pop band editorial portrait",
+        caption: "Photo: Aleksi Lausti",
+        fullBleed: true,
+      },
+      {
+        type: "p",
+        text: `The Issue №: When did it start, and how would you describe your format today?
 
 Fuäd Oranski: It started in May 2023 as a musical venture. Concerning the format as a band, it changes sometimes, but usually it is the classical one: vocal, bass guitar, drums, electric guitar, and keyboards. When there is a possibility, I prefer to play acoustic piano, and if acoustic guitar can join the band, it sounds perfect.`,
-    },
-    {
-      type: "p",
-      text: `The Issue №: How would you define your sound or direction?
+      },
+      {
+        type: "p",
+        text: `The Issue №: How would you define your sound or direction?
 
 Fuäd Oranski: About Elegance Musical is a rock-pop fusion band, but I like to add some soul taste, funk, and often hard rock or metal drums. All those rhythms and tastes give a special original sound. I call it a “very specific cocktail sound”.`,
-    },
-    {
-      type: "p",
-      text: `It is specific also in terms of our singing languages. I usually sing in English, but also in French, sometimes in Finnish, and on rare occasions in Russian and Arabic. I had a chance to be born to multicultural parents, and had the privilege to live in different countries and continents. That is why all these languages are inside of me forever.`,
-    },
-    {
-      type: "quote",
-      text: "About Elegance is much more than a band. It is an open platform to share music.",
-    },
-    
-    {
-      type: "p",
-      text: `The Issue №: How did your project begin — and what has changed since then?
+      },
+      {
+        type: "p",
+        text: `It is specific also in terms of our singing languages. I usually sing in English, but also in French, sometimes in Finnish, and on rare occasions in Russian and Arabic. I had a chance to be born to multicultural parents, and had the privilege to live in different countries and continents. That is why all these languages are inside of me forever.`,
+      },
+      {
+        type: "quote",
+        text: "About Elegance is much more than a band. It is an open platform to share music.",
+      },
+      {
+        type: "p",
+        text: `The Issue №: How did your project begin — and what has changed since then?
 
 Fuäd Oranski: In the beginning it was a project. Today it is more like a musical venture, a mission to share the best of what we can offer to the audience — our music, our message, our love through all of this.`,
-    },
-    {
-      type: "p",
-      text: `The Issue №: What does “work” mean to you today?
+      },
+      {
+        type: "p",
+        text: `The Issue №: What does “work” mean to you today?
 
 Fuäd Oranski: Work means a lot of things at the same time: creativity, the right timing, positive connection between everyone helping and working inside the band and around it.`,
-    },
-    {
-      type: "p",
-      text: `I would like to thank our manager Sami, who gave an incredible re-boost to the whole process, and a special thanks to Ilari, our bassist, who is giving his best to the band, and Oliver, a great drummer and musician who is always with AEM when needed. Big thanks to Sofia Sol, such an adorable model, for her collaboration with us — and a million thanks to many other people.`,
-    },
-    
-
-    {
-      type: "p",
-      text: `Work is a magical process. It takes a lot of energy, and you have to sacrifice a lot. But in the end, there is always satisfaction, because the result is mainly positive.`,
-    },
-    {
-      type: "image",
-      src: "/images/practice/about-elegance-musical/22.jpeg",
-      alt: "Fuäd Oranski About Elegance Musical creative process and performance editorial",
-     
-      fullBleed: true,
-    },
-    {
-      type: "p",
-      text: `The Issue №: What part of your work do people not see or misunderstand?
+      },
+      {
+        type: "p",
+        text: `I would like to thank our manager Sami, who gave an incredible re-boost to the whole process, and a special thanks to Ilari, our bassist, who is giving his best to the band, and Oliver, a great drummer and musician who is always with AEM when needed. Big thanks to Sofia Sol, such an adorable model, for her collaboration with us — and a million thanks to many other people.`,
+      },
+      {
+        type: "p",
+        text: `Work is a magical process. It takes a lot of energy, and you have to sacrifice a lot. But in the end, there is always satisfaction, because the result is mainly positive.`,
+      },
+      {
+        type: "image",
+        src: "/images/practice/about-elegance-musical/22.jpeg",
+        alt: "Fuäd Oranski About Elegance Musical creative process and performance editorial",
+        fullBleed: true,
+      },
+      {
+        type: "p",
+        text: `The Issue №: What part of your work do people not see or misunderstand?
 
 Fuäd Oranski: We try to share a lot with the crowd. Maybe I am not yet ready to share the moment of creation. It is still something private for me. But who knows — maybe in the future I will share that part with the audience too.`,
-    },
-    {
-      type: "p",
-      text: `The Issue №: How does your creative process usually start?
+      },
+      {
+        type: "p",
+        text: `The Issue №: How does your creative process usually start?
 
 Fuäd Oranski: It starts in a million different ways — from personal life moments, past memories, moments of meeting great people, receiving great lyrics from nice people or even from someone unknown, or after living through a beautiful or dramatic personal moment.`,
-    },
-    {
-      type: "p",
-      text: `The Issue №: Do you work more from structure or intuition?
+      },
+      {
+        type: "p",
+        text: `The Issue №: Do you work more from structure or intuition?
 
 Fuäd Oranski: More from intuition, but I like to work from structure too sometimes.`,
-    },
-    {
-      type: "p",
-      text: `The Issue №: What has changed in your approach to music over time?
+      },
+      {
+        type: "p",
+        text: `The Issue №: What has changed in your approach to music over time?
 
 Fuäd Oranski: Music is not only creating, recording, or performing. Music is an incredible world where you meet people, discover sounds and rhythms, and connect in real time or through social media with millions of different things.`,
-    },
-     {
-      type: "image",
-      src: "/images/practice/about-elegance-musical/3.jpeg",
-      alt: "Fuäd Oranski About Elegance Musical creative process and performance editorial",
-     
-      fullBleed: true,
-    },
-    {
-      type: "p",
-      text: `That is why I am in love with all that process. I try to reach the ideal everywhere and every time, even if I know that it is impossible. But the most valuable thing is sharing your creativity.`,
-    },
-    {
-      type: "quote",
-      text: "The most valuable thing is sharing your creativity.",
-    },
-    {
-      type: "p",
-      text: `The Issue №: How do you feel about being visible as artists today?
+      },
+      {
+        type: "image",
+        src: "/images/practice/about-elegance-musical/3.jpeg",
+        alt: "Fuäd Oranski About Elegance Musical creative process and performance editorial",
+        fullBleed: true,
+      },
+      {
+        type: "p",
+        text: `That is why I am in love with all that process. I try to reach the ideal everywhere and every time, even if I know that it is impossible. But the most valuable thing is sharing your creativity.`,
+      },
+      {
+        type: "quote",
+        text: "The most valuable thing is sharing your creativity.",
+      },
+      {
+        type: "p",
+        text: `The Issue №: How do you feel about being visible as artists today?
 
 Fuäd Oranski: Being visible is not so complicated in our era. Everyone can create their own music, their own image, if they have a bit of skill. The most important thing is to understand that you do something unique, and that you can give the audience something that makes people happy or boosts them emotionally in a positive way.`,
-    },
-    {
-      type: "p",
-      text: `The Issue №: What do you want people to feel when they listen to your music?
+      },
+      {
+        type: "p",
+        text: `The Issue №: What do you want people to feel when they listen to your music?
 
 Fuäd Oranski: Love, happiness, various feelings — mostly positive ones, and sometimes sad ones too.`,
-    },
-    {
-      type: "image",
-      src: "/images/practice/about-elegance-musical/4.jpeg",
-      alt: "About Elegance Musical rock pop project Helsinki editorial image",
-      caption: "Photo: Aleksi Lausti",
-      fullBleed: true,
-    },
-    {
-      type: "p",
-      text: `The Issue №: What are you building right now?
+      },
+      {
+        type: "image",
+        src: "/images/practice/about-elegance-musical/4.jpeg",
+        alt: "About Elegance Musical rock pop project Helsinki editorial image",
+        caption: "Photo: Aleksi Lausti",
+        fullBleed: true,
+      },
+      {
+        type: "p",
+        text: `The Issue №: What are you building right now?
 
 Fuäd Oranski: Starting from December 2025, we are preparing three different singles and two music videos. I am also in a non-stop process of creating new songs for our first album.`,
-    },
-    {
-      type: "p",
-      text: `I am lucky to be surrounded by great people, without whom it would be impossible to achieve the intended goals. There will also be some amazing surprises. The deadline is May or June 2026, and I am so excited to launch that sharing process with the audience.`,
-    },
-    {
-      type: "p",
-      text: `Of course, there will be a lot of gigs — mainly in Finland, but in Estonia and France too. We will inform the world about all the dates when the right time comes.`,
-    },
-   
-    {
-      type: "p",
-      text: `The Issue №: What does the next phase look like for you?
+      },
+      {
+        type: "p",
+        text: `I am lucky to be surrounded by great people, without whom it would be impossible to achieve the intended goals. There will also be some amazing surprises. The deadline is May or June 2026, and I am so excited to launch that sharing process with the audience.`,
+      },
+      {
+        type: "p",
+        text: `Of course, there will be a lot of gigs — mainly in Finland, but in Estonia and France too. We will inform the world about all the dates when the right time comes.`,
+      },
+      {
+        type: "p",
+        text: `The Issue №: What does the next phase look like for you?
 
 Fuäd Oranski: The next phase is the launching process of everything we are preparing in terms of musical material — sharing it with the audience through social media, radio, TV, gigs, mainstream platforms, or interviews on platforms like yours, The Issue №.`,
-    },
-    {
-      type: "p",
-      text: `The Issue №: Thank you.
+      },
+      {
+        type: "p",
+        text: `The Issue №: Thank you.
 
 Fuäd Oranski: Thank you. It was a real pleasure.
 
@@ -867,37 +852,33 @@ About Elegance Instagram:
 https://www.instagram.com/aboutelegance_musical
 Aleksi Lausti Website:
 https://www.aleksilausti.com/ `,
-    },
-   {
-  type: "credits",
-  items: [
-    { label: "Project", value: "About Elegance Musical" },
-    { label: "Artist", value: "Fuäd Oranski" },
-    { label: "Location", value: "Helsinki, Finland" },
-
-    {
-      label: "Website",
-      value: "aboutelegancemusical.com",
-      href: "https://www.aboutelegancemusical.com/",
-    },
-
-    {
-      label: "Instagram",
-      value: "@aboutelegance_musical",
-      href: "https://www.instagram.com/aboutelegance_musical",
-    },
-
-    {
-      label: "Aleksi Lausti",
-      value: "aleksilausti.com",
-      href: "https://www.aleksilausti.com/",
-    },
-
-    { label: "Column", value: "PRACTICE" },
-  ],
-},
-  ],
-},
+      },
+      {
+        type: "credits",
+        items: [
+          { label: "Project", value: "About Elegance Musical" },
+          { label: "Artist", value: "Fuäd Oranski" },
+          { label: "Location", value: "Helsinki, Finland" },
+          {
+            label: "Website",
+            value: "aboutelegancemusical.com",
+            href: "https://www.aboutelegancemusical.com/",
+          },
+          {
+            label: "Instagram",
+            value: "@aboutelegance_musical",
+            href: "https://www.instagram.com/aboutelegance_musical",
+          },
+          {
+            label: "Aleksi Lausti",
+            value: "aleksilausti.com",
+            href: "https://www.aleksilausti.com/",
+          },
+          { label: "Column", value: "PRACTICE" },
+        ],
+      },
+    ],
+  },
 
   {
     slug: "marina-smagin-artmari-handmade-dsn",
@@ -908,79 +889,67 @@ https://www.aleksilausti.com/ `,
       "An editorial interview with eco-couture designer Marina Smagin on sustainable fashion, handmade couture, recycled textiles, and contemporary creative practice in fashion design.",
     image: "/images/practice/10.jpg",
     date: "2026-03-20",
+    author: "The Issue № Editorial Team",
     blocks: [
       {
         type: "p",
         dropCap: true,
         text: `My name is Marina Smagin, and my brand is Artmari Handmade DSN (Instagram @artmari_handmade_dsn). I am an eco-couture fashion designer working at the intersection of sustainability and high fashion craftsmanship.`,
       },
-
       {
         type: "p",
         text: `My work focuses on transforming unconventional materials into couture garments. I create pieces using recycled textiles, including neckties and repurposed fabrics, combining ecological design principles with traditional hand couture techniques.`,
       },
-
       {
         type: "image",
         src: "/images/practice/02.jpg",
         alt: "Eco couture fashion editorial look by designer Marina Smagin",
         fullBleed: true,
       },
-
       {
         type: "p",
         text: `Each garment is created largely by hand, reflecting a slow fashion philosophy where craftsmanship, sustainability, and artistic storytelling meet.`,
       },
-
       {
         type: "h2",
         text: "PROJECT",
       },
-
       {
         type: "p",
         text: `This editorial presents two couture gowns created for an international fashion event in Italy and designed for contestants appearing on the red carpet.`,
       },
-
       {
         type: "image",
         src: "/images/practice/17.jpg",
         alt: "Handmade couture details in sustainable fashion and eco couture design",
         fullBleed: true,
       },
-
       {
         type: "p",
         text: `Both dresses are part of my eco-couture concept. The garments combine recycled materials with traditional couture techniques. Approximately 80% of the work was completed entirely by hand.`,
       },
-
       {
         type: "p",
         text: `The creation of the two gowns took nearly five months of intensive craftsmanship. Each layer, structure, and decorative element was carefully constructed to achieve a sculptural silhouette while maintaining sustainable design principles.`,
       },
-
       {
         type: "h2",
         text: "DESIGN CONCEPT",
       },
-
       {
         type: "image",
         src: "/images/practice/04.jpg",
         alt: "Sustainable fashion editorial portrait by eco couture designer Marina Smagin",
         fullBleed: true,
       },
-
       {
         type: "p",
         text: `My design philosophy is based on the idea that sustainability can coexist with haute couture. I explore how discarded materials can be transformed into luxury garments.`,
       },
-
       {
         type: "p",
         text: `In my work, materials such as ties and reclaimed fabrics become the foundation for couture silhouettes. Through hand draping, layering, and detailed manual construction, the garments evolve into expressive pieces that combine ecological awareness with artistic fashion design.`,
       },
-
       {
         type: "gallery",
         images: [
@@ -1002,27 +971,22 @@ https://www.aleksilausti.com/ `,
           },
         ],
       },
-
       {
         type: "p",
         text: `The goal is to demonstrate that sustainable fashion can be both innovative and visually striking.`,
       },
-
       {
         type: "h2",
         text: "EDITORIAL",
       },
-
       {
         type: "p",
         text: `The editorial photoshoot highlights the dramatic textures and sculptural volumes of the gowns. Set against bold backgrounds and strong lighting, the images emphasize movement, craftsmanship, and the layered construction of the dresses.`,
       },
-
       {
         type: "p",
         text: `The visual concept reflects the transformation of recycled materials into couture forms — from raw textile elements into refined fashion pieces designed for red carpet presence.`,
       },
-
       {
         type: "credits",
         items: [
@@ -1045,177 +1009,177 @@ https://www.aleksilausti.com/ `,
     ],
   },
 
-  // ================= BECOMING =================
-{
-  slug: "starting-again-in-another-country",
-  column: "becoming",
-  title: "Starting Again, in Another Country",
-  category: "Becoming",
-  excerpt:
-    "A personal editorial essay by Sofia Solas on migration, motherhood, work, visual storytelling, and the quiet strength of beginning again in another country.",
-  image: "/images/becoming/starting-again/main.jpeg",
-  date: "2026-04-20",
-  blocks: [
-    {
-      type: "p",
-      dropCap: true,
-      text: `Beauty is not perfection.
+  {
+    slug: "starting-again-in-another-country",
+    column: "becoming",
+    title: "Starting Again, in Another Country",
+    category: "Becoming",
+    excerpt:
+      "A personal editorial essay by Sofia Solas on migration, motherhood, work, visual storytelling, and the quiet strength of beginning again in another country.",
+    image: "/images/becoming/starting-again/main.jpeg",
+    date: "2026-04-20",
+    author: "Sofia Solas",
+    blocks: [
+      {
+        type: "p",
+        dropCap: true,
+        text: `Beauty is not perfection.
 
 It is posture — especially when it’s hard.`,
-    },
-    {
-      type: "p",
-      text: `I grew up surrounded by women who understood this without explaining it.
+      },
+      {
+        type: "p",
+        text: `I grew up surrounded by women who understood this without explaining it.
 
 Not glossy beauty, not something constructed for attention — but something quieter and more grounded. Presence. Confidence. A way of holding yourself, even when no one is looking.`,
-    },
-    {
-      type: "p",
-      text: `My mother was a director and ran a modeling agency. For her, it was work. For me, it was an environment I observed from a distance — fittings, rehearsals, the rhythm before a show, the moment just before stepping into light. I remember watching more than participating. Trying to understand what made someone visible.`,
-    },
-    {
-      type: "p",
-      text: `That’s where my idea of beauty began — not as appearance, but as a form of strength.
+      },
+      {
+        type: "p",
+        text: `My mother was a director and ran a modeling agency. For her, it was work. For me, it was an environment I observed from a distance — fittings, rehearsals, the rhythm before a show, the moment just before stepping into light. I remember watching more than participating. Trying to understand what made someone visible.`,
+      },
+      {
+        type: "p",
+        text: `That’s where my idea of beauty began — not as appearance, but as a form of strength.
 
 Over time, observation turned into intention. Fashion stopped being something external. It became a language — a way to speak about character, femininity, vulnerability and control.`,
-    },
-    {
-      type: "gallery",
-      images: [
-        {
-          src: "/images/becoming/starting-again/1.jpeg",
-          alt: "Editorial portrait about migration, identity, and starting again in another country",
-        },
-        {
-          src: "/images/becoming/starting-again/2.jpeg",
-          alt: "Visual storytelling image about feminine strength and personal transformation",
-        },
-        {
-          src: "/images/becoming/starting-again/3.jpeg",
-          alt: "Editorial image about rebuilding life and identity in Helsinki",
-        },
-      ],
-    },
-    {
-      type: "h2",
-      text: "Starting from zero",
-    },
-    {
-      type: "p",
-      text: `Moving to another country changes your sense of direction.
+      },
+      {
+        type: "gallery",
+        images: [
+          {
+            src: "/images/becoming/starting-again/1.jpeg",
+            alt: "Editorial portrait about migration, identity, and starting again in another country",
+          },
+          {
+            src: "/images/becoming/starting-again/2.jpeg",
+            alt: "Visual storytelling image about feminine strength and personal transformation",
+          },
+          {
+            src: "/images/becoming/starting-again/3.jpeg",
+            alt: "Editorial image about rebuilding life and identity in Helsinki",
+          },
+        ],
+      },
+      {
+        type: "h2",
+        text: "Starting from zero",
+      },
+      {
+        type: "p",
+        text: `Moving to another country changes your sense of direction.
 
 I came to Helsinki with a small child and the idea that a different life was possible. But relocation removes structure very quickly. You arrive without context — no network, no history, no position. Things that once defined you no longer exist in the same way.`,
-    },
-    {
-      type: "p",
-      text: `You start again.
+      },
+      {
+        type: "p",
+        text: `You start again.
 
 When the relationship ended, that reset became more concrete. Responsibility stayed — for my child and for myself. There is a moment where you realise there are only two options: stop, or continue. There is no in-between.`,
-    },
-    {
-      type: "h2",
-      text: "Work, in its simplest form",
-    },
-    {
-      type: "p",
-      text: `My first job in Finland was cleaning.
+      },
+      {
+        type: "h2",
+        text: "Work, in its simplest form",
+      },
+      {
+        type: "p",
+        text: `My first job in Finland was cleaning.
 
 There is a certain clarity in that kind of work. It is direct, physical, repetitive. It gives structure to the day. It teaches discipline without needing to explain it.`,
-    },
-    {
-      type: "p",
-      text: `I never saw it as something to hide. It was part of the process — a stage that builds endurance and respect for work in any form.
+      },
+      {
+        type: "p",
+        text: `I never saw it as something to hide. It was part of the process — a stage that builds endurance and respect for work in any form.
 
 From there, things moved slowly. I began working within a hotel group in Scandinavia. I studied hospitality and event management. I received Finnish citizenship after four years.
 
 Nothing happened quickly. And maybe that’s why it stayed.`,
-    },
-    {
-      type: "quote",
-      text: "You either stop, or you begin again.",
-    },
-    {
-      type: "h2",
-      text: "Returning to image",
-    },
-    {
-      type: "p",
-      text: `At some point, I felt that something was still unresolved.
+      },
+      {
+        type: "quote",
+        text: "You either stop, or you begin again.",
+      },
+      {
+        type: "h2",
+        text: "Returning to image",
+      },
+      {
+        type: "p",
+        text: `At some point, I felt that something was still unresolved.
 
 I returned to visual work — not as an observer this time, but as someone building from inside. I started training in posing and fashion production. Then styling. Then visual concepts.`,
-    },
-    {
-      type: "p",
-      text: `It became clear that I didn’t want to wait for opportunities. I wanted to create them.
+      },
+      {
+        type: "p",
+        text: `It became clear that I didn’t want to wait for opportunities. I wanted to create them.
 
 I began producing shoots — bringing together photographers, designers, makeup artists. Working through the entire process: from the initial idea to the final image.`,
-    },
-    {
-      type: "p",
-      text: `Later, I studied fashion styling in Italy. At the same time, I started learning finance — because creating something is only part of the work. Sustaining it is another.`,
-    },
-    {
-      type: "gallery",
-      images: [
-        {
-          src: "/images/becoming/starting-again/77.jpeg",
-          alt: "Editorial portrait about returning to visual storytelling and creative work",
-        },
-        {
-          src: "/images/becoming/starting-again/5.jpeg",
-          alt: "Fashion editorial image about creative direction and personal growth",
-        },
-        {
-          src: "/images/becoming/starting-again/6.jpeg",
-          alt: "Editorial image about Sofia Solas and the development of The Issue N",
-        },
-      ],
-    },
-    {
-      type: "h2",
-      text: "People",
-    },
-    {
-      type: "p",
-      text: `The work gradually became more defined. Projects started forming. Publications followed — across Europe, the US and the UK.
+      },
+      {
+        type: "p",
+        text: `Later, I studied fashion styling in Italy. At the same time, I started learning finance — because creating something is only part of the work. Sustaining it is another.`,
+      },
+      {
+        type: "gallery",
+        images: [
+          {
+            src: "/images/becoming/starting-again/77.jpeg",
+            alt: "Editorial portrait about returning to visual storytelling and creative work",
+          },
+          {
+            src: "/images/becoming/starting-again/5.jpeg",
+            alt: "Fashion editorial image about creative direction and personal growth",
+          },
+          {
+            src: "/images/becoming/starting-again/6.jpeg",
+            alt: "Editorial image about Sofia Solas and the development of The Issue N",
+          },
+        ],
+      },
+      {
+        type: "h2",
+        text: "People",
+      },
+      {
+        type: "p",
+        text: `The work gradually became more defined. Projects started forming. Publications followed — across Europe, the US and the UK.
 
 But the most important part was always the same.
 
 Women.`,
-    },
-    {
-      type: "p",
-      text: `Different ages, different bodies, different experiences. Each one carrying something specific, something not always visible at first. Working with them was never only about image. It was about presence — how a person enters a frame, and what remains after.`,
-    },
-    {
-      type: "h2",
-      text: "The Issue №",
-    },
-    {
-      type: "p",
-      text: `This project didn’t begin as a fixed idea.
+      },
+      {
+        type: "p",
+        text: `Different ages, different bodies, different experiences. Each one carrying something specific, something not always visible at first. Working with them was never only about image. It was about presence — how a person enters a frame, and what remains after.`,
+      },
+      {
+        type: "h2",
+        text: "The Issue №",
+      },
+      {
+        type: "p",
+        text: `This project didn’t begin as a fixed idea.
 
 It grew out of process — from working, observing, building, and returning again. From understanding that not everything needs to be explained, and not everything needs to be visible immediately.`,
-    },
-    {
-      type: "p",
-      text: `The Issue № is not a showcase.
+      },
+      {
+        type: "p",
+        text: `The Issue № is not a showcase.
 
 It is a continuation. A structure that holds different stories, without forcing them into one direction.
 
 Something that remains open.`,
-    },
-    {
-      type: "p",
-      text: `— Sofia Solas
+      },
+      {
+        type: "p",
+        text: `— Sofia Solas
 Helsinki`,
-    },
-    {
-      type: "p",
-      text: `For another story of transformation through visual identity, continue with the TRINITY project.`,
-    },
-  ],
-},
+      },
+      {
+        type: "p",
+        text: `For another story of transformation through visual identity, continue with the TRINITY project.`,
+      },
+    ],
+  },
 
   {
     slug: "trinity-sofia",
@@ -1226,6 +1190,7 @@ Helsinki`,
       "A fashion editorial photography story about feminine transformation, identity, empowerment, and personal evolution through the three emotional phases of Project Trinity.",
     image: "/images/trinity/115.jpg",
     date: "2026-04-03",
+    author: "Maria Shatylovich",
     blocks: [
       {
         type: "h2",
@@ -1249,7 +1214,6 @@ Helsinki`,
         src: "/images/trinity/video_trinity.mp4",
         autoplay: false,
       },
-
       {
         type: "h2",
         text: "THREE FACES OF THE SOUL",
@@ -1357,7 +1321,6 @@ Helsinki`,
         type: "p",
         text: `At first, it felt like I was stepping back into a familiar role. Next to the red car, I felt strong, composed — the version of me that always keeps everything under control. It felt familiar, even safe.`,
       },
-
       {
         type: "p",
         text: `But then something began to shift.`,
@@ -1374,22 +1337,18 @@ Helsinki`,
         type: "p",
         text: `It was a little scary. And at the same time, it felt completely right.`,
       },
-
       {
         type: "p",
         text: `I am deeply grateful to the team for the way they guided me through this process. For the attention to detail, for the support, for creating a space where I could be different versions of myself.`,
       },
-
       {
         type: "p",
         text: `And it still feels almost unreal that this story found its continuation — being featured in the Spanish magazine Lovely became something more than just a result of the shoot.`,
       },
-
       {
         type: "p",
         text: `It felt like a confirmation: when you allow yourself to be real, it always resonates.`,
       },
-
       {
         type: "h2",
         text: "READY TO BE OUR NEXT HERO?",

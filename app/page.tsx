@@ -42,6 +42,14 @@ export const metadata: Metadata = {
   },
 };
 
+function formatArticleDate(date: string) {
+  return new Date(date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
 export default function HomePage() {
   const latestArticles = [...articles]
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
@@ -87,14 +95,14 @@ export default function HomePage() {
               </p>
 
               <div className="mt-10 md:mt-12">
-               <Image
-  src="/images/logo_new.jpg"
-  alt="The Issue № editorial magazine logo"
-  width={96}
-  height={96}
-  priority
-  className="h-auto w-[76px] md:w-[96px] rounded-xl md:rounded-2xl opacity-95"
-/>
+                <Image
+                  src="/images/logo_new.jpg"
+                  alt="The Issue № editorial magazine logo"
+                  width={96}
+                  height={96}
+                  priority
+                  className="h-auto w-[76px] md:w-[96px] rounded-xl md:rounded-2xl opacity-95"
+                />
               </div>
             </div>
           </div>
@@ -135,9 +143,18 @@ export default function HomePage() {
                   />
                 </div>
 
-                <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
-                  {featuredLatest.category}
-                </p>
+                <div className="space-y-2">
+                  <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
+                    {featuredLatest.category}
+                  </p>
+
+                  <p className="text-xs text-neutral-500">
+                    By {featuredLatest.author || "The Issue № Editorial Team"} ·{" "}
+                    <time dateTime={featuredLatest.date}>
+                      {formatArticleDate(featuredLatest.date)}
+                    </time>
+                  </p>
+                </div>
 
                 <h3 className="font-serif text-3xl md:text-5xl leading-tight text-editorial-text">
                   {featuredLatest.title}
@@ -169,6 +186,14 @@ export default function HomePage() {
                     <div>
                       <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-600">
                         {article.category}
+                      </p>
+
+                      <p className="mt-2 text-[11px] leading-relaxed text-neutral-500">
+                        By {article.author || "The Issue № Editorial Team"}
+                        <br />
+                        <time dateTime={article.date}>
+                          {formatArticleDate(article.date)}
+                        </time>
                       </p>
 
                       <h3 className="mt-3 text-xl md:text-2xl font-serif leading-tight text-editorial-text">
