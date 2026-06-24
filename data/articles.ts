@@ -52,7 +52,7 @@ export const articles: Article[] = [
   category: "Becoming",
   excerpt:
     "A reflection by Sofia Solas on Queen Sapphire World, courage, visibility, and the moment when women allow themselves to begin again.",
-  image: "/images/becoming/queen-sapphire/7.jpg",
+  image: "/images/becoming/queen-sapphire/7.jpeg",
   date: "2026-06-26",
   author: "Sofia Solas",
   blocks: [
@@ -77,7 +77,7 @@ export const articles: Article[] = [
     },
     {
       type: "image",
-      src: "/images/becoming/queen-sapphire/6.jpg",
+      src: "/images/becoming/queen-sapphire/6.jpeg",
       alt: "Queen Sapphire World editorial portrait in Helsinki",
       fullBleed: true,
     },
@@ -93,11 +93,11 @@ export const articles: Article[] = [
       type: "gallery",
       images: [
         {
-          src: "/images/becoming/queen-sapphire/3.jpg",
+          src: "/images/becoming/queen-sapphire/3.jpeg",
           alt: "Queen Sapphire World event preparation and participants",
         },
         {
-          src: "/images/becoming/queen-sapphire/5.jpg",
+          src: "/images/becoming/queen-sapphire/5.jpeg",
           alt: "Queen Sapphire World fashion and age-modeling event in Helsinki",
         },
       ],
@@ -120,7 +120,7 @@ export const articles: Article[] = [
     },
     {
       type: "image",
-      src: "/images/becoming/queen-sapphire/1.jpg",
+      src: "/images/becoming/queen-sapphire/1.jpeg",
       alt: "Queen Sapphire World event organiser and participants in Helsinki",
       fullBleed: true,
     },
@@ -144,11 +144,11 @@ export const articles: Article[] = [
       type: "gallery",
       images: [
         {
-          src: "/images/becoming/queen-sapphire/4.jpg",
+          src: "/images/becoming/queen-sapphire/4.jpeg",
           alt: "Queen Sapphire World international selection final announcement",
         },
         {
-          src: "/images/becoming/queen-sapphire/2.jpg",
+          src: "/images/becoming/queen-sapphire/2.jpeg",
           alt: "Queen Sapphire World international selection final in Helsinki",
         },
       ],
