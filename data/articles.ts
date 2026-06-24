@@ -44,6 +44,180 @@ export type Article = {
 };
 
 export const articles: Article[] = [
+
+{
+  slug: "when-women-stop-waiting-queen-sapphire-world",
+  column: "becoming",
+  title: "When Women Stop Waiting",
+  category: "Becoming",
+  excerpt:
+    "A reflection by Sofia Solas on Queen Sapphire World, courage, visibility, and the moment when women allow themselves to begin again.",
+  image: "/images/becoming/queen-sapphire/7.jpg",
+  date: "2026-06-26",
+  author: "Sofia Solas",
+  blocks: [
+    {
+      type: "p",
+      dropCap: true,
+      text: `Recently, I was talking to a woman. We were talking about life, work, and plans for the future. Nothing unusual, just one of those conversations people have every day. At some point, she said something that stayed with me:
+
+“I always wanted to try it, but I thought it was too late.”`,
+    },
+    {
+      type: "p",
+      text: `I found myself thinking about that sentence long after the conversation was over. Maybe because I’ve heard the same idea many times before, from very different women.`,
+    },
+    {
+      type: "p",
+      text: `Not necessarily about stepping onto a stage or becoming a model. Sometimes it was about changing careers. Sometimes it was about moving to another country. Sometimes it was about a personal project that had been sitting in the back of someone’s mind for years.`,
+    },
+    {
+      type: "p",
+      text: `And every time, I was struck by how easy it is to convince ourselves that we’ve missed our chance.`,
+    },
+    {
+      type: "image",
+      src: "/images/becoming/queen-sapphire/6.jpg",
+      alt: "Queen Sapphire World editorial portrait in Helsinki",
+      fullBleed: true,
+    },
+    {
+      type: "p",
+      text: `I think many women spend years putting themselves last. There’s always something more important to focus on — education, work, family, responsibilities, the endless list of things that need attention first.`,
+    },
+    {
+      type: "p",
+      text: `And somewhere along the way, our own dreams quietly get pushed aside and saved for “later.” The problem is that later can turn into years.`,
+    },
+    {
+      type: "gallery",
+      images: [
+        {
+          src: "/images/becoming/queen-sapphire/3.jpg",
+          alt: "Queen Sapphire World event preparation and participants",
+        },
+        {
+          src: "/images/becoming/queen-sapphire/5.jpg",
+          alt: "Queen Sapphire World fashion and age-modeling event in Helsinki",
+        },
+      ],
+    },
+    {
+      type: "p",
+      text: `Over the past few years, I’ve met many women who eventually decided to start over. Some launched businesses, some changed careers, some moved abroad, others stepped in front of a professional camera for the first time in their lives.`,
+    },
+    {
+      type: "p",
+      text: `And what inspired me was never the result. It was the decision. The decision to do something they had wanted to do for years but never quite had the courage to pursue.`,
+    },
+    {
+      type: "h2",
+      text: "Queen Sapphire World",
+    },
+    {
+      type: "p",
+      text: `That’s what first drew me to Queen Sapphire World.`,
+    },
+    {
+      type: "image",
+      src: "/images/becoming/queen-sapphire/1.jpg",
+      alt: "Queen Sapphire World event organiser and participants in Helsinki",
+      fullBleed: true,
+    },
+    {
+      type: "p",
+      text: `At first glance, it’s an international beauty and age-modeling competition. But the more you learn about it, the more you realise that for many of the women taking part, this isn’t really a story about titles or crowns.`,
+    },
+    {
+      type: "quote",
+      text: "It’s about trying something new. It’s about seeing yourself differently.",
+    },
+    {
+      type: "p",
+      text: `On July 11, Helsinki will host the international selection final of Queen Sapphire World.`,
+    },
+    {
+      type: "p",
+      text: `The event will take place at Oodi Library, one of Finland’s most recognised public spaces, bringing together participants from Finland, Estonia, Latvia, Norway, Sweden, Spain, Ukraine and other European countries.`,
+    },
+    {
+      type: "gallery",
+      images: [
+        {
+          src: "/images/becoming/queen-sapphire/4.jpg",
+          alt: "Queen Sapphire World international selection final announcement",
+        },
+        {
+          src: "/images/becoming/queen-sapphire/2.jpg",
+          alt: "Queen Sapphire World international selection final in Helsinki",
+        },
+      ],
+    },
+    {
+      type: "p",
+      text: `The organisers emphasise that the competition is not aimed exclusively at professional models. Most of the participants have never worked in the fashion industry before and go through training and preparation as part of the programme.`,
+    },
+    {
+      type: "p",
+      text: `For some women, it’s simply an exciting experience. For others, it’s the fulfilment of something they have wanted to do for a very long time. And for some, it may become the beginning of an entirely new chapter.`,
+    },
+    {
+      type: "p",
+      text: `And honestly, that’s the part I find most interesting. Not the competition itself. Not the titles. But the moment when someone stops waiting for perfect circumstances and finally allows themselves to try.`,
+    },
+    {
+      type: "p",
+      text: `Because sometimes a new life doesn’t begin with a dramatic change. Sometimes it begins with a single decision. A quiet moment when you tell yourself:
+
+Why not?`,
+    },
+    {
+      type: "hr",
+    },
+    {
+      type: "h2",
+      text: "Event Details",
+    },
+    {
+      type: "p",
+      text: `11 July 2026
+
+Queen Sapphire World International Selection Final
+
+Oodi Library, Helsinki`,
+    },
+    {
+      type: "p",
+      text: `If you would like to support the participants and be part of this event, we invite you to join us in Helsinki.
+
+Tickets are available here:
+https://buy.stripe.com/4gM3cwaHE3rI90p0UZ0Ny02`,
+    },
+    {
+      type: "p",
+      text: `After the final, THE ISSUE N° will return to this story with event coverage, photography, and interviews with participants and organisers.`,
+    },
+    {
+      type: "credits",
+      items: [
+        { label: "Text", value: "Sofia Solas" },
+        { label: "Project", value: "Queen Sapphire World" },
+        {
+          label: "Facebook",
+          value: "Official Event Page",
+          href: "https://www.facebook.com/share/18Ddg7sjZq/?mibextid=wwXIfr",
+        },
+        { label: "Head", value: "Alena Roshal" },
+        { label: "Organiser", value: "Alena Kuznetsova" },
+        { label: "Photography", value: "Maksim Toome" },
+        { label: "Location", value: "Oodi Library, Helsinki" },
+        { label: "Date", value: "11 July 2026" },
+        { label: "Column", value: "BECOMING" },
+      ],
+    },
+  ],
+},
+
   {
     slug: "tallinn-fashion-week-between-space-movement-and-form",
     column: "place",
