@@ -332,9 +332,21 @@ export default async function ArticlePage({
     <main className="bg-[#FFFBEB] text-neutral-900">
       <section className="py-16 md:py-20">
         <article className="max-w-2xl mx-auto px-6">
-          <h1 className="font-serif text-4xl md:text-6xl mb-8">
-            {article.title}
-          </h1>
+          <h1 className="font-serif text-4xl md:text-6xl mb-6 text-editorial-text">
+  {article.title}
+</h1>
+
+<div className="mb-12 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-neutral-500">
+  <span>By The Issue № Editorial Team</span>
+  <span>—</span>
+  <time dateTime={article.date}>
+    {new Date(article.date).toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    })}
+  </time>
+</div>
 
           {article.blocks.map((b, i) => renderBlock(b, i))}
 

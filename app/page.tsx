@@ -137,7 +137,7 @@ export default function HomePage() {
                 <div className="relative aspect-[4/3] overflow-hidden bg-white/30">
                   <Image
                     src={featuredLatest.image}
-                    alt={featuredLatest.title}
+                   alt={`${featuredLatest.title} — editorial feature in The Issue № magazine`}
                     fill
                     className="object-cover transition duration-700 group-hover:scale-[1.025]"
                   />
@@ -168,7 +168,7 @@ export default function HomePage() {
                     <div className="relative aspect-[3/4] overflow-hidden bg-white/30">
                       <Image
                         src={article.image}
-                        alt={article.title}
+                      alt={`${article.title} — ${article.category} story in The Issue №`}
                         fill
                         className="object-cover transition duration-700 group-hover:scale-[1.03]"
                       />
@@ -321,7 +321,7 @@ export default function HomePage() {
                 <div className="relative aspect-[4/5] overflow-hidden bg-white/30">
                   <Image
                     src={column.image}
-                    alt={column.label}
+                   alt={`${column.label} column — ${column.title} in The Issue № editorial magazine`}
                     fill
                     className="object-cover transition duration-700 group-hover:scale-[1.03]"
                   />
@@ -421,7 +421,7 @@ export default function HomePage() {
                     <div className="relative w-full aspect-[3/4] overflow-hidden">
                       <Image
                         src="/images/team/sofia1.jpeg"
-                        alt="Sofia Solas"
+                       alt="Sofia Solas, Founder and Editor of The Issue №"
                         fill
                         className="object-cover"
                       />
@@ -436,7 +436,7 @@ export default function HomePage() {
                     <div className="relative w-full aspect-[3/4] overflow-hidden">
                       <Image
                         src="/images/team/maria.jpeg"
-                        alt="Maria"
+                       alt="Maria Shatylovich, Co-Founder and Editorial Director of The Issue №"
                         fill
                         className="object-cover"
                       />
