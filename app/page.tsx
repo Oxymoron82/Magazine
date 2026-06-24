@@ -56,53 +56,45 @@ export default function HomePage() {
       {/* HERO */}
       <section
         id="home"
-        className="relative w-full overflow-hidden scroll-mt-24 bg-editorial-bg"
+        className="relative h-[86vh] min-h-[620px] md:h-screen overflow-hidden scroll-mt-24 bg-black"
       >
-        <div className="grid md:grid-cols-2">
-          {/* LEFT SIDE */}
-          <div className="relative h-[62vh] min-h-[460px] md:h-[78vh] md:min-h-[620px] overflow-hidden">
-            <Image
-              src="/images/editorial-2.jpg"
-              alt="Editorial cover"
-              fill
-              priority
-              className="object-cover opacity-65"
-            />
+        <Image
+          src="/images/editorial-2.jpg"
+          alt="The Issue № editorial magazine homepage cover"
+          fill
+          priority
+          className="object-cover"
+        />
 
-            <div className="absolute inset-0 bg-black/35 md:bg-editorial-bg/45" />
-<div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/25 to-transparent md:from-editorial-bg/65 md:via-editorial-bg/35 md:to-transparent" />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/30 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10" />
 
-            <div className="absolute inset-0 z-10 flex flex-col justify-center px-8 md:px-20 lg:px-24">
-              
-              <h1 className="font-inria text-white md:text-editorial-text text-[40px] sm:text-[52px] md:text-[64px] lg:text-[72px] leading-[0.95] tracking-[-0.035em] max-w-[11ch] md:max-w-[15ch]">
-                <span className="block md:whitespace-nowrap">
-                  Individual stories.
-                </span>
-                <span className="block mt-3 md:mt-4 md:whitespace-nowrap">
-                  Fashion identity.
-                </span>
+        <div className="absolute inset-0 z-10 flex items-center">
+          <div className="mx-auto w-full max-w-7xl px-8 md:px-16 lg:px-24">
+            <div className="max-w-[720px]">
+              <h1 className="font-inria text-white text-[42px] sm:text-[56px] md:text-[78px] lg:text-[86px] leading-[0.95] tracking-[-0.04em]">
+                Individual stories.
+                <br />
+                Fashion identity.
               </h1>
 
-              <div className="mt-8 h-px w-16 bg-white/70 md:bg-editorial-text/55" />
+              <div className="mt-8 h-px w-20 bg-white/70" />
 
-              <p className="mt-6 max-w-[310px] text-[15px] md:text-[16px] leading-[1.75] text-white/90 md:text-editorial-text/85">
+              <p className="mt-7 max-w-[420px] text-[16px] md:text-[19px] leading-[1.75] text-white/90">
                 A visual magazine about people, work, transformation and
                 contemporary culture.
               </p>
-            </div>
-          </div>
 
-          {/* RIGHT SIDE */}
-          <div className="relative h-[62vh] min-h-[460px] md:h-[78vh] md:min-h-[620px] bg-editorial-bg">
-            <div className="absolute inset-0 flex items-start justify-center pt-[18vh] md:pt-[22vh] px-8">
-              <div className="relative w-full max-w-[300px] md:max-w-[420px] aspect-[3/4]">
-                <Image
-                  src="/images/logo_main2.jpg"
-                  alt="The Issue № logo"
-                  fill
-                  priority
-                  className="object-contain mix-blend-multiply"
-                />
+              <div className="mt-10 md:mt-12">
+               <Image
+  src="/images/logo_new.jpg"
+  alt="The Issue № editorial magazine logo"
+  width={96}
+  height={96}
+  priority
+  className="h-auto w-[76px] md:w-[96px] rounded-xl md:rounded-2xl opacity-95"
+/>
               </div>
             </div>
           </div>
@@ -137,7 +129,7 @@ export default function HomePage() {
                 <div className="relative aspect-[4/3] overflow-hidden bg-white/30">
                   <Image
                     src={featuredLatest.image}
-                   alt={`${featuredLatest.title} — editorial feature in The Issue № magazine`}
+                    alt={`${featuredLatest.title} — editorial feature in The Issue № magazine`}
                     fill
                     className="object-cover transition duration-700 group-hover:scale-[1.025]"
                   />
@@ -168,7 +160,7 @@ export default function HomePage() {
                     <div className="relative aspect-[3/4] overflow-hidden bg-white/30">
                       <Image
                         src={article.image}
-                      alt={`${article.title} — ${article.category} story in The Issue №`}
+                        alt={`${article.title} — ${article.category} story in The Issue №`}
                         fill
                         className="object-cover transition duration-700 group-hover:scale-[1.03]"
                       />
@@ -321,7 +313,7 @@ export default function HomePage() {
                 <div className="relative aspect-[4/5] overflow-hidden bg-white/30">
                   <Image
                     src={column.image}
-                   alt={`${column.label} column — ${column.title} in The Issue № editorial magazine`}
+                    alt={`${column.label} column — ${column.title} in The Issue № editorial magazine`}
                     fill
                     className="object-cover transition duration-700 group-hover:scale-[1.03]"
                   />
@@ -421,7 +413,7 @@ export default function HomePage() {
                     <div className="relative w-full aspect-[3/4] overflow-hidden">
                       <Image
                         src="/images/team/sofia1.jpeg"
-                       alt="Sofia Solas, Founder and Editor of The Issue №"
+                        alt="Sofia Solas, Founder and Editor of The Issue №"
                         fill
                         className="object-cover"
                       />
@@ -436,12 +428,12 @@ export default function HomePage() {
                     <div className="relative w-full aspect-[3/4] overflow-hidden">
                       <Image
                         src="/images/team/maria.jpeg"
-                       alt="Maria Shatylovich, Co-Founder and Editorial Director of The Issue №"
+                        alt="Maria Shatylovich, Co-Founder and Editorial Director of The Issue №"
                         fill
                         className="object-cover"
                       />
                     </div>
-                    <p className="font-medium">Maria</p>
+                    <p className="font-medium">Maria Shatylovich</p>
                     <p className="text-sm text-neutral-500">
                       Co-Founder & Editorial Director
                     </p>
