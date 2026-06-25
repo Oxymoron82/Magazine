@@ -24,7 +24,7 @@ export default function Header() {
           <Link href="/#latest" className={linkClass}>
             Latest
           </Link>
-          <Link href="/#about" className={linkClass}>
+          <Link href="/about" className={linkClass}>
             About
           </Link>
           <Link href="/#editors-note" className={linkClass}>

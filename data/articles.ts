@@ -52,7 +52,7 @@ export const articles: Article[] = [
   category: "Becoming",
   excerpt:
     "A reflection by Sofia Solas on Queen Sapphire World, courage, visibility, and the moment when women allow themselves to begin again.",
-  image: "/images/becoming/queen-sapphire/7.jpeg",
+  image: "/images/becoming/queen-sapphire/3.jpeg",
   date: "2026-06-26",
   author: "Sofia Solas",
   blocks: [
