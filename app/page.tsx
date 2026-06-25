@@ -141,16 +141,16 @@ export default function HomePage() {
         </p>
       </div>
 
-      <div className="md:col-span-5">
-        <div className="relative aspect-[4/5] md:aspect-[16/10] overflow-hidden rounded-xl bg-white/40">
-          <Image
-            src="/images/becoming/queen-sapphire/7.jpeg"
-            alt="Queen Sapphire World International Selection Final poster in Helsinki"
-            fill
-            className="object-cover transition duration-700 group-hover:scale-[1.03]"
-          />
-        </div>
-      </div>
+   <div className="md:col-span-5 flex justify-center">
+  <div className="relative w-[330px] md:w-[360px] h-[500px] md:h-[540px] overflow-hidden rounded-xl bg-black">
+    <Image
+      src="/images/becoming/queen-sapphire/7.jpeg"
+      alt="Queen Sapphire World International Selection Final poster in Helsinki"
+      fill
+      className="object-contain transition duration-700 group-hover:scale-[1.02]"
+    />
+  </div>
+</div>
     </Link>
   </div>
 </section>
