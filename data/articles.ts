@@ -224,11 +224,7 @@ https://www.facebook.com/share/18Ddg7sjZq/?mibextid=wwXIfr`,
         
       ],
 
-      logo: {
-  src: "/images/becoming/queen-sapphire/logo.jpg",
-  href: "https://www.facebook.com/share/18Ddg7sjZq/?mibextid=wwXIfr",
-  alt: "Queen Sapphire World logo",
-},
+     
     },
   ],
 },

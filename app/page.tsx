@@ -113,47 +113,52 @@ export default function HomePage() {
       </section>
 
       {/* TEMPORARY ANNOUNCEMENT */}
-<section className="bg-editorial-bg border-b border-neutral-200/70">
-  <div className="max-w-7xl mx-auto px-6 py-10 md:py-14">
-    <Link
-      href="/article/when-women-stop-waiting-queen-sapphire-world"
-      className="group grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center"
-    >
-      <div className="md:col-span-7">
-        <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
-          Special Announcement
-        </p>
+      <section className="bg-editorial-bg border-b border-neutral-200/70">
+        <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
+          <Link
+            href="/article/when-women-stop-waiting-queen-sapphire-world"
+            className="group grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-14 items-center"
+          >
+            <div className="md:col-span-7">
+              <p className="text-[18px] md:text-[20px] font-medium uppercase tracking-[0.22em] text-[#A32020]">
+                Special Announcement
+              </p>
 
-        <h2 className="mt-4 font-serif text-3xl md:text-5xl leading-tight text-editorial-text">
-          Queen Sapphire World
-          <br />
-          in Helsinki
-        </h2>
+              <p className="mt-4 text-xs uppercase tracking-[0.35em] text-neutral-500">
+                11 July 2026 • Helsinki
+              </p>
 
-        <p className="mt-5 max-w-xl text-neutral-700 leading-[1.75]">
-          On July 11, the international selection final of Queen Sapphire World
-          will take place at Oodi Library, bringing together women from across
-          Europe for a story about courage, visibility and new beginnings.
-        </p>
+              <h2 className="mt-5 font-serif text-4xl md:text-6xl leading-tight text-editorial-text">
+                Queen Sapphire World
+                <br />
+                in Helsinki
+              </h2>
 
-        <p className="mt-6 text-sm underline underline-offset-4 group-hover:text-black transition">
-          Read the story →
-        </p>
-      </div>
+              <p className="mt-6 max-w-xl text-neutral-700 leading-[1.75]">
+                On July 11, the international selection final of Queen Sapphire
+                World will take place at Oodi Library, bringing together women
+                from across Europe for a story about courage, visibility and new
+                beginnings.
+              </p>
 
-   <div className="md:col-span-5 flex justify-center">
-  <div className="relative w-[330px] md:w-[360px] h-[500px] md:h-[540px] overflow-hidden rounded-xl bg-black">
-    <Image
-      src="/images/becoming/queen-sapphire/7.jpeg"
-      alt="Queen Sapphire World International Selection Final poster in Helsinki"
-      fill
-      className="object-contain transition duration-700 group-hover:scale-[1.02]"
-    />
-  </div>
-</div>
-    </Link>
-  </div>
-</section>
+              <p className="mt-7 text-sm underline underline-offset-4 group-hover:text-black transition">
+                Read the story →
+              </p>
+            </div>
+
+            <div className="md:col-span-5 flex justify-center md:justify-end">
+              <div className="relative w-[280px] sm:w-[320px] md:w-[340px] h-[420px] sm:h-[480px] md:h-[510px] overflow-hidden rounded-xl bg-transparent">
+                <Image
+                  src="/images/becoming/queen-sapphire/7.jpeg"
+                  alt="Queen Sapphire World International Selection Final poster in Helsinki"
+                  fill
+                  className="object-contain transition duration-700 group-hover:scale-[1.02]"
+                />
+              </div>
+            </div>
+          </Link>
+        </div>
+      </section>
 
       <SearchArticles />
 
@@ -183,7 +188,7 @@ export default function HomePage() {
                 <div
                   className={`relative overflow-hidden ${
                     isQueenSapphireFeatured
-                      ? "aspect-[3/4] bg-black"
+                      ? "aspect-[3/4]"
                       : "aspect-[4/3] bg-white/30"
                   }`}
                 >
@@ -193,7 +198,7 @@ export default function HomePage() {
                     fill
                     className={`transition duration-700 ${
                       isQueenSapphireFeatured
-                        ? "object-contain p-4 group-hover:scale-[1.015]"
+                        ? "object-contain group-hover:scale-[1.015]"
                         : "object-cover group-hover:scale-[1.025]"
                     }`}
                   />
