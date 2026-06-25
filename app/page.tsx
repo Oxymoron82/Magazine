@@ -112,7 +112,11 @@ export default function HomePage() {
         </div>
       </section>
 
+      
+
       {/* TEMPORARY ANNOUNCEMENT */}
+      {/*
+      
       <section className="bg-editorial-bg border-b border-neutral-200/70">
         <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
           <Link
@@ -159,6 +163,8 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+
+    */}
 
       <SearchArticles />
 
