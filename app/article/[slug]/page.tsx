@@ -142,7 +142,7 @@ function CreditsList({
                   href={it.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline"
+                  className="underline underline-offset-4 hover:text-black"
                 >
                   {it.value}
                 </a>
@@ -171,7 +171,7 @@ function CreditsCard({
   return (
     <aside className="mt-12 rounded-2xl border border-neutral-200 bg-white/40 p-6 md:p-8 overflow-hidden">
       {logo ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_180px] gap-8 md:gap-10 items-center">
           <CreditsList items={items} />
 
           <div className="flex justify-center md:justify-end min-w-0">
@@ -184,9 +184,9 @@ function CreditsCard({
               <Image
                 src={logo.src}
                 alt={logo.alt || "logo"}
-                width={300}
-                height={140}
-                className="w-full max-w-[280px] h-auto object-contain opacity-95 hover:opacity-100 transition"
+                width={180}
+                height={120}
+                className="w-full max-w-[160px] h-auto object-contain opacity-95 hover:opacity-100 transition"
               />
             </a>
           </div>
@@ -244,20 +244,20 @@ function VideoBlock({
 function renderBlock(block: ArticleBlock, index: number) {
   switch (block.type) {
     case "p":
-  return (
-    <p
-      key={index}
-      className={[
-        block.className ||
-          "my-6 text-[18px] leading-relaxed text-neutral-800 whitespace-pre-line",
-        block.dropCap
-          ? "first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:font-serif first-letter:text-6xl md:first-letter:text-7xl first-letter:leading-none"
-          : "",
-      ].join(" ")}
-    >
-      {renderTextWithLinks(block.text)}
-    </p>
-  );
+      return (
+        <p
+          key={index}
+          className={[
+            block.className ||
+              "my-6 text-[18px] leading-relaxed text-neutral-800 whitespace-pre-line",
+            block.dropCap
+              ? "first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:font-serif first-letter:text-6xl md:first-letter:text-7xl first-letter:leading-none"
+              : "",
+          ].join(" ")}
+        >
+          {renderTextWithLinks(block.text)}
+        </p>
+      );
 
     case "h2":
       return (
@@ -330,24 +330,51 @@ export default async function ArticlePage({
 
   return (
     <main className="bg-[#FFFBEB] text-neutral-900">
+      {/* HERO */}
+      <section className="relative h-[72vh] min-h-[520px] md:h-[82vh] overflow-hidden bg-black">
+        <Image
+          src={article.image}
+          alt={`${article.title} — ${article.category} article in The Issue №`}
+          fill
+          priority
+          className="object-cover"
+        />
+
+        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
+
+        <div className="absolute bottom-0 left-0 right-0 z-10">
+          <div className="max-w-5xl mx-auto px-6 pb-10 md:pb-14">
+            <p className="text-xs uppercase tracking-[0.35em] text-white/80">
+              {article.category}
+            </p>
+
+            <h1 className="mt-4 font-serif text-[34px] md:text-[56px] leading-[1.05] tracking-[-0.01em] text-white max-w-[22ch] md:max-w-[20ch] text-balance">
+              {article.title}
+            </h1>
+
+            <p className="mt-5 max-w-[55ch] text-lg text-white/90 leading-relaxed">
+              {article.excerpt}
+            </p>
+
+            <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-white/80">
+              <span>By {article.author || "The Issue № Editorial Team"}</span>
+              <span>—</span>
+              <time dateTime={article.date}>
+                {new Date(article.date).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </time>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CONTENT */}
       <section className="py-16 md:py-20">
         <article className="max-w-2xl mx-auto px-6">
-          <h1 className="font-serif text-4xl md:text-6xl mb-6 text-editorial-text">
-  {article.title}
-</h1>
-
-<div className="mb-12 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-neutral-500">
-  <span>By The Issue № Editorial Team</span>
-  <span>—</span>
-  <time dateTime={article.date}>
-    {new Date(article.date).toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    })}
-  </time>
-</div>
-
           {article.blocks.map((b, i) => renderBlock(b, i))}
 
           <SubmitForm />

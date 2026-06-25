@@ -197,23 +197,38 @@ https://buy.stripe.com/4gM3cwaHE3rI90p0UZ0Ny02`,
       type: "p",
       text: `After the final, THE ISSUE N° will return to this story with event coverage, photography, and interviews with participants and organisers.`,
     },
+
+    {
+  type: "p",
+  text: `To learn more about Queen Sapphire World and follow updates before the international final, visit the official event page on Facebook:
+
+https://www.facebook.com/share/18Ddg7sjZq/?mibextid=wwXIfr`,
+},
+
     {
       type: "credits",
       items: [
         { label: "Text", value: "Sofia Solas" },
         { label: "Project", value: "Queen Sapphire World" },
         {
-          label: "Facebook",
-          value: "Official Event Page",
-          href: "https://www.facebook.com/share/18Ddg7sjZq/?mibextid=wwXIfr",
-        },
+  label: "Event Page",
+  value: "Official Facebook Page",
+  href: "https://www.facebook.com/share/18Ddg7sjZq/?mibextid=wwXIfr",
+},
         { label: "Head", value: "Alena Roshal" },
         { label: "Organiser", value: "Alena Kuznetsova" },
         { label: "Photography", value: "Maksim Toome" },
         { label: "Location", value: "Oodi Library, Helsinki" },
         { label: "Date", value: "11 July 2026" },
         { label: "Column", value: "BECOMING" },
+        
       ],
+
+      logo: {
+  src: "/images/becoming/queen-sapphire/logo.jpg",
+  href: "https://www.facebook.com/share/18Ddg7sjZq/?mibextid=wwXIfr",
+  alt: "Queen Sapphire World logo",
+},
     },
   ],
 },

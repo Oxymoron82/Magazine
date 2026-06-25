@@ -59,6 +59,9 @@ export default function HomePage() {
 
   const [featuredLatest, ...secondaryLatest] = latestArticles;
 
+  const isQueenSapphireFeatured =
+    featuredLatest?.slug === "when-women-stop-waiting-queen-sapphire-world";
+
   return (
     <main className="bg-editorial-bg text-neutral-900">
       {/* HERO */}
@@ -109,6 +112,49 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* TEMPORARY ANNOUNCEMENT */}
+<section className="bg-editorial-bg border-b border-neutral-200/70">
+  <div className="max-w-7xl mx-auto px-6 py-10 md:py-14">
+    <Link
+      href="/article/when-women-stop-waiting-queen-sapphire-world"
+      className="group grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center"
+    >
+      <div className="md:col-span-7">
+        <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
+          Special Announcement
+        </p>
+
+        <h2 className="mt-4 font-serif text-3xl md:text-5xl leading-tight text-editorial-text">
+          Queen Sapphire World
+          <br />
+          in Helsinki
+        </h2>
+
+        <p className="mt-5 max-w-xl text-neutral-700 leading-[1.75]">
+          On July 11, the international selection final of Queen Sapphire World
+          will take place at Oodi Library, bringing together women from across
+          Europe for a story about courage, visibility and new beginnings.
+        </p>
+
+        <p className="mt-6 text-sm underline underline-offset-4 group-hover:text-black transition">
+          Read the story →
+        </p>
+      </div>
+
+      <div className="md:col-span-5">
+        <div className="relative aspect-[4/5] md:aspect-[16/10] overflow-hidden rounded-xl bg-white/40">
+          <Image
+            src="/images/becoming/queen-sapphire/7.jpeg"
+            alt="Queen Sapphire World International Selection Final poster in Helsinki"
+            fill
+            className="object-cover transition duration-700 group-hover:scale-[1.03]"
+          />
+        </div>
+      </div>
+    </Link>
+  </div>
+</section>
+
       <SearchArticles />
 
       {/* LATEST */}
@@ -134,12 +180,22 @@ export default function HomePage() {
               className="block lg:col-span-7 group"
             >
               <article className="space-y-5">
-                <div className="relative aspect-[4/3] overflow-hidden bg-white/30">
+                <div
+                  className={`relative overflow-hidden ${
+                    isQueenSapphireFeatured
+                      ? "aspect-[3/4] bg-black"
+                      : "aspect-[4/3] bg-white/30"
+                  }`}
+                >
                   <Image
                     src={featuredLatest.image}
                     alt={`${featuredLatest.title} — editorial feature in The Issue № magazine`}
                     fill
-                    className="object-cover transition duration-700 group-hover:scale-[1.025]"
+                    className={`transition duration-700 ${
+                      isQueenSapphireFeatured
+                        ? "object-contain p-4 group-hover:scale-[1.015]"
+                        : "object-cover group-hover:scale-[1.025]"
+                    }`}
                   />
                 </div>
 
