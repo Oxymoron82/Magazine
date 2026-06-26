@@ -193,9 +193,9 @@ export default function HomePage() {
               <article className="space-y-5">
                 <div
                   className={`relative overflow-hidden ${
-                    isQueenSapphireFeatured
-                      ? "aspect-[3/4]"
-                      : "aspect-[4/3] bg-white/30"
+                   isQueenSapphireFeatured
+  ? "aspect-[4/5]"
+  : "aspect-[4/3] bg-white/30"
                   }`}
                 >
                   <Image
@@ -204,8 +204,8 @@ export default function HomePage() {
                     fill
                     className={`transition duration-700 ${
                       isQueenSapphireFeatured
-                        ? "object-contain group-hover:scale-[1.015]"
-                        : "object-cover group-hover:scale-[1.025]"
+  ? "object-cover object-center group-hover:scale-[1.025]"
+  : "object-cover group-hover:scale-[1.025]"
                     }`}
                   />
                 </div>
