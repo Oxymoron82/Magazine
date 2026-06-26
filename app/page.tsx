@@ -64,58 +64,58 @@ export default function HomePage() {
 
   return (
     <main className="bg-editorial-bg text-neutral-900">
-      {/* HERO */}
-      <section
-        id="home"
-        className="relative h-[86vh] min-h-[620px] md:h-screen overflow-hidden scroll-mt-24 bg-black"
-      >
-        <Image
-          src="/images/editorial-2.jpg"
-          alt="The Issue № editorial magazine homepage cover"
-          fill
-          priority
-          className="object-cover"
-        />
+  {/* HERO */}
+<section
+  id="home"
+  className="relative h-[64vh] min-h-[460px] md:h-[72vh] overflow-hidden scroll-mt-24 bg-black"
+>
+  <Image
+    src="/images/editorial-2.jpg"
+    alt="The Issue № editorial magazine homepage cover"
+    fill
+    priority
+    className="object-cover"
+  />
 
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/30 to-black/10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10" />
+  <div className="absolute inset-0 bg-black/50" />
+  <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/30 to-black/10" />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/10" />
 
-        <div className="absolute inset-0 z-10 flex items-center">
-          <div className="mx-auto w-full max-w-7xl px-8 md:px-16 lg:px-24">
-            <div className="max-w-[720px]">
-              <h1 className="font-inria text-white text-[42px] sm:text-[56px] md:text-[78px] lg:text-[86px] leading-[0.95] tracking-[-0.04em]">
-                Individual stories.
-                <br />
-                Fashion identity.
-              </h1>
+  <div className="absolute inset-0 z-10 flex items-end pb-20 md:pb-28">
+    <div className="mx-auto w-full max-w-7xl px-8 md:px-16 lg:px-24">
+      <div className="max-w-[720px]">
+        <h1 className="font-inria text-white text-[42px] sm:text-[56px] md:text-[72px] lg:text-[80px] leading-[0.95] tracking-[-0.04em]">
+          Individual stories.
+          <br />
+          Fashion identity.
+        </h1>
 
-              <div className="mt-8 h-px w-20 bg-white/70" />
+        <div className="mt-8 h-px w-20 bg-white/70" />
 
-              <p className="mt-7 max-w-[420px] text-[16px] md:text-[19px] leading-[1.75] text-white/90">
-                A visual magazine about people, work, transformation and
-                contemporary culture.
-              </p>
+        <p className="mt-7 max-w-[420px] text-[16px] md:text-[19px] leading-[1.75] text-white/90">
+          A visual magazine about people, work, transformation and contemporary
+          culture.
+        </p>
 
-              <div className="mt-10 md:mt-12">
-                <Image
-                  src="/images/logo_new.jpg"
-                  alt="The Issue № editorial magazine logo"
-                  width={96}
-                  height={96}
-                  priority
-                  className="h-auto w-[76px] md:w-[96px] rounded-xl md:rounded-2xl opacity-95"
-                />
-              </div>
-            </div>
-          </div>
+        <div className="mt-10 md:mt-12">
+          <Image
+            src="/images/logo_new.jpg"
+            alt="The Issue № editorial magazine logo"
+            width={96}
+            height={96}
+            priority
+            className="h-auto w-[76px] md:w-[96px] rounded-xl md:rounded-2xl opacity-95"
+          />
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
       
 
       {/* TEMPORARY ANNOUNCEMENT */}
-      {/*
+      
       
       <section className="bg-editorial-bg border-b border-neutral-200/70">
         <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
@@ -164,7 +164,7 @@ export default function HomePage() {
         </div>
       </section>
 
-    */}
+   
 
       <SearchArticles />
 
