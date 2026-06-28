@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Fragment } from "react";
@@ -314,6 +315,64 @@ function renderBlock(block: ArticleBlock, index: number) {
     default:
       return null;
   }
+}
+
+/* ---------------- PAGE SEO ---------------- */
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const article = articles.find((a) => a.slug === slug);
+
+  if (!article) {
+    return {
+      title: "Article Not Found | The Issue №",
+    };
+  }
+
+  const title = `${article.title} | The Issue №`;
+  const description = article.excerpt;
+  const url = `https://theissue.xyz/article/${article.slug}`;
+  const image = `https://theissue.xyz${article.image}`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: "The Issue №",
+      type: "article",
+      locale: "en_US",
+      publishedTime: article.date,
+      authors: [article.author || "The Issue № Editorial Team"],
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: `${article.title} — The Issue №`,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image],
+    },
+    robots: {
+      index: true,
+      follow: true,
+    },
+  };
 }
 
 /* ---------------- PAGE ---------------- */
