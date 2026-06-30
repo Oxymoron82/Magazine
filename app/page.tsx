@@ -293,6 +293,47 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+      {/* TRINITY PROJECT */}
+<section className="max-w-7xl mx-auto px-6 pb-24 md:pb-32">
+  <Link
+    href="/article/trinity-sofia"
+    className="group block border-t border-b border-neutral-200/70 py-16 md:py-20"
+  >
+    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-14 items-center">
+      <div className="lg:col-span-4">
+        <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
+          Editorial Project
+        </p>
+
+        <h2 className="mt-5 font-serif text-5xl md:text-7xl leading-[0.95] tracking-[-0.03em] text-editorial-text">
+          Trinity
+        </h2>
+
+        <div className="mt-7 h-px w-16 bg-[#4A3F3C]/35" />
+
+        <p className="mt-7 max-w-sm text-[17px] leading-[1.75] text-neutral-700">
+          A fashion editorial photography story about feminine transformation,
+          identity, empowerment and personal evolution.
+        </p>
+
+        <p className="mt-8 text-sm underline underline-offset-4 group-hover:text-black transition">
+          Explore the project →
+        </p>
+      </div>
+
+      <div className="lg:col-span-8">
+        <div className="relative aspect-[16/9] overflow-hidden bg-white/30">
+          <Image
+            src="/images/trinity/115.jpg"
+            alt="Trinity editorial project — fashion photography story about feminine transformation"
+            fill
+            className="object-cover transition duration-700 group-hover:scale-[1.025]"
+          />
+        </div>
+      </div>
+    </div>
+  </Link>
+</section>
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="h-px bg-neutral-200/70" />
@@ -356,6 +397,8 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="h-px bg-neutral-200/70" />
