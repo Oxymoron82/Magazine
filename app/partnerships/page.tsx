@@ -11,6 +11,8 @@ export const metadata: Metadata = {
   },
 };
 
+const mediaKitPages = [1, 2, 3, 4, 5, 6];
+
 export default function PartnershipsPage() {
   return (
     <main className="bg-editorial-bg text-neutral-900">
@@ -94,12 +96,30 @@ export default function PartnershipsPage() {
 
           <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
-              ["Editorial Feature", "A magazine-style article built around your story, identity and visual world."],
-              ["Brand Story", "A thoughtful profile for founders, studios, businesses and creative projects."],
-              ["Event Coverage", "Photography, atmosphere, interviews and editorial reporting from selected events."],
-              ["Visual Campaign", "Image-led storytelling for launches, campaigns and creative announcements."],
-              ["Interview", "A personal conversation shaped into a polished editorial publication."],
-              ["Creative Direction", "Concept, mood, story structure and visual direction for editorial production."],
+              [
+                "Editorial Feature",
+                "A magazine-style article built around your story, identity and visual world.",
+              ],
+              [
+                "Brand Story",
+                "A thoughtful profile for founders, studios, businesses and creative projects.",
+              ],
+              [
+                "Event Coverage",
+                "Photography, atmosphere, interviews and editorial reporting from selected events.",
+              ],
+              [
+                "Visual Campaign",
+                "Image-led storytelling for launches, campaigns and creative announcements.",
+              ],
+              [
+                "Interview",
+                "A personal conversation shaped into a polished editorial publication.",
+              ],
+              [
+                "Creative Direction",
+                "Concept, mood, story structure and visual direction for editorial production.",
+              ],
             ].map(([title, text]) => (
               <div
                 key={title}
@@ -192,25 +212,47 @@ export default function PartnershipsPage() {
         </div>
       </section>
 
-      {/* MEDIA KIT */}
+      {/* COLLABORATION BOOK */}
       <section className="max-w-7xl mx-auto px-6 pb-20 md:pb-28">
-        <div className="rounded-2xl border border-neutral-200 bg-white/35 p-8 md:p-12 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          <div className="lg:col-span-8">
-            <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
-              Media Kit
-            </p>
+        <div className="border-b border-neutral-200/70 pb-16 md:pb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            <div className="lg:col-span-4">
+              <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
+                Collaboration Book
+              </p>
+            </div>
 
-            <h2 className="mt-5 font-serif text-4xl md:text-6xl leading-tight text-editorial-text">
-              Collaboration deck
-            </h2>
+            <div className="lg:col-span-8">
+              <h2 className="font-serif text-4xl md:text-6xl leading-tight text-editorial-text">
+                Inside The Issue №
+              </h2>
 
-            <p className="mt-6 max-w-2xl text-neutral-700 leading-[1.8]">
-              Download our media kit for partnership formats, editorial
-              opportunities and collaboration options.
-            </p>
+              <p className="mt-6 max-w-2xl text-neutral-700 leading-[1.8]">
+                Browse our visual partnership presentation — a compact editorial
+                book about the magazine, our collaborations and the stories we
+                create with brands and creative projects.
+              </p>
+            </div>
           </div>
 
-          <div className="lg:col-span-4 lg:text-right">
+          <div className="mt-14 md:mt-18 space-y-12 md:space-y-16">
+            {mediaKitPages.map((page) => (
+              <div
+                key={page}
+                className="mx-auto w-full max-w-[420px] md:max-w-[460px]"
+              >
+                <Image
+                  src={`/images/media-kit/${page}.png`}
+                  alt={`The Issue № media kit page ${page}`}
+                  width={1080}
+                  height={1920}
+                  className="w-full h-auto rounded-2xl shadow-[0_24px_80px_rgba(74,63,60,0.18)]"
+                />
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-14 text-center">
             <a
               href="/media-kit.pdf"
               target="_blank"
