@@ -30,6 +30,12 @@ export default function Header() {
           <Link href="/about" className={linkClass}>
             About
           </Link>
+           <Link
+  href="/partnerships"
+  className="text-[11px] tracking-[0.28em] uppercase text-[#8A5A2B] hover:text-[#4A3F3C] transition"
+>
+  Partnerships
+</Link>
           <Link href="/#editors-note" className={linkClass}>
             Editor’s Note
           </Link>

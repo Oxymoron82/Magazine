@@ -19,7 +19,7 @@ export default function PartnershipsPage() {
       {/* HERO */}
       <section className="relative h-[86vh] min-h-[620px] overflow-hidden bg-black">
         <Image
-          src="/images/trinity/115.jpg"
+          src="/images/partnerships.png"
           alt="The Issue № editorial partnerships"
           fill
           priority
