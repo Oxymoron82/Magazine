@@ -235,19 +235,25 @@ export default function PartnershipsPage() {
             </div>
           </div>
 
-          <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
-            {mediaKitPages.map((page) => (
-              <div key={page} className="w-full">
-                <Image
-                  src={`/media-kit/${page}.png`}
-                  alt={`The Issue № media kit page ${page}`}
-                  width={1600}
-                  height={1000}
-                  className="w-full h-auto rounded-xl shadow-[0_18px_60px_rgba(74,63,60,0.14)]"
-                />
-              </div>
-            ))}
-          </div>
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+  {mediaKitPages.map((page) => (
+    <a
+      key={page}
+      href="/media-kit.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group block w-full"
+    >
+      <Image
+        src={`/media-kit/${page}.png`}
+        alt={`The Issue № media kit page ${page}`}
+        width={1600}
+        height={1000}
+        className="w-full h-auto rounded-xl shadow-[0_18px_60px_rgba(74,63,60,0.14)] transition duration-500 group-hover:scale-[1.015]"
+      />
+    </a>
+  ))}
+</div>
 
           <div className="mt-14 text-center">
             <a
