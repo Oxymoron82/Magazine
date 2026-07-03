@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
 };
 
-const mediaKitPages = [1, 2, 3, 4, 5, 6];
+const mediaKitPages = [1, 2, 3, 4, 5, 6, 7, 8];
 
 export default function PartnershipsPage() {
   return (
@@ -235,18 +235,15 @@ export default function PartnershipsPage() {
             </div>
           </div>
 
-          <div className="mt-14 md:mt-18 space-y-12 md:space-y-16">
+          <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
             {mediaKitPages.map((page) => (
-              <div
-                key={page}
-                className="mx-auto w-full max-w-[420px] md:max-w-[460px]"
-              >
+              <div key={page} className="w-full">
                 <Image
-                  src={`/images/media-kit/${page}.png`}
+                  src={`/media-kit/${page}.png`}
                   alt={`The Issue № media kit page ${page}`}
-                  width={1080}
-                  height={1920}
-                  className="w-full h-auto rounded-2xl shadow-[0_24px_80px_rgba(74,63,60,0.18)]"
+                  width={1600}
+                  height={1000}
+                  className="w-full h-auto rounded-xl shadow-[0_18px_60px_rgba(74,63,60,0.14)]"
                 />
               </div>
             ))}
@@ -259,7 +256,7 @@ export default function PartnershipsPage() {
               rel="noopener noreferrer"
               className="inline-block text-sm uppercase tracking-[0.25em] underline underline-offset-8 hover:text-black transition"
             >
-              Download PDF
+              Download Media Kit (PDF)
             </a>
           </div>
         </div>
