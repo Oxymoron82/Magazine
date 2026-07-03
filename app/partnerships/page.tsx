@@ -26,8 +26,8 @@ export default function PartnershipsPage() {
           className="object-cover"
         />
 
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
+        <div className="absolute inset-0 bg-black/20" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
 
         <div className="absolute inset-0 z-10 flex items-center">
           <div className="max-w-7xl mx-auto w-full px-6 md:px-12">
