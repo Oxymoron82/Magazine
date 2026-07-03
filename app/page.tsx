@@ -293,51 +293,139 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+
       {/* TRINITY PROJECT */}
-<section className="max-w-7xl mx-auto px-6 pb-24 md:pb-32">
-  <Link
-    href="/article/trinity-sofia"
-    className="group block border-t border-b border-neutral-200/70 py-16 md:py-20"
-  >
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-14 items-center">
-      <div className="lg:col-span-4">
-        <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
-          Editorial Project
-        </p>
+      <section className="max-w-7xl mx-auto px-6 pb-24 md:pb-32">
+        <Link
+          href="/article/trinity-sofia"
+          className="group block border-t border-b border-neutral-200/70 py-16 md:py-20"
+        >
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-14 items-center">
+            <div className="lg:col-span-4">
+              <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
+                Editorial Project
+              </p>
 
-        <h2 className="mt-5 font-serif text-5xl md:text-7xl leading-[0.95] tracking-[-0.03em] text-editorial-text">
-          Trinity
-        </h2>
+              <h2 className="mt-5 font-serif text-5xl md:text-7xl leading-[0.95] tracking-[-0.03em] text-editorial-text">
+                Trinity
+              </h2>
 
-        <div className="mt-7 h-px w-16 bg-[#4A3F3C]/35" />
+              <div className="mt-7 h-px w-16 bg-[#4A3F3C]/35" />
 
-        <p className="mt-7 max-w-sm text-[17px] leading-[1.75] text-neutral-700">
-          A fashion editorial photography story about feminine transformation,
-          identity, empowerment and personal evolution.
-        </p>
+              <p className="mt-7 max-w-sm text-[17px] leading-[1.75] text-neutral-700">
+                A fashion editorial photography story about feminine
+                transformation, identity, empowerment and personal evolution.
+              </p>
 
-        <p className="mt-8 text-sm underline underline-offset-4 group-hover:text-black transition">
-          Explore the project →
-        </p>
-      </div>
+              <p className="mt-8 text-sm underline underline-offset-4 group-hover:text-black transition">
+                Explore the project →
+              </p>
+            </div>
 
-      <div className="lg:col-span-8">
-        <div className="relative aspect-[16/9] overflow-hidden bg-white/30">
-          <Image
-            src="/images/trinity/115.jpg"
-            alt="Trinity editorial project — fashion photography story about feminine transformation"
-            fill
-            className="object-cover transition duration-700 group-hover:scale-[1.025]"
-          />
+            <div className="lg:col-span-8">
+              <div className="relative aspect-[16/9] overflow-hidden bg-white/30">
+                <Image
+                  src="/images/trinity/115.jpg"
+                  alt="Trinity editorial project — fashion photography story about feminine transformation"
+                  fill
+                  className="object-cover transition duration-700 group-hover:scale-[1.025]"
+                />
+              </div>
+            </div>
+          </div>
+        </Link>
+      </section>
+
+      {/* THE ISSUE ECOSYSTEM */}
+      <section className="max-w-7xl mx-auto px-6 pb-24 md:pb-32">
+        <div className="border-t border-b border-neutral-200/70 py-16 md:py-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+            <div className="lg:col-span-4">
+              <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
+                The Issue №
+              </p>
+
+              <h2 className="mt-5 font-serif text-4xl md:text-6xl leading-[1.05] text-editorial-text">
+                A magazine,
+                <br />
+                a project space,
+                <br />
+                a platform.
+              </h2>
+            </div>
+
+            <div className="lg:col-span-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <Link
+                  href="/#latest"
+                  className="group block border border-neutral-200 bg-white/35 p-6 md:p-7 min-h-[260px] hover:bg-white/60 transition"
+                >
+                  <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
+                    01
+                  </p>
+
+                  <h3 className="mt-8 font-serif text-3xl leading-tight text-editorial-text">
+                    Magazine
+                  </h3>
+
+                  <p className="mt-5 text-sm leading-[1.8] text-neutral-700">
+                    Articles, interviews, essays and visual stories from the
+                    worlds of fashion, culture, creativity and entrepreneurship.
+                  </p>
+
+                  <p className="mt-8 text-sm underline underline-offset-4 group-hover:text-black transition">
+                    Read stories →
+                  </p>
+                </Link>
+
+                <Link
+                  href="/article/trinity-sofia"
+                  className="group block border border-neutral-200 bg-white/35 p-6 md:p-7 min-h-[260px] hover:bg-white/60 transition"
+                >
+                  <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
+                    02
+                  </p>
+
+                  <h3 className="mt-8 font-serif text-3xl leading-tight text-editorial-text">
+                    Projects
+                  </h3>
+
+                  <p className="mt-5 text-sm leading-[1.8] text-neutral-700">
+                    Long-form editorial projects, beginning with Trinity — a
+                    visual story about identity, transformation and presence.
+                  </p>
+
+                  <p className="mt-8 text-sm underline underline-offset-4 group-hover:text-black transition">
+                    Explore Trinity →
+                  </p>
+                </Link>
+
+                <Link
+                  href="/partnerships"
+                  className="group block border border-neutral-200 bg-white/35 p-6 md:p-7 min-h-[260px] hover:bg-white/60 transition"
+                >
+                  <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
+                    03
+                  </p>
+
+                  <h3 className="mt-8 font-serif text-3xl leading-tight text-editorial-text">
+                    Partnerships
+                  </h3>
+
+                  <p className="mt-5 text-sm leading-[1.8] text-neutral-700">
+                    Editorial collaborations, brand stories, photography,
+                    campaigns and media-kit opportunities with The Issue №.
+                  </p>
+
+                  <p className="mt-8 text-sm underline underline-offset-4 group-hover:text-black transition">
+                    Work with us →
+                  </p>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </Link>
-</section>
-
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="h-px bg-neutral-200/70" />
-      </div>
+      </section>
 
       {/* EDITOR NOTE */}
       <section
@@ -397,8 +485,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="h-px bg-neutral-200/70" />
