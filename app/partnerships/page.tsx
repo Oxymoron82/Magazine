@@ -13,6 +13,39 @@ export const metadata: Metadata = {
 
 const mediaKitPages = [1, 2, 3, 4, 5, 6, 7, 8];
 
+const partnershipFormats = [
+  {
+    title: "Editorial Feature",
+    text: "A magazine-style article built around your story, identity and visual world.",
+    image: "/images/partnerships/1.png",
+  },
+  {
+    title: "Brand Story",
+    text: "A thoughtful profile for founders, studios, businesses and creative projects.",
+    image: "/images/partnerships/2.png",
+  },
+  {
+    title: "Event Coverage",
+    text: "Photography, atmosphere, interviews and editorial reporting from selected events.",
+    image: "/images/partnerships/3.png",
+  },
+  {
+    title: "Visual Campaign",
+    text: "Image-led storytelling for launches, campaigns and creative announcements.",
+    image: "/images/partnerships/4.png",
+  },
+  {
+    title: "Interview",
+    text: "A personal conversation shaped into a polished editorial publication.",
+    image: "/images/partnerships/5.png",
+  },
+  {
+    title: "Creative Direction",
+    text: "Concept, mood, story structure and visual direction for editorial production.",
+    image: "/images/partnerships/6.png",
+  },
+];
+
 export default function PartnershipsPage() {
   return (
     <main className="bg-editorial-bg text-neutral-900">
@@ -95,45 +128,31 @@ export default function PartnershipsPage() {
           </p>
 
           <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              [
-                "Editorial Feature",
-                "A magazine-style article built around your story, identity and visual world.",
-              ],
-              [
-                "Brand Story",
-                "A thoughtful profile for founders, studios, businesses and creative projects.",
-              ],
-              [
-                "Event Coverage",
-                "Photography, atmosphere, interviews and editorial reporting from selected events.",
-              ],
-              [
-                "Visual Campaign",
-                "Image-led storytelling for launches, campaigns and creative announcements.",
-              ],
-              [
-                "Interview",
-                "A personal conversation shaped into a polished editorial publication.",
-              ],
-              [
-                "Creative Direction",
-                "Concept, mood, story structure and visual direction for editorial production.",
-              ],
-            ].map(([title, text]) => (
+            {partnershipFormats.map((item) => (
               <div
-                key={title}
-                className="border border-neutral-200 bg-white/35 p-6 md:p-7 min-h-[210px]"
+                key={item.title}
+                className="group overflow-hidden border border-neutral-200 bg-white/35 transition duration-500 hover:bg-white/60"
               >
-                <p className="font-serif text-2xl leading-tight text-editorial-text">
-                  {title}
-                </p>
+                <div className="relative aspect-[16/9] overflow-hidden bg-white/30">
+                  <Image
+                    src={item.image}
+                    alt={`${item.title} — The Issue № partnership format`}
+                    fill
+                    className="object-cover transition duration-700 group-hover:scale-[1.035]"
+                  />
+                </div>
 
-                <div className="mt-5 h-px w-12 bg-[#4A3F3C]/25" />
+                <div className="p-6 md:p-7 min-h-[210px]">
+                  <p className="font-serif text-2xl leading-tight text-editorial-text">
+                    {item.title}
+                  </p>
 
-                <p className="mt-5 text-sm leading-[1.8] text-neutral-700">
-                  {text}
-                </p>
+                  <div className="mt-5 h-px w-12 bg-[#4A3F3C]/25" />
+
+                  <p className="mt-5 text-sm leading-[1.8] text-neutral-700">
+                    {item.text}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -235,25 +254,25 @@ export default function PartnershipsPage() {
             </div>
           </div>
 
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
-  {mediaKitPages.map((page) => (
-    <a
-      key={page}
-      href="/media-kit.pdf"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="group block w-full"
-    >
-      <Image
-        src={`/media-kit/${page}.png`}
-        alt={`The Issue № media kit page ${page}`}
-        width={1600}
-        height={1000}
-        className="w-full h-auto rounded-xl shadow-[0_18px_60px_rgba(74,63,60,0.14)] transition duration-500 group-hover:scale-[1.015]"
-      />
-    </a>
-  ))}
-</div>
+          <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+            {mediaKitPages.map((page) => (
+              <a
+                key={page}
+                href="/media-kit.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block w-full"
+              >
+                <Image
+                  src={`/media-kit/${page}.png`}
+                  alt={`The Issue № media kit page ${page}`}
+                  width={1600}
+                  height={1000}
+                  className="w-full h-auto rounded-xl shadow-[0_18px_60px_rgba(74,63,60,0.14)] transition duration-500 group-hover:scale-[1.015]"
+                />
+              </a>
+            ))}
+          </div>
 
           <div className="mt-14 text-center">
             <a
