@@ -297,9 +297,9 @@ export default function HomePage() {
       {/* TRINITY PROJECT */}
       <section className="max-w-7xl mx-auto px-6 pb-24 md:pb-32">
         <Link
-          href="/article/trinity-sofia"
-          className="group block border-t border-b border-neutral-200/70 py-16 md:py-20"
-        >
+  href="/trinity"
+  className="group block border-t border-b border-neutral-200/70 py-16 md:py-20"
+>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-14 items-center">
             <div className="lg:col-span-4">
               <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
@@ -377,9 +377,8 @@ export default function HomePage() {
                     Read stories →
                   </p>
                 </Link>
-
-                <Link
-                  href="/article/trinity-sofia"
+<Link
+  href="/trinity"
                   className="group block border border-neutral-200 bg-white/35 p-6 md:p-7 min-h-[260px] hover:bg-white/60 transition"
                 >
                   <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
