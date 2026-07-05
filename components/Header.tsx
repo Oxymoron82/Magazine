@@ -24,9 +24,7 @@ export default function Header() {
           <Link href="/#latest" className={linkClass}>
             Latest
           </Link>
-          <Link href="/article/trinity-sofia" className={linkClass}>
-  ✦ Trinity
-</Link>
+         
           <Link href="/about" className={linkClass}>
             About
           </Link>
@@ -39,7 +37,7 @@ export default function Header() {
           <Link href="/#editors-note" className={linkClass}>
             Editor’s Note
           </Link>
-          <Link href="/trinity">TRINITY</Link>
+          <Link href="/trinity">✦ TRINITY</Link>
           <Link href="/#contact" className={linkClass}>
             Contact
           </Link>
