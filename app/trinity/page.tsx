@@ -158,7 +158,7 @@ export default function TrinityPage() {
 
               <p>
                 Whether it is a single portrait or a complete editorial
-                production, every story begins the same way — with a
+                production, every story begins the same way - with a
                 conversation.
               </p>
             </div>

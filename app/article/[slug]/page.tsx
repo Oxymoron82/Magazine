@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { Fragment } from "react";
 import { articles, ArticleBlock } from "@/data/articles";
 import SubmitForm from "@/components/SubmitForm";
+import Link from "next/link";
 
 /* ---------------- HELPERS ---------------- */
 
@@ -411,12 +412,23 @@ export default async function ArticlePage({
             <h1 className="mt-4 font-serif text-[34px] md:text-[56px] leading-[1.05] tracking-[-0.01em] text-white max-w-[22ch] md:max-w-[20ch] text-balance">
               {article.title}
             </h1>
+<p className="mt-5 max-w-[55ch] text-lg text-white/90 leading-relaxed">
+  {article.excerpt}
+</p>
 
-            <p className="mt-5 max-w-[55ch] text-lg text-white/90 leading-relaxed">
-              {article.excerpt}
-            </p>
+{article.slug === "trinity-sofia" && (
+  <div className="mt-8">
+    <Link
+      href="/trinity"
+      className="inline-flex items-center gap-2 border border-white/40 bg-white/10 px-5 py-3 text-xs uppercase tracking-[0.35em] text-white backdrop-blur-sm transition hover:bg-white hover:text-black"
+    >
+      Explore Trinity Experience
+      <span>↗</span>
+    </Link>
+  </div>
+)}
 
-            <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-white/80">
+<div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-white/80">
               <span>By {article.author || "The Issue № Editorial Team"}</span>
               <span>—</span>
               <time dateTime={article.date}>
