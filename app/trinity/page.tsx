@@ -66,7 +66,7 @@ const galleryImages = [
   "/images/trinity/5.jpeg",
   "/images/trinity/6.jpg",
   "/images/trinity/8.jpeg",
-  "/images/trinity/9.jpeg",
+  "/images/trinity/21.jpeg",
   "/images/trinity/20.jpeg",
   "/images/trinity/22.jpeg",
   "/images/trinity/25.jpeg",
