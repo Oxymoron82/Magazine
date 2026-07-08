@@ -134,6 +134,60 @@ export default function TrinityPage() {
         </div>
       </section>
 
+            {/* TEMPORARY INVITATION */}
+      <section className="bg-[#F6EFE4] border-b border-[#4A3F3C]/10">
+        <div className="max-w-7xl mx-auto px-6 py-10 md:py-14">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
+            <div className="md:col-span-8">
+              <p className="text-xs uppercase tracking-[0.35em] text-[#8A5A2B]">
+                Private Invitation
+              </p>
+
+              <h2 className="mt-5 font-serif text-4xl md:text-6xl leading-tight text-editorial-text">
+                Welcome to Trinity.
+              </h2>
+
+              <div className="mt-6 max-w-2xl space-y-3 text-[17px] leading-[1.8] text-neutral-700">
+                <p>Thank you for being part of the fashion show.</p>
+                <p>
+                  Your exclusive 10% invitation for the Trinity project is
+                  available until 31 July.
+                </p>
+                <p>
+                  Project price: <span className="font-medium">€230</span>.
+                </p>
+              </div>
+
+              <a
+                href="https://qrco.de/bgue1d"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-8 text-sm uppercase tracking-[0.25em] underline underline-offset-8 hover:text-black transition"
+              >
+                Apply for Trinity
+              </a>
+            </div>
+
+            <div className="md:col-span-4 flex justify-center md:justify-end">
+              <a
+                href="https://qrco.de/bgue1d"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block rounded-2xl border border-[#4A3F3C]/10 bg-white/70 p-4 shadow-[0_18px_60px_rgba(74,63,60,0.12)]"
+              >
+                <Image
+                  src="/images/trinity/qr-invitation.png"
+                  alt="QR code for Trinity invitation"
+                  width={220}
+                  height={220}
+                  className="h-auto w-[180px] md:w-[220px]"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* INTRO */}
       <section className="max-w-7xl mx-auto px-6 py-20 md:py-28">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
@@ -215,6 +269,36 @@ export default function TrinityPage() {
                 </div>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+            {/* PROJECT INVESTMENT */}
+      <section className="max-w-7xl mx-auto px-6 pb-20 md:pb-28">
+        <div className="border-t border-b border-neutral-200/70 py-14 md:py-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+            <div className="lg:col-span-4">
+              <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
+                Project Investment
+              </p>
+            </div>
+
+            <div className="lg:col-span-8">
+              <p className="font-serif text-5xl md:text-7xl leading-none text-editorial-text">
+                €230
+              </p>
+
+              <p className="mt-6 max-w-2xl text-[17px] leading-[1.8] text-neutral-700">
+                The Trinity project includes creative consultation, editorial
+                direction, professional photography, selected edited images and
+                a magazine-style visual story.
+              </p>
+
+              <p className="mt-4 max-w-2xl text-sm leading-[1.8] text-neutral-500">
+                Fashion show participants receive a private 10% invitation until
+                31 July.
+              </p>
+            </div>
           </div>
         </div>
       </section>
