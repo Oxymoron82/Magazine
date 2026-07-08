@@ -1371,6 +1371,7 @@ Helsinki`,
     column: "becoming",
     title: "Trinity — Fashion Editorial Photography Story",
     category: "Becoming",
+    
     excerpt:
       "A fashion editorial photography story about feminine transformation, identity, empowerment, and personal evolution through the three emotional phases of Project Trinity.",
     image: "/images/trinity/115.jpg",
