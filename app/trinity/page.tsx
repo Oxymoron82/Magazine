@@ -79,8 +79,16 @@ const galleryImages = [
 
 const processSteps = [
   ["01", "Conversation", "Every project begins with listening."],
-  ["02", "Creative Direction", "We shape the mood, story, location and visual language."],
-  ["03", "Photography", "The shoot becomes a carefully guided editorial experience."],
+  [
+    "02",
+    "Creative Direction",
+    "We shape the mood, story, location and visual language.",
+  ],
+  [
+    "03",
+    "Photography",
+    "The shoot becomes a carefully guided editorial experience.",
+  ],
   ["04", "Story", "Images and words are brought together into one narrative."],
   ["05", "Publication", "The final result can live inside The Issue №."],
 ];
@@ -88,21 +96,35 @@ const processSteps = [
 export default function TrinityPage() {
   return (
     <main className="bg-editorial-bg text-neutral-900">
-      {/* HERO VIDEO */}
+      {/* HERO IMAGE SEQUENCE */}
       <section className="relative h-[92vh] min-h-[680px] overflow-hidden bg-black">
-        <video
-          src="/images/trinity/video_trinity.mp4"
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="/images/trinity/115.jpg"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
+        <div className="absolute inset-0">
+          <Image
+            src="/images/trinity/22.jpeg"
+            alt="Trinity editorial hero image one"
+            fill
+            priority
+            className="trinity-hero-image trinity-hero-image-1 object-cover"
+          />
 
-        <div className="absolute inset-0 bg-black/35" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/15 to-transparent" />
+          <Image
+            src="/images/trinity/59.jpeg"
+            alt="Trinity editorial hero image two"
+            fill
+            className="trinity-hero-image trinity-hero-image-2 object-cover"
+          />
+
+          <Image
+            src="/images/trinity/60.jpeg"
+            alt="Trinity editorial hero image three"
+            fill
+            className="trinity-hero-image trinity-hero-image-3 object-cover"
+          />
+        </div>
+
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent" />
 
         <div className="absolute inset-0 z-10 flex items-center">
           <div className="mx-auto w-full max-w-7xl px-6 md:px-12">
@@ -124,17 +146,66 @@ export default function TrinityPage() {
               more than beautiful images.
             </p>
 
-            <a
-              href="mailto:hello@theissue.xyz"
+            <Link
+              href="#apply"
               className="inline-block mt-10 text-sm uppercase tracking-[0.28em] text-white underline underline-offset-8 hover:text-white/75 transition"
             >
               Begin your story
-            </a>
+            </Link>
           </div>
         </div>
+
+        <style>{`
+          .trinity-hero-image {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transform: scale(1.04);
+            animation: trinityHeroFade 18s infinite ease-in-out;
+          }
+
+          .trinity-hero-image-1 {
+            animation-delay: 0s;
+          }
+
+          .trinity-hero-image-2 {
+            animation-delay: 6s;
+          }
+
+          .trinity-hero-image-3 {
+            animation-delay: 12s;
+          }
+
+          @keyframes trinityHeroFade {
+            0% {
+              opacity: 1;
+              transform: scale(1);
+            }
+
+            24% {
+              opacity: 1;
+              transform: scale(1.025);
+            }
+
+            34% {
+              opacity: 0;
+              transform: scale(1.04);
+            }
+
+            90% {
+              opacity: 0;
+              transform: scale(1.04);
+            }
+
+            100% {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+        `}</style>
       </section>
 
-            {/* TEMPORARY INVITATION */}
+      {/* TEMPORARY INVITATION */}
       <section className="bg-[#F6EFE4] border-b border-[#4A3F3C]/10">
         <div className="max-w-7xl mx-auto px-6 py-10 md:py-14">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 items-center">
@@ -158,14 +229,12 @@ export default function TrinityPage() {
                 </p>
               </div>
 
-              <a
-                href="https://qrco.de/bgue1d"
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="#apply"
                 className="inline-block mt-8 text-sm uppercase tracking-[0.25em] underline underline-offset-8 hover:text-black transition"
               >
                 Apply for Trinity
-              </a>
+              </Link>
             </div>
 
             <div className="md:col-span-4 flex justify-center md:justify-end">
@@ -212,7 +281,7 @@ export default function TrinityPage() {
 
               <p>
                 Whether it is a single portrait or a complete editorial
-                production, every story begins the same way - with a
+                production, every story begins the same way — with a
                 conversation.
               </p>
             </div>
@@ -273,7 +342,7 @@ export default function TrinityPage() {
         </div>
       </section>
 
-            {/* PROJECT INVESTMENT */}
+      {/* PROJECT INVESTMENT */}
       <section className="max-w-7xl mx-auto px-6 pb-20 md:pb-28">
         <div className="border-t border-b border-neutral-200/70 py-14 md:py-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
@@ -316,8 +385,9 @@ export default function TrinityPage() {
             className="absolute inset-0 h-full w-full object-cover"
           />
 
-          <div className="absolute inset-0 bg-black/30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-black/45" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/10 to-transparent" />
 
           <div className="absolute bottom-0 left-0 right-0 z-10">
             <div className="max-w-7xl mx-auto px-6 md:px-12 pb-12 md:pb-16">
@@ -429,7 +499,10 @@ export default function TrinityPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="max-w-7xl mx-auto px-6 pb-24 md:pb-32">
+      <section
+        id="apply"
+        className="max-w-7xl mx-auto px-6 pb-24 md:pb-32 scroll-mt-24"
+      >
         <div className="border-t border-neutral-200/70 pt-16">
           <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
             Apply
@@ -444,11 +517,21 @@ export default function TrinityPage() {
             To discuss your idea or request a proposal, get in touch.
           </p>
 
+          <p className="mt-6 text-neutral-700">
+            To apply, email us at{" "}
+            <a
+              href="mailto:hello@theissue.xyz"
+              className="underline underline-offset-4 hover:text-black"
+            >
+              hello@theissue.xyz
+            </a>
+          </p>
+
           <a
             href="mailto:hello@theissue.xyz"
             className="inline-block mt-10 text-sm uppercase tracking-[0.25em] underline underline-offset-8 hover:text-black transition"
           >
-            hello@theissue.xyz
+            Send an email
           </a>
 
           <div className="mt-12">
