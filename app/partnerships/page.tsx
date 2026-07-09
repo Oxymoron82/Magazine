@@ -78,12 +78,12 @@ export default function PartnershipsPage() {
               visual campaigns.
             </p>
 
-            <a
-              href="mailto:hello@theissue.xyz"
-              className="inline-block mt-10 text-sm uppercase tracking-[0.25em] text-white underline underline-offset-8 hover:text-white/75 transition"
-            >
-              Start a collaboration
-            </a>
+           <Link
+  href="#contact"
+  className="inline-block mt-10 text-sm uppercase tracking-[0.25em] text-white underline underline-offset-8 hover:text-white/75 transition"
+>
+  Start a collaboration
+</Link>
           </div>
         </div>
       </section>
@@ -287,8 +287,11 @@ export default function PartnershipsPage() {
         </div>
       </section>
 
-      {/* CONTACT */}
-      <section className="max-w-7xl mx-auto px-6 pb-24 md:pb-32">
+     {/* CONTACT */}
+<section
+  id="contact"
+  className="max-w-7xl mx-auto px-6 pb-24 md:pb-32 scroll-mt-24"
+>
         <div className="border-t border-neutral-200/70 pt-16">
           <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
             Contact
