@@ -159,7 +159,7 @@ export default function EditorPage() {
         </p>
 
         {/* ending */}
-        <div className="mt-12 border-t border-neutral-200/70 pt-10">
+        <div className="mt-12 border-neutral-200/70 pt-10">
           <p className="font-serif text-2xl leading-snug">
             The Issue is not a showcase.
             <br />
