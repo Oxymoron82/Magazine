@@ -272,7 +272,7 @@ export default function HomePage() {
         <div className="mt-14 md:hidden">
           <Link
             href="/columns"
-            className="block border-t border-b border-[#4A3F3C]/20 py-6"
+            className="block border-b border-[#4A3F3C]/20 py-6"
           >
             <p className="text-[11px] uppercase tracking-[0.35em] text-neutral-500">
               Explore
@@ -298,7 +298,7 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-6 pb-24 md:pb-32">
         <Link
   href="/trinity"
-  className="group block border-t border-b border-neutral-200/70 py-16 md:py-20"
+  className="group block border-b border-neutral-200/70 py-16 md:py-20"
 >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-14 items-center">
             <div className="lg:col-span-4">

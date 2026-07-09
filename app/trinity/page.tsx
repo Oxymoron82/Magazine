@@ -338,7 +338,7 @@ export default function TrinityPage() {
 
       {/* FORMATS */}
       <section className="max-w-7xl mx-auto px-6 pb-20 md:pb-28">
-        <div className="border-t border-neutral-200/70 pt-16">
+        <div className="border-neutral-200/70 pt-16">
           <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
             Editorial Formats
           </p>
@@ -391,7 +391,7 @@ export default function TrinityPage() {
 
       {/* PROJECT INVESTMENT */}
       <section className="max-w-7xl mx-auto px-6 pb-20 md:pb-28">
-        <div className="border-t border-b border-neutral-200/70 py-14 md:py-16">
+        <div className="border-b border-neutral-200/70 py-14 md:py-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
             <div className="lg:col-span-4">
               <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
@@ -452,7 +452,7 @@ export default function TrinityPage() {
 
       {/* GALLERY */}
       <section className="max-w-7xl mx-auto px-6 pb-20 md:pb-28">
-        <div className="border-t border-neutral-200/70 pt-16">
+        <div className="border-neutral-200/70 pt-16">
           <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
             Selected Work
           </p>
@@ -481,7 +481,7 @@ export default function TrinityPage() {
 
       {/* PROCESS */}
       <section className="max-w-7xl mx-auto px-6 pb-20 md:pb-28">
-        <div className="border-t border-b border-neutral-200/70 py-16 md:py-20">
+        <div className="border-b border-neutral-200/70 py-16 md:py-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             <div className="lg:col-span-4">
               <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
@@ -550,7 +550,7 @@ export default function TrinityPage() {
         id="apply"
         className="max-w-7xl mx-auto px-6 pb-24 md:pb-32 scroll-mt-24"
       >
-        <div className="border-t border-neutral-200/70 pt-16">
+        <div className="border-neutral-200/70 pt-16">
           <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
             Apply
           </p>
