@@ -15,7 +15,7 @@ const editorialFormats = [
   {
     title: "Editorial Portrait",
     subtitle: "One story. One vision.",
-    image: "/images/trinity/21.jpeg",
+    image: "/images/trinity/card_portrait.jpg",
     text: "Designed for individuals who need a strong visual identity without a large-scale production.",
     includes: [
       "Creative consultation",
@@ -30,7 +30,7 @@ const editorialFormats = [
   {
     title: "Trinity",
     subtitle: "Three chapters. One story.",
-    image: "/images/trinity/115.jpg",
+    image: "/images/trinity/card_trinity.jpg",
     text: "A complete editorial experience exploring different sides of the same person through three visual chapters.",
     includes: [
       "Creative consultation",
@@ -45,7 +45,7 @@ const editorialFormats = [
   {
     title: "Brand Story",
     subtitle: "Every brand has a story worth telling.",
-    image: "/images/trinity/27.jpeg",
+    image: "/images/trinity/card_business.jpg",
     text: "Created for brands, founders and creative businesses that want imagery with depth, personality and editorial quality.",
     includes: [
       "Brand discovery session",
