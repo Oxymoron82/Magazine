@@ -323,15 +323,83 @@ export default function HomePage() {
             </div>
 
             <div className="lg:col-span-8">
-              <div className="relative aspect-[16/9] overflow-hidden bg-white/30">
-                <Image
-                  src="/images/trinity/115.jpg"
-                  alt="Trinity editorial project — fashion photography story about feminine transformation"
-                  fill
-                  className="object-cover transition duration-700 group-hover:scale-[1.025]"
-                />
-              </div>
-            </div>
+  <div className="relative ml-auto aspect-square w-full max-w-[680px] overflow-hidden bg-white/30">
+    {[
+      "/images/trinity/115.jpg",
+      "/images/trinity/61.jpeg",
+      "/images/trinity/62.jpeg",
+      "/images/trinity/63.jpeg",
+      "/images/trinity/64.jpeg",
+      "/images/trinity/65.jpeg",
+    ].map((src, index) => (
+      <Image
+        key={src}
+        src={src}
+        alt={`Trinity editorial project image ${index + 1}`}
+        fill
+        className={`home-trinity-image home-trinity-image-${
+          index + 1
+        } object-cover object-[center_22%]`}
+      />
+    ))}
+
+    <div className="absolute inset-0 bg-black/8" />
+
+    <style>{`
+      .home-trinity-image {
+        position: absolute;
+        inset: 0;
+        opacity: 0;
+        transform: scale(1.01);
+        animation-duration: 18s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+      }
+
+      .home-trinity-image-1 { animation-name: homeTrinityOne; }
+      .home-trinity-image-2 { animation-name: homeTrinityTwo; }
+      .home-trinity-image-3 { animation-name: homeTrinityThree; }
+      .home-trinity-image-4 { animation-name: homeTrinityFour; }
+      .home-trinity-image-5 { animation-name: homeTrinityFive; }
+      .home-trinity-image-6 { animation-name: homeTrinitySix; }
+
+      @keyframes homeTrinityOne {
+        0%, 13% { opacity: 1; transform: scale(1); }
+        18%, 100% { opacity: 0; transform: scale(1.01); }
+      }
+
+      @keyframes homeTrinityTwo {
+        0%, 13% { opacity: 0; transform: scale(1.01); }
+        18%, 30% { opacity: 1; transform: scale(1); }
+        35%, 100% { opacity: 0; transform: scale(1.01); }
+      }
+
+      @keyframes homeTrinityThree {
+        0%, 30% { opacity: 0; transform: scale(1.01); }
+        35%, 47% { opacity: 1; transform: scale(1); }
+        52%, 100% { opacity: 0; transform: scale(1.01); }
+      }
+
+      @keyframes homeTrinityFour {
+        0%, 47% { opacity: 0; transform: scale(1.01); }
+        52%, 64% { opacity: 1; transform: scale(1); }
+        69%, 100% { opacity: 0; transform: scale(1.01); }
+      }
+
+      @keyframes homeTrinityFive {
+        0%, 64% { opacity: 0; transform: scale(1.01); }
+        69%, 81% { opacity: 1; transform: scale(1); }
+        86%, 100% { opacity: 0; transform: scale(1.01); }
+      }
+
+      @keyframes homeTrinitySix {
+        0%, 81% { opacity: 0; transform: scale(1.01); }
+        86%, 96% { opacity: 1; transform: scale(1); }
+        100% { opacity: 0; transform: scale(1.01); }
+      }
+    `}</style>
+  </div>
+</div>
           </div>
         </Link>
       </section>
