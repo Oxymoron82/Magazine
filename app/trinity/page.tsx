@@ -96,162 +96,161 @@ const processSteps = [
 export default function TrinityPage() {
   return (
     <main className="bg-editorial-bg text-neutral-900">
-      {/* HERO IMAGE SEQUENCE */}
-      <section className="relative h-[92vh] min-h-[680px] overflow-hidden bg-black">
-        <Image
-          src="/images/trinity/22.jpeg"
-          alt="Trinity editorial hero image one"
-          fill
-          priority
-          className="hero-image hero-image-1 object-cover object-center"
-        />
+     {/* HERO IMAGE SEQUENCE */}
+<section className="relative h-[92vh] min-h-[680px] overflow-hidden bg-black">
+  <Image
+    src="/images/trinity/22.jpeg"
+    alt="Trinity editorial hero image one"
+    fill
+    priority
+    className="hero-image hero-image-1 object-cover object-center"
+  />
 
-        <Image
-          src="/images/trinity/59.jpeg"
-          alt="Trinity editorial hero image two"
-          fill
-          className="hero-image hero-image-2 object-cover object-center"
-        />
+  <Image
+    src="/images/trinity/59.jpeg"
+    alt="Trinity editorial hero image two"
+    fill
+    className="hero-image hero-image-2 object-cover object-center"
+  />
 
-        <Image
-          src="/images/trinity/60.jpeg"
-          alt="Trinity editorial hero image three"
-          fill
-          className="hero-image hero-image-3 object-cover object-center"
-        />
+  <Image
+    src="/images/trinity/60.jpeg"
+    alt="Trinity editorial hero image three"
+    fill
+    className="hero-image hero-image-3 object-cover object-center"
+  />
 
-        <div className="absolute inset-0 bg-black/22" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/82 via-black/22 to-transparent" />
+  <div className="absolute inset-0 bg-black/18" />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/12 to-transparent" />
 
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "radial-gradient(ellipse at center, rgba(0,0,0,0) 42%, rgba(0,0,0,0.16) 63%, rgba(0,0,0,0.52) 84%, rgba(0,0,0,0.86) 100%)",
-          }}
-        />
+  <div
+    className="absolute inset-0"
+    style={{
+      background:
+        "radial-gradient(ellipse at center, rgba(0,0,0,0) 46%, rgba(0,0,0,0.10) 66%, rgba(0,0,0,0.46) 88%, rgba(0,0,0,0.82) 100%)",
+    }}
+  />
 
-        <div
-          className="absolute inset-y-0 left-0 w-[16%]"
-          style={{
-            background:
-              "linear-gradient(to right, rgba(0,0,0,.82), rgba(0,0,0,.42), rgba(0,0,0,0))",
-          }}
-        />
+  <div
+    className="absolute inset-y-0 left-0 w-[16.5%]"
+    style={{
+      background:
+        "linear-gradient(to right, rgba(0,0,0,.78), rgba(0,0,0,.34), rgba(0,0,0,0))",
+    }}
+  />
 
-        <div
-          className="absolute inset-y-0 right-0 w-[16%]"
-          style={{
-            background:
-              "linear-gradient(to left, rgba(0,0,0,.82), rgba(0,0,0,.42), rgba(0,0,0,0))",
-          }}
-        />
+  <div
+    className="absolute inset-y-0 right-0 w-[16.5%]"
+    style={{
+      background:
+        "linear-gradient(to left, rgba(0,0,0,.78), rgba(0,0,0,.34), rgba(0,0,0,0))",
+    }}
+  />
 
-        <div className="absolute inset-0 z-10 flex items-center">
-          <div className="mx-auto w-full max-w-7xl px-6 md:px-12">
-            <p className="text-xs uppercase tracking-[0.45em] text-white/75">
-              Original Editorial Project
-            </p>
+  <div className="absolute inset-0 z-10 flex items-center">
+    <div className="mx-auto w-full max-w-7xl px-6 md:px-12">
+      <p className="text-xs uppercase tracking-[0.45em] text-white/75">
+        Original Editorial Project
+      </p>
 
-            <h1 className="mt-6 font-serif text-[64px] md:text-[120px] lg:text-[150px] leading-[0.85] tracking-[-0.06em] text-white">
-              Trinity
-            </h1>
+      <h1 className="mt-6 font-serif text-[64px] md:text-[120px] lg:text-[150px] leading-[0.85] tracking-[-0.06em] text-white">
+        Trinity
+      </h1>
 
-            <p className="mt-8 max-w-2xl text-[22px] md:text-[32px] font-serif leading-[1.25] text-white">
-              More than a photoshoot.
-            </p>
+      <p className="mt-8 max-w-2xl text-[22px] md:text-[32px] font-serif leading-[1.25] text-white">
+        More than a photoshoot.
+      </p>
 
-            <p className="mt-6 max-w-xl text-[16px] md:text-[19px] leading-[1.8] text-white/85">
-              Every story deserves to be seen. Trinity is an original project by
-              The Issue №, created for people, brands and businesses that want
-              more than beautiful images.
-            </p>
+      <p className="mt-6 max-w-xl text-[16px] md:text-[19px] leading-[1.8] text-white/85">
+        Every story deserves to be seen. Trinity is an original project by The
+        Issue №, created for people, brands and businesses that want more than
+        beautiful images.
+      </p>
 
-            <Link
-              href="#apply"
-              className="inline-block mt-10 text-sm uppercase tracking-[0.28em] text-white underline underline-offset-8 hover:text-white/75 transition"
-            >
-              Begin your story
-            </Link>
-          </div>
-        </div>
+      <Link
+        href="#apply"
+        className="inline-block mt-10 text-sm uppercase tracking-[0.28em] text-white underline underline-offset-8 hover:text-white/75 transition"
+      >
+        Begin your story
+      </Link>
+    </div>
+  </div>
 
-        <style>{`
-          .hero-image {
-            position: absolute;
-            inset: 0;
-            opacity: 0;
-            transform: scale(1.04);
-            animation-duration: 14.5s;
-            animation-iteration-count: infinite;
-            animation-timing-function: ease-in-out;
-          }
+  <style>{`
+    .hero-image {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      transform: scale(1.015);
+      animation-duration: 14.5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+    }
 
-          .hero-image-1 {
-            animation-name: heroOne;
-          }
+    .hero-image-1 {
+      animation-name: heroOne;
+    }
 
-          .hero-image-2 {
-            animation-name: heroTwo;
-          }
+    .hero-image-2 {
+      animation-name: heroTwo;
+    }
 
-          .hero-image-3 {
-            animation-name: heroThree;
-          }
+    .hero-image-3 {
+      animation-name: heroThree;
+    }
 
-          @keyframes heroOne {
-            0%, 28% {
-              opacity: 1;
-              transform: scale(1);
-            }
+    @keyframes heroOne {
+      0%, 28% {
+        opacity: 1;
+        transform: scale(1);
+      }
 
-            34%, 94% {
-              opacity: 0;
-              transform: scale(1.04);
-            }
+      34%, 94% {
+        opacity: 0;
+        transform: scale(1.018);
+      }
 
-            100% {
-              opacity: 1;
-              transform: scale(1);
-            }
-          }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
 
-          @keyframes heroTwo {
-            0%, 28% {
-              opacity: 0;
-              transform: scale(1.04);
-            }
+    @keyframes heroTwo {
+      0%, 28% {
+        opacity: 0;
+        transform: scale(1.018);
+      }
 
-            34%, 61% {
-              opacity: 1;
-              transform: scale(1);
-            }
+      34%, 61% {
+        opacity: 1;
+        transform: scale(1);
+      }
 
-            67%, 100% {
-              opacity: 0;
-              transform: scale(1.04);
-            }
-          }
+      67%, 100% {
+        opacity: 0;
+        transform: scale(1.018);
+      }
+    }
 
-          @keyframes heroThree {
-            0%, 61% {
-              opacity: 0;
-              transform: scale(1.04);
-            }
+    @keyframes heroThree {
+      0%, 61% {
+        opacity: 0;
+        transform: scale(1.018);
+      }
 
-            67%, 94% {
-              opacity: 1;
-              transform: scale(1);
-            }
+      67%, 94% {
+        opacity: 1;
+        transform: scale(1);
+      }
 
-            100% {
-              opacity: 0;
-              transform: scale(1.04);
-            }
-          }
-        `}</style>
-      </section>
-
+      100% {
+        opacity: 0;
+        transform: scale(1.018);
+      }
+    }
+  `}</style>
+</section>
       {/* TEMPORARY INVITATION */}
       <section className="bg-[#F6EFE4] border-b border-[#4A3F3C]/10">
         <div className="max-w-7xl mx-auto px-6 py-10 md:py-14">
