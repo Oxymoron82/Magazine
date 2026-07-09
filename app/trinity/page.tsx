@@ -96,33 +96,34 @@ const processSteps = [
 export default function TrinityPage() {
   return (
     <main className="bg-editorial-bg text-neutral-900">
-      {/* HERO IMAGE SEQUENCE */}
+     {/* HERO IMAGE SEQUENCE */}
 <section className="relative h-[92vh] min-h-[680px] overflow-hidden bg-black">
   <Image
     src="/images/trinity/22.jpeg"
     alt="Trinity editorial hero image one"
     fill
     priority
-    className="absolute inset-0 object-cover opacity-100 animate-[heroOne_18s_infinite_ease-in-out]"
+    className="absolute inset-0 object-contain opacity-100 animate-[heroOne_16.5s_infinite_ease-in-out]"
   />
 
   <Image
     src="/images/trinity/59.jpeg"
     alt="Trinity editorial hero image two"
     fill
-    className="absolute inset-0 object-cover opacity-0 animate-[heroTwo_18s_infinite_ease-in-out]"
+    className="absolute inset-0 object-contain opacity-0 animate-[heroTwo_16.5s_infinite_ease-in-out]"
   />
 
   <Image
     src="/images/trinity/60.jpeg"
     alt="Trinity editorial hero image three"
     fill
-    className="absolute inset-0 object-cover opacity-0 animate-[heroThree_18s_infinite_ease-in-out]"
+    className="absolute inset-0 object-contain opacity-0 animate-[heroThree_16.5s_infinite_ease-in-out]"
   />
 
-  <div className="absolute inset-0 bg-black/40" />
-  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
-  <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-transparent" />
+  <div className="absolute inset-0 bg-black/25" />
+  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+  <div className="absolute inset-0 bg-gradient-to-r from-black via-black/30 to-black" />
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_28%,rgba(0,0,0,0.28)_62%,rgba(0,0,0,0.78)_100%)]" />
 
   <div className="absolute inset-0 z-10 flex items-center">
     <div className="mx-auto w-full max-w-7xl px-6 md:px-12">
@@ -155,21 +156,21 @@ export default function TrinityPage() {
 
   <style>{`
     @keyframes heroOne {
-      0%, 28% { opacity: 1; transform: scale(1); }
-      34%, 94% { opacity: 0; transform: scale(1.04); }
+      0%, 27% { opacity: 1; transform: scale(1); }
+      33%, 94% { opacity: 0; transform: scale(1.025); }
       100% { opacity: 1; transform: scale(1); }
     }
 
     @keyframes heroTwo {
-      0%, 28% { opacity: 0; transform: scale(1.04); }
-      34%, 61% { opacity: 1; transform: scale(1); }
-      67%, 100% { opacity: 0; transform: scale(1.04); }
+      0%, 27% { opacity: 0; transform: scale(1.025); }
+      33%, 60% { opacity: 1; transform: scale(1); }
+      66%, 100% { opacity: 0; transform: scale(1.025); }
     }
 
     @keyframes heroThree {
-      0%, 61% { opacity: 0; transform: scale(1.04); }
-      67%, 94% { opacity: 1; transform: scale(1); }
-      100% { opacity: 0; transform: scale(1.04); }
+      0%, 60% { opacity: 0; transform: scale(1.025); }
+      66%, 94% { opacity: 1; transform: scale(1); }
+      100% { opacity: 0; transform: scale(1.025); }
     }
   `}</style>
 </section>
