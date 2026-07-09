@@ -46,6 +46,15 @@ const partnershipFormats = [
   },
 ];
 
+const trinityFeatureImages = [
+  "/images/trinity/115.jpg",
+  "/images/trinity/61.jpeg",
+  "/images/trinity/62.jpeg",
+  "/images/trinity/63.jpeg",
+  "/images/trinity/64.jpeg",
+  "/images/trinity/65.jpeg",
+];
+
 export default function PartnershipsPage() {
   return (
     <main className="bg-editorial-bg text-neutral-900">
@@ -78,12 +87,12 @@ export default function PartnershipsPage() {
               visual campaigns.
             </p>
 
-           <Link
-  href="#contact"
-  className="inline-block mt-10 text-sm uppercase tracking-[0.25em] text-white underline underline-offset-8 hover:text-white/75 transition"
->
-  Start a collaboration
-</Link>
+            <Link
+              href="#contact"
+              className="inline-block mt-10 text-sm uppercase tracking-[0.25em] text-white underline underline-offset-8 hover:text-white/75 transition"
+            >
+              Start a collaboration
+            </Link>
           </div>
         </div>
       </section>
@@ -163,7 +172,7 @@ export default function PartnershipsPage() {
       <section className="max-w-7xl mx-auto px-6 pb-20 md:pb-28">
         <Link
           href="/article/trinity-sofia"
-          className="group block border-t border-b border-neutral-200/70 py-16 md:py-20"
+          className="group block border-t border-b border-neutral-200/70 py-5 md:py-6"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-14 items-center">
             <div className="lg:col-span-4">
@@ -188,13 +197,74 @@ export default function PartnershipsPage() {
             </div>
 
             <div className="lg:col-span-8">
-              <div className="relative aspect-[16/9] overflow-hidden bg-white/30">
-                <Image
-                  src="/images/trinity/115.jpg"
-                  alt="Trinity editorial project by The Issue №"
-                  fill
-                  className="object-cover transition duration-700 group-hover:scale-[1.025]"
-                />
+              <div className="relative ml-auto aspect-square w-full max-w-[680px] overflow-hidden bg-white/30">
+                {trinityFeatureImages.map((src, index) => (
+                  <Image
+                    key={src}
+                    src={src}
+                    alt={`Trinity editorial project image ${index + 1}`}
+                    fill
+                    className={`trinity-partnership-image trinity-partnership-image-${
+                      index + 1
+                    } object-cover object-[center_22%]`}
+                  />
+                ))}
+
+                <div className="absolute inset-0 bg-black/8" />
+
+                <style>{`
+                  .trinity-partnership-image {
+                    position: absolute;
+                    inset: 0;
+                    opacity: 0;
+                    transform: scale(1.01);
+                    animation-duration: 18s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: ease-in-out;
+                  }
+
+                  .trinity-partnership-image-1 { animation-name: trinityPartnershipOne; }
+                  .trinity-partnership-image-2 { animation-name: trinityPartnershipTwo; }
+                  .trinity-partnership-image-3 { animation-name: trinityPartnershipThree; }
+                  .trinity-partnership-image-4 { animation-name: trinityPartnershipFour; }
+                  .trinity-partnership-image-5 { animation-name: trinityPartnershipFive; }
+                  .trinity-partnership-image-6 { animation-name: trinityPartnershipSix; }
+
+                  @keyframes trinityPartnershipOne {
+                    0%, 13% { opacity: 1; transform: scale(1); }
+                    18%, 100% { opacity: 0; transform: scale(1.01); }
+                  }
+
+                  @keyframes trinityPartnershipTwo {
+                    0%, 13% { opacity: 0; transform: scale(1.01); }
+                    18%, 30% { opacity: 1; transform: scale(1); }
+                    35%, 100% { opacity: 0; transform: scale(1.01); }
+                  }
+
+                  @keyframes trinityPartnershipThree {
+                    0%, 30% { opacity: 0; transform: scale(1.01); }
+                    35%, 47% { opacity: 1; transform: scale(1); }
+                    52%, 100% { opacity: 0; transform: scale(1.01); }
+                  }
+
+                  @keyframes trinityPartnershipFour {
+                    0%, 47% { opacity: 0; transform: scale(1.01); }
+                    52%, 64% { opacity: 1; transform: scale(1); }
+                    69%, 100% { opacity: 0; transform: scale(1.01); }
+                  }
+
+                  @keyframes trinityPartnershipFive {
+                    0%, 64% { opacity: 0; transform: scale(1.01); }
+                    69%, 81% { opacity: 1; transform: scale(1); }
+                    86%, 100% { opacity: 0; transform: scale(1.01); }
+                  }
+
+                  @keyframes trinityPartnershipSix {
+                    0%, 81% { opacity: 0; transform: scale(1.01); }
+                    86%, 96% { opacity: 1; transform: scale(1); }
+                    100% { opacity: 0; transform: scale(1.01); }
+                  }
+                `}</style>
               </div>
             </div>
           </div>
@@ -287,11 +357,11 @@ export default function PartnershipsPage() {
         </div>
       </section>
 
-     {/* CONTACT */}
-<section
-  id="contact"
-  className="max-w-7xl mx-auto px-6 pb-24 md:pb-32 scroll-mt-24"
->
+      {/* CONTACT */}
+      <section
+        id="contact"
+        className="max-w-7xl mx-auto px-6 pb-24 md:pb-32 scroll-mt-24"
+      >
         <div className="border-t border-neutral-200/70 pt-16">
           <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
             Contact
