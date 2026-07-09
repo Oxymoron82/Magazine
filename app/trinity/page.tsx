@@ -96,84 +96,161 @@ const processSteps = [
 export default function TrinityPage() {
   return (
     <main className="bg-editorial-bg text-neutral-900">
-     {/* HERO IMAGE SEQUENCE */}
-<section className="relative h-[92vh] min-h-[680px] overflow-hidden bg-black">
-  <Image
-    src="/images/trinity/22.jpeg"
-    alt="Trinity editorial hero image one"
-    fill
-    priority
-    className="absolute inset-0 object-contain opacity-100 animate-[heroOne_16.5s_infinite_ease-in-out]"
-  />
+      {/* HERO IMAGE SEQUENCE */}
+      <section className="relative h-[92vh] min-h-[680px] overflow-hidden bg-black">
+        <Image
+          src="/images/trinity/22.jpeg"
+          alt="Trinity editorial hero image one"
+          fill
+          priority
+          className="hero-image hero-image-1 object-cover object-center"
+        />
 
-  <Image
-    src="/images/trinity/59.jpeg"
-    alt="Trinity editorial hero image two"
-    fill
-    className="absolute inset-0 object-contain opacity-0 animate-[heroTwo_16.5s_infinite_ease-in-out]"
-  />
+        <Image
+          src="/images/trinity/59.jpeg"
+          alt="Trinity editorial hero image two"
+          fill
+          className="hero-image hero-image-2 object-cover object-center"
+        />
 
-  <Image
-    src="/images/trinity/60.jpeg"
-    alt="Trinity editorial hero image three"
-    fill
-    className="absolute inset-0 object-contain opacity-0 animate-[heroThree_16.5s_infinite_ease-in-out]"
-  />
+        <Image
+          src="/images/trinity/60.jpeg"
+          alt="Trinity editorial hero image three"
+          fill
+          className="hero-image hero-image-3 object-cover object-center"
+        />
 
-  <div className="absolute inset-0 bg-black/25" />
-  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-  <div className="absolute inset-0 bg-gradient-to-r from-black via-black/30 to-black" />
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_28%,rgba(0,0,0,0.28)_62%,rgba(0,0,0,0.78)_100%)]" />
+        <div className="absolute inset-0 bg-black/22" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/82 via-black/22 to-transparent" />
 
-  <div className="absolute inset-0 z-10 flex items-center">
-    <div className="mx-auto w-full max-w-7xl px-6 md:px-12">
-      <p className="text-xs uppercase tracking-[0.45em] text-white/75">
-        Original Editorial Project
-      </p>
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              "radial-gradient(ellipse at center, rgba(0,0,0,0) 42%, rgba(0,0,0,0.16) 63%, rgba(0,0,0,0.52) 84%, rgba(0,0,0,0.86) 100%)",
+          }}
+        />
 
-      <h1 className="mt-6 font-serif text-[64px] md:text-[120px] lg:text-[150px] leading-[0.85] tracking-[-0.06em] text-white">
-        Trinity
-      </h1>
+        <div
+          className="absolute inset-y-0 left-0 w-[16%]"
+          style={{
+            background:
+              "linear-gradient(to right, rgba(0,0,0,.82), rgba(0,0,0,.42), rgba(0,0,0,0))",
+          }}
+        />
 
-      <p className="mt-8 max-w-2xl text-[22px] md:text-[32px] font-serif leading-[1.25] text-white">
-        More than a photoshoot.
-      </p>
+        <div
+          className="absolute inset-y-0 right-0 w-[16%]"
+          style={{
+            background:
+              "linear-gradient(to left, rgba(0,0,0,.82), rgba(0,0,0,.42), rgba(0,0,0,0))",
+          }}
+        />
 
-      <p className="mt-6 max-w-xl text-[16px] md:text-[19px] leading-[1.8] text-white/85">
-        Every story deserves to be seen. Trinity is an original project by The
-        Issue №, created for people, brands and businesses that want more than
-        beautiful images.
-      </p>
+        <div className="absolute inset-0 z-10 flex items-center">
+          <div className="mx-auto w-full max-w-7xl px-6 md:px-12">
+            <p className="text-xs uppercase tracking-[0.45em] text-white/75">
+              Original Editorial Project
+            </p>
 
-      <Link
-        href="#apply"
-        className="inline-block mt-10 text-sm uppercase tracking-[0.28em] text-white underline underline-offset-8 hover:text-white/75 transition"
-      >
-        Begin your story
-      </Link>
-    </div>
-  </div>
+            <h1 className="mt-6 font-serif text-[64px] md:text-[120px] lg:text-[150px] leading-[0.85] tracking-[-0.06em] text-white">
+              Trinity
+            </h1>
 
-  <style>{`
-    @keyframes heroOne {
-      0%, 27% { opacity: 1; transform: scale(1); }
-      33%, 94% { opacity: 0; transform: scale(1.025); }
-      100% { opacity: 1; transform: scale(1); }
-    }
+            <p className="mt-8 max-w-2xl text-[22px] md:text-[32px] font-serif leading-[1.25] text-white">
+              More than a photoshoot.
+            </p>
 
-    @keyframes heroTwo {
-      0%, 27% { opacity: 0; transform: scale(1.025); }
-      33%, 60% { opacity: 1; transform: scale(1); }
-      66%, 100% { opacity: 0; transform: scale(1.025); }
-    }
+            <p className="mt-6 max-w-xl text-[16px] md:text-[19px] leading-[1.8] text-white/85">
+              Every story deserves to be seen. Trinity is an original project by
+              The Issue №, created for people, brands and businesses that want
+              more than beautiful images.
+            </p>
 
-    @keyframes heroThree {
-      0%, 60% { opacity: 0; transform: scale(1.025); }
-      66%, 94% { opacity: 1; transform: scale(1); }
-      100% { opacity: 0; transform: scale(1.025); }
-    }
-  `}</style>
-</section>
+            <Link
+              href="#apply"
+              className="inline-block mt-10 text-sm uppercase tracking-[0.28em] text-white underline underline-offset-8 hover:text-white/75 transition"
+            >
+              Begin your story
+            </Link>
+          </div>
+        </div>
+
+        <style>{`
+          .hero-image {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transform: scale(1.04);
+            animation-duration: 14.5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+          }
+
+          .hero-image-1 {
+            animation-name: heroOne;
+          }
+
+          .hero-image-2 {
+            animation-name: heroTwo;
+          }
+
+          .hero-image-3 {
+            animation-name: heroThree;
+          }
+
+          @keyframes heroOne {
+            0%, 28% {
+              opacity: 1;
+              transform: scale(1);
+            }
+
+            34%, 94% {
+              opacity: 0;
+              transform: scale(1.04);
+            }
+
+            100% {
+              opacity: 1;
+              transform: scale(1);
+            }
+          }
+
+          @keyframes heroTwo {
+            0%, 28% {
+              opacity: 0;
+              transform: scale(1.04);
+            }
+
+            34%, 61% {
+              opacity: 1;
+              transform: scale(1);
+            }
+
+            67%, 100% {
+              opacity: 0;
+              transform: scale(1.04);
+            }
+          }
+
+          @keyframes heroThree {
+            0%, 61% {
+              opacity: 0;
+              transform: scale(1.04);
+            }
+
+            67%, 94% {
+              opacity: 1;
+              transform: scale(1);
+            }
+
+            100% {
+              opacity: 0;
+              transform: scale(1.04);
+            }
+          }
+        `}</style>
+      </section>
 
       {/* TEMPORARY INVITATION */}
       <section className="bg-[#F6EFE4] border-b border-[#4A3F3C]/10">
@@ -342,36 +419,37 @@ export default function TrinityPage() {
         </div>
       </section>
 
-     {/* VIDEO STRIP */}
-<section className="pb-20 md:pb-28">
-  <div className="relative h-[70vh] min-h-[520px] overflow-hidden bg-black">
-    <video
-      src="/images/trinity/video_trinity.mp4"
-      autoPlay
-      muted
-      loop
-      playsInline
-      poster="/images/trinity/115.jpg"
-      className="absolute inset-0 h-full w-full object-cover object-center"
-    />
+      {/* VIDEO STRIP */}
+      <section className="pb-20 md:pb-28">
+        <div className="relative h-[70vh] min-h-[520px] overflow-hidden bg-black">
+          <video
+            src="/images/trinity/video_trinity.mp4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            poster="/images/trinity/115.jpg"
+            className="absolute inset-0 h-full w-full object-cover object-center"
+          />
 
-    <div className="absolute inset-0 bg-black/45" />
-    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
-    <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/10 to-transparent" />
+          <div className="absolute inset-0 bg-black/45" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/45 via-black/10 to-transparent" />
 
-    <div className="absolute bottom-0 left-0 right-0 z-10">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 pb-12 md:pb-16">
-        <p className="text-xs uppercase tracking-[0.35em] text-white/70">
-          Behind the Story
-        </p>
+          <div className="absolute bottom-0 left-0 right-0 z-10">
+            <div className="max-w-7xl mx-auto px-6 md:px-12 pb-12 md:pb-16">
+              <p className="text-xs uppercase tracking-[0.35em] text-white/70">
+                Behind the Story
+              </p>
 
-        <h2 className="mt-5 max-w-3xl font-serif text-4xl md:text-6xl leading-tight text-white">
-          Every project begins long before the camera appears.
-        </h2>
-      </div>
-    </div>
-  </div>
-</section>
+              <h2 className="mt-5 max-w-3xl font-serif text-4xl md:text-6xl leading-tight text-white">
+                Every project begins long before the camera appears.
+              </h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* GALLERY */}
       <section className="max-w-7xl mx-auto px-6 pb-20 md:pb-28">
         <div className="border-t border-neutral-200/70 pt-16">
