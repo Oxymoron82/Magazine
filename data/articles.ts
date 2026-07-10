@@ -1,5 +1,11 @@
 export type ArticleBlock =
-  | { type: "p"; text: string; dropCap?: boolean; className?: string }
+  | {
+      type: "p";
+      text: string;
+      dropCap?: boolean;
+      className?: string;
+      link?: { text: string; href: string };
+    }
   | { type: "h2"; text: string }
   | { type: "quote"; text: string }
   | {
@@ -289,10 +295,14 @@ The event brought together designers, guests and industry professionals around n
         type: "quote",
         text: "The space was shaped not only by the runway, but by the people within it.",
       },
-      {
-        type: "p",
-        text: `Continue reading in the Practice column: “Anastasija Balak — Silent Guardian / Falling Petals.”`,
-      },
+     {
+  type: "p",
+  text: "Continue reading in the Practice column:",
+  link: {
+    text: "Anastasija Balak — Silent Guardian / Falling Petals.",
+    href: "/article/anastasija-balak-silent-guardian-falling-petals",
+  },
+},
     ],
   },
 

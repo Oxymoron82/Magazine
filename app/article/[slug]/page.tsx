@@ -245,21 +245,36 @@ function VideoBlock({
 
 function renderBlock(block: ArticleBlock, index: number) {
   switch (block.type) {
-    case "p":
+    case "p": {
+      const paragraphLink = block.link;
+
       return (
-        <p
-          key={index}
-          className={[
-            block.className ||
-              "my-6 text-[18px] leading-relaxed text-neutral-800 whitespace-pre-line",
-            block.dropCap
-              ? "first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:font-serif first-letter:text-6xl md:first-letter:text-7xl first-letter:leading-none"
-              : "",
-          ].join(" ")}
-        >
-          {renderTextWithLinks(block.text)}
-        </p>
-      );
+    <p
+      key={index}
+      className={[
+        block.className ||
+          "my-6 text-[18px] leading-relaxed text-neutral-800 whitespace-pre-line",
+        block.dropCap
+          ? "first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:font-serif first-letter:text-6xl md:first-letter:text-7xl first-letter:leading-none"
+          : "",
+      ].join(" ")}
+    >
+      {renderTextWithLinks(block.text)}
+
+      {paragraphLink ? (
+        <>
+          {" "}
+          <Link
+            href={paragraphLink.href}
+            className="underline underline-offset-4 hover:text-black transition"
+          >
+            {paragraphLink.text}
+          </Link>
+        </>
+      ) : null}
+    </p>
+  );
+}
 
     case "h2":
       return (
