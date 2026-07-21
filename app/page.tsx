@@ -4,6 +4,7 @@ import Image from "next/image";
 import { articles } from "@/data/articles";
 import { columns } from "@/data/columns";
 import SearchArticles from "@/components/SearchArticles";
+import ArticlePhotoCarousel from "@/components/ArticlePhotoCarousel";
 
 export const metadata: Metadata = {
   title: "The Issue № | Independent Fashion and Editorial Magazine",

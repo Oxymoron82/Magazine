@@ -5,6 +5,7 @@ import { Fragment } from "react";
 import { articles, ArticleBlock } from "@/data/articles";
 import SubmitForm from "@/components/SubmitForm";
 import Link from "next/link";
+import ArticlePhotoCarousel from "@/components/ArticlePhotoCarousel";
 
 /* ---------------- HELPERS ---------------- */
 
@@ -311,6 +312,14 @@ function renderBlock(block: ArticleBlock, index: number) {
           caption={block.caption}
         />
       );
+      case "carousel":
+  return (
+    <ArticlePhotoCarousel
+      key={index}
+      images={block.images}
+      caption={block.caption}
+    />
+  );
 
     case "video":
       return (
