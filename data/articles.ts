@@ -67,7 +67,7 @@ export const articles: Article[] = [
   category: "Becoming",
   excerpt:
     "A reflection by Sofia Solas on Queen Sapphire World, courage, visibility, and the moment when women allow themselves to begin again.",
-  image: "/images/places/queen-sapphire/DSC00906.jpg",
+  image: "/images/places/queen-sapphire/DSC01029.jpg",
   date: "2026-07-11",
   author: "Sofia Solas",
 
@@ -132,267 +132,168 @@ One shared decision:
     },
 
     {
-      type: "p",
-      text: `There wasn’t much time to prepare, and everyone was understandably nervous. Every participant wanted to step onto that stage with confidence.`,
-    },
+  type: "p",
+  text: `There wasn’t much time to prepare, and everyone was understandably nervous. Every participant wanted to step onto that stage with confidence. My role was to choreograph the runway and help the contestants feel comfortable before their moment arrived.
 
-    {
-      type: "p",
-      text: `My role was to choreograph the runway and help the contestants feel comfortable before their moment arrived.`,
-    },
+Yet what stayed with me most wasn’t the preparation itself. It was the atmosphere backstage. There was no sense of rivalry.
 
-    {
-      type: "p",
-      text: `Yet what stayed with me most wasn’t the preparation itself. It was the atmosphere backstage.`,
-    },
+Instead, I watched women quietly supporting one another. Someone adjusted a dress. Someone offered a reassuring hug before stepping onto the stage. Someone whispered a few simple words that meant far more than they probably realized.
 
-    {
-      type: "p",
-      text: `There was no sense of rivalry.`,
-    },
+I watched them in those final moments before their entrance—the nervous glances, the last adjustments, the deep breath before taking that first step toward the audience.
 
-    {
-      type: "p",
-      text: `Instead, I watched women quietly supporting one another. Someone adjusted a dress. Someone offered a reassuring hug before stepping onto the stage. Someone whispered a few simple words that meant far more than they probably realized.`,
-    },
+In moments like these, knowing that someone believes in you can make all the difference. I hoped I could be that person for them.`,
+},
 
+{
+  type: "gallery",
+  images: [
     {
-      type: "p",
-      text: `I watched them in those final moments before their entrance—the nervous glances, the last adjustments, the deep breath before taking that first step toward the audience.`,
+      src: "/images/places/queen-sapphire/DSC00942.jpg",
+      alt: "Contestant backstage at Queen Sapphire World International",
     },
-
     {
-      type: "p",
-      text: `In moments like these, knowing that someone believes in you can make all the difference.`,
+      src: "/images/places/queen-sapphire/DSC09808.jpg",
+      alt: "Runway preparation during the Helsinki event",
     },
-
     {
-      type: "p",
-      text: `I hoped I could be that person for them.`,
+      src: "/images/places/queen-sapphire/DSC00948.jpg",
+      alt: "A contestant preparing to step onto the stage",
     },
-
     {
-      type: "gallery",
-      images: [
-        {
-          src: "/images/places/queen-sapphire/DSC00238.jpg",
-          alt: "Contestant backstage at Queen Sapphire World International",
-        },
-        {
-          src: "/images/places/queen-sapphire/DSC00510.jpg",
-          alt: "Runway preparation during the Helsinki event",
-        },
-        {
-          src: "/images/places/queen-sapphire/DSC00613.jpg",
-          alt: "A contestant preparing to step onto the stage",
-        },
-        {
-          src: "/images/places/queen-sapphire/DSC00622.jpg",
-          alt: "Queen Sapphire World contestants together backstage",
-        },
-      ],
+      src: "/images/places/queen-sapphire/DSC00738.jpg",
+      alt: "Queen Sapphire World contestants together backstage",
     },
+  ],
+},
 
+{
+  type: "p",
+  text: `Sometimes, a few sincere words are enough to quiet self-doubt. And if even one woman walked onto that stage feeling a little calmer and a little more confident, then my role that evening truly mattered.
+
+When the show began, the audience saw elegance and beauty. I saw something different. I knew how much vulnerability, uncertainty, and courage stood behind every single step.
+
+Watching everything unfold from behind the curtain, I realized that for many of these women, this evening was never just about a pageant. It was about themselves.
+
+For many, it was a step they had postponed for years—a quiet dream they had finally given themselves permission to pursue.
+
+Perhaps that’s why, once the evening was over, I wasn’t thinking about crowns or titles. I was thinking about the women.
+
+The women who chose to step beyond the life they had always known. The women who finally allowed themselves to pursue a dream they had quietly carried for years. The women who went home believing in themselves just a little more than they had before they arrived.
+
+These are the stories I want to tell through THE ISSUE N°.
+
+Because true beauty doesn’t begin the moment a crown is placed on a woman’s head. It begins much earlier—the moment she stops waiting for the perfect time, chooses to let go of self-doubt, and takes the first step toward herself.`,
+},
+
+{
+  type: "gallery",
+  images: [
     {
-      type: "p",
-      text: `Sometimes, a few sincere words are enough to quiet self-doubt. And if even one woman walked onto that stage feeling a little calmer and a little more confident, then my role that evening truly mattered.`,
+      src: "/images/places/queen-sapphire/DSC00942.jpg",
+      alt: "Contestant on stage during the Queen Sapphire final",
     },
-
     {
-      type: "p",
-      text: `When the show began, the audience saw elegance and beauty.`,
+      src: "/images/places/queen-sapphire/DSC00984.jpg",
+      alt: "Runway moment at Oodi Library in Helsinki",
     },
-
     {
-      type: "p",
-      text: `I saw something different.`,
+      src: "/images/places/queen-sapphire/DSC00784.jpg",
+      alt: "Final runway walk at Queen Sapphire World International",
     },
-
     {
-      type: "p",
-      text: `I knew how much vulnerability, uncertainty, and courage stood behind every single step.`,
+      src: "/images/places/queen-sapphire/DSC00631.jpg",
+      alt: "Celebration during the Queen Sapphire Helsinki final",
     },
+  ],
+},
 
+{
+  type: "carousel",
+  caption: "View more photographs",
+  images: [
     {
-      type: "p",
-      text: `Watching everything unfold from behind the curtain, I realized that for many of these women, this evening was never just about a pageant.`,
+      src: "/images/places/queen-sapphire/DSC00100.jpg",
+      alt: "Queen Sapphire World International Selection Final in Helsinki",
     },
-
     {
-      type: "p",
-      text: `It was about themselves.`,
+      src: "/images/places/queen-sapphire/DSC00200.jpg",
+      alt: "Queen Sapphire World participant at Oodi Library",
     },
-
     {
-      type: "p",
-      text: `For many, it was a step they had postponed for years—a quiet dream they had finally given themselves permission to pursue.`,
+      src: "/images/places/queen-sapphire/DSC00318.jpg",
+      alt: "Runway presentation during the Queen Sapphire final",
     },
-
     {
-      type: "p",
-      text: `Perhaps that’s why, once the evening was over, I wasn’t thinking about crowns or titles.`,
+      src: "/images/places/queen-sapphire/DSC00583.jpg",
+      alt: "Queen Sapphire World International contestant in Helsinki",
     },
-
     {
-      type: "p",
-      text: `I was thinking about the women.`,
+      src: "/images/places/queen-sapphire/DSC00948.jpg",
+      alt: "Stage moment during the international selection final",
     },
-
     {
-      type: "p",
-      text: `The women who chose to step beyond the life they had always known.`,
+      src: "/images/places/queen-sapphire/DSC00631.jpg",
+      alt: "Queen Sapphire World event at Oodi Library",
     },
-
     {
-      type: "p",
-      text: `The women who finally allowed themselves to pursue a dream they had quietly carried for years.`,
+      src: "/images/places/queen-sapphire/DSC0926.jpg",
+      alt: "Contestant during the Queen Sapphire Helsinki final",
     },
-
     {
-      type: "p",
-      text: `The women who went home believing in themselves just a little more than they had before they arrived.`,
+      src: "/images/places/queen-sapphire/DSC00590.jpg",
+      alt: "Evening runway presentation in Helsinki",
     },
-
     {
-      type: "p",
-      text: `These are the stories I want to tell through THE ISSUE N°.`,
+      src: "/images/places/queen-sapphire/DSC00809.jpg",
+      alt: "Queen Sapphire World International event photograph",
     },
-
     {
-      type: "p",
-      text: `Because true beauty doesn’t begin the moment a crown is placed on a woman’s head.`,
+      src: "/images/places/queen-sapphire/DSC09858.jpg",
+      alt: "Participant at the Queen Sapphire World final",
     },
-
     {
-      type: "p",
-      text: `It begins much earlier—the moment she stops waiting for the perfect time, chooses to let go of self-doubt, and takes the first step toward herself.`,
+      src: "/images/places/queen-sapphire/DSC09823.jpg",
+      alt: "Queen Sapphire World stage presentation",
     },
-
     {
-      type: "gallery",
-      images: [
-        {
-          src: "/images/places/queen-sapphire/DSC00684.jpg",
-          alt: "Contestant on stage during the Queen Sapphire final",
-        },
-        {
-          src: "/images/places/queen-sapphire/DSC00699.jpg",
-          alt: "Runway moment at Oodi Library in Helsinki",
-        },
-        {
-          src: "/images/places/queen-sapphire/DSC00738.jpg",
-          alt: "Final runway walk at Queen Sapphire World International",
-        },
-        {
-          src: "/images/places/queen-sapphire/DSC00787.jpg",
-          alt: "Celebration during the Queen Sapphire Helsinki final",
-        },
-      ],
+      src: "/images/places/queen-sapphire/DSC00100.jpg",
+      alt: "Backstage portrait from Queen Sapphire World International",
     },
-
     {
-      type: "carousel",
-      caption: "View more photographs",
-      images: [
-        {
-          src: "/images/places/queen-sapphire/DSC00853.jpg",
-          alt: "Queen Sapphire World International Selection Final in Helsinki",
-        },
-        {
-          src: "/images/places/queen-sapphire/DSC00877.jpg",
-          alt: "Queen Sapphire World participant at Oodi Library",
-        },
-        {
-          src: "/images/places/queen-sapphire/DSC00928.jpg",
-          alt: "Runway presentation during the Queen Sapphire final",
-        },
-        {
-          src: "/images/places/queen-sapphire/DSC00988.jpg",
-          alt: "Queen Sapphire World International contestant in Helsinki",
-        },
-        {
-          src: "/images/places/queen-sapphire/DSC01023.jpg",
-          alt: "Stage moment during the international selection final",
-        },
-        {
-          src: "/images/places/queen-sapphire/DSC09813.jpg",
-          alt: "Queen Sapphire World event at Oodi Library",
-        },
-        {
-          src: "/images/places/queen-sapphire/DSC09864.jpg",
-          alt: "Contestant during the Queen Sapphire Helsinki final",
-        },
-        {
-          src: "/images/places/queen-sapphire/DSC09909.jpg",
-          alt: "Evening runway presentation in Helsinki",
-        },
-        {
-          src: "/images/places/queen-sapphire/DSC09992.jpg",
-          alt: "Queen Sapphire World International event photograph",
-        },
-        {
-          src: "/images/places/queen-sapphire/DSC09858.jpg",
-          alt: "Participant at the Queen Sapphire World final",
-        },
-        {
-          src: "/images/places/queen-sapphire/DSC09823.jpg",
-          alt: "Queen Sapphire World stage presentation",
-        },
-        {
-          src: "/images/places/queen-sapphire/DSC00100.jpg",
-          alt: "Backstage portrait from Queen Sapphire World International",
-        },
-        {
-          src: "/images/places/queen-sapphire/DSC09810.jpg",
-          alt: "Queen Sapphire World contestant during the Helsinki event",
-        },
-        {
-          src: "/images/places/queen-sapphire/DSC00984.jpg",
-          alt: "Runway appearance at the international selection final",
-        },
-        {
-          src: "/images/places/queen-sapphire/DSC00933.jpg",
-          alt: "Queen Sapphire World International finale in Helsinki",
-        },
-      ],
+      src: "/images/places/queen-sapphire/DSC09810.jpg",
+      alt: "Queen Sapphire World contestant during the Helsinki event",
     },
-
     {
-      type: "h2",
-      text: "Author’s Note",
+      src: "/images/places/queen-sapphire/DSC00984.jpg",
+      alt: "Runway appearance at the international selection final",
     },
-
     {
-      type: "p",
-      text: `To every woman who shared this day with us—thank you.`,
+      src: "/images/places/queen-sapphire/DSC00933.jpg",
+      alt: "Queen Sapphire World International finale in Helsinki",
     },
+  ],
+},
 
-    {
-      type: "p",
-      text: `Thank you for your trust, your openness, and for allowing me to be part of your journey.`,
-    },
+{
+  type: "h2",
+  text: "Author’s Note",
+},
 
-    {
-      type: "p",
-      text: `It was an honor to stand beside you, encourage you before you stepped onto the stage, and watch confidence slowly replace uncertainty.`,
-    },
+{
+  type: "p",
+  text: `To every woman who shared this day with us—thank you.
 
-    {
-      type: "p",
-      text: `I hope this day stays with you long after the photographs have been put away—not because of the competition itself, but because of what it reminded you about your own strength.`,
-    },
+Thank you for your trust, your openness, and for allowing me to be part of your journey.
 
-    {
-      type: "p",
-      text: `Thank you for allowing me to become part of your story.`,
-    },
+It was an honor to stand beside you, encourage you before you stepped onto the stage, and watch confidence slowly replace uncertainty.
 
-    {
-      type: "p",
-      text: `Sofia Solas
+I hope this day stays with you long after the photographs have been put away—not because of the competition itself, but because of what it reminded you about your own strength.
+
+Thank you for allowing me to become part of your story.
+
+Sofia Solas
 Editor-in-Chief, THE ISSUE N°`,
-    },
-
+},
     {
       type: "credits",
       items: [
