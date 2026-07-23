@@ -277,10 +277,19 @@ It was an honor to stand beside you, encourage you before you stepped onto the s
 
 I hope this day stays with you long after the photographs have been put away—not because of the competition itself, but because of what it reminded you about your own strength.
 
-Thank you for allowing me to become part of your story.
+Thank you for allowing me to become part of your story.`,
+},
 
-Sofia Solas
-Editor-in-Chief, THE ISSUE N°`,
+{
+  type: "p",
+  className: "mt-10 font-serif text-xl italic text-neutral-900 text-right",
+  text: `Sofia Solas`,
+},
+
+{
+  type: "p",
+  className: "mt-1 font-serif italic text-lg text-neutral-600 text-right",
+  text: `Editor-in-Chief, THE ISSUE N°`,
 },
     {
       type: "credits",

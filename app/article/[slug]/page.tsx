@@ -243,41 +243,42 @@ function VideoBlock({
 function renderBlock(block: ArticleBlock, index: number) {
   switch (block.type) {
     case "p": {
-  const paragraphLink = block.link;
+      const paragraphLink = block.link;
 
-  return (
-    <p
-      key={index}
-      lang="en"
-      style={{
-        textAlign: "justify",
-        textJustify: "inter-word",
-        hyphens: "auto",
-      }}
-      className={[
-        "my-6 text-[18px] leading-relaxed text-neutral-800",
-        block.className || "",
-        block.dropCap
-          ? "first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:font-serif first-letter:text-6xl md:first-letter:text-7xl first-letter:leading-none"
-          : "",
-      ].join(" ")}
-    >
-      {renderTextWithLinks(block.text)}
+      return (
+        <p
+          key={index}
+          lang="en"
+          style={{
+            textAlign: "justify",
+            textJustify: "inter-word",
+            hyphens: "auto",
+          }}
+          className={[
+            "my-6 text-[18px] leading-relaxed text-neutral-800",
+            block.className || "",
+            block.dropCap
+              ? "first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:font-serif first-letter:text-6xl md:first-letter:text-7xl first-letter:leading-none"
+              : "",
+          ].join(" ")}
+        >
+          {renderTextWithLinks(block.text)}
 
-      {paragraphLink ? (
-        <>
-          {" "}
-          <Link
-            href={paragraphLink.href}
-            className="underline underline-offset-4 transition hover:text-black"
-          >
-            {paragraphLink.text}
-          </Link>
-        </>
-      ) : null}
-    </p>
-  );
-}
+          {paragraphLink ? (
+            <>
+              {" "}
+              <Link
+                href={paragraphLink.href}
+                className="underline underline-offset-4 transition hover:text-black"
+              >
+                {paragraphLink.text}
+              </Link>
+            </>
+          ) : null}
+        </p>
+      );
+    }
+
     case "h2":
       return (
         <h2
@@ -414,19 +415,56 @@ export default async function ArticlePage({
 
   if (!article) notFound();
 
+  const isBalakArticle =
+    article.slug === "anastasija-balak-silent-guardian-falling-petals";
+
   return (
     <main className="bg-[#FFFBEB] text-neutral-900">
       {/* HERO */}
       <section className="relative h-[72vh] min-h-[520px] md:h-[82vh] overflow-hidden bg-black">
-        <Image
-          src={article.image}
-          alt={`${article.title} — ${article.category} article in The Issue №`}
-          fill
-          priority
-          className="object-cover"
+        {isBalakArticle ? (
+          <>
+            {/* Blurred background fills the frame */}
+            <Image
+              src={article.image}
+              alt=""
+              fill
+              aria-hidden="true"
+              sizes="100vw"
+              className="scale-110 object-cover object-center blur-2xl opacity-45"
+            />
+
+            {/* Main image is fully visible and centered */}
+            <Image
+              src={article.image}
+              alt={`${article.title} — ${article.category} article in The Issue №`}
+              fill
+              priority
+              sizes="100vw"
+              className="object-contain object-center"
+            />
+
+            {/* Smooth fade into black side frames */}
+            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.96)_0%,rgba(0,0,0,0.76)_7%,rgba(0,0,0,0.30)_17%,transparent_29%,transparent_71%,rgba(0,0,0,0.30)_83%,rgba(0,0,0,0.76)_93%,rgba(0,0,0,0.96)_100%)]" />
+          </>
+        ) : (
+          <Image
+            src={article.image}
+            alt={`${article.title} — ${article.category} article in The Issue №`}
+            fill
+            priority
+            className="object-cover"
+          />
+        )}
+
+        <div
+          className={
+            isBalakArticle
+              ? "absolute inset-0 bg-black/20"
+              : "absolute inset-0 bg-black/45"
+          }
         />
 
-        <div className="absolute inset-0 bg-black/45" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
 
         <div className="absolute bottom-0 left-0 right-0 z-10">
@@ -474,9 +512,7 @@ export default async function ArticlePage({
       {/* CONTENT */}
       <section className="py-16 md:py-20">
         <article lang="en" className="max-w-2xl mx-auto px-6">
-          {article.blocks.map((block, index) =>
-            renderBlock(block, index),
-          )}
+          {article.blocks.map((block, index) => renderBlock(block, index))}
 
           <SubmitForm />
         </article>
