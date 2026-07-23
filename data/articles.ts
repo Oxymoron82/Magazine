@@ -193,7 +193,7 @@ Because true beauty doesn’t begin the moment a crown is placed on a woman’s 
       alt: "Contestant on stage during the Queen Sapphire final",
     },
     {
-      src: "/images/places/queen-sapphire/DSC00984.jpg",
+      src: "/images/places/queen-sapphire/DSC00100.jpg",
       alt: "Runway moment at Oodi Library in Helsinki",
     },
     {
@@ -236,7 +236,7 @@ Because true beauty doesn’t begin the moment a crown is placed on a woman’s 
       alt: "Queen Sapphire World event at Oodi Library",
     },
     {
-      src: "/images/places/queen-sapphire/DSC0926.jpg",
+      src: "/images/places/queen-sapphire/DSC0580.jpg",
       alt: "Contestant during the Queen Sapphire Helsinki final",
     },
     {
@@ -260,7 +260,7 @@ Because true beauty doesn’t begin the moment a crown is placed on a woman’s 
       alt: "Backstage portrait from Queen Sapphire World International",
     },
     {
-      src: "/images/places/queen-sapphire/DSC09810.jpg",
+      src: "/images/places/queen-sapphire/DSC00630.jpg",
       alt: "Queen Sapphire World contestant during the Helsinki event",
     },
     {
