@@ -228,6 +228,7 @@ function VideoBlock({
           loop: true,
         })}
       />
+
       {caption ? (
         <p className="mt-3 text-sm text-neutral-500 text-center">
           {caption}
@@ -242,36 +243,41 @@ function VideoBlock({
 function renderBlock(block: ArticleBlock, index: number) {
   switch (block.type) {
     case "p": {
-      const paragraphLink = block.link;
+  const paragraphLink = block.link;
 
-      return (
-        <p
-          key={index}
-          className={[
-            block.className ||
-              "my-6 text-[18px] leading-relaxed text-neutral-800",
-            block.dropCap
-              ? "first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:font-serif first-letter:text-6xl md:first-letter:text-7xl first-letter:leading-none"
-              : "",
-          ].join(" ")}
-        >
-          {renderTextWithLinks(block.text)}
+  return (
+    <p
+      key={index}
+      lang="en"
+      style={{
+        textAlign: "justify",
+        textJustify: "inter-word",
+        hyphens: "auto",
+      }}
+      className={[
+        "my-6 text-[18px] leading-relaxed text-neutral-800",
+        block.className || "",
+        block.dropCap
+          ? "first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:font-serif first-letter:text-6xl md:first-letter:text-7xl first-letter:leading-none"
+          : "",
+      ].join(" ")}
+    >
+      {renderTextWithLinks(block.text)}
 
-          {paragraphLink ? (
-            <>
-              {" "}
-              <Link
-                href={paragraphLink.href}
-                className="underline underline-offset-4 hover:text-black transition"
-              >
-                {paragraphLink.text}
-              </Link>
-            </>
-          ) : null}
-        </p>
-      );
-    }
-
+      {paragraphLink ? (
+        <>
+          {" "}
+          <Link
+            href={paragraphLink.href}
+            className="underline underline-offset-4 transition hover:text-black"
+          >
+            {paragraphLink.text}
+          </Link>
+        </>
+      ) : null}
+    </p>
+  );
+}
     case "h2":
       return (
         <h2
@@ -307,14 +313,15 @@ function renderBlock(block: ArticleBlock, index: number) {
           caption={block.caption}
         />
       );
-      case "carousel":
-  return (
-    <ArticlePhotoCarousel
-      key={index}
-      images={block.images}
-      caption={block.caption}
-    />
-  );
+
+    case "carousel":
+      return (
+        <ArticlePhotoCarousel
+          key={index}
+          images={block.images}
+          caption={block.caption}
+        />
+      );
 
     case "video":
       return (
@@ -431,25 +438,27 @@ export default async function ArticlePage({
             <h1 className="mt-4 font-serif text-[34px] md:text-[56px] leading-[1.05] tracking-[-0.01em] text-white max-w-[22ch] md:max-w-[20ch] text-balance">
               {article.title}
             </h1>
-<p className="mt-5 max-w-[55ch] text-lg text-white/90 leading-relaxed">
-  {article.excerpt}
-</p>
 
-{article.slug === "trinity-sofia" && (
-  <div className="mt-8">
-    <Link
-      href="/trinity"
-      className="inline-flex items-center gap-2 border border-white/40 bg-white/10 px-5 py-3 text-xs uppercase tracking-[0.35em] text-white backdrop-blur-sm transition hover:bg-white hover:text-black"
-    >
-      Explore Trinity Experience
-      <span>↗</span>
-    </Link>
-  </div>
-)}
+            <p className="mt-5 max-w-[55ch] text-lg text-white/90 leading-relaxed">
+              {article.excerpt}
+            </p>
 
-<div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-white/80">
+            {article.slug === "trinity-sofia" && (
+              <div className="mt-8">
+                <Link
+                  href="/trinity"
+                  className="inline-flex items-center gap-2 border border-white/40 bg-white/10 px-5 py-3 text-xs uppercase tracking-[0.35em] text-white backdrop-blur-sm transition hover:bg-white hover:text-black"
+                >
+                  Explore Trinity Experience
+                  <span>↗</span>
+                </Link>
+              </div>
+            )}
+
+            <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-white/80">
               <span>By {article.author || "The Issue № Editorial Team"}</span>
               <span>—</span>
+
               <time dateTime={article.date}>
                 {new Date(article.date).toLocaleDateString("en-US", {
                   year: "numeric",
@@ -464,8 +473,10 @@ export default async function ArticlePage({
 
       {/* CONTENT */}
       <section className="py-16 md:py-20">
-        <article className="max-w-2xl mx-auto px-6">
-          {article.blocks.map((b, i) => renderBlock(b, i))}
+        <article lang="en" className="max-w-2xl mx-auto px-6">
+          {article.blocks.map((block, index) =>
+            renderBlock(block, index),
+          )}
 
           <SubmitForm />
         </article>
