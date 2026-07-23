@@ -152,7 +152,7 @@ In moments like these, knowing that someone believes in you can make all the dif
       alt: "Contestant backstage at Queen Sapphire World International",
     },
     {
-      src: "/images/places/queen-sapphire/DSC09808.jpg",
+      src: "/images/places/queen-sapphire/DSC00699.jpg",
       alt: "Runway preparation during the Helsinki event",
     },
     {
@@ -236,7 +236,7 @@ Because true beauty doesn’t begin the moment a crown is placed on a woman’s 
       alt: "Queen Sapphire World event at Oodi Library",
     },
     {
-      src: "/images/places/queen-sapphire/DSC0580.jpg",
+      src: "/images/places/queen-sapphire/DSC00580.jpg",
       alt: "Contestant during the Queen Sapphire Helsinki final",
     },
     {
