@@ -72,31 +72,19 @@ export const articles: Article[] = [
   author: "Sofia Solas",
 
   blocks: [
-    {
-      type: "p",
-      dropCap: true,
-      text: `Some events end the moment the applause fades. Others stay with you long after the audience has left the room. For me, the evening of July 11 at Oodi Library in Helsinki was one of those moments.`,
-    },
+   {
+  type: "p",
+  dropCap: true,
+  text: `Some events end the moment the applause fades. Others stay with you long after the audience has left the room. For me, the evening of July 11 at Oodi Library in Helsinki was one of those moments.
 
-    {
-      type: "p",
-      text: `That evening, 23 women from across Europe stepped onto the stage. Each brought her own profession, her own story, and her own journey. They came from different countries and different backgrounds, but they all shared something far more important.`,
-    },
+That evening, 23 women from across Europe stepped onto the stage. Each brought her own profession, her own story, and her own journey. They came from different countries and different backgrounds, but they all shared something far more important.
 
-    {
-      type: "p",
-      text: `They were genuine women, each carrying her own strength, hopes, and dreams. Women who decided to stop putting their lives on hold and simply asked themselves: “Why not?”`,
-    },
+They were genuine women, each carrying her own strength, hopes, and dreams. Women who decided to stop putting their lives on hold and simply asked themselves: “Why not?”
 
-    {
-      type: "p",
-      text: `From the audience, it looked like a beautiful evening filled with elegant gowns, music, graceful walks, and applause. But for me, the most meaningful part of the story happened backstage.`,
-    },
+From the audience, it looked like a beautiful evening filled with elegant gowns, music, graceful walks, and applause. But for me, the most meaningful part of the story happened backstage.
 
-    {
-      type: "p",
-      text: `This year, I was there in two roles: as Editor-in-Chief of THE ISSUE N° and as the runway director. That gave me the opportunity to witness everything the audience never sees.`,
-    },
+This year, I was there in two roles: as Editor-in-Chief of THE ISSUE N° and as the runway director. That gave me the opportunity to witness everything the audience never sees.`,
+},
 
     {
       type: "quote",
@@ -121,7 +109,7 @@ One shared decision:
           alt: "Contestants preparing backstage at Oodi Library",
         },
         {
-          src: "/images/places/queen-sapphire/DSC00035.jpg",
+          src: "/images/places/queen-sapphire/DSC00268.jpg",
           alt: "Quiet moments before the Queen Sapphire World show",
         },
         {

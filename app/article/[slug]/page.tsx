@@ -22,32 +22,27 @@ function renderText(text: string) {
 
 function renderTextWithLinks(text: string) {
   const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const normalizedText = text.replace(/\s*\n+\s*/g, " ");
+  const parts = normalizedText.split(urlRegex);
 
-  return text.split("\n").map((line, i) => {
-    const parts = line.split(urlRegex);
+  return parts.map((part, index) => {
+    const isUrl = /^https?:\/\/[^\s]+$/.test(part);
 
-    return (
-      <Fragment key={i}>
-        {parts.map((part, index) => {
-          if (urlRegex.test(part)) {
-            return (
-              <a
-                key={index}
-                href={part}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="italic underline underline-offset-4 hover:text-black"
-              >
-                {part}
-              </a>
-            );
-          }
+    if (isUrl) {
+      return (
+        <a
+          key={index}
+          href={part}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="italic underline underline-offset-4 hover:text-black"
+        >
+          {part}
+        </a>
+      );
+    }
 
-          return <Fragment key={index}>{part}</Fragment>;
-        })}
-        <br />
-      </Fragment>
-    );
+    return <Fragment key={index}>{part}</Fragment>;
   });
 }
 
@@ -250,32 +245,32 @@ function renderBlock(block: ArticleBlock, index: number) {
       const paragraphLink = block.link;
 
       return (
-    <p
-      key={index}
-      className={[
-        block.className ||
-          "my-6 text-[18px] leading-relaxed text-neutral-800 whitespace-pre-line",
-        block.dropCap
-          ? "first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:font-serif first-letter:text-6xl md:first-letter:text-7xl first-letter:leading-none"
-          : "",
-      ].join(" ")}
-    >
-      {renderTextWithLinks(block.text)}
+        <p
+          key={index}
+          className={[
+            block.className ||
+              "my-6 text-[18px] leading-relaxed text-neutral-800",
+            block.dropCap
+              ? "first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:font-serif first-letter:text-6xl md:first-letter:text-7xl first-letter:leading-none"
+              : "",
+          ].join(" ")}
+        >
+          {renderTextWithLinks(block.text)}
 
-      {paragraphLink ? (
-        <>
-          {" "}
-          <Link
-            href={paragraphLink.href}
-            className="underline underline-offset-4 hover:text-black transition"
-          >
-            {paragraphLink.text}
-          </Link>
-        </>
-      ) : null}
-    </p>
-  );
-}
+          {paragraphLink ? (
+            <>
+              {" "}
+              <Link
+                href={paragraphLink.href}
+                className="underline underline-offset-4 hover:text-black transition"
+              >
+                {paragraphLink.text}
+              </Link>
+            </>
+          ) : null}
+        </p>
+      );
+    }
 
     case "h2":
       return (
