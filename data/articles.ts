@@ -212,7 +212,7 @@ Because true beauty doesn’t begin the moment a crown is placed on a woman’s 
   caption: "View more photographs",
   images: [
     {
-      src: "/images/places/queen-sapphire/DSC00928.jpg",
+      src: "/images/places/queen-sapphire/DSC09808.jpg",
       alt: "Queen Sapphire World International Selection Final in Helsinki",
     },
     {
@@ -228,7 +228,7 @@ Because true beauty doesn’t begin the moment a crown is placed on a woman’s 
       alt: "Queen Sapphire World International contestant in Helsinki",
     },
     {
-      src: "/images/places/queen-sapphire/DSC00948.jpg",
+      src: "/images/places/queen-sapphire/DSC00928.jpg",
       alt: "Stage moment during the international selection final",
     },
     {
