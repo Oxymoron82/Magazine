@@ -69,12 +69,13 @@ const galleryImages = [
   "/images/trinity/21.jpeg",
   "/images/trinity/20.jpeg",
   "/images/trinity/22.jpeg",
-  "/images/trinity/25.jpeg",
-  "/images/trinity/30.jpeg",
-  "/images/trinity/55.jpeg",
-  "/images/trinity/56.jpeg",
-  "/images/trinity/57.jpeg",
-  "/images/trinity/58.jpeg",
+
+  "/images/trinity/new-model/1.jpeg",
+  "/images/trinity/new-model/2.jpeg",
+  "/images/trinity/new-model/3.jpeg",
+  "/images/trinity/new-model/4.jpeg",
+  "/images/trinity/new-model/5.jpeg",
+  "/images/trinity/new-model/6.jpeg",
 ];
 
 const processSteps = [
