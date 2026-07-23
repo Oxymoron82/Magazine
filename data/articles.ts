@@ -117,7 +117,7 @@ One shared decision:
           alt: "Backstage before the Queen Sapphire World International Selection Final",
         },
         {
-          src: "/images/places/queen-sapphire/DSC00034.jpg",
+          src: "/images/places/queen-sapphire/DSC00809.jpg",
           alt: "Contestants preparing backstage at Oodi Library",
         },
         {
@@ -216,7 +216,7 @@ Because true beauty doesn’t begin the moment a crown is placed on a woman’s 
       alt: "Queen Sapphire World International Selection Final in Helsinki",
     },
     {
-      src: "/images/places/queen-sapphire/DSC00942.jpg",
+      src: "/images/places/queen-sapphire/DSC00907.jpg",
       alt: "Queen Sapphire World participant at Oodi Library",
     },
     {
@@ -232,7 +232,7 @@ Because true beauty doesn’t begin the moment a crown is placed on a woman’s 
       alt: "Stage moment during the international selection final",
     },
     {
-      src: "/images/places/queen-sapphire/DSC00631.jpg",
+      src: "/images/places/queen-sapphire/DSC00762.jpg",
       alt: "Queen Sapphire World event at Oodi Library",
     },
     {
@@ -244,7 +244,7 @@ Because true beauty doesn’t begin the moment a crown is placed on a woman’s 
       alt: "Evening runway presentation in Helsinki",
     },
     {
-      src: "/images/places/queen-sapphire/DSC00809.jpg",
+      src: "/images/places/queen-sapphire/DSC00822.jpg",
       alt: "Queen Sapphire World International event photograph",
     },
     {
