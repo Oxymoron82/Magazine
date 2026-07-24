@@ -59,8 +59,8 @@ const editorialFormats = [
 ];
 
 const galleryImagesOne = [
+  "/images/trinity/11.jpeg",
   "/images/trinity/1.jpeg",
-  "/images/trinity/2.jpeg",
   "/images/trinity/3.jpeg",
   "/images/trinity/4.jpeg",
   "/images/trinity/5.jpeg",
