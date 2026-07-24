@@ -64,20 +64,7 @@ export default function MediaKitCarousel() {
             type="button"
             onClick={showPrevious}
             aria-label="Previous media kit page"
-            className="
-              absolute left-2 top-1/2 z-20
-              flex h-10 w-10 -translate-y-1/2 items-center justify-center
-              rounded-full border border-white/35
-              bg-black/15 text-white
-              shadow-[0_8px_30px_rgba(0,0,0,0.12)]
-              backdrop-blur-md
-              transition duration-300
-              hover:scale-105 hover:bg-black/30
-              focus:outline-none
-              focus-visible:ring-2 focus-visible:ring-white/80
-              sm:left-4 sm:h-12 sm:w-12
-              md:left-6 md:h-14 md:w-14
-            "
+            className="absolute left-2 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/35 bg-black/15 text-white shadow-[0_8px_30px_rgba(0,0,0,0.12)] backdrop-blur-md transition duration-300 hover:scale-105 hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 sm:left-4 sm:h-12 sm:w-12 md:left-6 md:h-14 md:w-14"
           >
             <svg
               aria-hidden="true"
@@ -101,20 +88,7 @@ export default function MediaKitCarousel() {
             type="button"
             onClick={showNext}
             aria-label="Next media kit page"
-            className="
-              absolute right-2 top-1/2 z-20
-              flex h-10 w-10 -translate-y-1/2 items-center justify-center
-              rounded-full border border-white/35
-              bg-black/15 text-white
-              shadow-[0_8px_30px_rgba(0,0,0,0.12)]
-              backdrop-blur-md
-              transition duration-300
-              hover:scale-105 hover:bg-black/30
-              focus:outline-none
-              focus-visible:ring-2 focus-visible:ring-white/80
-              sm:right-4 sm:h-12 sm:w-12
-              md:right-6 md:h-14 md:w-14
-            "
+            className="absolute right-2 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/35 bg-black/15 text-white shadow-[0_8px_30px_rgba(0,0,0,0.12)] backdrop-blur-md transition duration-300 hover:scale-105 hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 sm:right-4 sm:h-12 sm:w-12 md:right-6 md:h-14 md:w-14"
           >
             <svg
               aria-hidden="true"
@@ -163,7 +137,7 @@ export default function MediaKitCarousel() {
         </div>
       </div>
 
-      <style jsx>{`
+      <style>{`
         .media-kit-slide {
           position: absolute;
           inset: 0;
