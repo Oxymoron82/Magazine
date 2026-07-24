@@ -58,7 +58,7 @@ const editorialFormats = [
   },
 ];
 
-const galleryImages = [
+const galleryImagesOne = [
   "/images/trinity/1.jpeg",
   "/images/trinity/2.jpeg",
   "/images/trinity/3.jpeg",
@@ -69,7 +69,9 @@ const galleryImages = [
   "/images/trinity/21.jpeg",
   "/images/trinity/20.jpeg",
   "/images/trinity/22.jpeg",
+];
 
+const galleryImagesTwo = [
   "/images/trinity/new-model/1.jpeg",
   "/images/trinity/new-model/2.jpeg",
   "/images/trinity/new-model/3.jpeg",
@@ -451,34 +453,61 @@ export default function TrinityPage() {
         </div>
       </section>
 
-      {/* GALLERY */}
-      <section className="max-w-7xl mx-auto px-6 pb-20 md:pb-28">
-        <div className="border-neutral-200/70 pt-16">
-          <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
-            Selected Work
-          </p>
+     {/* GALLERY */}
+<section className="max-w-7xl mx-auto px-6 pb-20 md:pb-28">
+  <div className="border-neutral-200/70 pt-16">
+    <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
+      Selected Work
+    </p>
 
-          <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-            {galleryImages.map((src, index) => (
-              <div
-                key={src}
-                className={`relative overflow-hidden bg-white/30 ${
-                  index === 0 || index === 7 || index === 12
-                    ? "col-span-2 aspect-[4/5]"
-                    : "aspect-[3/4]"
-                }`}
-              >
-                <Image
-                  src={src}
-                  alt={`Trinity editorial photography ${index + 1}`}
-                  fill
-                  className="object-cover transition duration-700 hover:scale-[1.035]"
-                />
-              </div>
-            ))}
-          </div>
+    {/* FIRST EDITORIAL */}
+    <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+      {galleryImagesOne.map((src, index) => (
+        <div
+          key={src}
+          className={`relative overflow-hidden bg-white/30 ${
+            index === 0 || index === 7
+              ? "col-span-2 aspect-[4/5]"
+              : "aspect-[3/4]"
+          }`}
+        >
+          <Image
+            src={src}
+            alt={`Trinity editorial photography ${index + 1}`}
+            fill
+            className="object-cover transition duration-700 hover:scale-[1.035]"
+          />
         </div>
-      </section>
+      ))}
+    </div>
+
+    {/* EDITORIAL DIVIDER */}
+    <div className="my-20 md:my-28">
+      <div className="h-px w-full bg-neutral-200/70" />
+    </div>
+
+    {/* SECOND EDITORIAL */}
+    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+      {galleryImagesTwo.map((src, index) => (
+        <div
+          key={src}
+          className={`relative overflow-hidden bg-white/30 ${
+            index === 2
+              ? "col-span-2 aspect-[4/5]"
+              : "aspect-[3/4]"
+          }`}
+        >
+          <Image
+            src={src}
+            alt={`Trinity editorial photography second story ${index + 1}`}
+            fill
+            className="object-cover transition duration-700 hover:scale-[1.035]"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* PROCESS */}
       <section className="max-w-7xl mx-auto px-6 pb-20 md:pb-28">

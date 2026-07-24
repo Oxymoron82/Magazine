@@ -61,9 +61,9 @@ export const articles: Article[] = [
 
   
 {
-  slug: "when-women-stop-waiting-queen-sapphire-world",
+  slug: "beyond-the-crown-queen-sapphire-world",
   column: "becoming",
-  title: "When Women Stop Waiting",
+  title: "Beyond The Crown",
   category: "Becoming",
   excerpt:
     "A reflection by Sofia Solas on Queen Sapphire World, courage, visibility, and the moment when women allow themselves to begin again.",
