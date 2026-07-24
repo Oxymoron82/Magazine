@@ -26,16 +26,18 @@ export default function MediaKitCarousel() {
   };
 
   const openPage = (index: number) => {
+    if (index === currentPage) return;
+
     setDirection(index > currentPage ? "next" : "previous");
     setCurrentPage(index);
   };
 
   return (
-    <div className="mt-14">
-      <div className="relative mx-auto w-full max-w-4xl">
+    <div className="mt-10 w-full md:mt-14">
+      <div className="relative mx-auto w-full max-w-[1600px]">
         {/* CAROUSEL */}
         <div className="relative">
-          <div className="relative aspect-[16/10] overflow-hidden bg-white/30 shadow-[0_18px_60px_rgba(74,63,60,0.14)]">
+          <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#F3EDE3] shadow-[0_24px_80px_rgba(74,63,60,0.14)] sm:aspect-[16/9]">
             <div
               key={mediaKitPages[currentPage]}
               className={
@@ -51,7 +53,7 @@ export default function MediaKitCarousel() {
                 }`}
                 fill
                 priority={currentPage === 0}
-                sizes="(max-width: 768px) 100vw, 896px"
+                sizes="(max-width: 640px) 100vw, (max-width: 1280px) 96vw, 1600px"
                 className="object-contain"
               />
             </div>
@@ -62,7 +64,20 @@ export default function MediaKitCarousel() {
             type="button"
             onClick={showPrevious}
             aria-label="Previous media kit page"
-            className="absolute left-3 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/80 text-white shadow-[0_10px_30px_rgba(0,0,0,0.28)] backdrop-blur-sm transition duration-300 hover:scale-105 hover:bg-black focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 md:-left-7 md:h-14 md:w-14"
+            className="
+              absolute left-2 top-1/2 z-20
+              flex h-10 w-10 -translate-y-1/2 items-center justify-center
+              rounded-full border border-white/35
+              bg-black/15 text-white
+              shadow-[0_8px_30px_rgba(0,0,0,0.12)]
+              backdrop-blur-md
+              transition duration-300
+              hover:scale-105 hover:bg-black/30
+              focus:outline-none
+              focus-visible:ring-2 focus-visible:ring-white/80
+              sm:left-4 sm:h-12 sm:w-12
+              md:left-6 md:h-14 md:w-14
+            "
           >
             <svg
               aria-hidden="true"
@@ -74,7 +89,7 @@ export default function MediaKitCarousel() {
               <path
                 d="M19 12H5M11 18L5 12L11 6"
                 stroke="currentColor"
-                strokeWidth="1.8"
+                strokeWidth="1.6"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
@@ -86,7 +101,20 @@ export default function MediaKitCarousel() {
             type="button"
             onClick={showNext}
             aria-label="Next media kit page"
-            className="absolute right-3 top-1/2 z-20 flex h-11 w-11 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/80 text-white shadow-[0_10px_30px_rgba(0,0,0,0.28)] backdrop-blur-sm transition duration-300 hover:scale-105 hover:bg-black focus:outline-none focus-visible:ring-2 focus-visible:ring-white/80 md:-right-7 md:h-14 md:w-14"
+            className="
+              absolute right-2 top-1/2 z-20
+              flex h-10 w-10 -translate-y-1/2 items-center justify-center
+              rounded-full border border-white/35
+              bg-black/15 text-white
+              shadow-[0_8px_30px_rgba(0,0,0,0.12)]
+              backdrop-blur-md
+              transition duration-300
+              hover:scale-105 hover:bg-black/30
+              focus:outline-none
+              focus-visible:ring-2 focus-visible:ring-white/80
+              sm:right-4 sm:h-12 sm:w-12
+              md:right-6 md:h-14 md:w-14
+            "
           >
             <svg
               aria-hidden="true"
@@ -98,7 +126,7 @@ export default function MediaKitCarousel() {
               <path
                 d="M5 12H19M13 6L19 12L13 18"
                 stroke="currentColor"
-                strokeWidth="1.8"
+                strokeWidth="1.6"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
@@ -107,7 +135,7 @@ export default function MediaKitCarousel() {
         </div>
 
         {/* PAGE COUNTER */}
-        <div className="mt-5 flex items-center justify-between text-xs uppercase tracking-[0.3em] text-neutral-500">
+        <div className="mt-5 flex items-center justify-between px-4 text-[9px] uppercase tracking-[0.26em] text-neutral-500 sm:px-0 sm:text-xs sm:tracking-[0.3em]">
           <span>Collaboration Book</span>
 
           <span>
@@ -142,6 +170,7 @@ export default function MediaKitCarousel() {
           animation-duration: 600ms;
           animation-timing-function: ease;
           animation-fill-mode: both;
+          will-change: opacity, transform;
         }
 
         .media-kit-slide-next {
@@ -155,7 +184,7 @@ export default function MediaKitCarousel() {
         @keyframes mediaKitNext {
           from {
             opacity: 0;
-            transform: translateX(18px) scale(0.995);
+            transform: translateX(20px) scale(0.995);
           }
 
           to {
@@ -167,7 +196,7 @@ export default function MediaKitCarousel() {
         @keyframes mediaKitPrevious {
           from {
             opacity: 0;
-            transform: translateX(-18px) scale(0.995);
+            transform: translateX(-20px) scale(0.995);
           }
 
           to {
