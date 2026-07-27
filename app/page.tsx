@@ -4,7 +4,6 @@ import Image from "next/image";
 import { articles } from "@/data/articles";
 import { columns } from "@/data/columns";
 import SearchArticles from "@/components/SearchArticles";
-import ArticlePhotoCarousel from "@/components/ArticlePhotoCarousel";
 
 export const metadata: Metadata = {
   title: "The Issue № | Independent Fashion and Editorial Magazine",
@@ -377,69 +376,124 @@ export default function HomePage() {
 
             <div className="lg:col-span-8">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <Link
-                  href="/#latest"
-                  className="group block border border-neutral-200 bg-white/35 p-6 md:p-7 min-h-[260px] hover:bg-white/60 transition"
-                >
-                  <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
-                    01
-                  </p>
+                <Link href="/#latest" className="group block h-full">
+                  <article className="flex h-full min-h-[430px] flex-col overflow-hidden border border-neutral-200 bg-white/45 transition-all duration-500 hover:-translate-y-1 hover:bg-white/70 hover:shadow-[0_18px_45px_rgba(74,63,60,0.08)]">
+                    <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100">
+                      <Image
+                        src="/images/magazine.png"
+                        alt="The Issue № independent editorial magazine"
+                        fill
+                        className="object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.035]"
+                      />
 
-                  <h3 className="mt-8 font-serif text-3xl leading-tight text-editorial-text">
-                    Magazine
-                  </h3>
+                      <div className="absolute inset-0 bg-black/[0.06] transition duration-500 group-hover:bg-transparent" />
 
-                  <p className="mt-5 text-sm leading-[1.8] text-neutral-700">
-                    Articles, interviews, essays and visual stories from the
-                    worlds of fashion, culture, creativity and entrepreneurship.
-                  </p>
+                      <span className="absolute right-5 top-5 text-[10px] uppercase tracking-[0.35em] text-white">
+                        01
+                      </span>
+                    </div>
 
-                  <p className="mt-8 text-sm underline underline-offset-4 group-hover:text-black transition">
-                    Read stories →
-                  </p>
-                </Link>
-<Link
-  href="/trinity"
-                  className="group block border border-neutral-200 bg-white/35 p-6 md:p-7 min-h-[260px] hover:bg-white/60 transition"
-                >
-                  <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
-                    02
-                  </p>
+                    <div className="flex flex-1 flex-col p-6 md:p-7">
+                      <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
+                        Editorial Platform
+                      </p>
 
-                  <h3 className="mt-8 font-serif text-3xl leading-tight text-editorial-text">
-                    Projects
-                  </h3>
+                      <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text">
+                        Magazine
+                      </h3>
 
-                  <p className="mt-5 text-sm leading-[1.8] text-neutral-700">
-                    Long-form editorial projects, beginning with Trinity — a
-                    visual story about identity, transformation and presence.
-                  </p>
+                      <div className="mt-5 h-px w-12 bg-[#4A3F3C]/30 transition-all duration-500 group-hover:w-20" />
 
-                  <p className="mt-8 text-sm underline underline-offset-4 group-hover:text-black transition">
-                    Explore Trinity →
-                  </p>
+                      <p className="mt-5 text-sm leading-[1.8] text-neutral-700">
+                        Articles, interviews, essays and visual stories from the
+                        worlds of fashion, culture, creativity and entrepreneurship.
+                      </p>
+
+                      <p className="mt-auto pt-8 text-sm underline decoration-[#4A3F3C]/40 underline-offset-4 transition group-hover:decoration-[#4A3F3C]">
+                        Read stories →
+                      </p>
+                    </div>
+                  </article>
                 </Link>
 
-                <Link
-                  href="/partnerships"
-                  className="group block border border-neutral-200 bg-white/35 p-6 md:p-7 min-h-[260px] hover:bg-white/60 transition"
-                >
-                  <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
-                    03
-                  </p>
+                <Link href="/trinity" className="group block h-full">
+                  <article className="flex h-full min-h-[430px] flex-col overflow-hidden border border-neutral-200 bg-white/45 transition-all duration-500 hover:-translate-y-1 hover:bg-white/70 hover:shadow-[0_18px_45px_rgba(74,63,60,0.08)]">
+                    <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100">
+                      <Image
+                        src="/images/projects.png"
+                        alt="Trinity editorial photography project"
+                        fill
+                        className="object-cover object-[center_25%] transition-transform duration-1000 ease-out group-hover:scale-[1.035]"
+                      />
 
-                  <h3 className="mt-8 font-serif text-3xl leading-tight text-editorial-text">
-                    Partnerships
-                  </h3>
+                      <div className="absolute inset-0 bg-black/[0.06] transition duration-500 group-hover:bg-transparent" />
 
-                  <p className="mt-5 text-sm leading-[1.8] text-neutral-700">
-                    Editorial collaborations, brand stories, photography,
-                    campaigns and media-kit opportunities with The Issue №.
-                  </p>
+                      <span className="absolute right-5 top-5 text-[10px] uppercase tracking-[0.35em] text-white">
+                        02
+                      </span>
+                    </div>
 
-                  <p className="mt-8 text-sm underline underline-offset-4 group-hover:text-black transition">
-                    Work with us →
-                  </p>
+                    <div className="flex flex-1 flex-col p-6 md:p-7">
+                      <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
+                        Long-form Stories
+                      </p>
+
+                      <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text">
+                        Projects
+                      </h3>
+
+                      <div className="mt-5 h-px w-12 bg-[#4A3F3C]/30 transition-all duration-500 group-hover:w-20" />
+
+                      <p className="mt-5 text-sm leading-[1.8] text-neutral-700">
+                        Long-form editorial projects, beginning with Trinity — a
+                        visual story about identity, transformation and presence.
+                      </p>
+
+                      <p className="mt-auto pt-8 text-sm underline decoration-[#4A3F3C]/40 underline-offset-4 transition group-hover:decoration-[#4A3F3C]">
+                        Explore Trinity →
+                      </p>
+                    </div>
+                  </article>
+                </Link>
+
+                <Link href="/partnerships" className="group block h-full">
+                  <article className="flex h-full min-h-[430px] flex-col overflow-hidden border border-neutral-200 bg-white/45 transition-all duration-500 hover:-translate-y-1 hover:bg-white/70 hover:shadow-[0_18px_45px_rgba(74,63,60,0.08)]">
+                    <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100">
+                      <Image
+                        src="/images/partnerships.png"
+                        alt="Editorial collaborations and partnerships with The Issue №"
+                        fill
+                        className="object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.035]"
+                      />
+
+                      <div className="absolute inset-0 bg-black/[0.06] transition duration-500 group-hover:bg-transparent" />
+
+                      <span className="absolute right-5 top-5 text-[10px] uppercase tracking-[0.35em] text-white">
+                        03
+                      </span>
+                    </div>
+
+                    <div className="flex flex-1 flex-col p-6 md:p-7">
+                      <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
+                        Creative Collaboration
+                      </p>
+
+                      <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text">
+                        Partnerships
+                      </h3>
+
+                      <div className="mt-5 h-px w-12 bg-[#4A3F3C]/30 transition-all duration-500 group-hover:w-20" />
+
+                      <p className="mt-5 text-sm leading-[1.8] text-neutral-700">
+                        Editorial collaborations, brand stories, photography,
+                        campaigns and media-kit opportunities with The Issue №.
+                      </p>
+
+                      <p className="mt-auto pt-8 text-sm underline decoration-[#4A3F3C]/40 underline-offset-4 transition group-hover:decoration-[#4A3F3C]">
+                        Work with us →
+                      </p>
+                    </div>
+                  </article>
                 </Link>
               </div>
             </div>
