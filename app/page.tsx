@@ -550,7 +550,8 @@ export default function HomePage() {
           <div className="md:col-span-5">
             <div className="relative ml-auto w-full max-w-sm aspect-[4/5] overflow-hidden rounded-xl">
               <Image
-                src="/images/sonja1.jpg"
+                src="/images/sonja1.jpeg"
+                
                 alt="Editor portrait"
                 fill
                 className="object-cover transition duration-700 hover:scale-[1.03]"
