@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -7,39 +8,35 @@ export const metadata: Metadata = {
     "The story behind The Issue № — an independent editorial magazine created, designed and developed by Maria Shatylovich.",
 };
 
-type PhotoPlaceholderProps = {
-  label: string;
-  note?: string;
+type EditorialImageProps = {
+  src: string;
+  alt: string;
   className?: string;
+  imageClassName?: string;
+  priority?: boolean;
+  sizes?: string;
 };
 
-function PhotoPlaceholder({
-  label,
-  note,
+function EditorialImage({
+  src,
+  alt,
   className = "",
-}: PhotoPlaceholderProps) {
+  imageClassName = "",
+  priority = false,
+  sizes = "(max-width: 1024px) 100vw, 50vw",
+}: EditorialImageProps) {
   return (
     <div
-      className={`relative flex overflow-hidden bg-[#ded9cf] ${className}`}
-      aria-label={label}
+      className={`relative overflow-hidden bg-[#ded9cf] ${className}`}
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-white/40 via-transparent to-black/10" />
-
-      <div className="relative z-10 m-auto px-6 text-center">
-        <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-600">
-          Photo placeholder
-        </p>
-
-        <p className="mt-3 font-serif text-2xl leading-tight text-neutral-800">
-          {label}
-        </p>
-
-        {note && (
-          <p className="mt-3 text-xs leading-relaxed text-neutral-500">
-            {note}
-          </p>
-        )}
-      </div>
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        priority={priority}
+        sizes={sizes}
+        className={`object-cover ${imageClassName}`}
+      />
     </div>
   );
 }
@@ -49,31 +46,36 @@ const creationSteps = [
     number: "01",
     title: "The Idea",
     text: "I wanted to create a real editorial product rather than another portfolio made of isolated screens.",
-    photo: "Notebook, handwritten ideas or printed references",
+    image: "/images/behind-the-issue/3.png",
+    alt: "Early ideas and notes for The Issue magazine",
   },
   {
     number: "02",
     title: "Research",
     text: "I explored independent magazines, editorial websites, typography and ways to make long-form content feel engaging online.",
-    photo: "Printed magazines, books and visual references",
+    image: "/images/behind-the-issue/4.png",
+    alt: "Editorial research and visual references",
   },
   {
     number: "03",
     title: "Design & Doubts",
     text: "The visual direction changed many times. I kept simplifying the layouts until the magazine began to feel calm, spacious and contemporary.",
-    photo: "Maria reviewing layouts or working at the computer",
+    image: "/images/behind-the-issue/5.png",
+    alt: "Design exploration and visual decisions",
   },
   {
     number: "04",
     title: "Development",
     text: "I turned the concept into a responsive editorial platform using reusable components and flexible article layouts.",
-    photo: "Code visible on the computer screen",
+    image: "/images/behind-the-issue/6.png",
+    alt: "Frontend development and code for The Issue",
   },
   {
     number: "05",
     title: "Launch & Evolution",
     text: "The Issue № is not a finished experiment. It continues to grow through new stories, collaborations and ideas.",
-    photo: "Magazine website, printed pages or publishing process",
+    image: "/images/behind-the-issue/7.png",
+    alt: "The Issue magazine publishing process",
   },
 ];
 
@@ -102,12 +104,12 @@ export default function BehindTheIssuePage() {
                 A magazine built from concept to code.
               </h1>
 
-              <p className="mt-10 max-w-lg text-[17px] leading-[1.8] text-neutral-650">
+              <p className="mt-10 max-w-lg text-[17px] leading-[1.8] text-neutral-600">
                 The Issue № is an independent editorial magazine created,
                 designed and developed by Maria Shatylovich.
               </p>
 
-              <p className="mt-5 max-w-lg text-[17px] leading-[1.8] text-neutral-650">
+              <p className="mt-5 max-w-lg text-[17px] leading-[1.8] text-neutral-600">
                 It brings together editorial storytelling, visual design,
                 photography and modern web development in one evolving digital
                 experience.
@@ -119,10 +121,12 @@ export default function BehindTheIssuePage() {
             </div>
           </div>
 
-          <PhotoPlaceholder
-            label="Maria working at the computer"
-            note="Recommended: horizontal or portrait crop, at least 1400 px wide"
+          <EditorialImage
+            src="/images/behind-the-issue/1.png"
+            alt="Maria Shatylovich working on The Issue magazine"
+            priority
             className="min-h-[560px] lg:min-h-full"
+            imageClassName="object-center"
           />
         </div>
       </section>
@@ -143,7 +147,7 @@ export default function BehindTheIssuePage() {
               It is proof of how I think, create and solve problems.
             </p>
 
-            <div className="mt-10 max-w-xl space-y-5 text-[16px] leading-[1.8] text-neutral-650">
+            <div className="mt-10 max-w-xl space-y-5 text-[16px] leading-[1.8] text-neutral-600">
               <p>
                 I did not want to demonstrate my skills through static mock-ups
                 alone. I wanted to build something people could actually read,
@@ -174,10 +178,11 @@ export default function BehindTheIssuePage() {
             </div>
           </div>
 
-          <PhotoPlaceholder
-            label="Printed magazines and editorial references"
-            note="Recommended ratio: 4:3, at least 1400 × 1050 px"
+          <EditorialImage
+            src="/images/behind-the-issue/2.png"
+            alt="Creative editorial workspace representing design thinking and portfolio development"
             className="aspect-[4/3]"
+            imageClassName="object-center"
           />
         </div>
       </section>
@@ -207,14 +212,17 @@ export default function BehindTheIssuePage() {
                     {step.title}
                   </h3>
 
-                  <p className="mt-5 min-h-[120px] text-sm leading-[1.75] text-neutral-650">
+                  <p className="mt-5 text-sm leading-[1.75] text-neutral-600 xl:min-h-[145px]">
                     {step.text}
                   </p>
                 </div>
 
-                <PhotoPlaceholder
-                  label={step.photo}
+                <EditorialImage
+                  src={step.image}
+                  alt={step.alt}
                   className="mt-7 aspect-[4/3]"
+                  imageClassName="transition duration-700 hover:scale-[1.025]"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 20vw"
                 />
               </article>
             ))}
@@ -224,11 +232,12 @@ export default function BehindTheIssuePage() {
 
       {/* DESIGN PHILOSOPHY */}
       <section className="mx-auto max-w-[1600px] px-6 py-20 md:px-12 md:py-28">
-        <div className="grid grid-cols-1 items-stretch gap-0 lg:grid-cols-2">
-          <PhotoPlaceholder
-            label="Maria working with code on a large screen"
-            note="Recommended: horizontal photograph, at least 1600 × 1100 px"
+        <div className="grid grid-cols-1 items-stretch lg:grid-cols-2">
+          <EditorialImage
+            src="/images/behind-the-issue/8.png"
+            alt="Maria working with code on a large computer screen"
             className="min-h-[520px]"
+            imageClassName="object-center"
           />
 
           <div className="flex items-center bg-[#ebe6dc] px-8 py-16 md:px-14 lg:px-16">
@@ -245,7 +254,7 @@ export default function BehindTheIssuePage() {
                 Timeless.
               </h2>
 
-              <p className="mt-8 max-w-xl text-[16px] leading-[1.8] text-neutral-650">
+              <p className="mt-8 max-w-xl text-[16px] leading-[1.8] text-neutral-600">
                 I wanted the magazine to feel like a carefully curated reading
                 experience rather than a conventional business website.
                 Typography, imagery, space and rhythm guide every design
@@ -267,37 +276,6 @@ export default function BehindTheIssuePage() {
         </div>
       </section>
 
-      {/* PHOTO STRIP */}
-      <section className="mx-auto max-w-[1600px] px-6 pb-20 md:px-12 md:pb-28">
-        <div className="mb-10">
-          <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500">
-            Inside the process
-          </p>
-        </div>
-
-        <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
-          <PhotoPlaceholder
-            label="Writing"
-            className="aspect-[3/4]"
-          />
-
-          <PhotoPlaceholder
-            label="Development"
-            className="aspect-[3/4]"
-          />
-
-          <PhotoPlaceholder
-            label="Editorial research"
-            className="aspect-[3/4]"
-          />
-
-          <PhotoPlaceholder
-            label="Publishing"
-            className="aspect-[3/4]"
-          />
-        </div>
-      </section>
-
       {/* COLLABORATION CTA */}
       <section className="border-t border-black/10">
         <div className="mx-auto grid max-w-[1600px] grid-cols-1 lg:grid-cols-2">
@@ -311,7 +289,7 @@ export default function BehindTheIssuePage() {
                 Looking for a designer and developer for your next project?
               </h2>
 
-              <p className="mt-8 max-w-xl text-[17px] leading-[1.8] text-neutral-650">
+              <p className="mt-8 max-w-xl text-[17px] leading-[1.8] text-neutral-600">
                 I help businesses and creative professionals create clear,
                 beautiful and memorable digital experiences — from visual
                 direction and UI design to the final published website.
@@ -335,10 +313,11 @@ export default function BehindTheIssuePage() {
             </div>
           </div>
 
-          <PhotoPlaceholder
-            label="The Issue, notebook, laptop and coffee"
-            note="Recommended: horizontal still life, at least 1400 px wide"
+          <EditorialImage
+            src="/images/behind-the-issue/9.png"
+            alt="The Issue magazine, notebook, laptop and coffee"
             className="min-h-[500px]"
+            imageClassName="object-center"
           />
         </div>
       </section>
