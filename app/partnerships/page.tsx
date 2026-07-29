@@ -514,7 +514,7 @@ Explore our editorial services, pricing and tailored collaboration options.
       </section>
 
       {/* LARGE MEDIA KIT CAROUSEL */}
-      <section className="overflow-hidden pb-20 md:pb-28">
+     {/* <section className="overflow-hidden pb-20 md:pb-28">
         <div className="mx-auto w-full max-w-[1680px] px-0 sm:px-4 md:px-8 lg:px-12">
           <div className="w-full">
             <MediaKitCarousel />
@@ -532,6 +532,7 @@ Explore our editorial services, pricing and tailored collaboration options.
           </div>
         </div>
       </section>
+      */}
 
       {/* CONTACT */}
       <section
