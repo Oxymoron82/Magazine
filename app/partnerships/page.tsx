@@ -236,8 +236,11 @@ export default function PartnershipsPage() {
               </h2>
 
               <p className="mt-8 max-w-sm text-[16px] leading-[1.8] text-white/60">
-                Explore our editorial packages, inclusions and pricing on the
-                dedicated services page.
+                Already have a completed editorial? Or looking for a full creative production?
+
+We can support your project at any stage.
+
+Explore our editorial services, pricing and tailored collaboration options.
               </p>
             </div>
 
