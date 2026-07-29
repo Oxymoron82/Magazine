@@ -491,7 +491,7 @@ Explore our editorial services, pricing and tailored collaboration options.
       </section>
 
       {/* COLLABORATION BOOK INTRO */}
-      <section className="mx-auto max-w-7xl px-6 pb-10 md:px-12 md:pb-14">
+      {/* <section className="mx-auto max-w-7xl px-6 pb-10 md:px-12 md:pb-14">
         <div className="grid grid-cols-1 gap-10 border-t border-neutral-200/70 pt-14 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-4">
             <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
@@ -513,8 +513,8 @@ Explore our editorial services, pricing and tailored collaboration options.
         </div>
       </section>
 
-      {/* LARGE MEDIA KIT CAROUSEL */}
-     {/* <section className="overflow-hidden pb-20 md:pb-28">
+      
+      <section className="overflow-hidden pb-20 md:pb-28">
         <div className="mx-auto w-full max-w-[1680px] px-0 sm:px-4 md:px-8 lg:px-12">
           <div className="w-full">
             <MediaKitCarousel />
