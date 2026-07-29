@@ -6,7 +6,7 @@ import MediaKitCarousel from "@/components/MediaKitCarousel";
 export const metadata: Metadata = {
   title: "Partnerships | The Issue №",
   description:
-    "Editorial partnerships, brand stories, visual campaigns and creative collaborations with The Issue №.",
+    "Editorial partnerships, brand stories, founder interviews, event coverage and creative productions with The Issue №.",
   alternates: {
     canonical: "https://theissue.xyz/partnerships",
   },
@@ -14,81 +14,62 @@ export const metadata: Metadata = {
 
 const partnershipFormats = [
   {
-    title: "Editorial Feature",
-    text: "A magazine-style article built around your story, identity and visual world.",
+    title: "Brand Story",
+    text: "An editorial article introducing your brand, collection or creative project through its identity, values and visual world.",
     image: "/images/partnerships/1.png",
   },
   {
-    title: "Brand Story",
-    text: "A thoughtful profile for founders, studios, businesses and creative projects.",
+    title: "Founder Interview",
+    text: "An in-depth conversation exploring the vision, journey and philosophy behind a brand or independent project.",
     image: "/images/partnerships/2.png",
   },
   {
     title: "Event Coverage",
-    text: "Photography, atmosphere, interviews and editorial reporting from selected events.",
+    text: "Editorial coverage of launches, fashion events, exhibitions and cultural experiences.",
     image: "/images/partnerships/3.png",
   },
   {
-    title: "Visual Campaign",
-    text: "Image-led storytelling for launches, campaigns and creative announcements.",
+    title: "Editorial Production",
+    text: "A complete editorial production created together with your brand, from the initial concept to the final publication.",
     image: "/images/partnerships/4.png",
   },
   {
-    title: "Interview",
-    text: "A personal conversation shaped into a polished editorial publication.",
+    title: "International Publication",
+    text: "Selected editorial productions prepared for submission to international fashion and creative publications.",
     image: "/images/partnerships/5.png",
   },
   {
     title: "Creative Direction",
-    text: "Concept, mood, story structure and visual direction for editorial production.",
+    text: "Concept development, visual direction, photography, storytelling and editorial structure for a distinctive final result.",
     image: "/images/partnerships/6.png",
   },
 ];
 
-const collaborationPackages = [
+const editorialServices = [
   {
     number: "01",
     title: "Editorial Feature",
-    description:
-      "An in-depth editorial article about founders, brands, creatives and inspiring projects.",
-    price: "€90",
-    label: "One article",
+    price: "€120",
   },
   {
     number: "02",
-    title: "Business Feature",
-    description:
-      "A story about entrepreneurship, branding, strategy and creative business.",
-    price: "€120",
-    label: "One article",
+    title: "Founder Interview",
+    price: "€180",
   },
   {
     number: "03",
     title: "Event Coverage",
-    description:
-      "Thoughtful digital coverage of events, exhibitions, launches and cultural experiences.",
-    price: "€120",
-    label: "Full coverage",
+    price: "From €180",
   },
   {
     number: "04",
-    title: "Brand Editorial Experience",
-    description:
-      "A complete editorial feature combining storytelling, professional photography and publication to communicate the identity and values of a brand.",
-    price: "€300",
-    label: "Full coverage",
-    href: "/partnerships/brand-editorial-experience",
-    linkText: "Read more",
+    title: "Editorial Production",
+    price: "From €650",
   },
   {
     number: "05",
-    title: "Trinity Project",
-    description:
-      "An in-house editorial project combining photography, creative direction and visual storytelling.",
-    price: "€280",
-    label: "Editorial suite",
-    href: "/trinity",
-    linkText: "Discover Trinity",
+    title: "International Publication",
+    price: "From €450",
   },
 ];
 
@@ -114,8 +95,9 @@ export default function PartnershipsPage() {
           className="object-cover"
         />
 
-        <div className="absolute inset-0 bg-black/20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
+        <div className="absolute inset-0 bg-black/25" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/15 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/30 via-transparent to-transparent" />
 
         <div className="absolute inset-0 z-10 flex items-center">
           <div className="mx-auto w-full max-w-7xl px-6 md:px-12">
@@ -124,27 +106,36 @@ export default function PartnershipsPage() {
             </p>
 
             <h1 className="mt-6 max-w-4xl font-serif text-5xl leading-[0.95] tracking-[-0.04em] text-white md:text-8xl">
-              Let’s tell your story.
+              Let&apos;s tell your story.
             </h1>
 
-            <p className="mt-8 max-w-xl text-[17px] leading-[1.8] text-white/85 md:text-xl">
-              The Issue № collaborates with brands, founders, artists and
-              cultural projects through editorial storytelling, photography and
-              visual campaigns.
+            <p className="mt-8 max-w-2xl text-[17px] leading-[1.8] text-white/85 md:text-xl">
+              We collaborate with brands, designers, photographers, artists and
+              creative businesses through editorial storytelling, interviews,
+              event coverage and creative productions.
             </p>
 
-            <Link
-              href="#contact"
-              className="mt-10 inline-block text-sm uppercase tracking-[0.25em] text-white underline underline-offset-8 transition hover:text-white/75"
-            >
-              Start a collaboration
-            </Link>
+            <div className="mt-10 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
+              <Link
+                href="/services"
+                className="inline-block border border-white/70 px-7 py-4 text-[11px] uppercase tracking-[0.25em] text-white transition hover:bg-white hover:text-black"
+              >
+                View editorial services
+              </Link>
+
+              <a
+                href="#contact"
+                className="text-[11px] uppercase tracking-[0.25em] text-white underline decoration-white/60 underline-offset-8 transition hover:text-white/70"
+              >
+                Start a collaboration
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* INTRO */}
-      <section className="mx-auto max-w-7xl px-6 py-20 md:py-28">
+      <section className="mx-auto max-w-7xl px-6 py-20 md:px-12 md:py-28">
         <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-4">
             <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
@@ -155,19 +146,19 @@ export default function PartnershipsPage() {
           <div className="lg:col-span-8">
             <p className="max-w-5xl font-serif text-3xl leading-[1.2] text-editorial-text md:text-5xl">
               An independent magazine exploring fashion, business, creativity
-              and people through visual storytelling.
+              and the people behind remarkable ideas.
             </p>
 
             <div className="mt-10 grid grid-cols-1 gap-8 text-[17px] leading-[1.8] text-neutral-700 md:grid-cols-2">
               <p>
                 We create editorial stories for brands, founders and creative
-                businesses that want to be seen with depth, atmosphere and
-                visual identity.
+                professionals who want to communicate with greater depth,
+                atmosphere and visual identity.
               </p>
 
               <p>
-                Our collaborations are built around interviews, photography,
-                personal narratives, cultural context and long-form editorial
+                Each collaboration is shaped through interviews, photography,
+                personal narratives, cultural context and long-term editorial
                 presence.
               </p>
             </div>
@@ -176,31 +167,48 @@ export default function PartnershipsPage() {
       </section>
 
       {/* WHAT WE CREATE */}
-      <section className="mx-auto max-w-7xl px-6 pb-20 md:pb-28">
+      <section className="mx-auto max-w-7xl px-6 pb-20 md:px-12 md:pb-28">
         <div className="border-t border-neutral-200/70 pt-16">
-          <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
-            What we create
-          </p>
+          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
+                What we create
+              </p>
 
-          <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
+              <h2 className="mt-5 max-w-3xl font-serif text-4xl leading-[1.05] tracking-[-0.035em] text-editorial-text md:text-6xl">
+                Editorial formats shaped around your story.
+              </h2>
+            </div>
+
+            <Link
+              href="/services"
+              className="shrink-0 text-[11px] uppercase tracking-[0.25em] underline decoration-neutral-400 underline-offset-8 transition hover:text-neutral-500"
+            >
+              View services and pricing →
+            </Link>
+          </div>
+
+          <div className="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {partnershipFormats.map((item) => (
               <article
                 key={item.title}
-                className="group overflow-hidden border border-neutral-200 bg-white/35 transition duration-500 hover:bg-white/60"
+                className="group overflow-hidden border border-neutral-200 bg-white/35 transition duration-500 hover:bg-white/65"
               >
-                <div className="relative aspect-[16/9] overflow-hidden bg-white/30">
+                <div className="relative aspect-[16/10] overflow-hidden bg-white/30">
                   <Image
                     src={item.image}
-                    alt={`${item.title} — The Issue № partnership format`}
+                    alt={`${item.title} — The Issue № editorial partnership`}
                     fill
                     className="object-cover transition duration-700 group-hover:scale-[1.035]"
                   />
+
+                  <div className="absolute inset-0 bg-black/5 transition duration-500 group-hover:bg-black/10" />
                 </div>
 
-                <div className="min-h-[210px] p-6 md:p-7">
-                  <h2 className="font-serif text-2xl leading-tight text-editorial-text">
+                <div className="min-h-[220px] p-6 md:p-7">
+                  <h3 className="font-serif text-3xl leading-tight text-editorial-text">
                     {item.title}
-                  </h2>
+                  </h3>
 
                   <div className="mt-5 h-px w-12 bg-[#4A3F3C]/25" />
 
@@ -214,8 +222,60 @@ export default function PartnershipsPage() {
         </div>
       </section>
 
+      {/* SERVICES PREVIEW */}
+      <section className="mx-auto max-w-7xl px-6 pb-20 md:px-12 md:pb-28">
+        <div className="bg-[#1d1d1b] px-7 py-14 text-white md:px-12 md:py-18 lg:px-16">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-4">
+              <p className="text-xs uppercase tracking-[0.35em] text-white/45">
+                Editorial Services
+              </p>
+
+              <h2 className="mt-6 max-w-md font-serif text-5xl leading-[0.96] tracking-[-0.04em] md:text-7xl">
+                Find the right format for your story.
+              </h2>
+
+              <p className="mt-8 max-w-sm text-[16px] leading-[1.8] text-white/60">
+                Explore our editorial packages, inclusions and pricing on the
+                dedicated services page.
+              </p>
+            </div>
+
+            <div className="lg:col-span-8">
+              <div className="border-t border-white/15">
+                {editorialServices.map((service) => (
+                  <div
+                    key={service.number}
+                    className="grid grid-cols-[46px_1fr] gap-4 border-b border-white/15 py-6 sm:grid-cols-[55px_1fr_auto] sm:items-center sm:gap-7"
+                  >
+                    <p className="text-[10px] uppercase tracking-[0.3em] text-white/35">
+                      {service.number}
+                    </p>
+
+                    <p className="font-serif text-2xl leading-none text-white md:text-3xl">
+                      {service.title}
+                    </p>
+
+                    <p className="col-start-2 font-serif text-xl text-white/70 sm:col-auto sm:text-right">
+                      {service.price}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <Link
+                href="/services"
+                className="mt-10 inline-block border border-white/40 px-7 py-4 text-[10px] uppercase tracking-[0.25em] text-white transition hover:bg-white hover:text-black"
+              >
+                View full editorial services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* TRINITY FEATURE */}
-      <section className="mx-auto max-w-7xl px-6 pb-20 md:pb-28">
+      <section className="mx-auto max-w-7xl px-6 pb-20 md:px-12 md:pb-28">
         <Link
           href="/article/trinity-sofia"
           className="group block border-y border-neutral-200/70 py-5 md:py-6"
@@ -233,8 +293,8 @@ export default function PartnershipsPage() {
               <div className="mt-7 h-px w-16 bg-[#4A3F3C]/35" />
 
               <p className="mt-7 max-w-sm text-[17px] leading-[1.75] text-neutral-700">
-                A fashion editorial photography story about feminine
-                transformation, identity, empowerment and personal evolution.
+                A fashion editorial project exploring feminine transformation,
+                identity, empowerment and personal evolution.
               </p>
 
               <p className="mt-8 text-sm underline underline-offset-4 transition group-hover:text-black">
@@ -397,7 +457,7 @@ export default function PartnershipsPage() {
       </section>
 
       {/* WHY THE ISSUE */}
-      <section className="mx-auto max-w-7xl px-6 pb-20 md:pb-28">
+      <section className="mx-auto max-w-7xl px-6 pb-20 md:px-12 md:pb-28">
         <div className="grid grid-cols-1 gap-12 border-b border-neutral-200/70 pb-16 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-4">
             <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
@@ -407,14 +467,15 @@ export default function PartnershipsPage() {
 
           <div className="lg:col-span-8">
             <p className="max-w-4xl font-serif text-3xl leading-[1.18] text-editorial-text md:text-5xl">
-              We do not create advertising. We create editorial stories people
-              actually want to read.
+              We do not create conventional advertising. We create editorial
+              stories people actually want to read.
             </p>
 
             <div className="mt-10 grid grid-cols-1 gap-8 text-[16px] leading-[1.8] text-neutral-700 md:grid-cols-2">
               <p>
                 Every collaboration becomes part of a curated editorial archive,
-                not a temporary campaign that disappears after a few days.
+                rather than a temporary campaign that disappears after a few
+                days.
               </p>
 
               <p>
@@ -426,87 +487,8 @@ export default function PartnershipsPage() {
         </div>
       </section>
 
-      {/* COLLABORATION FORMATS AND PRICING */}
-      <section className="mx-auto max-w-7xl px-6 pb-20 md:pb-28">
-        <div className="border-t border-neutral-200/70 pt-14 md:pt-16">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
-            <div className="lg:col-span-4">
-              <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
-                Collaboration Formats
-              </p>
-
-              <h2 className="mt-6 max-w-md font-serif text-5xl leading-[0.95] tracking-[-0.04em] text-editorial-text md:text-7xl">
-                What we create.
-              </h2>
-
-              <div className="mt-8 h-px w-14 bg-[#4A3F3C]/30" />
-
-              <p className="mt-8 max-w-sm text-[16px] leading-[1.8] text-neutral-700">
-                Choose the format that fits your story. Every collaboration is
-                shaped around the identity, goals and visual world of the
-                project.
-              </p>
-
-              <p className="mt-5 max-w-sm text-sm leading-[1.8] text-neutral-500">
-                Custom formats and tailored partnership packages are available
-                upon request.
-              </p>
-            </div>
-
-            <div className="lg:col-span-8">
-              <div className="border-t border-neutral-200/70">
-                {collaborationPackages.map((item) => (
-                  <article
-                    key={item.number}
-                    className="grid grid-cols-1 gap-5 border-b border-neutral-200/70 py-8 md:grid-cols-[50px_minmax(0,1fr)_140px] md:gap-7 md:py-10"
-                  >
-                    <p className="text-[10px] uppercase tracking-[0.32em] text-neutral-400">
-                      {item.number}
-                    </p>
-
-                    <div>
-                      <h3 className="font-serif text-3xl leading-[1] text-editorial-text md:text-4xl">
-                        {item.title}
-                      </h3>
-
-                      <p className="mt-4 max-w-xl text-sm leading-[1.8] text-neutral-600">
-                        {item.description}
-                      </p>
-
-                      {item.href && item.linkText && (
-                        <Link
-                          href={item.href}
-                          className="mt-5 inline-block text-[10px] uppercase tracking-[0.28em] underline decoration-neutral-400 underline-offset-8 transition hover:text-neutral-500"
-                        >
-                          {item.linkText}
-                        </Link>
-                      )}
-                    </div>
-
-                    <div className="md:text-right">
-                      <p className="font-serif text-3xl leading-none text-editorial-text md:text-4xl">
-                        {item.price}
-                      </p>
-
-                      <p className="mt-3 text-[9px] uppercase tracking-[0.28em] text-neutral-400">
-                        {item.label}
-                      </p>
-                    </div>
-                  </article>
-                ))}
-              </div>
-
-              <p className="mt-6 max-w-2xl text-xs leading-[1.8] text-neutral-400">
-                Final pricing may vary depending on the scope, location,
-                photography requirements and complexity of the production.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* COLLABORATION BOOK INTRO */}
-      <section className="mx-auto max-w-7xl px-6 pb-10 md:pb-14">
+      <section className="mx-auto max-w-7xl px-6 pb-10 md:px-12 md:pb-14">
         <div className="grid grid-cols-1 gap-10 border-t border-neutral-200/70 pt-14 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-4">
             <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
@@ -551,7 +533,7 @@ export default function PartnershipsPage() {
       {/* CONTACT */}
       <section
         id="contact"
-        className="mx-auto max-w-7xl scroll-mt-24 px-6 pb-24 md:pb-32"
+        className="mx-auto max-w-7xl scroll-mt-24 px-6 pb-24 md:px-12 md:pb-32"
       >
         <div className="border-t border-neutral-200/70 pt-16">
           <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
@@ -559,7 +541,7 @@ export default function PartnershipsPage() {
           </p>
 
           <h2 className="mt-6 max-w-4xl font-serif text-5xl leading-[1] tracking-[-0.03em] text-editorial-text md:text-7xl">
-            Let’s create something memorable.
+            Let&apos;s create something memorable.
           </h2>
 
           <div className="mt-10 grid grid-cols-1 gap-8 text-neutral-700 md:grid-cols-2">
