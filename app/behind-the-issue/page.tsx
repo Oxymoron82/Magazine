@@ -5,7 +5,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Behind The Issue | The Issue №",
   description:
-    "The story behind The Issue № — an independent editorial magazine created, designed and developed by Maria Shatylovich.",
+    "The story behind The Issue № — an independent editorial magazine created, designed and developed by Maria S.",
 };
 
 type EditorialImageProps = {
@@ -106,7 +106,7 @@ export default function BehindTheIssuePage() {
 
               <p className="mt-10 max-w-lg text-[17px] leading-[1.8] text-neutral-600">
                 The Issue № is an independent editorial magazine created,
-                designed and developed by Maria Shatylovich.
+                designed and developed by me.
               </p>
 
               <p className="mt-5 max-w-lg text-[17px] leading-[1.8] text-neutral-600">
@@ -116,18 +116,23 @@ export default function BehindTheIssuePage() {
               </p>
 
               <p className="mt-10 font-serif text-3xl italic text-neutral-700">
-                Maria
+                Maria S.
               </p>
             </div>
           </div>
 
-          <EditorialImage
-            src="/images/behind-the-issue/1.png"
-            alt="Maria Shatylovich working on The Issue magazine"
-            priority
-            className="min-h-[560px] lg:min-h-full"
-            imageClassName="object-center"
-          />
+          <div className="flex min-h-[560px] items-center justify-center bg-[#ded9cf] px-6 py-8 md:px-10 md:py-10 lg:min-h-full">
+            <div className="relative h-full min-h-[520px] w-full">
+              <Image
+                src="/images/behind-the-issue/1.png"
+                alt="Maria S., creator, designer and developer of The Issue magazine"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-contain object-center"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -235,7 +240,7 @@ export default function BehindTheIssuePage() {
         <div className="grid grid-cols-1 items-stretch lg:grid-cols-2">
           <EditorialImage
             src="/images/behind-the-issue/8.png"
-            alt="Maria working with code on a large computer screen"
+            alt="Editorial workspace with code for The Issue magazine"
             className="min-h-[520px]"
             imageClassName="object-center"
           />
