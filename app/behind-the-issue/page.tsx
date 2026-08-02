@@ -79,6 +79,25 @@ const creationSteps = [
   },
 ];
 
+const professionalAreas = [
+  {
+    label: "Frontend",
+    value: "Next.js · React · TypeScript · JavaScript",
+  },
+  {
+    label: "Design",
+    value: "UI/UX · Responsive Design · Editorial Layouts",
+  },
+  {
+    label: "Workflow",
+    value: "Git · Figma · Reusable Component Systems",
+  },
+  {
+    label: "Focus",
+    value: "Editorial Platforms · Business Websites · Digital Storytelling",
+  },
+];
+
 const principles = [
   "Typography before decoration",
   "White space creates rhythm",
@@ -192,8 +211,81 @@ export default function BehindTheIssuePage() {
         </div>
       </section>
 
+      {/* PROFESSIONAL PROFILE */}
+      <section className="border-y border-black/10 bg-[#ebe6dc]">
+        <div className="mx-auto max-w-[1500px] px-6 py-20 md:px-12 md:py-28">
+          <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-20">
+            <div className="lg:col-span-6">
+              <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500">
+                Meet your developer
+              </p>
+
+              <h2 className="mt-7 max-w-2xl font-serif text-5xl leading-[1.02] tracking-[-0.04em] md:text-7xl">
+                Design and development as one complete experience.
+              </h2>
+
+              <div className="mt-9 max-w-2xl space-y-5 text-[16px] leading-[1.85] text-neutral-700">
+                <p>
+                  I am a frontend developer and UI/UX designer creating
+                  editorial and business websites that combine clear structure,
+                  refined visuals and thoughtful user experience.
+                </p>
+
+                <p>
+                  I work with Next.js, React, TypeScript and modern frontend
+                  technologies, taking projects from content structure and
+                  visual direction to responsive implementation and launch.
+                </p>
+
+                <p>
+                  The Issue № is the clearest example of this approach: a real,
+                  evolving digital product where design, development and
+                  storytelling work together.
+                </p>
+              </div>
+            </div>
+
+            <div className="lg:col-span-6">
+              <div className="border-t border-black/15">
+                {professionalAreas.map((area) => (
+                  <div
+                    key={area.label}
+                    className="grid grid-cols-1 gap-3 border-b border-black/15 py-7 sm:grid-cols-[145px_minmax(0,1fr)] sm:gap-8"
+                  >
+                    <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
+                      {area.label}
+                    </p>
+
+                    <p className="font-serif text-2xl leading-[1.25] text-neutral-800">
+                      {area.value}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-10 border border-black/15 bg-[#f7f4ec]/70 p-7 md:p-9">
+                <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
+                  Why work with me
+                </p>
+
+                <p className="mt-6 font-serif text-3xl leading-[1.2] tracking-[-0.025em] text-neutral-900 md:text-4xl">
+                  Every decision is considered from both a designer&apos;s and a
+                  developer&apos;s perspective.
+                </p>
+
+                <p className="mt-6 text-[15px] leading-[1.85] text-neutral-650">
+                  Typography, layout, usability, responsiveness and technical
+                  implementation are treated as parts of one coherent digital
+                  experience rather than separate stages.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CREATION STEPS */}
-      <section className="border-y border-black/10 bg-[#f2eee5]">
+      <section className="border-b border-black/10 bg-[#f2eee5]">
         <div className="mx-auto max-w-[1600px] px-6 py-20 md:px-12 md:py-28">
           <div className="max-w-3xl">
             <p className="text-[10px] uppercase tracking-[0.4em] text-neutral-500">
