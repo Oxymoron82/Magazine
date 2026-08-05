@@ -683,27 +683,35 @@ export default function HomePage() {
                   </Link>
                 </article>
 
-                <article className="mt-9 border-t border-neutral-200/90 pt-9">
-                  <div className="flex flex-wrap items-center justify-between gap-4">
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
-                      Next publication
-                    </p>
+                <Link
+  href="/article/beyond-the-logo-why-brand-identity-matters"
+  className="group mt-9 block border-t border-neutral-200/90 pt-9"
+>
+  <article>
+    <div className="flex flex-wrap items-center justify-between gap-4">
+      <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
+        Latest publication
+      </p>
 
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-[#8A5A2B]">
-                      Coming soon
-                    </p>
-                  </div>
+      <p className="text-[10px] uppercase tracking-[0.3em] text-[#8A5A2B]">
+        Published
+      </p>
+    </div>
 
-                  <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text md:text-4xl">
-                    Beyond the Logo: Why Brand Identity Matters
-                  </h3>
+    <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text transition group-hover:text-neutral-600 md:text-4xl">
+      Beyond the Logo: Why Brand Identity Matters
+    </h3>
 
-                  <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-neutral-700">
-                    Why do some brands become unforgettable while others
-                    disappear? A reflection on identity, storytelling and the
-                    role of editorial.
-                  </p>
-                </article>
+    <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-neutral-700">
+      Why do some brands become unforgettable while others disappear? A
+      reflection on identity, storytelling and the role of editorial.
+    </p>
+
+    <p className="mt-6 text-sm underline decoration-neutral-400 underline-offset-6 transition group-hover:text-black">
+      Read article →
+    </p>
+  </article>
+</Link>
               </div>
 
               <div className="mt-10 border-t border-neutral-200/90 pt-8">

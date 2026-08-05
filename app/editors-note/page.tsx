@@ -16,7 +16,7 @@ const editorArticles = [
     title: "Starting Again in Another Country",
     excerpt:
       "A personal reflection on starting over, finding direction and learning to build a new life away from everything familiar.",
-    image: "/images/sonja1.jpeg",
+    image: "/images/becoming/starting-again/main.jpeg",
     href: "/article/starting-again-in-another-country",
     status: "Published",
     date: "2026",
@@ -26,8 +26,8 @@ const editorArticles = [
     excerpt:
       "Why do some brands become unforgettable while others disappear? A reflection on identity, storytelling and the role of editorial.",
     image: "/images/sonja1.jpeg",
-    href: null,
-    status: "Coming soon",
+    href: "/article/beyond-the-logo-why-brand-identity-matters",
+status: "Published",
     date: "2026",
   },
 ];
