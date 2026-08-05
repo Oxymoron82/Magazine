@@ -67,7 +67,7 @@ export default function HomePage() {
       {/* HERO */}
       <section
         id="home"
-        className="relative h-[86vh] min-h-[620px] md:h-screen overflow-hidden scroll-mt-24 bg-black"
+        className="relative h-[86vh] min-h-[620px] overflow-hidden bg-black scroll-mt-24 md:h-screen"
       >
         <Image
           src="/images/editorial-2.jpg"
@@ -84,7 +84,7 @@ export default function HomePage() {
         <div className="absolute inset-0 z-10 flex items-center">
           <div className="mx-auto w-full max-w-7xl px-8 md:px-16 lg:px-24">
             <div className="max-w-[720px]">
-              <h1 className="font-inria text-white text-[42px] sm:text-[56px] md:text-[78px] lg:text-[86px] leading-[0.95] tracking-[-0.04em]">
+              <h1 className="font-inria text-[42px] leading-[0.95] tracking-[-0.04em] text-white sm:text-[56px] md:text-[78px] lg:text-[86px]">
                 Individual stories.
                 <br />
                 Fashion identity.
@@ -92,7 +92,7 @@ export default function HomePage() {
 
               <div className="mt-8 h-px w-20 bg-white/70" />
 
-              <p className="mt-7 max-w-[420px] text-[16px] md:text-[19px] leading-[1.75] text-white/90">
+              <p className="mt-7 max-w-[420px] text-[16px] leading-[1.75] text-white/90 md:text-[19px]">
                 A visual magazine about people, work, transformation and
                 contemporary culture.
               </p>
@@ -104,7 +104,7 @@ export default function HomePage() {
                   width={96}
                   height={96}
                   priority
-                  className="h-auto w-[76px] md:w-[96px] rounded-xl md:rounded-2xl opacity-95"
+                  className="h-auto w-[76px] rounded-xl opacity-95 md:w-[96px] md:rounded-2xl"
                 />
               </div>
             </div>
@@ -117,24 +117,25 @@ export default function HomePage() {
       {/* LATEST */}
       <section
         id="latest"
-        className="max-w-7xl mx-auto px-6 pt-16 md:pt-24 pb-24 md:pb-32 scroll-mt-24"
+        className="mx-auto max-w-7xl scroll-mt-24 px-6 pb-24 pt-16 md:pb-32 md:pt-24"
       >
-        <div className="flex items-end justify-between gap-6 mb-12">
+        <div className="mb-12 flex items-end justify-between gap-6">
           <div>
             <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
               Latest
             </p>
-            <h2 className="mt-3 text-3xl md:text-5xl font-serif leading-tight text-editorial-text">
+
+            <h2 className="mt-3 font-serif text-3xl leading-tight text-editorial-text md:text-5xl">
               New pieces and fresh visuals
             </h2>
           </div>
         </div>
 
         {featuredLatest ? (
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-x-12 gap-y-16">
+          <div className="grid grid-cols-1 gap-x-12 gap-y-16 lg:grid-cols-12">
             <Link
               href={`/article/${featuredLatest.slug}`}
-              className="block lg:col-span-7 group"
+              className="group block lg:col-span-7"
             >
               <article className="space-y-5">
                 <div
@@ -169,24 +170,24 @@ export default function HomePage() {
                   </p>
                 </div>
 
-                <h3 className="font-serif text-3xl md:text-5xl leading-tight text-editorial-text">
+                <h3 className="font-serif text-3xl leading-tight text-editorial-text md:text-5xl">
                   {featuredLatest.title}
                 </h3>
 
-                <p className="max-w-[42ch] text-neutral-700 leading-[1.75]">
+                <p className="max-w-[42ch] leading-[1.75] text-neutral-700">
                   {featuredLatest.excerpt}
                 </p>
               </article>
             </Link>
 
-            <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-10">
+            <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-1">
               {secondaryLatest.slice(0, 3).map((article) => (
                 <Link
                   key={article.slug}
                   href={`/article/${article.slug}`}
-                  className="block group"
+                  className="group block"
                 >
-                  <article className="grid grid-cols-1 md:grid-cols-[0.9fr_1.1fr] gap-5 items-start">
+                  <article className="grid grid-cols-1 items-start gap-5 md:grid-cols-[0.9fr_1.1fr]">
                     <div className="relative aspect-[3/4] overflow-hidden bg-white/30">
                       <Image
                         src={article.image}
@@ -204,12 +205,13 @@ export default function HomePage() {
                       <p className="mt-2 text-[11px] leading-relaxed text-neutral-500">
                         By {article.author || "The Issue № Editorial Team"}
                         <br />
+
                         <time dateTime={article.date}>
                           {formatArticleDate(article.date)}
                         </time>
                       </p>
 
-                      <h3 className="mt-3 text-xl md:text-2xl font-serif leading-tight text-editorial-text">
+                      <h3 className="mt-3 font-serif text-xl leading-tight text-editorial-text md:text-2xl">
                         {article.title}
                       </h3>
                     </div>
@@ -247,18 +249,18 @@ export default function HomePage() {
       </section>
 
       {/* TRINITY PROJECT */}
-      <section className="max-w-7xl mx-auto px-6 pb-24 md:pb-32">
+      <section className="mx-auto max-w-7xl px-6 pb-24 md:pb-32">
         <Link
-  href="/trinity"
-  className="group block border-b border-neutral-200/70 py-16 md:py-20"
->
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-14 items-center">
+          href="/trinity"
+          className="group block border-b border-neutral-200/70 py-16 md:py-20"
+        >
+          <div className="grid grid-cols-1 items-center gap-10 md:gap-14 lg:grid-cols-12">
             <div className="lg:col-span-4">
               <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
                 Editorial Project
               </p>
 
-              <h2 className="mt-5 font-serif text-5xl md:text-7xl leading-[0.95] tracking-[-0.03em] text-editorial-text">
+              <h2 className="mt-5 font-serif text-5xl leading-[0.95] tracking-[-0.03em] text-editorial-text md:text-7xl">
                 Trinity
               </h2>
 
@@ -269,103 +271,198 @@ export default function HomePage() {
                 transformation, identity, empowerment and personal evolution.
               </p>
 
-              <p className="mt-8 text-sm underline underline-offset-4 group-hover:text-black transition">
+              <p className="mt-8 text-sm underline underline-offset-4 transition group-hover:text-black">
                 Explore the project →
               </p>
             </div>
 
             <div className="lg:col-span-8">
-  <div className="relative ml-auto aspect-square w-full max-w-[680px] overflow-hidden bg-white/30">
-    {[
-      "/images/trinity/115.jpg",
-      "/images/trinity/61.jpeg",
-      "/images/trinity/62.jpeg",
-      "/images/trinity/63.jpeg",
-      "/images/trinity/64.jpeg",
-      "/images/trinity/65.jpeg",
-    ].map((src, index) => (
-      <Image
-        key={src}
-        src={src}
-        alt={`Trinity editorial project image ${index + 1}`}
-        fill
-        className={`home-trinity-image home-trinity-image-${
-          index + 1
-        } object-cover object-[center_22%]`}
-      />
-    ))}
+              <div className="relative ml-auto aspect-square w-full max-w-[680px] overflow-hidden bg-white/30">
+                {[
+                  "/images/trinity/115.jpg",
+                  "/images/trinity/61.jpeg",
+                  "/images/trinity/62.jpeg",
+                  "/images/trinity/63.jpeg",
+                  "/images/trinity/64.jpeg",
+                  "/images/trinity/65.jpeg",
+                ].map((src, index) => (
+                  <Image
+                    key={src}
+                    src={src}
+                    alt={`Trinity editorial project image ${index + 1}`}
+                    fill
+                    className={`home-trinity-image home-trinity-image-${
+                      index + 1
+                    } object-cover object-[center_22%]`}
+                  />
+                ))}
 
-    <div className="absolute inset-0 bg-black/8" />
+                <div className="absolute inset-0 bg-black/8" />
 
-    <style>{`
-      .home-trinity-image {
-        position: absolute;
-        inset: 0;
-        opacity: 0;
-        transform: scale(1.01);
-        animation-duration: 18s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-in-out;
-      }
+                <style>{`
+                  .home-trinity-image {
+                    position: absolute;
+                    inset: 0;
+                    opacity: 0;
+                    transform: scale(1.01);
+                    animation-duration: 18s;
+                    animation-iteration-count: infinite;
+                    animation-timing-function: ease-in-out;
+                  }
 
-      .home-trinity-image-1 { animation-name: homeTrinityOne; }
-      .home-trinity-image-2 { animation-name: homeTrinityTwo; }
-      .home-trinity-image-3 { animation-name: homeTrinityThree; }
-      .home-trinity-image-4 { animation-name: homeTrinityFour; }
-      .home-trinity-image-5 { animation-name: homeTrinityFive; }
-      .home-trinity-image-6 { animation-name: homeTrinitySix; }
+                  .home-trinity-image-1 {
+                    animation-name: homeTrinityOne;
+                  }
 
-      @keyframes homeTrinityOne {
-        0%, 13% { opacity: 1; transform: scale(1); }
-        18%, 100% { opacity: 0; transform: scale(1.01); }
-      }
+                  .home-trinity-image-2 {
+                    animation-name: homeTrinityTwo;
+                  }
 
-      @keyframes homeTrinityTwo {
-        0%, 13% { opacity: 0; transform: scale(1.01); }
-        18%, 30% { opacity: 1; transform: scale(1); }
-        35%, 100% { opacity: 0; transform: scale(1.01); }
-      }
+                  .home-trinity-image-3 {
+                    animation-name: homeTrinityThree;
+                  }
 
-      @keyframes homeTrinityThree {
-        0%, 30% { opacity: 0; transform: scale(1.01); }
-        35%, 47% { opacity: 1; transform: scale(1); }
-        52%, 100% { opacity: 0; transform: scale(1.01); }
-      }
+                  .home-trinity-image-4 {
+                    animation-name: homeTrinityFour;
+                  }
 
-      @keyframes homeTrinityFour {
-        0%, 47% { opacity: 0; transform: scale(1.01); }
-        52%, 64% { opacity: 1; transform: scale(1); }
-        69%, 100% { opacity: 0; transform: scale(1.01); }
-      }
+                  .home-trinity-image-5 {
+                    animation-name: homeTrinityFive;
+                  }
 
-      @keyframes homeTrinityFive {
-        0%, 64% { opacity: 0; transform: scale(1.01); }
-        69%, 81% { opacity: 1; transform: scale(1); }
-        86%, 100% { opacity: 0; transform: scale(1.01); }
-      }
+                  .home-trinity-image-6 {
+                    animation-name: homeTrinitySix;
+                  }
 
-      @keyframes homeTrinitySix {
-        0%, 81% { opacity: 0; transform: scale(1.01); }
-        86%, 96% { opacity: 1; transform: scale(1); }
-        100% { opacity: 0; transform: scale(1.01); }
-      }
-    `}</style>
-  </div>
-</div>
+                  @keyframes homeTrinityOne {
+                    0%,
+                    13% {
+                      opacity: 1;
+                      transform: scale(1);
+                    }
+
+                    18%,
+                    100% {
+                      opacity: 0;
+                      transform: scale(1.01);
+                    }
+                  }
+
+                  @keyframes homeTrinityTwo {
+                    0%,
+                    13% {
+                      opacity: 0;
+                      transform: scale(1.01);
+                    }
+
+                    18%,
+                    30% {
+                      opacity: 1;
+                      transform: scale(1);
+                    }
+
+                    35%,
+                    100% {
+                      opacity: 0;
+                      transform: scale(1.01);
+                    }
+                  }
+
+                  @keyframes homeTrinityThree {
+                    0%,
+                    30% {
+                      opacity: 0;
+                      transform: scale(1.01);
+                    }
+
+                    35%,
+                    47% {
+                      opacity: 1;
+                      transform: scale(1);
+                    }
+
+                    52%,
+                    100% {
+                      opacity: 0;
+                      transform: scale(1.01);
+                    }
+                  }
+
+                  @keyframes homeTrinityFour {
+                    0%,
+                    47% {
+                      opacity: 0;
+                      transform: scale(1.01);
+                    }
+
+                    52%,
+                    64% {
+                      opacity: 1;
+                      transform: scale(1);
+                    }
+
+                    69%,
+                    100% {
+                      opacity: 0;
+                      transform: scale(1.01);
+                    }
+                  }
+
+                  @keyframes homeTrinityFive {
+                    0%,
+                    64% {
+                      opacity: 0;
+                      transform: scale(1.01);
+                    }
+
+                    69%,
+                    81% {
+                      opacity: 1;
+                      transform: scale(1);
+                    }
+
+                    86%,
+                    100% {
+                      opacity: 0;
+                      transform: scale(1.01);
+                    }
+                  }
+
+                  @keyframes homeTrinitySix {
+                    0%,
+                    81% {
+                      opacity: 0;
+                      transform: scale(1.01);
+                    }
+
+                    86%,
+                    96% {
+                      opacity: 1;
+                      transform: scale(1);
+                    }
+
+                    100% {
+                      opacity: 0;
+                      transform: scale(1.01);
+                    }
+                  }
+                `}</style>
+              </div>
+            </div>
           </div>
         </Link>
       </section>
 
       {/* THE ISSUE ECOSYSTEM */}
-      <section className="max-w-7xl mx-auto px-6 pb-24 md:pb-32">
+      <section className="mx-auto max-w-7xl px-6 pb-24 md:pb-32">
         <div className="border-b border-neutral-200/70 py-16 md:py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-4">
               <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
                 The Issue №
               </p>
 
-              <h2 className="mt-5 font-serif text-4xl md:text-6xl leading-[1.05] text-editorial-text">
+              <h2 className="mt-5 font-serif text-4xl leading-[1.05] text-editorial-text md:text-6xl">
                 A magazine,
                 <br />
                 a project space,
@@ -375,7 +472,7 @@ export default function HomePage() {
             </div>
 
             <div className="lg:col-span-8">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
                 <Link href="/#latest" className="group block h-full">
                   <article className="flex h-full min-h-[430px] flex-col overflow-hidden border border-neutral-200 bg-white/45 transition-all duration-500 hover:-translate-y-1 hover:bg-white/70 hover:shadow-[0_18px_45px_rgba(74,63,60,0.08)]">
                     <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100">
@@ -406,7 +503,8 @@ export default function HomePage() {
 
                       <p className="mt-5 text-sm leading-[1.8] text-neutral-700">
                         Articles, interviews, essays and visual stories from the
-                        worlds of fashion, culture, creativity and entrepreneurship.
+                        worlds of fashion, culture, creativity and
+                        entrepreneurship.
                       </p>
 
                       <p className="mt-auto pt-8 text-sm underline decoration-[#4A3F3C]/40 underline-offset-4 transition group-hover:decoration-[#4A3F3C]">
@@ -446,7 +544,8 @@ export default function HomePage() {
 
                       <p className="mt-5 text-sm leading-[1.8] text-neutral-700">
                         Long-form editorial projects, beginning with Trinity — a
-                        visual story about identity, transformation and presence.
+                        visual story about identity, transformation and
+                        presence.
                       </p>
 
                       <p className="mt-auto pt-8 text-sm underline decoration-[#4A3F3C]/40 underline-offset-4 transition group-hover:decoration-[#4A3F3C]">
@@ -501,24 +600,29 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* EDITOR NOTE */}
+      {/* EDITOR'S NOTE */}
       <section
         id="editors-note"
-        className="max-w-7xl mx-auto px-6 py-24 md:py-32 scroll-mt-24"
+        className="mx-auto max-w-7xl scroll-mt-24 px-6 py-24 md:py-32"
       >
-        <div className="grid md:grid-cols-12 gap-14 items-center">
-          <div className="md:col-span-7 max-w-3xl md:ml-8">
+        <div className="grid items-start gap-14 md:grid-cols-12">
+          <div className="max-w-3xl md:col-span-7 md:ml-8">
             <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
-              Editor’s Note
+              Editor&apos;s Note
             </p>
 
-            <h2 className="mt-6 text-5xl md:text-7xl font-serif leading-[1.02] text-editorial-text">
+            <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-neutral-600">
+              Thoughts on fashion, identity, publishing and the ideas behind
+              contemporary editorial culture.
+            </p>
+
+            <h2 className="mt-7 font-serif text-5xl leading-[1.02] text-editorial-text md:text-7xl">
               This is not a journal.
               <br />
               It is a continuation of the journey.
             </h2>
 
-            <div className="mt-8 space-y-6 text-neutral-700 leading-[1.85] text-lg max-w-2xl">
+            <div className="mt-8 max-w-2xl space-y-6 text-lg leading-[1.85] text-neutral-700">
               <p>
                 The Issue № began as a collection of separate ideas — about
                 work, presence and the way people shape their environment.
@@ -535,65 +639,141 @@ export default function HomePage() {
               </p>
             </div>
 
-            <p className="mt-6 italic text-neutral-500 text-sm">
-              by Sofia Solas
-            </p>
+            <div className="mt-9">
+              <p className="font-serif text-2xl leading-none text-editorial-text">
+                Sofia Solas
+              </p>
 
-            <Link
-              href="/article/starting-again-in-another-country"
-              className="inline-block mt-6 text-sm underline underline-offset-4 hover:text-black transition"
-            >
-              read more →
-            </Link>
+              <p className="mt-3 text-[10px] uppercase tracking-[0.3em] text-neutral-500">
+                Editor-in-Chief
+              </p>
+            </div>
+
+            {/* LATEST FROM EDITOR'S NOTE */}
+            <div className="mt-14 max-w-2xl border-t border-neutral-200/90 pt-10">
+              <div className="flex items-center justify-between gap-6">
+                <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
+                  Latest from Editor&apos;s Note
+                </p>
+
+                <span className="font-serif text-xl text-neutral-400">№ 01</span>
+              </div>
+
+              <div className="mt-9">
+                <article>
+                  <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
+                    Published
+                  </p>
+
+                  <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text md:text-4xl">
+                    Starting Again in Another Country
+                  </h3>
+
+                  <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-neutral-700">
+                    A personal reflection on starting over, finding direction
+                    and learning to build a new life away from everything
+                    familiar.
+                  </p>
+
+                  <Link
+                    href="/article/starting-again-in-another-country"
+                    className="mt-6 inline-block text-sm underline decoration-neutral-400 underline-offset-6 transition hover:text-black"
+                  >
+                    Read article →
+                  </Link>
+                </article>
+
+                <article className="mt-9 border-t border-neutral-200/90 pt-9">
+                  <div className="flex flex-wrap items-center justify-between gap-4">
+                    <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
+                      Next publication
+                    </p>
+
+                    <p className="text-[10px] uppercase tracking-[0.3em] text-[#8A5A2B]">
+                      Coming soon
+                    </p>
+                  </div>
+
+                  <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text md:text-4xl">
+                    Beyond the Logo: Why Brand Identity Matters
+                  </h3>
+
+                  <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-neutral-700">
+                    Why do some brands become unforgettable while others
+                    disappear? A reflection on identity, storytelling and the
+                    role of editorial.
+                  </p>
+                </article>
+              </div>
+
+              <div className="mt-10 border-t border-neutral-200/90 pt-8">
+                <Link
+                  href="/editors-note"
+                  className="inline-block text-[10px] uppercase tracking-[0.28em] underline decoration-neutral-400 underline-offset-8 transition hover:text-black"
+                >
+                  View all Editor&apos;s Notes →
+                </Link>
+              </div>
+            </div>
           </div>
 
-          <div className="md:col-span-5">
-            <div className="relative ml-auto w-full max-w-sm aspect-[4/5] overflow-hidden rounded-xl">
+          <div className="md:col-span-5 md:pt-10">
+            <div className="relative ml-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-xl">
               <Image
                 src="/images/sonja1.jpeg"
-                
-                alt="Editor portrait"
+                alt="Sofia Solas, Editor-in-Chief of The Issue №"
                 fill
                 className="object-cover transition duration-700 hover:scale-[1.03]"
               />
+            </div>
+
+            <div className="ml-auto mt-6 w-full max-w-sm border-t border-neutral-200/90 pt-5">
+              <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
+                Author&apos;s column
+              </p>
+
+              <p className="mt-3 font-serif text-2xl leading-snug text-editorial-text">
+                Fashion, identity and the stories behind what we create.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="mx-auto max-w-7xl px-6">
         <div className="h-px bg-neutral-200/70" />
       </div>
 
       {/* COLUMNS */}
       <section
         id="columns"
-        className="max-w-7xl mx-auto px-6 py-24 md:py-28 scroll-mt-24"
+        className="mx-auto max-w-7xl scroll-mt-24 px-6 py-24 md:py-28"
       >
-        <div className="flex items-end justify-between gap-6 mb-12">
+        <div className="mb-12 flex items-end justify-between gap-6">
           <div>
             <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
               Columns
             </p>
-            <h2 className="mt-3 text-3xl md:text-5xl font-serif leading-tight text-editorial-text">
+
+            <h2 className="mt-3 font-serif text-3xl leading-tight text-editorial-text md:text-5xl">
               Editorial structure
             </h2>
           </div>
 
           <Link
             href="/columns"
-            className="text-sm underline underline-offset-4 hover:text-black transition"
+            className="text-sm underline underline-offset-4 transition hover:text-black"
           >
             All columns →
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-x-8 gap-y-14">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-5">
           {activeColumns.slice(0, 5).map((column, index) => (
             <Link
               key={column.slug}
               href={`/columns/${column.slug}`}
-              className="block group"
+              className="group block"
             >
               <article
                 className={`space-y-4 ${
@@ -617,7 +797,7 @@ export default function HomePage() {
                   {column.title}
                 </h3>
 
-                <p className="text-sm text-neutral-700 leading-relaxed">
+                <p className="text-sm leading-relaxed text-neutral-700">
                   {column.descriptionShort}
                 </p>
               </article>

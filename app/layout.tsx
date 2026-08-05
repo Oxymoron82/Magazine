@@ -60,14 +60,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        suppressHydrationWarning
         className={`${inter.variable} ${playfair.variable} ${bodoni.variable} ${inria.variable}`}
       >
         <Header />
+
         {children}
-         <CreatedBy />
+
+        <CreatedBy />
+
         <Footer />
       </body>
     </html>
