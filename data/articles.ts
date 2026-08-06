@@ -201,81 +201,96 @@ journal: "studio-journal",
   {
   slug: "beyond-the-logo-why-brand-identity-matters",
   column: "work",
-journal: "editors-note",
+  journal: "editors-note",
   title: "Beyond the Logo: Why Brand Identity Matters",
   excerpt:
     "Why do some brands become unforgettable while others disappear? A reflection on identity, storytelling and the role of editorial.",
   category: "Editor’s Note",
   author: "Sofia Solas",
   date: "2026-08-05",
-  image: "/images/sonja1.jpeg",
- blocks: [
-  {
-    type: "p",
-    dropCap: true,
-    text: `A few days ago, I caught myself looking through different fashion brands online. Beautiful campaigns, beautiful websites, beautiful clothes. And then I realised something: an hour later, I could barely remember most of them. Not because they were not good. They simply looked the same.`,
-  },
+  image: "/images/editors-note/beyond-the-logo/1.jpg",
 
-  {
-    type: "p",
-    text: `Today, almost every brand has a logo, a website and an Instagram page. Many have beautiful photography. But beauty alone does not make people remember you. What people remember is something much simpler: a feeling, a point of view, a story.`,
-  },
+  blocks: [
+    {
+      type: "p",
+      dropCap: true,
+      text: `A few days ago, I caught myself looking through different fashion brands online. Beautiful campaigns, beautiful websites, beautiful clothes. And then I realised something: an hour later, I could barely remember most of them. Not because they were not good. They simply looked the same.`,
+    },
 
-  {
-    type: "quote",
-    text: "What is your brand trying to say?",
-  },
+    {
+      type: "p",
+      text: `Today, almost every brand has a logo, a website and an Instagram page. Many have beautiful photography. But beauty alone does not make people remember you. What people remember is something much simpler: a feeling, a point of view, a story.`,
+    },
 
-  {
-    type: "p",
-    text: `I have always believed that people do not connect with products first. They connect with people, ideas and emotions. That is why, before we think about a photoshoot or a publication, I always ask one question: Not sell. Say.`,
-  },
+    {
+      type: "quote",
+      text: "What is your brand trying to say?",
+    },
 
-  {
-    type: "p",
-    text: `Because a beautiful editorial without an idea is simply another beautiful editorial. The brands that stay with us always have something deeper behind them. Sometimes it is their philosophy. Sometimes it is the founder’s story. Sometimes it is simply the way they see the world.`,
-  },
+    {
+      type: "p",
+      text: `I have always believed that people do not connect with products first. They connect with people, ideas and emotions. That is why, before we think about a photoshoot or a publication, I always ask one question: Not sell. Say.`,
+    },
 
-  {
-    type: "p",
-    text: `You can feel it in every photograph, every campaign and every collection. People often think identity begins with a logo. I do not think it does. A logo helps people recognise you. Identity gives them a reason to remember you.`,
-  },
+    {
+      type: "p",
+      text: `Because a beautiful editorial without an idea is simply another beautiful editorial. The brands that stay with us always have something deeper behind them. Sometimes it is their philosophy. Sometimes it is the founder’s story. Sometimes it is simply the way they see the world.`,
+    },
 
-  {
-    type: "p",
-    text: `At THE ISSUE N°, we do not just publish fashion stories. We are interested in the people behind them, the ideas that inspired a collection and the details that make one brand different from another. Because that is where the real story begins.`,
-  },
+    {
+      type: "image",
+      src: "/images/editors-note/beyond-the-logo/2.jpg",
+      alt: "Sofia Solas posing with an oversized black bag",
+      fullBleed: true,
+    },
 
-  {
-    type: "p",
-    text: `Fashion changes. Trends change. Even brands evolve. But when people remember how you made them feel, you have already created something much bigger than a logo.`,
-  },
+    {
+      type: "p",
+      text: `You can feel it in every photograph, every campaign and every collection. People often think identity begins with a logo. I do not think it does. A logo helps people recognise you. Identity gives them a reason to remember you.`,
+    },
 
-  {
-    type: "hr",
-  },
+    {
+      type: "p",
+      text: `At THE ISSUE N°, we do not just publish fashion stories. We are interested in the people behind them, the ideas that inspired a collection and the details that make one brand different from another. Because that is where the real story begins.`,
+    },
 
-  {
-    type: "p",
-    className:
-      "mt-10 text-center font-serif text-xl leading-relaxed text-neutral-900 italic",
-    text: `Sofia Solas`,
-  },
+    {
+      type: "p",
+      text: `Fashion changes. Trends change. Even brands evolve. But when people remember how you made them feel, you have already created something much bigger than a logo.`,
+    },
 
-  {
-    type: "p",
-    className:
-      "-mt-2 text-center text-sm uppercase tracking-[0.28em] text-neutral-500",
-    text: `Editor-in-Chief, THE ISSUE N°`,
-  },
+    {
+      type: "image",
+      src: "/images/editors-note/beyond-the-logo/3.jpg",
+      alt: "Portrait of Sofia Solas wearing a russet fur hat",
+      fullBleed: true,
+    },
 
-  {
-    type: "p",
-    className:
-      "mt-5 text-center font-serif italic text-lg text-neutral-700",
-    text: `“Fashion begins with identity.”`,
-  },
-],
+    {
+      type: "hr",
+    },
+
+    {
+      type: "p",
+      className:
+        "mt-10 text-center font-serif text-xl leading-relaxed text-neutral-900 italic",
+      text: `Sofia Solas`,
+    },
+
+    {
+      type: "p",
+      className:
+        "-mt-2 text-center text-sm uppercase tracking-[0.28em] text-neutral-500",
+      text: `Editor-in-Chief, THE ISSUE N°`,
+    },
+
+    {
+      type: "p",
+      className:
+        "mt-5 text-center font-serif italic text-lg text-neutral-700",
+      text: `“Fashion begins with identity.”`,
+    },
+  ],
 },
 
   

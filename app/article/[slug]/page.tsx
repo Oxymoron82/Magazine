@@ -624,26 +624,34 @@ export default async function ArticlePage({
 
   const relatedArticles = getRelatedArticles(article);
 
-  const isBalakArticle =
-    article.slug === "anastasija-balak-silent-guardian-falling-petals";
+  const containedHeroSlugs = new Set([
+    "anastasija-balak-silent-guardian-falling-petals",
+    "beyond-the-logo-why-brand-identity-matters",
+    "starting-again-in-another-country",
+  ]);
+
+  const useContainedHero = containedHeroSlugs.has(article.slug);
 
   return (
     <main className="bg-[#FFFBEB] text-neutral-900">
       {/* HERO */}
       <section className="relative h-[72vh] min-h-[520px] overflow-hidden bg-black md:h-[82vh]">
-        {isBalakArticle ? (
+        {useContainedHero ? (
           <>
-            {/* Blurred background fills the frame */}
+            {/* Blurred background fills the empty side space */}
             <Image
               src={article.image}
               alt=""
               fill
               aria-hidden="true"
               sizes="100vw"
-              className="scale-110 object-cover object-center opacity-45 blur-2xl"
+              className="scale-110 object-cover object-center opacity-50 blur-2xl"
             />
 
-            {/* Main image is fully visible and centered */}
+            {/* Darkening over the blurred background */}
+            <div className="absolute inset-0 bg-black/30" />
+
+            {/* Main vertical image remains fully visible */}
             <Image
               src={article.image}
               alt={`${article.title} — ${article.category} article in The Issue №`}
@@ -653,8 +661,8 @@ export default async function ArticlePage({
               className="object-contain object-center"
             />
 
-            {/* Smooth fade into black side frames */}
-            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.96)_0%,rgba(0,0,0,0.76)_7%,rgba(0,0,0,0.30)_17%,transparent_29%,transparent_71%,rgba(0,0,0,0.30)_83%,rgba(0,0,0,0.76)_93%,rgba(0,0,0,0.96)_100%)]" />
+            {/* Smooth transition into black side frames */}
+            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.98)_0%,rgba(0,0,0,0.82)_7%,rgba(0,0,0,0.38)_17%,transparent_30%,transparent_70%,rgba(0,0,0,0.38)_83%,rgba(0,0,0,0.82)_93%,rgba(0,0,0,0.98)_100%)]" />
           </>
         ) : (
           <Image
@@ -669,13 +677,13 @@ export default async function ArticlePage({
 
         <div
           className={
-            isBalakArticle
-              ? "absolute inset-0 bg-black/20"
+            useContainedHero
+              ? "absolute inset-0 bg-black/15"
               : "absolute inset-0 bg-black/45"
           }
         />
 
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
         <div className="absolute bottom-0 left-0 right-0 z-10">
           <div className="mx-auto max-w-5xl px-6 pb-10 md:pb-14">
