@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import MediaKitCarousel from "@/components/MediaKitCarousel";
 
 export const metadata: Metadata = {
   title: "Partnerships | The Issue №",
@@ -81,6 +82,17 @@ const trinityFeatureImages = [
   "/images/trinity/65.jpeg",
 ];
 
+const mediaKitImages = [
+  "/media-kit/1.png",
+  "/media-kit/2.png",
+  "/media-kit/3.png",
+  "/media-kit/4.png",
+  "/media-kit/5.png",
+  "/media-kit/6.png",
+  "/media-kit/7.png",
+  "/media-kit/8.png",
+];
+
 export default function PartnershipsPage() {
   return (
     <main className="bg-editorial-bg text-neutral-900">
@@ -91,6 +103,7 @@ export default function PartnershipsPage() {
           alt="The Issue № editorial partnerships"
           fill
           priority
+          sizes="100vw"
           className="object-cover"
         />
 
@@ -198,6 +211,7 @@ export default function PartnershipsPage() {
                     src={item.image}
                     alt={`${item.title} — The Issue № editorial partnership`}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition duration-700 group-hover:scale-[1.035]"
                   />
 
@@ -234,13 +248,19 @@ export default function PartnershipsPage() {
                 Find the right format for your story.
               </h2>
 
-              <p className="mt-8 max-w-sm text-[16px] leading-[1.8] text-white/60">
-                Already have a completed editorial? Or looking for a full creative production?
+              <div className="mt-8 max-w-sm space-y-5 text-[16px] leading-[1.8] text-white/60">
+                <p>
+                  Already have a completed editorial? Or looking for a full
+                  creative production?
+                </p>
 
-We can support your project at any stage.
+                <p>We can support your project at any stage.</p>
 
-Explore our editorial services, pricing and tailored collaboration options.
-              </p>
+                <p>
+                  Explore our editorial services, pricing and tailored
+                  collaboration options.
+                </p>
+              </div>
             </div>
 
             <div className="lg:col-span-8">
@@ -312,6 +332,7 @@ Explore our editorial services, pricing and tailored collaboration options.
                     src={src}
                     alt={`Trinity editorial project image ${index + 1}`}
                     fill
+                    sizes="(max-width: 1024px) 100vw, 55vw"
                     className={`trinity-partnership-image trinity-partnership-image-${
                       index + 1
                     } object-cover object-[center_22%]`}
@@ -490,7 +511,7 @@ Explore our editorial services, pricing and tailored collaboration options.
       </section>
 
       {/* COLLABORATION BOOK INTRO */}
-      {/* <section className="mx-auto max-w-7xl px-6 pb-10 md:px-12 md:pb-14">
+      <section className="mx-auto max-w-7xl px-6 pb-10 md:px-12 md:pb-14">
         <div className="grid grid-cols-1 gap-10 border-t border-neutral-200/70 pt-14 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-4">
             <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
@@ -512,26 +533,25 @@ Explore our editorial services, pricing and tailored collaboration options.
         </div>
       </section>
 
-      
-      <section className="overflow-hidden pb-20 md:pb-28">
-        <div className="mx-auto w-full max-w-[1680px] px-0 sm:px-4 md:px-8 lg:px-12">
-          <div className="w-full">
-            <MediaKitCarousel />
-          </div>
+     {/* MEDIA KIT CAROUSEL */}
+<section className="overflow-hidden pb-20 md:pb-28">
+  <div className="mx-auto w-full max-w-[1680px] px-0 sm:px-4 md:px-8 lg:px-12">
+    <div className="w-full">
+      <MediaKitCarousel />
+    </div>
 
-          <div className="mt-12 text-center md:mt-14">
-            <a
-              href="/media-kit.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block text-sm uppercase tracking-[0.25em] underline underline-offset-8 transition hover:text-black"
-            >
-              Download Media Kit (PDF)
-            </a>
-          </div>
-        </div>
-      </section>
-      */}
+    <div className="mt-12 text-center md:mt-14">
+      <a
+        href="/media-kit.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block border border-[#4A3F3C]/35 px-7 py-4 text-[10px] uppercase tracking-[0.25em] text-[#4A3F3C] transition hover:bg-[#4A3F3C] hover:text-white"
+      >
+        Open Media Kit PDF →
+      </a>
+    </div>
+  </div>
+</section>
 
       {/* CONTACT */}
       <section
