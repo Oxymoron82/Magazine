@@ -265,7 +265,16 @@ journal: "studio-journal",
       alt: "Portrait of Sofia Solas wearing a russet fur hat",
       fullBleed: true,
     },
-
+{
+  type: "credits",
+  items: [
+    {
+      label: "Photography",
+      value: "Anna Kyllönen",
+      href: "https://www.instagram.com/annakyllonen86/",
+    },
+  ],
+},
     {
       type: "hr",
     },
