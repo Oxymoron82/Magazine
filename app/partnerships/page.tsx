@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import MediaKitCarousel from "@/components/MediaKitCarousel";
 
 export const metadata: Metadata = {
   title: "Partnerships | The Issue №",
@@ -224,7 +223,7 @@ export default function PartnershipsPage() {
 
       {/* SERVICES PREVIEW */}
       <section className="mx-auto max-w-7xl px-6 pb-20 md:px-12 md:pb-28">
-        <div className="bg-[#1d1d1b] px-7 py-14 text-white md:px-12 md:py-18 lg:px-16">
+        <div className="bg-[#1d1d1b] px-7 py-14 text-white md:px-12 md:py-20 lg:px-16">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
             <div className="lg:col-span-4">
               <p className="text-xs uppercase tracking-[0.35em] text-white/45">
@@ -578,6 +577,15 @@ Explore our editorial services, pricing and tailored collaboration options.
                 For pitches, articles and visual stories.
               </p>
             </div>
+          </div>
+
+          <div className="mt-12 border-t border-neutral-200/70 pt-8">
+            <Link
+              href="/services"
+              className="text-[10px] uppercase tracking-[0.28em] underline decoration-neutral-400 underline-offset-8 transition hover:text-black"
+            >
+              View editorial services and pricing →
+            </Link>
           </div>
         </div>
       </section>

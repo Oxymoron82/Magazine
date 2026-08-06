@@ -526,28 +526,28 @@ export default function ServicesPage() {
             right format and level of support.
           </p>
 
-          <div className="mt-11 flex flex-col items-start gap-7 sm:flex-row sm:items-center">
-            <a
-              href="mailto:hello@theissue.xyz?subject=Editorial%20Collaboration"
-              className="border border-white/70 px-7 py-4 text-[10px] uppercase tracking-[0.27em] text-white transition hover:bg-white hover:text-black"
-            >
-              Start a conversation
-            </a>
+         <div className="mt-11 flex flex-col items-start gap-7 sm:flex-row sm:flex-wrap sm:items-center">
+  <a
+    href="mailto:hello@theissue.xyz?subject=Editorial%20Collaboration"
+    className="border border-white/70 px-7 py-4 text-[10px] uppercase tracking-[0.27em] text-white transition hover:bg-white hover:text-black"
+  >
+    Start a conversation
+  </a>
 
-            <a
-              href="mailto:hello@theissue.xyz"
-              className="text-lg underline decoration-white/60 underline-offset-8 transition hover:text-white/75"
-            >
-              hello@theissue.xyz
-            </a>
-          </div>
+  <Link
+    href="/partnerships"
+    className="text-[10px] uppercase tracking-[0.27em] text-white/75 underline decoration-white/40 underline-offset-8 transition hover:text-white"
+  >
+    Learn about partnerships →
+  </Link>
 
-          <Link
-            href="/partnerships"
-            className="mt-12 inline-block text-[10px] uppercase tracking-[0.27em] text-white/70 underline decoration-white/40 underline-offset-8 transition hover:text-white"
-          >
-            Return to Partnerships
-          </Link>
+  <a
+    href="mailto:hello@theissue.xyz"
+    className="text-lg underline decoration-white/60 underline-offset-8 transition hover:text-white/75"
+  >
+    hello@theissue.xyz
+  </a>
+</div>
         </div>
       </section>
     </main>

@@ -387,26 +387,26 @@ export default function BehindTheIssuePage() {
               </h2>
 
               <p className="mt-8 max-w-xl text-[17px] leading-[1.8] text-neutral-600">
-                I help businesses and creative professionals create clear,
-                beautiful and memorable digital experiences — from visual
-                direction and UI design to the final published website.
-              </p>
+  I help businesses and creative professionals create editorial
+  websites, brand stories and digital experiences that combine
+  thoughtful design, modern development and visual storytelling.
+</p>
 
-              <div className="mt-10 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
-                <a
-                  href="mailto:hello@theissue.xyz"
-                  className="border border-black px-7 py-4 text-[10px] uppercase tracking-[0.25em] transition hover:bg-black hover:text-white"
-                >
-                  Start a conversation →
-                </a>
+             <div className="mt-10 flex flex-col items-start gap-6 sm:flex-row sm:items-center">
+  <Link
+    href="/services"
+    className="border border-black px-7 py-4 text-[10px] uppercase tracking-[0.25em] transition hover:bg-black hover:text-white"
+  >
+    Explore services →
+  </Link>
 
-                <Link
-                  href="/partnerships"
-                  className="text-[10px] uppercase tracking-[0.25em] underline decoration-black/40 underline-offset-8"
-                >
-                  Explore partnerships
-                </Link>
-              </div>
+  <a
+    href="mailto:hello@theissue.xyz"
+    className="text-[10px] uppercase tracking-[0.25em] underline decoration-black/40 underline-offset-8 transition hover:text-black"
+  >
+    Start a conversation
+  </a>
+</div>
             </div>
           </div>
 
