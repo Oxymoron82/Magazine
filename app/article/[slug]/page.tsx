@@ -1,23 +1,20 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Fragment } from "react";
 import { articles, ArticleBlock } from "@/data/articles";
 import SubmitForm from "@/components/SubmitForm";
-import Link from "next/link";
 import ArticlePhotoCarousel from "@/components/ArticlePhotoCarousel";
 
 /* ---------------- HELPERS ---------------- */
 
-function renderText(text: string) {
-  const lines = text.split("\n");
-
-  return lines.map((line, i) => (
-    <Fragment key={i}>
-      {line}
-      {i < lines.length - 1 ? <br /> : null}
-    </Fragment>
-  ));
+function formatArticleDate(date: string) {
+  return new Date(date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 }
 
 function renderTextWithLinks(text: string) {
@@ -67,7 +64,7 @@ function FullBleedImage({ src, alt }: { src: string; alt: string }) {
           alt={alt}
           width={1400}
           height={1800}
-          className="w-full h-auto"
+          className="h-auto w-full"
         />
       </div>
     </div>
@@ -78,7 +75,13 @@ function InlineImage({ src, alt }: { src: string; alt: string }) {
   return (
     <div className="my-10">
       <div className="relative aspect-[3/2] overflow-hidden rounded-2xl border border-neutral-200 bg-white/30">
-        <Image src={src} alt={alt} fill className="object-cover" />
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="(max-width: 768px) 100vw, 672px"
+          className="object-cover"
+        />
       </div>
     </div>
   );
@@ -96,13 +99,14 @@ function GalleryBlock({
       <div className="grid grid-cols-2 gap-4 md:gap-6">
         {images.map((image, index) => (
           <div
-            key={index}
+            key={`${image.src}-${index}`}
             className="relative aspect-[3/4] overflow-hidden rounded-2xl border border-neutral-200 bg-white/30"
           >
             <Image
               src={image.src}
               alt={image.alt}
               fill
+              sizes="(max-width: 768px) 50vw, 320px"
               className="object-cover transition duration-500 hover:scale-[1.04]"
             />
           </div>
@@ -128,24 +132,24 @@ function CreditsList({
       </p>
 
       <dl className="mt-5 space-y-4 text-sm text-neutral-800">
-        {items.map((it) => (
-          <div key={it.label} className="flex gap-3">
-            <dt className="w-24 md:w-28 shrink-0 text-neutral-500">
-              {it.label}
+        {items.map((item) => (
+          <div key={`${item.label}-${item.value}`} className="flex gap-3">
+            <dt className="w-24 shrink-0 text-neutral-500 md:w-28">
+              {item.label}
             </dt>
 
-            <dd className="font-medium leading-snug break-words">
-              {it.href ? (
+            <dd className="break-words font-medium leading-snug">
+              {item.href ? (
                 <a
-                  href={it.href}
+                  href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline underline-offset-4 hover:text-black"
                 >
-                  {it.value}
+                  {item.value}
                 </a>
               ) : (
-                it.value
+                item.value
               )}
             </dd>
           </div>
@@ -166,27 +170,35 @@ function CreditsCard({
     alt?: string;
   };
 }) {
+  const logoImage = (
+    <Image
+      src={logo?.src || ""}
+      alt={logo?.alt || "Logo"}
+      width={180}
+      height={120}
+      className="h-auto w-full max-w-[160px] object-contain opacity-95 transition hover:opacity-100"
+    />
+  );
+
   return (
-    <aside className="mt-12 rounded-2xl border border-neutral-200 bg-white/40 p-6 md:p-8 overflow-hidden">
+    <aside className="mt-12 overflow-hidden rounded-2xl border border-neutral-200 bg-white/40 p-6 md:p-8">
       {logo ? (
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_180px] gap-8 md:gap-10 items-center">
+        <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-[1fr_180px] md:gap-10">
           <CreditsList items={items} />
 
-          <div className="flex justify-center md:justify-end min-w-0">
-            <a
-              href={logo.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block"
-            >
-              <Image
-                src={logo.src}
-                alt={logo.alt || "logo"}
-                width={180}
-                height={120}
-                className="w-full max-w-[160px] h-auto object-contain opacity-95 hover:opacity-100 transition"
-              />
-            </a>
+          <div className="flex min-w-0 justify-center md:justify-end">
+            {logo.href ? (
+              <a
+                href={logo.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                {logoImage}
+              </a>
+            ) : (
+              logoImage
+            )}
           </div>
         </div>
       ) : (
@@ -222,17 +234,17 @@ function VideoBlock({
         controls
         playsInline
         className="w-full rounded-2xl"
-        {...(autoplay && {
-          autoPlay: true,
-          muted: true,
-          loop: true,
-        })}
+        {...(autoplay
+          ? {
+              autoPlay: true,
+              muted: true,
+              loop: true,
+            }
+          : {})}
       />
 
       {caption ? (
-        <p className="mt-3 text-sm text-neutral-500 text-center">
-          {caption}
-        </p>
+        <p className="mt-3 text-center text-sm text-neutral-500">{caption}</p>
       ) : null}
     </div>
   );
@@ -252,13 +264,13 @@ function renderBlock(block: ArticleBlock, index: number) {
           style={{
             textAlign: "justify",
             textJustify: "inter-word",
-            hyphens: "auto",
+            hyphens: "none",
           }}
           className={[
             "my-6 text-[18px] leading-relaxed text-neutral-800",
             block.className || "",
             block.dropCap
-              ? "first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:font-serif first-letter:text-6xl md:first-letter:text-7xl first-letter:leading-none"
+              ? "first-letter:float-left first-letter:mr-3 first-letter:mt-2 first-letter:font-serif first-letter:text-6xl first-letter:leading-none md:first-letter:text-7xl"
               : "",
           ].join(" ")}
         >
@@ -283,7 +295,7 @@ function renderBlock(block: ArticleBlock, index: number) {
       return (
         <h2
           key={index}
-          className="mt-12 mb-5 font-serif text-2xl md:text-3xl leading-snug text-editorial-text"
+          className="mb-5 mt-12 font-serif text-2xl leading-snug text-editorial-text md:text-3xl"
         >
           {block.text}
         </h2>
@@ -293,7 +305,7 @@ function renderBlock(block: ArticleBlock, index: number) {
       return (
         <blockquote
           key={index}
-          className="my-12 font-serif text-[24px] md:text-[30px] leading-snug text-neutral-900"
+          className="my-12 font-serif text-[24px] leading-snug text-neutral-900 md:text-[30px]"
         >
           {block.text}
         </blockquote>
@@ -345,6 +357,199 @@ function renderBlock(block: ArticleBlock, index: number) {
   }
 }
 
+/* ---------------- RELATED ARTICLES ---------------- */
+
+type ArticleItem = (typeof articles)[number];
+
+function getRelatedArticles(article: ArticleItem) {
+  return articles
+    .filter((candidate) => candidate.slug !== article.slug)
+    .map((candidate) => {
+      const sameJournal =
+        Boolean(article.journal) && candidate.journal === article.journal;
+
+      const sameColumn = candidate.column === article.column;
+
+      const sameAuthor =
+        Boolean(article.author) && candidate.author === article.author;
+
+      let relevanceScore = 0;
+
+      if (sameJournal) relevanceScore += 100;
+      if (sameColumn) relevanceScore += 40;
+      if (sameAuthor) relevanceScore += 15;
+
+      return {
+        article: candidate,
+        relevanceScore,
+      };
+    })
+    .sort((a, b) => {
+      if (a.relevanceScore !== b.relevanceScore) {
+        return b.relevanceScore - a.relevanceScore;
+      }
+
+      return (
+        new Date(b.article.date).getTime() -
+        new Date(a.article.date).getTime()
+      );
+    })
+    .slice(0, 3)
+    .map((item) => item.article);
+}
+
+function RelatedArticles({
+  relatedArticles,
+}: {
+  relatedArticles: ArticleItem[];
+}) {
+  if (relatedArticles.length === 0) {
+    return null;
+  }
+
+  return (
+    <section className="border-t border-neutral-200/70">
+      <div className="mx-auto max-w-7xl px-6 py-20 md:px-12 md:py-28">
+        <div className="flex flex-col gap-6 border-b border-neutral-200/70 pb-10 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
+              Continue reading
+            </p>
+
+            <h2 className="mt-5 font-serif text-4xl leading-tight tracking-[-0.03em] text-editorial-text md:text-6xl">
+              More from The Issue №
+            </h2>
+          </div>
+
+          <Link
+            href="/columns"
+            className="text-[10px] uppercase tracking-[0.28em] underline decoration-neutral-400 underline-offset-8 transition hover:text-black"
+          >
+            Explore all columns →
+          </Link>
+        </div>
+
+        <div className="mt-14 grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-3">
+          {relatedArticles.map((relatedArticle, index) => (
+            <Link
+              key={relatedArticle.slug}
+              href={`/article/${relatedArticle.slug}`}
+              className="group block"
+            >
+              <article className="flex h-full flex-col">
+                <div className="relative aspect-[4/5] overflow-hidden bg-neutral-200">
+                  <Image
+                    src={relatedArticle.image}
+                    alt={`${relatedArticle.title} — The Issue №`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition duration-700 group-hover:scale-[1.03]"
+                  />
+
+                  <div className="absolute inset-0 bg-black/[0.04] transition duration-500 group-hover:bg-transparent" />
+
+                  <span className="absolute right-5 top-5 text-[10px] uppercase tracking-[0.3em] text-white">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                </div>
+
+                <div className="flex flex-1 flex-col pt-6">
+                  <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
+                    <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
+                      {relatedArticle.category}
+                    </p>
+
+                    <time
+                      dateTime={relatedArticle.date}
+                      className="text-[10px] uppercase tracking-[0.25em] text-neutral-400"
+                    >
+                      {formatArticleDate(relatedArticle.date)}
+                    </time>
+                  </div>
+
+                  <h3 className="mt-4 font-serif text-3xl leading-[1.08] tracking-[-0.025em] text-editorial-text transition group-hover:text-neutral-600">
+                    {relatedArticle.title}
+                  </h3>
+
+                  <p className="mt-5 text-sm leading-[1.8] text-neutral-700">
+                    {relatedArticle.excerpt}
+                  </p>
+
+                  <p className="mt-auto pt-7 text-sm underline decoration-neutral-400 underline-offset-6 transition group-hover:text-black">
+                    Read article →
+                  </p>
+                </div>
+              </article>
+            </Link>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ---------------- AUTHOR BOX ---------------- */
+
+function AuthorBox({ article }: { article: ArticleItem }) {
+  const isEditorsNote = article.journal === "editors-note";
+  const isStudioJournal = article.journal === "studio-journal";
+
+  const authorName = article.author || "The Issue № Editorial Team";
+
+  const role = isEditorsNote
+    ? "Editor-in-Chief"
+    : isStudioJournal
+      ? "Creative Developer · UI/UX Designer"
+      : "Independent Editorial Team";
+
+  const description = isEditorsNote
+    ? "Reflections on fashion, identity, publishing and contemporary editorial culture."
+    : isStudioJournal
+      ? "A behind-the-scenes look at editorial production, digital publishing, branding and the creative process behind The Issue №."
+      : "Independent editorial stories exploring fashion, culture, creativity, work and contemporary identity.";
+
+  const href = isEditorsNote
+    ? "/editors-note"
+    : isStudioJournal
+      ? "/studio-journal"
+      : "/columns";
+
+  const linkText = isEditorsNote
+    ? "View Editor’s Note →"
+    : isStudioJournal
+      ? "View Studio Journal →"
+      : "Explore the magazine →";
+
+  return (
+    <aside className="mt-16 border-y border-neutral-200/70 py-10">
+      <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
+        About the author
+      </p>
+
+      <div className="mt-7">
+        <h2 className="font-serif text-3xl leading-tight text-editorial-text">
+          {authorName}
+        </h2>
+
+        <p className="mt-3 text-[10px] uppercase tracking-[0.28em] text-neutral-500">
+          {role}
+        </p>
+
+        <p className="mt-6 max-w-xl text-[15px] leading-[1.8] text-neutral-700">
+          {description}
+        </p>
+
+        <Link
+          href={href}
+          className="mt-7 inline-block text-[10px] uppercase tracking-[0.28em] underline decoration-neutral-400 underline-offset-8 transition hover:text-black"
+        >
+          {linkText}
+        </Link>
+      </div>
+    </aside>
+  );
+}
+
 /* ---------------- PAGE SEO ---------------- */
 
 export async function generateMetadata({
@@ -353,7 +558,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const article = articles.find((a) => a.slug === slug);
+  const article = articles.find((item) => item.slug === slug);
 
   if (!article) {
     return {
@@ -411,9 +616,13 @@ export default async function ArticlePage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const article = articles.find((a) => a.slug === slug);
+  const article = articles.find((item) => item.slug === slug);
 
-  if (!article) notFound();
+  if (!article) {
+    notFound();
+  }
+
+  const relatedArticles = getRelatedArticles(article);
 
   const isBalakArticle =
     article.slug === "anastasija-balak-silent-guardian-falling-petals";
@@ -421,7 +630,7 @@ export default async function ArticlePage({
   return (
     <main className="bg-[#FFFBEB] text-neutral-900">
       {/* HERO */}
-      <section className="relative h-[72vh] min-h-[520px] md:h-[82vh] overflow-hidden bg-black">
+      <section className="relative h-[72vh] min-h-[520px] overflow-hidden bg-black md:h-[82vh]">
         {isBalakArticle ? (
           <>
             {/* Blurred background fills the frame */}
@@ -431,7 +640,7 @@ export default async function ArticlePage({
               fill
               aria-hidden="true"
               sizes="100vw"
-              className="scale-110 object-cover object-center blur-2xl opacity-45"
+              className="scale-110 object-cover object-center opacity-45 blur-2xl"
             />
 
             {/* Main image is fully visible and centered */}
@@ -453,6 +662,7 @@ export default async function ArticlePage({
             alt={`${article.title} — ${article.category} article in The Issue №`}
             fill
             priority
+            sizes="100vw"
             className="object-cover"
           />
         )}
@@ -468,20 +678,20 @@ export default async function ArticlePage({
         <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/25 to-transparent" />
 
         <div className="absolute bottom-0 left-0 right-0 z-10">
-          <div className="max-w-5xl mx-auto px-6 pb-10 md:pb-14">
+          <div className="mx-auto max-w-5xl px-6 pb-10 md:pb-14">
             <p className="text-xs uppercase tracking-[0.35em] text-white/80">
               {article.category}
             </p>
 
-            <h1 className="mt-4 font-serif text-[34px] md:text-[56px] leading-[1.05] tracking-[-0.01em] text-white max-w-[22ch] md:max-w-[20ch] text-balance">
+            <h1 className="mt-4 max-w-[22ch] text-balance font-serif text-[34px] leading-[1.05] tracking-[-0.01em] text-white md:max-w-[20ch] md:text-[56px]">
               {article.title}
             </h1>
 
-            <p className="mt-5 max-w-[55ch] text-lg text-white/90 leading-relaxed">
+            <p className="mt-5 max-w-[55ch] text-lg leading-relaxed text-white/90">
               {article.excerpt}
             </p>
 
-            {article.slug === "trinity-sofia" && (
+            {article.slug === "trinity-sofia" ? (
               <div className="mt-8">
                 <Link
                   href="/trinity"
@@ -491,18 +701,14 @@ export default async function ArticlePage({
                   <span>↗</span>
                 </Link>
               </div>
-            )}
+            ) : null}
 
             <div className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-white/80">
               <span>By {article.author || "The Issue № Editorial Team"}</span>
               <span>—</span>
 
               <time dateTime={article.date}>
-                {new Date(article.date).toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
+                {formatArticleDate(article.date)}
               </time>
             </div>
           </div>
@@ -511,12 +717,17 @@ export default async function ArticlePage({
 
       {/* CONTENT */}
       <section className="py-16 md:py-20">
-        <article lang="en" className="max-w-2xl mx-auto px-6">
+        <article lang="en" className="mx-auto max-w-2xl px-6">
           {article.blocks.map((block, index) => renderBlock(block, index))}
+
+          <AuthorBox article={article} />
 
           <SubmitForm />
         </article>
       </section>
+
+      {/* RELATED ARTICLES */}
+      <RelatedArticles relatedArticles={relatedArticles} />
     </main>
   );
 }

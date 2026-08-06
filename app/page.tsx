@@ -59,6 +59,24 @@ export default function HomePage() {
 
   const [featuredLatest, ...secondaryLatest] = latestArticles;
 
+ const editorArticles = [...articles]
+  .filter((article) => article.journal === "editors-note")
+  .sort(
+    (a, b) =>
+      new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
+
+const studioArticles = [...articles]
+  .filter((article) => article.journal === "studio-journal")
+  .sort(
+    (a, b) =>
+      new Date(b.date).getTime() - new Date(a.date).getTime(),
+  );
+
+const latestEditorArticle = editorArticles.at(0);
+const previousEditorArticle = editorArticles.at(1);
+const latestStudioArticle = studioArticles.at(0);
+
   const isQueenSapphireFeatured =
     featuredLatest?.slug === "when-women-stop-waiting-queen-sapphire-world";
 
@@ -600,7 +618,7 @@ export default function HomePage() {
         </div>
       </section>
 
-            {/* EDITOR'S NOTE */}
+                 {/* EDITOR'S NOTE */}
       <section
         id="editors-note"
         className="mx-auto max-w-7xl scroll-mt-24 px-6 py-24 md:py-32"
@@ -656,65 +674,71 @@ export default function HomePage() {
                   Latest from Editor&apos;s Note
                 </p>
 
-                <span className="font-serif text-xl text-neutral-400">№ 01</span>
+                <span className="font-serif text-xl text-neutral-400">
+                  № {String(editorArticles.length).padStart(2, "0")}
+                </span>
               </div>
 
               <div className="mt-9">
-                <Link
-                  href="/article/beyond-the-logo-why-brand-identity-matters"
-                  className="group block"
-                >
-                  <article>
-                    <div className="flex flex-wrap items-center justify-between gap-4">
+                {latestEditorArticle ? (
+                  <Link
+                    href={`/article/${latestEditorArticle.slug}`}
+                    className="group block"
+                  >
+                    <article>
+                      <div className="flex flex-wrap items-center justify-between gap-4">
+                        <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
+                          Latest publication
+                        </p>
+
+                        <p className="text-[10px] uppercase tracking-[0.3em] text-[#8A5A2B]">
+                          Published
+                        </p>
+                      </div>
+
+                      <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text transition group-hover:text-neutral-600 md:text-4xl">
+                        {latestEditorArticle.title}
+                      </h3>
+
+                      <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-neutral-700">
+                        {latestEditorArticle.excerpt}
+                      </p>
+
+                      <p className="mt-6 text-sm underline decoration-neutral-400 underline-offset-6 transition group-hover:text-black">
+                        Read article →
+                      </p>
+                    </article>
+                  </Link>
+                ) : (
+                  <p className="text-sm leading-[1.8] text-neutral-500">
+                    New Editor&apos;s Note publications are coming soon.
+                  </p>
+                )}
+
+                {previousEditorArticle ? (
+                  <Link
+                    href={`/article/${previousEditorArticle.slug}`}
+                    className="group mt-9 block border-t border-neutral-200/90 pt-9"
+                  >
+                    <article>
                       <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
-                        Latest publication
+                        From the archive
                       </p>
 
-                      <p className="text-[10px] uppercase tracking-[0.3em] text-[#8A5A2B]">
-                        Published
+                      <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text transition group-hover:text-neutral-600 md:text-4xl">
+                        {previousEditorArticle.title}
+                      </h3>
+
+                      <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-neutral-700">
+                        {previousEditorArticle.excerpt}
                       </p>
-                    </div>
 
-                    <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text transition group-hover:text-neutral-600 md:text-4xl">
-                      Beyond the Logo: Why Brand Identity Matters
-                    </h3>
-
-                    <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-neutral-700">
-                      Why do some brands become unforgettable while others
-                      disappear? A reflection on identity, storytelling and the
-                      role of editorial.
-                    </p>
-
-                    <p className="mt-6 text-sm underline decoration-neutral-400 underline-offset-6 transition group-hover:text-black">
-                      Read article →
-                    </p>
-                  </article>
-                </Link>
-
-                <Link
-                  href="/article/starting-again-in-another-country"
-                  className="group mt-9 block border-t border-neutral-200/90 pt-9"
-                >
-                  <article>
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
-                      From the archive
-                    </p>
-
-                    <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text transition group-hover:text-neutral-600 md:text-4xl">
-                      Starting Again in Another Country
-                    </h3>
-
-                    <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-neutral-700">
-                      A personal reflection on starting over, finding direction
-                      and learning to build a new life away from everything
-                      familiar.
-                    </p>
-
-                    <p className="mt-6 text-sm underline decoration-neutral-400 underline-offset-6 transition group-hover:text-black">
-                      Read article →
-                    </p>
-                  </article>
-                </Link>
+                      <p className="mt-6 text-sm underline decoration-neutral-400 underline-offset-6 transition group-hover:text-black">
+                        Read article →
+                      </p>
+                    </article>
+                  </Link>
+                ) : null}
               </div>
 
               <div className="mt-10 border-t border-neutral-200/90 pt-8">
@@ -751,7 +775,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       <div className="mx-auto max-w-7xl px-6">
         <div className="h-px bg-neutral-200/70" />
       </div>
@@ -832,55 +855,61 @@ export default function HomePage() {
             </div>
 
             {/* LATEST FROM STUDIO JOURNAL */}
-            <div className="mt-14 max-w-2xl border-t border-neutral-200/90 pt-10">
-              <div className="flex items-center justify-between gap-6">
-                <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
-                  Latest from Studio Journal
-                </p>
+<div className="mt-14 max-w-2xl border-t border-neutral-200/90 pt-10">
+  <div className="flex items-center justify-between gap-6">
+    <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
+      Latest from Studio Journal
+    </p>
 
-                <span className="font-serif text-xl text-neutral-400">№ 01</span>
-              </div>
+    <span className="font-serif text-xl text-neutral-400">
+      № {String(studioArticles.length).padStart(2, "0")}
+    </span>
+  </div>
 
-              <Link
-                href="/article/why-we-dont-build-ordinary-websites"
-                className="group mt-9 block"
-              >
-                <article>
-                  <div className="flex flex-wrap items-center justify-between gap-4">
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
-                      First publication
-                    </p>
+  {latestStudioArticle ? (
+    <Link
+      href={`/article/${latestStudioArticle.slug}`}
+      className="group mt-9 block"
+    >
+      <article>
+        <div className="flex flex-wrap items-center justify-between gap-4">
+          <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
+            Latest publication
+          </p>
 
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-[#8A5A2B]">
-                      Published
-                    </p>
-                  </div>
+          <p className="text-[10px] uppercase tracking-[0.3em] text-[#8A5A2B]">
+            Published
+          </p>
+        </div>
 
-                  <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text transition group-hover:text-neutral-600 md:text-4xl">
-                    Why We Don&apos;t Build Ordinary Websites
-                  </h3>
+        <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text transition group-hover:text-neutral-600 md:text-4xl">
+          {latestStudioArticle.title}
+        </h3>
 
-                  <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-neutral-700">
-                    A reflection on why memorable digital experiences need more
-                    than attractive layouts — and how editorial thinking gives
-                    a website character, rhythm and purpose.
-                  </p>
+        <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-neutral-700">
+          {latestStudioArticle.excerpt}
+        </p>
 
-                  <p className="mt-6 text-sm underline decoration-neutral-400 underline-offset-6 transition group-hover:text-black">
-                    Read article →
-                  </p>
-                </article>
-              </Link>
+        <p className="mt-6 text-sm underline decoration-neutral-400 underline-offset-6 transition group-hover:text-black">
+          Read article →
+        </p>
+      </article>
+    </Link>
+  ) : (
+    <p className="mt-9 text-sm leading-[1.8] text-neutral-500">
+      A new Studio Journal publication is coming soon.
+    </p>
+  )}
 
-              <div className="mt-10 border-t border-neutral-200/90 pt-8">
-                <Link
-                  href="/studio-journal"
-                  className="inline-block text-[10px] uppercase tracking-[0.28em] underline decoration-neutral-400 underline-offset-8 transition hover:text-black"
-                >
-                  Explore Studio Journal →
-                </Link>
-              </div>
-            </div>
+  <div className="mt-10 border-t border-neutral-200/90 pt-8">
+    <Link
+      href="/studio-journal"
+      className="inline-block text-[10px] uppercase tracking-[0.28em] underline decoration-neutral-400 underline-offset-8 transition hover:text-black"
+    >
+      Explore Studio Journal →
+    </Link>
+  </div>
+</div>
           </div>
         </div>
       </section>
