@@ -45,9 +45,33 @@ export type ArticleBlock =
       };
     };
 
+export type EditorialColumn =
+  | "practice"
+  | "work"
+  | "intimacy"
+  | "becoming"
+  | "place";
+
+export type EditorialJournal =
+  | "editors-note"
+  | "studio-journal";
+
 export type Article = {
   slug: string;
-  column: string;
+
+  /**
+   * The thematic section of the magazine.
+   * Used by /columns/[slug].
+   */
+  column: EditorialColumn;
+
+  /**
+   * Optional recurring author journal.
+   * One article may belong to both a thematic column
+   * and an author journal.
+   */
+  journal?: EditorialJournal;
+
   title: string;
   category: string;
   excerpt: string;
@@ -61,7 +85,8 @@ export const articles: Article[] = [
 
   {
   slug: "why-we-dont-build-ordinary-websites",
-  column: "editorial",
+  column: "work",
+journal: "studio-journal",
   title: "Why We Don’t Build Ordinary Websites",
   excerpt:
     "A reflection on why memorable digital experiences need more than attractive layouts — and how editorial thinking gives a website character, rhythm and purpose.",
@@ -175,7 +200,8 @@ export const articles: Article[] = [
 
   {
   slug: "beyond-the-logo-why-brand-identity-matters",
-  column: "editorial",
+  column: "work",
+journal: "editors-note",
   title: "Beyond the Logo: Why Brand Identity Matters",
   excerpt:
     "Why do some brands become unforgettable while others disappear? A reflection on identity, storytelling and the role of editorial.",
@@ -1662,10 +1688,11 @@ https://www.aleksilausti.com/ `,
   },
 
   {
-    slug: "starting-again-in-another-country",
-    column: "becoming",
-    title: "Starting Again, in Another Country",
-    category: "Becoming",
+  slug: "starting-again-in-another-country",
+  column: "becoming",
+  journal: "editors-note",
+  title: "Starting Again, in Another Country",
+  category: "Becoming",
     excerpt:
       "A personal editorial essay by Sofia Solas on migration, motherhood, work, visual storytelling, and the quiet strength of beginning again in another country.",
     image: "/images/becoming/starting-again/main.jpeg",
@@ -2017,3 +2044,28 @@ Helsinki`,
     ],
   },
 ];
+export function getArticlesByColumn(column: EditorialColumn) {
+  return articles
+    .filter((article) => article.column === column)
+    .sort(
+      (a, b) =>
+        new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
+}
+
+export function getArticlesByJournal(journal: EditorialJournal) {
+  return articles
+    .filter((article) => article.journal === journal)
+    .sort(
+      (a, b) =>
+        new Date(b.date).getTime() - new Date(a.date).getTime()
+    );
+}
+
+export function getEditorsNoteArticles() {
+  return getArticlesByJournal("editors-note");
+}
+
+export function getStudioJournalArticles() {
+  return getArticlesByJournal("studio-journal");
+}

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import { getStudioJournalArticles } from "@/data/articles";
 
 export const metadata: Metadata = {
   title: "Studio Journal | The Issue №",
@@ -19,7 +21,17 @@ const futureTopics = [
   "The process behind The Issue №",
 ];
 
+function formatArticleDate(date: string) {
+  return new Date(date).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
 export default function StudioJournalPage() {
+  const studioArticles = getStudioJournalArticles();
+
   return (
     <main className="bg-[#f7f4ec] text-[#191918]">
       {/* HERO */}
@@ -115,40 +127,99 @@ export default function StudioJournalPage() {
         </div>
       </section>
 
-      {/* FIRST PUBLICATION */}
+      {/* PUBLICATIONS */}
       <section className="mx-auto max-w-[1500px] px-6 py-20 md:px-12 md:py-28">
-        <Link
-          href="/article/why-we-dont-build-ordinary-websites"
-          className="group block"
-        >
-          <article className="grid grid-cols-1 gap-12 border-b border-black/10 pb-16 lg:grid-cols-12 lg:gap-16">
-            <div className="lg:col-span-3">
-              <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
-                First publication
-              </p>
+        <div className="grid grid-cols-1 gap-10 border-b border-black/10 pb-12 lg:grid-cols-12 lg:gap-16">
+          <div className="lg:col-span-4">
+            <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
+              Publications
+            </p>
+          </div>
 
-              <p className="mt-5 text-[10px] uppercase tracking-[0.3em] text-[#8A5A2B]">
-                Published · August 2026
-              </p>
-            </div>
+          <div className="lg:col-span-8">
+            <h2 className="max-w-4xl font-serif text-4xl leading-[1.05] tracking-[-0.035em] text-neutral-900 md:text-6xl">
+              Notes from inside the creative process.
+            </h2>
 
-            <div className="lg:col-span-9">
-              <h2 className="max-w-4xl font-serif text-5xl leading-[1] tracking-[-0.04em] text-neutral-900 transition group-hover:text-neutral-600 md:text-7xl">
-                Why We Don&apos;t Build Ordinary Websites
-              </h2>
+            <p className="mt-7 max-w-3xl text-[16px] leading-[1.8] text-neutral-700">
+              Essays on editorial thinking, digital design, branding,
+              development and the decisions that shape The Issue №.
+            </p>
+          </div>
+        </div>
 
-              <p className="mt-8 max-w-3xl text-[17px] leading-[1.85] text-neutral-700">
-                A reflection on why memorable digital experiences need more
-                than attractive layouts — and how editorial thinking gives a
-                website character, rhythm and purpose.
-              </p>
+        {studioArticles.length > 0 ? (
+          <div className="mt-14">
+            {studioArticles.map((article, index) => (
+              <Link
+                key={article.slug}
+                href={`/article/${article.slug}`}
+                className="group block"
+              >
+                <article className="grid grid-cols-1 gap-8 border-b border-black/10 py-12 md:grid-cols-12 md:gap-12">
+                  <div className="md:col-span-2">
+                    <p className="font-serif text-3xl text-neutral-500">
+                      {String(index + 1).padStart(2, "0")}
+                    </p>
+                  </div>
 
-              <p className="mt-8 text-sm underline decoration-black/40 underline-offset-8 transition group-hover:text-neutral-500">
-                Read article →
-              </p>
-            </div>
-          </article>
-        </Link>
+                  <div className="md:col-span-4">
+                    <div className="relative aspect-[4/3] overflow-hidden bg-[#ded9cf]">
+                      <Image
+                        src={article.image}
+                        alt={`${article.title} — Studio Journal by Maria S.`}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 34vw"
+                        className="object-cover transition duration-700 group-hover:scale-[1.025]"
+                      />
+
+                      <div className="absolute inset-0 bg-black/[0.03] transition duration-500 group-hover:bg-transparent" />
+                    </div>
+                  </div>
+
+                  <div className="flex flex-col justify-center md:col-span-6">
+                    <div className="flex flex-wrap items-center gap-x-5 gap-y-2">
+                      <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
+                        Published
+                      </p>
+
+                      <time
+                        dateTime={article.date}
+                        className="text-[10px] uppercase tracking-[0.3em] text-neutral-400"
+                      >
+                        {formatArticleDate(article.date)}
+                      </time>
+                    </div>
+
+                    <h3 className="mt-5 max-w-2xl font-serif text-4xl leading-[1.05] tracking-[-0.025em] text-neutral-900 transition group-hover:text-neutral-600 md:text-5xl">
+                      {article.title}
+                    </h3>
+
+                    <p className="mt-6 max-w-2xl text-[16px] leading-[1.85] text-neutral-700">
+                      {article.excerpt}
+                    </p>
+
+                    <div className="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3">
+                      <p className="text-sm underline decoration-black/40 underline-offset-6 transition group-hover:text-neutral-500">
+                        Read article →
+                      </p>
+
+                      <p className="text-[10px] uppercase tracking-[0.28em] text-neutral-400">
+                        {article.category}
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <div className="mt-14 border-b border-black/10 py-16">
+            <p className="font-serif text-3xl text-neutral-700">
+              The first Studio Journal publication is coming soon.
+            </p>
+          </div>
+        )}
       </section>
 
       {/* CLOSING */}
@@ -164,12 +235,21 @@ export default function StudioJournalPage() {
             </p>
           </div>
 
-          <Link
-            href="/behind-the-issue"
-            className="text-[10px] uppercase tracking-[0.28em] underline decoration-black/40 underline-offset-8 transition hover:text-neutral-500"
-          >
-            Behind The Issue →
-          </Link>
+          <div className="flex flex-col items-start gap-6 sm:flex-row sm:items-center">
+            <Link
+              href="/behind-the-issue"
+              className="text-[10px] uppercase tracking-[0.28em] underline decoration-black/40 underline-offset-8 transition hover:text-neutral-500"
+            >
+              Behind The Issue →
+            </Link>
+
+            <Link
+              href="/services"
+              className="text-[10px] uppercase tracking-[0.28em] underline decoration-black/40 underline-offset-8 transition hover:text-neutral-500"
+            >
+              Explore services →
+            </Link>
+          </div>
         </div>
       </section>
     </main>
