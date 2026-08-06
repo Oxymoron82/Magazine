@@ -275,7 +275,7 @@ export default function TrinityPage() {
                   available until 31 July.
                 </p>
                 <p>
-                  Project price: <span className="font-medium">€230</span>.
+                  Project price: <span className="font-medium">€280</span>.
                 </p>
               </div>
 
