@@ -600,7 +600,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* EDITOR'S NOTE */}
+            {/* EDITOR'S NOTE */}
       <section
         id="editors-note"
         className="mx-auto max-w-7xl scroll-mt-24 px-6 py-24 md:py-32"
@@ -660,58 +660,61 @@ export default function HomePage() {
               </div>
 
               <div className="mt-9">
-                <article>
-                  <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
-                    Published
-                  </p>
+                <Link
+                  href="/article/beyond-the-logo-why-brand-identity-matters"
+                  className="group block"
+                >
+                  <article>
+                    <div className="flex flex-wrap items-center justify-between gap-4">
+                      <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
+                        Latest publication
+                      </p>
 
-                  <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text md:text-4xl">
-                    Starting Again in Another Country
-                  </h3>
+                      <p className="text-[10px] uppercase tracking-[0.3em] text-[#8A5A2B]">
+                        Published
+                      </p>
+                    </div>
 
-                  <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-neutral-700">
-                    A personal reflection on starting over, finding direction
-                    and learning to build a new life away from everything
-                    familiar.
-                  </p>
+                    <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text transition group-hover:text-neutral-600 md:text-4xl">
+                      Beyond the Logo: Why Brand Identity Matters
+                    </h3>
 
-                  <Link
-                    href="/article/starting-again-in-another-country"
-                    className="mt-6 inline-block text-sm underline decoration-neutral-400 underline-offset-6 transition hover:text-black"
-                  >
-                    Read article →
-                  </Link>
-                </article>
+                    <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-neutral-700">
+                      Why do some brands become unforgettable while others
+                      disappear? A reflection on identity, storytelling and the
+                      role of editorial.
+                    </p>
+
+                    <p className="mt-6 text-sm underline decoration-neutral-400 underline-offset-6 transition group-hover:text-black">
+                      Read article →
+                    </p>
+                  </article>
+                </Link>
 
                 <Link
-  href="/article/beyond-the-logo-why-brand-identity-matters"
-  className="group mt-9 block border-t border-neutral-200/90 pt-9"
->
-  <article>
-    <div className="flex flex-wrap items-center justify-between gap-4">
-      <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
-        Latest publication
-      </p>
+                  href="/article/starting-again-in-another-country"
+                  className="group mt-9 block border-t border-neutral-200/90 pt-9"
+                >
+                  <article>
+                    <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
+                      From the archive
+                    </p>
 
-      <p className="text-[10px] uppercase tracking-[0.3em] text-[#8A5A2B]">
-        Published
-      </p>
-    </div>
+                    <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text transition group-hover:text-neutral-600 md:text-4xl">
+                      Starting Again in Another Country
+                    </h3>
 
-    <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text transition group-hover:text-neutral-600 md:text-4xl">
-      Beyond the Logo: Why Brand Identity Matters
-    </h3>
+                    <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-neutral-700">
+                      A personal reflection on starting over, finding direction
+                      and learning to build a new life away from everything
+                      familiar.
+                    </p>
 
-    <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-neutral-700">
-      Why do some brands become unforgettable while others disappear? A
-      reflection on identity, storytelling and the role of editorial.
-    </p>
-
-    <p className="mt-6 text-sm underline decoration-neutral-400 underline-offset-6 transition group-hover:text-black">
-      Read article →
-    </p>
-  </article>
-</Link>
+                    <p className="mt-6 text-sm underline decoration-neutral-400 underline-offset-6 transition group-hover:text-black">
+                      Read article →
+                    </p>
+                  </article>
+                </Link>
               </div>
 
               <div className="mt-10 border-t border-neutral-200/90 pt-8">
@@ -719,7 +722,7 @@ export default function HomePage() {
                   href="/editors-note"
                   className="inline-block text-[10px] uppercase tracking-[0.28em] underline decoration-neutral-400 underline-offset-8 transition hover:text-black"
                 >
-                  View all Editor&apos;s Notes →
+                  Explore Editor&apos;s Note →
                 </Link>
               </div>
             </div>
@@ -731,6 +734,7 @@ export default function HomePage() {
                 src="/images/sonja1.jpeg"
                 alt="Sofia Solas, Editor-in-Chief of The Issue №"
                 fill
+                sizes="(max-width: 768px) 100vw, 40vw"
                 className="object-cover transition duration-700 hover:scale-[1.03]"
               />
             </div>
@@ -743,6 +747,139 @@ export default function HomePage() {
               <p className="mt-3 font-serif text-2xl leading-snug text-editorial-text">
                 Fashion, identity and the stories behind what we create.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="h-px bg-neutral-200/70" />
+      </div>
+
+      {/* STUDIO JOURNAL */}
+      <section
+        id="studio-journal"
+        className="mx-auto max-w-7xl scroll-mt-24 px-6 py-24 md:py-32"
+      >
+        <div className="grid items-start gap-14 md:grid-cols-12">
+          {/* IMAGE */}
+          <div className="md:col-span-5 md:pt-10">
+            <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-xl">
+              <Image
+                src="/images/behind-the-issue/8.png"
+                alt="Editorial design and development workspace behind The Issue №"
+                fill
+                sizes="(max-width: 768px) 100vw, 40vw"
+                className="object-cover object-center transition duration-700 hover:scale-[1.03]"
+              />
+            </div>
+
+            <div className="mt-6 w-full max-w-sm border-t border-neutral-200/90 pt-5">
+              <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
+                Studio column
+              </p>
+
+              <p className="mt-3 font-serif text-2xl leading-snug text-editorial-text">
+                Design, development and the creative process behind the
+                finished page.
+              </p>
+            </div>
+          </div>
+
+          {/* COPY */}
+          <div className="max-w-3xl md:col-span-7 md:pl-8">
+            <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
+              Studio Journal
+            </p>
+
+            <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-neutral-600">
+              A behind-the-scenes look at editorial production, branding,
+              digital publishing and the creative process behind The Issue №.
+            </p>
+
+            <h2 className="mt-7 font-serif text-5xl leading-[1.02] text-editorial-text md:text-7xl">
+              Ideas, process and the work behind the finished page.
+            </h2>
+
+            <div className="mt-8 max-w-2xl space-y-6 text-lg leading-[1.85] text-neutral-700">
+              <p>
+                Studio Journal documents how editorial ideas become digital
+                experiences — from visual direction and content structure to
+                responsive design and final development.
+              </p>
+
+              <p>
+                It explores the decisions behind typography, photography,
+                branding, UI/UX and the systems that allow a publication to
+                evolve without losing its identity.
+              </p>
+
+              <p>
+                This is not a technical diary. It is a closer look at the
+                relationship between storytelling, aesthetics and modern web
+                development.
+              </p>
+            </div>
+
+            <div className="mt-9">
+              <p className="font-serif text-2xl leading-none text-editorial-text">
+                Maria S.
+              </p>
+
+              <p className="mt-3 text-[10px] uppercase tracking-[0.3em] text-neutral-500">
+                Creative Developer · UI/UX Designer
+              </p>
+            </div>
+
+            {/* LATEST FROM STUDIO JOURNAL */}
+            <div className="mt-14 max-w-2xl border-t border-neutral-200/90 pt-10">
+              <div className="flex items-center justify-between gap-6">
+                <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
+                  Latest from Studio Journal
+                </p>
+
+                <span className="font-serif text-xl text-neutral-400">№ 01</span>
+              </div>
+
+              <Link
+                href="/article/why-we-dont-build-ordinary-websites"
+                className="group mt-9 block"
+              >
+                <article>
+                  <div className="flex flex-wrap items-center justify-between gap-4">
+                    <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
+                      First publication
+                    </p>
+
+                    <p className="text-[10px] uppercase tracking-[0.3em] text-[#8A5A2B]">
+                      Published
+                    </p>
+                  </div>
+
+                  <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text transition group-hover:text-neutral-600 md:text-4xl">
+                    Why We Don&apos;t Build Ordinary Websites
+                  </h3>
+
+                  <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-neutral-700">
+                    A reflection on why memorable digital experiences need more
+                    than attractive layouts — and how editorial thinking gives
+                    a website character, rhythm and purpose.
+                  </p>
+
+                  <p className="mt-6 text-sm underline decoration-neutral-400 underline-offset-6 transition group-hover:text-black">
+                    Read article →
+                  </p>
+                </article>
+              </Link>
+
+              <div className="mt-10 border-t border-neutral-200/90 pt-8">
+                <Link
+                  href="/studio-journal"
+                  className="inline-block text-[10px] uppercase tracking-[0.28em] underline decoration-neutral-400 underline-offset-8 transition hover:text-black"
+                >
+                  Explore Studio Journal →
+                </Link>
+              </div>
             </div>
           </div>
         </div>
