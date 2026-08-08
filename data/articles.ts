@@ -259,12 +259,7 @@ journal: "studio-journal",
       text: `Fashion changes. Trends change. Even brands evolve. But when people remember how you made them feel, you have already created something much bigger than a logo.`,
     },
 
-    {
-      type: "image",
-      src: "/images/editors-note/beyond-the-logo/3.jpg",
-      alt: "Portrait of Sofia Solas wearing a russet fur hat",
-      fullBleed: true,
-    },
+   
 {
   type: "credits",
   items: [
