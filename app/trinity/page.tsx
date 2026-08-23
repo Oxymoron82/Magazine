@@ -404,7 +404,7 @@ export default function TrinityPage() {
 
             <div className="lg:col-span-8">
               <p className="font-serif text-5xl md:text-7xl leading-none text-editorial-text">
-                €230
+                €280
               </p>
 
               <p className="mt-6 max-w-2xl text-[17px] leading-[1.8] text-neutral-700">
