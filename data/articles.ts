@@ -91,7 +91,7 @@ export const articles: Article[] = [
   category: "Studio Journal",
   excerpt:
     "Clients rarely come with a visual concept. More often, they come with a feeling. A recent beauty salon project reminded me that good design begins long before choosing colours, fonts or images — it begins with learning how to listen.",
-  image: "/images/studio-journal/visual-listening/1.jpg",
+  image: "/images/studio-journal/visual-listening/2.jpg",
   date: "2026-08-30",
   author: "Maria S.",
 
@@ -156,7 +156,7 @@ export const articles: Article[] = [
 
     {
       type: "image",
-      src: "/images/studio-journal/visual-listening/2.jpg",
+      src: "/images/studio-journal/visual-listening/1.jpg",
       alt: "Visual identity development for a Helsinki beauty salon",
       caption: "Finding the visual language behind the client's idea.",
     },
@@ -240,7 +240,7 @@ export const articles: Article[] = [
     },
     {
       type: "p",
-      text: `This is especially important in beauty and wellness, where there is a very thin line between looking approachable and looking inexpensive — or between looking sophisticated and becoming cold and clinical.`,
+      text: `This is especially important in beauty and wellness, where there is a very thin line between looking approachable and looking inexpensive - or between looking sophisticated and becoming cold and clinical.`,
     },
     {
       type: "p",
@@ -273,7 +273,7 @@ export const articles: Article[] = [
     },
     {
       type: "p",
-      text: `I could see the direction more clearly — the softness, the brightness, the level of minimalism, and the relationship between professionalism and warmth.`,
+      text: `I could see the direction more clearly - the softness, the brightness, the level of minimalism, and the relationship between professionalism and warmth.`,
     },
     {
       type: "p",
@@ -318,7 +318,7 @@ export const articles: Article[] = [
     },
     {
       type: "p",
-      text: `Who walks through the door? What does a treatment cost? Where is the salon located? How does the physical space feel? What level of service does the customer expect? Does the brand need to feel exclusive, approachable, clinical, intimate — or some careful combination of all four?`,
+      text: `Who walks through the door? What does a treatment cost? Where is the salon located? How does the physical space feel? What level of service does the customer expect? Does the brand need to feel exclusive, approachable, clinical, intimate - or some careful combination of all four?`,
     },
     {
       type: "p",
@@ -425,7 +425,7 @@ export const articles: Article[] = [
     },
     {
       type: "p",
-      text: `It is to find a visual language for something that already exists — perhaps as an idea, an atmosphere or simply a feeling the client hasn't yet learned how to describe.`,
+      text: `It is to find a visual language for something that already exists - perhaps as an idea, an atmosphere or simply a feeling the client hasn't yet learned how to describe.`,
     },
     {
       type: "p",
@@ -477,7 +477,7 @@ export const articles: Article[] = [
 journal: "studio-journal",
   title: "Why We Don’t Build Ordinary Websites",
   excerpt:
-    "A reflection on why memorable digital experiences need more than attractive layouts — and how editorial thinking gives a website character, rhythm and purpose.",
+    "A reflection on why memorable digital experiences need more than attractive layouts - and how editorial thinking gives a website character, rhythm and purpose.",
   category: "Studio Journal",
   author: "Maria S.",
   date: "2026-08-05",
@@ -491,7 +491,7 @@ journal: "studio-journal",
 
     {
       type: "p",
-      text: `When I began building The Issue №, I did not want to create another polished collection of screens. I wanted to create a real digital publication — something people could read, explore and return to. That changed the way I approached every decision, from typography and image placement to navigation, movement and page rhythm.`,
+      text: `When I began building The Issue №, I did not want to create another polished collection of screens. I wanted to create a real digital publication - something people could read, explore and return to. That changed the way I approached every decision, from typography and image placement to navigation, movement and page rhythm.`,
     },
 
     {
@@ -546,7 +546,7 @@ journal: "studio-journal",
 
     {
       type: "p",
-      text: `The goal was never to build something unusual simply for the sake of being different. The goal was to create a digital environment with its own character — one that supports the stories, people and projects published within it.`,
+      text: `The goal was never to build something unusual simply for the sake of being different. The goal was to create a digital environment with its own character - one that supports the stories, people and projects published within it.`,
     },
 
     {
