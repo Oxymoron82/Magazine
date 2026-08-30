@@ -84,6 +84,394 @@ export type Article = {
 export const articles: Article[] = [
 
   {
+  slug: "visual-listening-designing-what-the-client-cannot-put-into-words",
+  column: "work",
+  journal: "studio-journal",
+  title: "Visual Listening: Designing What the Client Cannot Put Into Words",
+  category: "Studio Journal",
+  excerpt:
+    "Clients rarely come with a visual concept. More often, they come with a feeling. A recent beauty salon project reminded me that good design begins long before choosing colours, fonts or images — it begins with learning how to listen.",
+  image: "/images/studio-journal/visual-listening/1.jpg",
+  date: "2026-08-30",
+  author: "Maria S.",
+
+  blocks: [
+    {
+      type: "p",
+      text: `When a client says, “I want it to feel more alive,” what exactly does that mean?`,
+    },
+    {
+      type: "p",
+      text: `More colour? Stronger typography? Less empty space? Different photography?`,
+    },
+    {
+      type: "p",
+      text: `Usually, none of these answers is quite right on its own.`,
+    },
+    {
+      type: "p",
+      text: `One of the most interesting parts of working with small businesses is that clients rarely speak the language of design. And they shouldn't have to. They know their business, their customers and the feeling they want to create. The designer's job is to translate that feeling into a visual language.`,
+    },
+    {
+      type: "p",
+      text: `I was reminded of this recently while developing the social media identity for a beauty salon in Helsinki.`,
+    },
+    {
+      type: "p",
+      text: `At first glance, the task seemed straightforward: create a coherent visual direction for Instagram and Facebook, introduce the salon and its treatments, and make the pages feel professional and recognisable.`,
+    },
+    {
+      type: "p",
+      text: `But very quickly, the project became less about making social media posts and more about understanding what kind of brand this actually was.`,
+    },
+
+    {
+      type: "h2",
+      text: "The Brief Is Rarely the Whole Brief",
+    },
+    {
+      type: "p",
+      text: `A brief gives you information. A conversation gives you clues.`,
+    },
+    {
+      type: "p",
+      text: `There is a difference.`,
+    },
+    {
+      type: "p",
+      text: `A client may ask for something “elegant”, “fresh”, “soft”, “minimal” or “more alive”. These words are useful, but they are not a design system. Two people can say elegant and imagine completely different things.`,
+    },
+    {
+      type: "p",
+      text: `This is where visual listening begins.`,
+    },
+    {
+      type: "p",
+      text: `You listen not only to what the client asks for, but also to what they reject. You notice which references they return to. You look at their space, their existing materials, their website, their services and the way they communicate with customers.`,
+    },
+    {
+      type: "p",
+      text: `Gradually, a visual personality begins to emerge.`,
+    },
+
+    {
+      type: "image",
+      src: "/images/studio-journal/visual-listening/2.jpg",
+      alt: "Visual identity development for a Helsinki beauty salon",
+      caption: "Finding the visual language behind the client's idea.",
+    },
+
+    {
+      type: "h2",
+      text: "A Brand Has an Address",
+    },
+    {
+      type: "p",
+      text: `One detail that can easily be underestimated in digital design is the physical location of the business.`,
+    },
+    {
+      type: "p",
+      text: `But an address is part of a brand.`,
+    },
+    {
+      type: "p",
+      text: `The salon I was designing for is located in Ullanlinna, one of Helsinki's established central neighbourhoods. That context matters. The surrounding architecture, businesses and clientele create certain expectations before a customer has even opened the door.`,
+    },
+    {
+      type: "p",
+      text: `The digital identity has to understand those expectations.`,
+    },
+    {
+      type: "p",
+      text: `A beauty business positioned in this environment should not feel cheap, overly promotional or visually chaotic. At the same time, “premium” does not have to mean black backgrounds, gold typography and obvious luxury codes.`,
+    },
+    {
+      type: "p",
+      text: `In fact, trying too hard to look expensive often creates the opposite impression.`,
+    },
+    {
+      type: "p",
+      text: `For this project, premium needed to feel quieter.`,
+    },
+    {
+      type: "p",
+      text: `More space. More restraint. Carefully selected photography. A controlled palette. Typography with enough confidence not to compete for attention.`,
+    },
+    {
+      type: "p",
+      text: `The goal was not to announce luxury.`,
+    },
+    {
+      type: "p",
+      text: `It was to let the brand behave as though quality was already expected.`,
+    },
+
+    {
+      type: "h2",
+      text: "Premium Is Not a Style",
+    },
+    {
+      type: "p",
+      text: `This became one of the most useful questions during the process:`,
+    },
+    {
+      type: "quote",
+      text: `What makes something look premium without explicitly trying to look luxurious?`,
+    },
+    {
+      type: "p",
+      text: `For me, the answer increasingly comes down to confidence and consistency.`,
+    },
+    {
+      type: "p",
+      text: `Premium design knows what to leave out.`,
+    },
+    {
+      type: "p",
+      text: `It doesn't need five fonts, ten colours and a promotional badge in every corner. It doesn't need to make every element equally loud.`,
+    },
+    {
+      type: "p",
+      text: `Instead, it creates hierarchy.`,
+    },
+    {
+      type: "p",
+      text: `One image can dominate. One sentence can have space around it. One carefully chosen detail can do more than several decorative elements.`,
+    },
+    {
+      type: "p",
+      text: `This is especially important in beauty and wellness, where there is a very thin line between looking approachable and looking inexpensive — or between looking sophisticated and becoming cold and clinical.`,
+    },
+    {
+      type: "p",
+      text: `Finding that balance became part of the concept.`,
+    },
+
+    {
+      type: "image",
+      src: "/images/studio-journal/visual-listening/3.jpg",
+      alt: "Premium social media design for a beauty salon",
+      caption:
+        "Premium does not have to be loud. Sometimes restraint communicates more.",
+    },
+
+    {
+      type: "h2",
+      text: "Then Something Clicked",
+    },
+    {
+      type: "p",
+      text: `During the process, the client showed me the salon's new website.`,
+    },
+    {
+      type: "p",
+      text: `And suddenly, several things became much clearer.`,
+    },
+    {
+      type: "p",
+      text: `It wasn't that the website gave me a ready-made design to copy. It did something more useful: it revealed the visual world the client had been trying to describe.`,
+    },
+    {
+      type: "p",
+      text: `I could see the direction more clearly — the softness, the brightness, the level of minimalism, and the relationship between professionalism and warmth.`,
+    },
+    {
+      type: "p",
+      text: `I realised that my first interpretation wasn't necessarily bad.`,
+    },
+    {
+      type: "p",
+      text: `It simply wasn't completely theirs.`,
+    },
+    {
+      type: "p",
+      text: `That distinction matters.`,
+    },
+    {
+      type: "p",
+      text: `One of the hardest lessons in design is learning that a beautiful solution can still be the wrong solution.`,
+    },
+
+    {
+      type: "h2",
+      text: "Designing for the Business, Not for the Designer",
+    },
+    {
+      type: "p",
+      text: `It is very easy for designers to become attached to an aesthetic.`,
+    },
+    {
+      type: "p",
+      text: `We have favourite typefaces, compositions, colours and visual references. And when something looks beautiful on our screen, it is tempting to defend it.`,
+    },
+    {
+      type: "p",
+      text: `But the client is not hiring us to demonstrate our personal taste.`,
+    },
+    {
+      type: "p",
+      text: `The design has to belong to the business.`,
+    },
+    {
+      type: "p",
+      text: `For a local beauty salon, that means considering much more than whether an Instagram grid looks attractive.`,
+    },
+    {
+      type: "p",
+      text: `Who walks through the door? What does a treatment cost? Where is the salon located? How does the physical space feel? What level of service does the customer expect? Does the brand need to feel exclusive, approachable, clinical, intimate — or some careful combination of all four?`,
+    },
+    {
+      type: "p",
+      text: `A successful visual identity sits somewhere at the intersection of those answers.`,
+    },
+
+    {
+      type: "h2",
+      text: "Social Media Is Part of the Interior",
+    },
+    {
+      type: "p",
+      text: `There is another reason this matters particularly for beauty businesses.`,
+    },
+    {
+      type: "p",
+      text: `For many new customers, Instagram is effectively the first room of the salon.`,
+    },
+    {
+      type: "p",
+      text: `They enter it before they enter the physical space.`,
+    },
+    {
+      type: "p",
+      text: `They see the colours, faces, treatments, photography and language. Within seconds, they form an expectation about the experience and, often unconsciously, about the price level.`,
+    },
+    {
+      type: "p",
+      text: `If the physical salon communicates care and quality while its digital presence communicates discount offers and visual noise, there is a disconnect.`,
+    },
+    {
+      type: "p",
+      text: `The opposite is equally problematic: an extremely polished luxury identity can create expectations that the actual experience was never designed to meet.`,
+    },
+    {
+      type: "p",
+      text: `Good branding reduces that distance.`,
+    },
+    {
+      type: "p",
+      text: `The Instagram page, website, treatment room and customer experience do not need to look identical.`,
+    },
+    {
+      type: "p",
+      text: `But they should feel as though they belong to the same world.`,
+    },
+
+    {
+      type: "image",
+      src: "/images/studio-journal/visual-listening/4.jpg",
+      alt: "Beauty salon brand identity across social media",
+      caption:
+        "Digital identity should feel like an extension of the physical experience.",
+    },
+
+    {
+      type: "h2",
+      text: "Visual Listening",
+    },
+    {
+      type: "p",
+      text: `This is why I have started thinking about this part of design as visual listening.`,
+    },
+    {
+      type: "p",
+      text: `It happens before the final palette.`,
+    },
+    {
+      type: "p",
+      text: `Before the typography.`,
+    },
+    {
+      type: "p",
+      text: `Sometimes even before the designer fully understands what the project is supposed to look like.`,
+    },
+    {
+      type: "p",
+      text: `You collect signals.`,
+    },
+    {
+      type: "p",
+      text: `The client's words. The things they dislike. Their location. Their audience. Their prices. Their personality. Their physical space. Existing materials. Competitors. References.`,
+    },
+    {
+      type: "p",
+      text: `And somewhere between all those fragments, the brand begins to become visible.`,
+    },
+    {
+      type: "p",
+      text: `The designer's role is not always to invent it.`,
+    },
+    {
+      type: "p",
+      text: `Sometimes the more interesting job is to recognise it.`,
+    },
+
+    {
+      type: "h2",
+      text: "The Designer as Translator",
+    },
+    {
+      type: "p",
+      text: `I don't think a designer's job is to impose a style on a business.`,
+    },
+    {
+      type: "p",
+      text: `It is to find a visual language for something that already exists — perhaps as an idea, an atmosphere or simply a feeling the client hasn't yet learned how to describe.`,
+    },
+    {
+      type: "p",
+      text: `That requires design skills, of course.`,
+    },
+    {
+      type: "p",
+      text: `But it also requires curiosity.`,
+    },
+    {
+      type: "p",
+      text: `Observation.`,
+    },
+    {
+      type: "p",
+      text: `And the willingness to change direction when new information changes your understanding of the project.`,
+    },
+    {
+      type: "p",
+      text: `Because sometimes the most important moment in the design process isn't when the client says:`,
+    },
+    {
+      type: "quote",
+      text: `“That's beautiful.”`,
+    },
+    {
+      type: "p",
+      text: `It's when they look at something and say:`,
+    },
+    {
+      type: "quote",
+      text: `“Yes. That's us.”`,
+    },
+
+    {
+      type: "p",
+      text: `Maria S.`,
+    },
+    {
+      type: "p",
+      text: `Creative Developer · UI/UX Designer`,
+    },
+  ],
+},
+
+  {
   slug: "why-we-dont-build-ordinary-websites",
   column: "work",
 journal: "studio-journal",
