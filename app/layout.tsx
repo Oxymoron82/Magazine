@@ -1,13 +1,13 @@
+import ConditionalLayout from "@/components/ConditionalLayout";
 import "./globals.css";
-import CreatedBy from "@/components/CreatedBy";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+
 import {
   Playfair_Display,
   Inter,
   Bodoni_Moda,
   Inria_Serif,
 } from "next/font/google";
+
 import type { Metadata } from "next";
 
 const playfair = Playfair_Display({
@@ -37,15 +37,19 @@ const inria = Inria_Serif({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://theissue.xyz"),
+
   title: {
     default: "The Issue",
     template: "%s | The Issue",
   },
+
   description:
     "The Issue is an independent online magazine about transformation, business, visual culture, and personal stories.",
+
   alternates: {
     canonical: "https://theissue.xyz",
   },
+
   verification: {
     google: "GpHgqBE_vaKUdIqV",
     other: {
@@ -64,13 +68,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${playfair.variable} ${bodoni.variable} ${inria.variable}`}
       >
-        <Header />
-
-        {children}
-
-        <CreatedBy />
-
-        <Footer />
+        <ConditionalLayout>
+          {children}
+        </ConditionalLayout>
       </body>
     </html>
   );
