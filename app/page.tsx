@@ -1,984 +1,133 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
-import { articles } from "@/data/articles";
-import { columns } from "@/data/columns";
-import SearchArticles from "@/components/SearchArticles";
-
-export const metadata: Metadata = {
-  title: "The Issue № | Independent Fashion and Editorial Magazine",
-  description:
-    "The Issue № is an independent fashion and editorial magazine exploring contemporary culture through visual storytelling, photography, design, creative practice, and modern identity.",
-  alternates: {
-    canonical: "https://theissue.xyz",
-  },
-  openGraph: {
-    title: "The Issue № | Independent Fashion and Editorial Magazine",
-    description:
-      "An independent editorial platform exploring fashion, photography, design, creative practice, and modern identity through visual storytelling.",
-    url: "https://theissue.xyz",
-    siteName: "The Issue №",
-    type: "website",
-    locale: "en_US",
-    images: [
-      {
-        url: "https://theissue.xyz/images/editorial-2.jpg",
-        width: 1200,
-        height: 630,
-        alt: "The Issue № editorial magazine homepage cover",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "The Issue № | Independent Fashion and Editorial Magazine",
-    description:
-      "An independent editorial platform exploring fashion, photography, design, creative practice, and modern identity through visual storytelling.",
-    images: ["https://theissue.xyz/images/editorial-2.jpg"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-  },
-};
-
-function formatArticleDate(date: string) {
-  return new Date(date).toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-}
 
 export default function HomePage() {
-  const latestArticles = [...articles]
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, 5);
-
-  const activeColumns = columns.filter((column) => column.active);
-
-  const [featuredLatest, ...secondaryLatest] = latestArticles;
-
- const editorArticles = [...articles]
-  .filter((article) => article.journal === "editors-note")
-  .sort(
-    (a, b) =>
-      new Date(b.date).getTime() - new Date(a.date).getTime(),
-  );
-
-const studioArticles = [...articles]
-  .filter((article) => article.journal === "studio-journal")
-  .sort(
-    (a, b) =>
-      new Date(b.date).getTime() - new Date(a.date).getTime(),
-  );
-
-const latestEditorArticle = editorArticles.at(0);
-const previousEditorArticle = editorArticles.at(1);
-const latestStudioArticle = studioArticles.at(0);
-
-  const isQueenSapphireFeatured =
-    featuredLatest?.slug === "when-women-stop-waiting-queen-sapphire-world";
-
   return (
-    <main className="bg-editorial-bg text-neutral-900">
-      {/* HERO */}
-      <section
-        id="home"
-        className="relative h-[86vh] min-h-[620px] overflow-hidden bg-black scroll-mt-24 md:h-screen"
-      >
-        <Image
-          src="/images/editorial-2.jpg"
-          alt="The Issue № editorial magazine homepage cover"
-          fill
-          priority
-          className="object-cover"
-        />
+    <main className="relative flex min-h-screen min-h-[100svh] items-center justify-center overflow-hidden bg-black text-white">
 
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/30 to-black/10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-black/10" />
+      {/* BACKGROUND */}
+      <Image
+        src="/images/editorial-2.jpg"
+        alt="Helsinki at dusk"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover"
+      />
 
-        <div className="absolute inset-0 z-10 flex items-center">
-          <div className="mx-auto w-full max-w-7xl px-8 md:px-16 lg:px-24">
-            <div className="max-w-[720px]">
-              <h1 className="font-inria text-[42px] leading-[0.95] tracking-[-0.04em] text-white sm:text-[56px] md:text-[78px] lg:text-[86px]">
-                Individual stories.
-                <br />
-                Fashion identity.
-              </h1>
+      {/* DARK OVERLAY */}
+      <div className="absolute inset-0 bg-black/55" />
 
-              <div className="mt-8 h-px w-20 bg-white/70" />
+      {/* CONTENT */}
+      <div className="relative z-10 flex w-full max-w-6xl flex-col items-center px-6 text-center">
 
-              <p className="mt-7 max-w-[420px] text-[16px] leading-[1.75] text-white/90 md:text-[19px]">
-                A visual magazine about people, work, transformation and
-                contemporary culture.
-              </p>
+        <h1 className="cover-title">
+          Individual stories.
+        </h1>
 
-              <div className="mt-10 md:mt-12">
-                <Image
-                  src="/images/logo_new.jpg"
-                  alt="The Issue № editorial magazine logo"
-                  width={96}
-                  height={96}
-                  priority
-                  className="h-auto w-[76px] rounded-xl opacity-95 md:w-[96px] md:rounded-2xl"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        <h2 className="cover-subtitle">
+          Fashion identity.
+        </h2>
 
-      <SearchArticles />
+        <div className="cover-line mt-10 h-px w-20 bg-white/70" />
 
-      {/* LATEST */}
-      <section
-        id="latest"
-        className="mx-auto max-w-7xl scroll-mt-24 px-6 pb-24 pt-16 md:pb-32 md:pt-24"
-      >
-        <div className="mb-12 flex items-end justify-between gap-6">
-          <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
-              Latest
-            </p>
-
-            <h2 className="mt-3 font-serif text-3xl leading-tight text-editorial-text md:text-5xl">
-              New pieces and fresh visuals
-            </h2>
-          </div>
-        </div>
-
-        {featuredLatest ? (
-          <div className="grid grid-cols-1 gap-x-12 gap-y-16 lg:grid-cols-12">
-            <Link
-              href={`/article/${featuredLatest.slug}`}
-              className="group block lg:col-span-7"
-            >
-              <article className="space-y-5">
-                <div
-                  className={`relative overflow-hidden ${
-                    isQueenSapphireFeatured
-                      ? "aspect-[4/5]"
-                      : "aspect-[4/3] bg-white/30"
-                  }`}
-                >
-                  <Image
-                    src={featuredLatest.image}
-                    alt={`${featuredLatest.title} — editorial feature in The Issue № magazine`}
-                    fill
-                    className={`transition duration-700 ${
-                      isQueenSapphireFeatured
-                        ? "object-cover object-center group-hover:scale-[1.025]"
-                        : "object-cover group-hover:scale-[1.025]"
-                    }`}
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
-                    {featuredLatest.category}
-                  </p>
-
-                  <p className="text-xs text-neutral-500">
-                    By {featuredLatest.author || "The Issue № Editorial Team"} ·{" "}
-                    <time dateTime={featuredLatest.date}>
-                      {formatArticleDate(featuredLatest.date)}
-                    </time>
-                  </p>
-                </div>
-
-                <h3 className="font-serif text-3xl leading-tight text-editorial-text md:text-5xl">
-                  {featuredLatest.title}
-                </h3>
-
-                <p className="max-w-[42ch] leading-[1.75] text-neutral-700">
-                  {featuredLatest.excerpt}
-                </p>
-              </article>
-            </Link>
-
-            <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-1">
-              {secondaryLatest.slice(0, 3).map((article) => (
-                <Link
-                  key={article.slug}
-                  href={`/article/${article.slug}`}
-                  className="group block"
-                >
-                  <article className="grid grid-cols-1 items-start gap-5 md:grid-cols-[0.9fr_1.1fr]">
-                    <div className="relative aspect-[3/4] overflow-hidden bg-white/30">
-                      <Image
-                        src={article.image}
-                        alt={`${article.title} — ${article.category} story in The Issue №`}
-                        fill
-                        className="object-cover transition duration-700 group-hover:scale-[1.03]"
-                      />
-                    </div>
-
-                    <div>
-                      <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-600">
-                        {article.category}
-                      </p>
-
-                      <p className="mt-2 text-[11px] leading-relaxed text-neutral-500">
-                        By {article.author || "The Issue № Editorial Team"}
-                        <br />
-
-                        <time dateTime={article.date}>
-                          {formatArticleDate(article.date)}
-                        </time>
-                      </p>
-
-                      <h3 className="mt-3 font-serif text-xl leading-tight text-editorial-text md:text-2xl">
-                        {article.title}
-                      </h3>
-                    </div>
-                  </article>
-                </Link>
-              ))}
-            </div>
-          </div>
-        ) : null}
-
-        {/* MOBILE ALL ARTICLES CTA */}
-        <div className="mt-14 md:hidden">
-          <Link
-            href="/columns"
-            className="block border-b border-[#4A3F3C]/20 py-6"
-          >
-            <p className="text-[11px] uppercase tracking-[0.35em] text-neutral-500">
-              Explore
-            </p>
-
-            <div className="mt-3 flex items-center justify-between gap-6">
-              <p className="font-serif text-3xl leading-tight text-[#4A3F3C]">
-                All stories
-              </p>
-
-              <span className="text-2xl text-[#4A3F3C]">→</span>
-            </div>
-
-            <p className="mt-3 text-sm leading-relaxed text-neutral-600">
-              Browse the full magazine archive by column: Practice, Work,
-              Intimacy, Becoming and Place.
-            </p>
-          </Link>
-        </div>
-      </section>
-
-      {/* TRINITY PROJECT */}
-      <section className="mx-auto max-w-7xl px-6 pb-24 md:pb-32">
         <Link
-          href="/trinity"
-          className="group block border-b border-neutral-200/70 py-16 md:py-20"
+          href="/magazine"
+          className="cover-button mt-12 border border-white/70 px-10 py-4 text-xs uppercase tracking-[0.3em] transition-all duration-500 hover:bg-white hover:text-black"
         >
-          <div className="grid grid-cols-1 items-center gap-10 md:gap-14 lg:grid-cols-12">
-            <div className="lg:col-span-4">
-              <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
-                Editorial Project
-              </p>
-
-              <h2 className="mt-5 font-serif text-5xl leading-[0.95] tracking-[-0.03em] text-editorial-text md:text-7xl">
-                Trinity
-              </h2>
-
-              <div className="mt-7 h-px w-16 bg-[#4A3F3C]/35" />
-
-              <p className="mt-7 max-w-sm text-[17px] leading-[1.75] text-neutral-700">
-                A fashion editorial photography story about feminine
-                transformation, identity, empowerment and personal evolution.
-              </p>
-
-              <p className="mt-8 text-sm underline underline-offset-4 transition group-hover:text-black">
-                Explore the project →
-              </p>
-            </div>
-
-            <div className="lg:col-span-8">
-              <div className="relative ml-auto aspect-square w-full max-w-[680px] overflow-hidden bg-white/30">
-                {[
-                  "/images/trinity/115.jpg",
-                  "/images/trinity/61.jpeg",
-                  "/images/trinity/62.jpeg",
-                  "/images/trinity/63.jpeg",
-                  "/images/trinity/64.jpeg",
-                  "/images/trinity/65.jpeg",
-                ].map((src, index) => (
-                  <Image
-                    key={src}
-                    src={src}
-                    alt={`Trinity editorial project image ${index + 1}`}
-                    fill
-                    className={`home-trinity-image home-trinity-image-${
-                      index + 1
-                    } object-cover object-[center_22%]`}
-                  />
-                ))}
-
-                <div className="absolute inset-0 bg-black/8" />
-
-                <style>{`
-                  .home-trinity-image {
-                    position: absolute;
-                    inset: 0;
-                    opacity: 0;
-                    transform: scale(1.01);
-                    animation-duration: 18s;
-                    animation-iteration-count: infinite;
-                    animation-timing-function: ease-in-out;
-                  }
-
-                  .home-trinity-image-1 {
-                    animation-name: homeTrinityOne;
-                  }
-
-                  .home-trinity-image-2 {
-                    animation-name: homeTrinityTwo;
-                  }
-
-                  .home-trinity-image-3 {
-                    animation-name: homeTrinityThree;
-                  }
-
-                  .home-trinity-image-4 {
-                    animation-name: homeTrinityFour;
-                  }
-
-                  .home-trinity-image-5 {
-                    animation-name: homeTrinityFive;
-                  }
-
-                  .home-trinity-image-6 {
-                    animation-name: homeTrinitySix;
-                  }
-
-                  @keyframes homeTrinityOne {
-                    0%,
-                    13% {
-                      opacity: 1;
-                      transform: scale(1);
-                    }
-
-                    18%,
-                    100% {
-                      opacity: 0;
-                      transform: scale(1.01);
-                    }
-                  }
-
-                  @keyframes homeTrinityTwo {
-                    0%,
-                    13% {
-                      opacity: 0;
-                      transform: scale(1.01);
-                    }
-
-                    18%,
-                    30% {
-                      opacity: 1;
-                      transform: scale(1);
-                    }
-
-                    35%,
-                    100% {
-                      opacity: 0;
-                      transform: scale(1.01);
-                    }
-                  }
-
-                  @keyframes homeTrinityThree {
-                    0%,
-                    30% {
-                      opacity: 0;
-                      transform: scale(1.01);
-                    }
-
-                    35%,
-                    47% {
-                      opacity: 1;
-                      transform: scale(1);
-                    }
-
-                    52%,
-                    100% {
-                      opacity: 0;
-                      transform: scale(1.01);
-                    }
-                  }
-
-                  @keyframes homeTrinityFour {
-                    0%,
-                    47% {
-                      opacity: 0;
-                      transform: scale(1.01);
-                    }
-
-                    52%,
-                    64% {
-                      opacity: 1;
-                      transform: scale(1);
-                    }
-
-                    69%,
-                    100% {
-                      opacity: 0;
-                      transform: scale(1.01);
-                    }
-                  }
-
-                  @keyframes homeTrinityFive {
-                    0%,
-                    64% {
-                      opacity: 0;
-                      transform: scale(1.01);
-                    }
-
-                    69%,
-                    81% {
-                      opacity: 1;
-                      transform: scale(1);
-                    }
-
-                    86%,
-                    100% {
-                      opacity: 0;
-                      transform: scale(1.01);
-                    }
-                  }
-
-                  @keyframes homeTrinitySix {
-                    0%,
-                    81% {
-                      opacity: 0;
-                      transform: scale(1.01);
-                    }
-
-                    86%,
-                    96% {
-                      opacity: 1;
-                      transform: scale(1);
-                    }
-
-                    100% {
-                      opacity: 0;
-                      transform: scale(1.01);
-                    }
-                  }
-                `}</style>
-              </div>
-            </div>
-          </div>
+          Enter The Issue
+          <span className="ml-4">→</span>
         </Link>
-      </section>
 
-      {/* THE ISSUE ECOSYSTEM */}
-      <section className="mx-auto max-w-7xl px-6 pb-24 md:pb-32">
-        <div className="border-b border-neutral-200/70 py-16 md:py-20">
-          <div className="grid grid-cols-1 items-start gap-12 lg:grid-cols-12 lg:gap-16">
-            <div className="lg:col-span-4">
-              <p className="text-xs uppercase tracking-[0.35em] text-neutral-500">
-                The Issue №
-              </p>
-
-              <h2 className="mt-5 font-serif text-4xl leading-[1.05] text-editorial-text md:text-6xl">
-                A magazine,
-                <br />
-                a project space,
-                <br />
-                a platform.
-              </h2>
-            </div>
-
-            <div className="lg:col-span-8">
-              <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-                <Link href="/#latest" className="group block h-full">
-                  <article className="flex h-full min-h-[430px] flex-col overflow-hidden border border-neutral-200 bg-white/45 transition-all duration-500 hover:-translate-y-1 hover:bg-white/70 hover:shadow-[0_18px_45px_rgba(74,63,60,0.08)]">
-                    <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100">
-                      <Image
-                        src="/images/magazine.png"
-                        alt="The Issue № independent editorial magazine"
-                        fill
-                        className="object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.035]"
-                      />
-
-                      <div className="absolute inset-0 bg-black/[0.06] transition duration-500 group-hover:bg-transparent" />
-
-                      <span className="absolute right-5 top-5 text-[10px] uppercase tracking-[0.35em] text-white">
-                        01
-                      </span>
-                    </div>
-
-                    <div className="flex flex-1 flex-col p-6 md:p-7">
-                      <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
-                        Editorial Platform
-                      </p>
-
-                      <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text">
-                        Magazine
-                      </h3>
-
-                      <div className="mt-5 h-px w-12 bg-[#4A3F3C]/30 transition-all duration-500 group-hover:w-20" />
-
-                      <p className="mt-5 text-sm leading-[1.8] text-neutral-700">
-                        Articles, interviews, essays and visual stories from the
-                        worlds of fashion, culture, creativity and
-                        entrepreneurship.
-                      </p>
-
-                      <p className="mt-auto pt-8 text-sm underline decoration-[#4A3F3C]/40 underline-offset-4 transition group-hover:decoration-[#4A3F3C]">
-                        Read stories →
-                      </p>
-                    </div>
-                  </article>
-                </Link>
-
-                <Link href="/trinity" className="group block h-full">
-                  <article className="flex h-full min-h-[430px] flex-col overflow-hidden border border-neutral-200 bg-white/45 transition-all duration-500 hover:-translate-y-1 hover:bg-white/70 hover:shadow-[0_18px_45px_rgba(74,63,60,0.08)]">
-                    <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100">
-                      <Image
-                        src="/images/projects.png"
-                        alt="Trinity editorial photography project"
-                        fill
-                        className="object-cover object-[center_25%] transition-transform duration-1000 ease-out group-hover:scale-[1.035]"
-                      />
-
-                      <div className="absolute inset-0 bg-black/[0.06] transition duration-500 group-hover:bg-transparent" />
-
-                      <span className="absolute right-5 top-5 text-[10px] uppercase tracking-[0.35em] text-white">
-                        02
-                      </span>
-                    </div>
-
-                    <div className="flex flex-1 flex-col p-6 md:p-7">
-                      <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
-                        Long-form Stories
-                      </p>
-
-                      <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text">
-                        Projects
-                      </h3>
-
-                      <div className="mt-5 h-px w-12 bg-[#4A3F3C]/30 transition-all duration-500 group-hover:w-20" />
-
-                      <p className="mt-5 text-sm leading-[1.8] text-neutral-700">
-                        Long-form editorial projects, beginning with Trinity — a
-                        visual story about identity, transformation and
-                        presence.
-                      </p>
-
-                      <p className="mt-auto pt-8 text-sm underline decoration-[#4A3F3C]/40 underline-offset-4 transition group-hover:decoration-[#4A3F3C]">
-                        Explore Trinity →
-                      </p>
-                    </div>
-                  </article>
-                </Link>
-
-                <Link href="/partnerships" className="group block h-full">
-                  <article className="flex h-full min-h-[430px] flex-col overflow-hidden border border-neutral-200 bg-white/45 transition-all duration-500 hover:-translate-y-1 hover:bg-white/70 hover:shadow-[0_18px_45px_rgba(74,63,60,0.08)]">
-                    <div className="relative aspect-[16/10] overflow-hidden bg-neutral-100">
-                      <Image
-                        src="/images/partnerships.png"
-                        alt="Editorial collaborations and partnerships with The Issue №"
-                        fill
-                        className="object-cover transition-transform duration-1000 ease-out group-hover:scale-[1.035]"
-                      />
-
-                      <div className="absolute inset-0 bg-black/[0.06] transition duration-500 group-hover:bg-transparent" />
-
-                      <span className="absolute right-5 top-5 text-[10px] uppercase tracking-[0.35em] text-white">
-                        03
-                      </span>
-                    </div>
-
-                    <div className="flex flex-1 flex-col p-6 md:p-7">
-                      <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
-                        Creative Collaboration
-                      </p>
-
-                      <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text">
-                        Partnerships
-                      </h3>
-
-                      <div className="mt-5 h-px w-12 bg-[#4A3F3C]/30 transition-all duration-500 group-hover:w-20" />
-
-                      <p className="mt-5 text-sm leading-[1.8] text-neutral-700">
-                        Editorial collaborations, brand stories, photography,
-                        campaigns and media-kit opportunities with The Issue №.
-                      </p>
-
-                      <p className="mt-auto pt-8 text-sm underline decoration-[#4A3F3C]/40 underline-offset-4 transition group-hover:decoration-[#4A3F3C]">
-                        Work with us →
-                      </p>
-                    </div>
-                  </article>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-                 {/* EDITOR'S NOTE */}
-      <section
-        id="editors-note"
-        className="mx-auto max-w-7xl scroll-mt-24 px-6 py-24 md:py-32"
-      >
-        <div className="grid items-start gap-14 md:grid-cols-12">
-          <div className="max-w-3xl md:col-span-7 md:ml-8">
-            <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
-              Editor&apos;s Note
-            </p>
-
-            <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-neutral-600">
-              Thoughts on fashion, identity, publishing and the ideas behind
-              contemporary editorial culture.
-            </p>
-
-            <h2 className="mt-7 font-serif text-5xl leading-[1.02] text-editorial-text md:text-7xl">
-              This is not a journal.
-              <br />
-              It is a continuation of the journey.
-            </h2>
-
-            <div className="mt-8 max-w-2xl space-y-6 text-lg leading-[1.85] text-neutral-700">
-              <p>
-                The Issue № began as a collection of separate ideas — about
-                work, presence and the way people shape their environment.
-              </p>
-
-              <p>
-                Over time, it became something more connected. Not a finished
-                statement, but a process.
-              </p>
-
-              <p>
-                There is no single narrative here. Only moments, observations
-                and people — each carrying their own direction.
-              </p>
-            </div>
-
-            <div className="mt-9">
-              <p className="font-serif text-2xl leading-none text-editorial-text">
-                Sofia Solas
-              </p>
-
-              <p className="mt-3 text-[10px] uppercase tracking-[0.3em] text-neutral-500">
-                Editor-in-Chief
-              </p>
-            </div>
-
-            {/* LATEST FROM EDITOR'S NOTE */}
-            <div className="mt-14 max-w-2xl border-t border-neutral-200/90 pt-10">
-              <div className="flex items-center justify-between gap-6">
-                <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
-                  Latest from Editor&apos;s Note
-                </p>
-
-                <span className="font-serif text-xl text-neutral-400">
-                  № {String(editorArticles.length).padStart(2, "0")}
-                </span>
-              </div>
-
-              <div className="mt-9">
-                {latestEditorArticle ? (
-                  <Link
-                    href={`/article/${latestEditorArticle.slug}`}
-                    className="group block"
-                  >
-                    <article>
-                      <div className="flex flex-wrap items-center justify-between gap-4">
-                        <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
-                          Latest publication
-                        </p>
-
-                        <p className="text-[10px] uppercase tracking-[0.3em] text-[#8A5A2B]">
-                          Published
-                        </p>
-                      </div>
-
-                      <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text transition group-hover:text-neutral-600 md:text-4xl">
-                        {latestEditorArticle.title}
-                      </h3>
-
-                      <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-neutral-700">
-                        {latestEditorArticle.excerpt}
-                      </p>
-
-                      <p className="mt-6 text-sm underline decoration-neutral-400 underline-offset-6 transition group-hover:text-black">
-                        Read article →
-                      </p>
-                    </article>
-                  </Link>
-                ) : (
-                  <p className="text-sm leading-[1.8] text-neutral-500">
-                    New Editor&apos;s Note publications are coming soon.
-                  </p>
-                )}
-
-                {previousEditorArticle ? (
-                  <Link
-                    href={`/article/${previousEditorArticle.slug}`}
-                    className="group mt-9 block border-t border-neutral-200/90 pt-9"
-                  >
-                    <article>
-                      <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
-                        From the archive
-                      </p>
-
-                      <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text transition group-hover:text-neutral-600 md:text-4xl">
-                        {previousEditorArticle.title}
-                      </h3>
-
-                      <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-neutral-700">
-                        {previousEditorArticle.excerpt}
-                      </p>
-
-                      <p className="mt-6 text-sm underline decoration-neutral-400 underline-offset-6 transition group-hover:text-black">
-                        Read article →
-                      </p>
-                    </article>
-                  </Link>
-                ) : null}
-              </div>
-
-              <div className="mt-10 border-t border-neutral-200/90 pt-8">
-                <Link
-                  href="/editors-note"
-                  className="inline-block text-[10px] uppercase tracking-[0.28em] underline decoration-neutral-400 underline-offset-8 transition hover:text-black"
-                >
-                  Explore Editor&apos;s Note →
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="md:col-span-5 md:pt-10">
-            <div className="relative ml-auto aspect-[4/5] w-full max-w-sm overflow-hidden rounded-xl">
-              <Image
-                src="/images/sonja1.jpeg"
-                alt="Sofia Solas, Editor-in-Chief of The Issue №"
-                fill
-                sizes="(max-width: 768px) 100vw, 40vw"
-                className="object-cover transition duration-700 hover:scale-[1.03]"
-              />
-            </div>
-
-            <div className="ml-auto mt-6 w-full max-w-sm border-t border-neutral-200/90 pt-5">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
-                Author&apos;s column
-              </p>
-
-              <p className="mt-3 font-serif text-2xl leading-snug text-editorial-text">
-                Fashion, identity and the stories behind what we create.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="h-px bg-neutral-200/70" />
       </div>
 
-      {/* STUDIO JOURNAL */}
-      <section
-        id="studio-journal"
-        className="mx-auto max-w-7xl scroll-mt-24 px-6 py-24 md:py-32"
-      >
-        <div className="grid items-start gap-14 md:grid-cols-12">
-          {/* IMAGE */}
-          <div className="md:col-span-5 md:pt-10">
-            <div className="relative aspect-[4/5] w-full max-w-sm overflow-hidden rounded-xl">
-              <Image
-                src="/images/behind-the-issue/8.png"
-                alt="Editorial design and development workspace behind The Issue №"
-                fill
-                sizes="(max-width: 768px) 100vw, 40vw"
-                className="object-cover object-center transition duration-700 hover:scale-[1.03]"
-              />
-            </div>
+      <style>{`
 
-            <div className="mt-6 w-full max-w-sm border-t border-neutral-200/90 pt-5">
-              <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
-                Studio column
-              </p>
+        .cover-title {
+          font-family: Arial, Helvetica, sans-serif;
+          font-size: clamp(3rem, 7vw, 7rem);
+          font-weight: 400;
+          line-height: 1.05;
+          letter-spacing: -0.045em;
 
-              <p className="mt-3 font-serif text-2xl leading-snug text-editorial-text">
-                Design, development and the creative process behind the
-                finished page.
-              </p>
-            </div>
-          </div>
+          opacity: 0;
+          transform: translateX(-150px);
 
-          {/* COPY */}
-          <div className="max-w-3xl md:col-span-7 md:pl-8">
-            <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
-              Studio Journal
-            </p>
+          animation: slideFromLeft 1.4s
+            cubic-bezier(0.22, 1, 0.36, 1)
+            forwards;
+        }
 
-            <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-neutral-600">
-              A behind-the-scenes look at editorial production, branding,
-              digital publishing and the creative process behind The Issue №.
-            </p>
+        .cover-subtitle {
+          font-family: Georgia, "Times New Roman", serif;
+          font-size: clamp(2.5rem, 5vw, 5rem);
+          font-style: italic;
+          font-weight: 400;
+          line-height: 1.2;
 
-            <h2 className="mt-7 font-serif text-5xl leading-[1.02] text-editorial-text md:text-7xl">
-              Ideas, process and the work behind the finished page.
-            </h2>
+          margin-top: 12px;
 
-            <div className="mt-8 max-w-2xl space-y-6 text-lg leading-[1.85] text-neutral-700">
-              <p>
-                Studio Journal documents how editorial ideas become digital
-                experiences — from visual direction and content structure to
-                responsive design and final development.
-              </p>
+          opacity: 0;
+          transform: translateX(150px);
 
-              <p>
-                It explores the decisions behind typography, photography,
-                branding, UI/UX and the systems that allow a publication to
-                evolve without losing its identity.
-              </p>
+          animation: slideFromRight 1.4s
+            cubic-bezier(0.22, 1, 0.36, 1)
+            0.35s forwards;
+        }
 
-              <p>
-                This is not a technical diary. It is a closer look at the
-                relationship between storytelling, aesthetics and modern web
-                development.
-              </p>
-            </div>
+        .cover-line {
+          opacity: 0;
+          animation: fadeIn 1s ease 1.5s forwards;
+        }
 
-            <div className="mt-9">
-              <p className="font-serif text-2xl leading-none text-editorial-text">
-                Maria S.
-              </p>
+        .cover-button {
+          opacity: 0;
+          transform: translateY(25px);
 
-              <p className="mt-3 text-[10px] uppercase tracking-[0.3em] text-neutral-500">
-                Creative Developer · UI/UX Designer
-              </p>
-            </div>
+          animation: buttonAppear 1s ease
+            1.8s forwards;
+        }
 
-            {/* LATEST FROM STUDIO JOURNAL */}
-<div className="mt-14 max-w-2xl border-t border-neutral-200/90 pt-10">
-  <div className="flex items-center justify-between gap-6">
-    <p className="text-[10px] uppercase tracking-[0.35em] text-neutral-500">
-      Latest from Studio Journal
-    </p>
+        @keyframes slideFromLeft {
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
 
-    <span className="font-serif text-xl text-neutral-400">
-      № {String(studioArticles.length).padStart(2, "0")}
-    </span>
-  </div>
+        @keyframes slideFromRight {
+          to {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
 
-  {latestStudioArticle ? (
-    <Link
-      href={`/article/${latestStudioArticle.slug}`}
-      className="group mt-9 block"
-    >
-      <article>
-        <div className="flex flex-wrap items-center justify-between gap-4">
-          <p className="text-[10px] uppercase tracking-[0.3em] text-neutral-500">
-            Latest publication
-          </p>
+        @keyframes fadeIn {
+          to {
+            opacity: 1;
+          }
+        }
 
-          <p className="text-[10px] uppercase tracking-[0.3em] text-[#8A5A2B]">
-            Published
-          </p>
-        </div>
+        @keyframes buttonAppear {
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
 
-        <h3 className="mt-4 font-serif text-3xl leading-tight text-editorial-text transition group-hover:text-neutral-600 md:text-4xl">
-          {latestStudioArticle.title}
-        </h3>
+        @media (prefers-reduced-motion: reduce) {
+          .cover-title,
+          .cover-subtitle,
+          .cover-line,
+          .cover-button {
+            animation: none;
+            opacity: 1;
+            transform: none;
+          }
+        }
 
-        <p className="mt-5 max-w-xl text-[15px] leading-[1.8] text-neutral-700">
-          {latestStudioArticle.excerpt}
-        </p>
+      `}</style>
 
-        <p className="mt-6 text-sm underline decoration-neutral-400 underline-offset-6 transition group-hover:text-black">
-          Read article →
-        </p>
-      </article>
-    </Link>
-  ) : (
-    <p className="mt-9 text-sm leading-[1.8] text-neutral-500">
-      A new Studio Journal publication is coming soon.
-    </p>
-  )}
-
-  <div className="mt-10 border-t border-neutral-200/90 pt-8">
-    <Link
-      href="/studio-journal"
-      className="inline-block text-[10px] uppercase tracking-[0.28em] underline decoration-neutral-400 underline-offset-8 transition hover:text-black"
-    >
-      Explore Studio Journal →
-    </Link>
-  </div>
-</div>
-          </div>
-        </div>
-      </section>
-
-      <div className="mx-auto max-w-7xl px-6">
-        <div className="h-px bg-neutral-200/70" />
-      </div>
-
-      {/* COLUMNS */}
-      <section
-        id="columns"
-        className="mx-auto max-w-7xl scroll-mt-24 px-6 py-24 md:py-28"
-      >
-        <div className="mb-12 flex items-end justify-between gap-6">
-          <div>
-            <p className="text-xs uppercase tracking-[0.35em] text-neutral-600">
-              Columns
-            </p>
-
-            <h2 className="mt-3 font-serif text-3xl leading-tight text-editorial-text md:text-5xl">
-              Editorial structure
-            </h2>
-          </div>
-
-          <Link
-            href="/columns"
-            className="text-sm underline underline-offset-4 transition hover:text-black"
-          >
-            All columns →
-          </Link>
-        </div>
-
-        <div className="grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-5">
-          {activeColumns.slice(0, 5).map((column, index) => (
-            <Link
-              key={column.slug}
-              href={`/columns/${column.slug}`}
-              className="group block"
-            >
-              <article
-                className={`space-y-4 ${
-                  index === 1 || index === 3 ? "lg:pt-10" : ""
-                }`}
-              >
-                <div className="relative aspect-[4/5] overflow-hidden bg-white/30">
-                  <Image
-                    src={column.image}
-                    alt={`${column.label} column — ${column.title} in The Issue № editorial magazine`}
-                    fill
-                    className="object-cover transition duration-700 group-hover:scale-[1.03]"
-                  />
-                </div>
-
-                <p className="text-[10px] uppercase tracking-[0.32em] text-neutral-600">
-                  {column.label}
-                </p>
-
-                <h3 className="font-serif text-2xl leading-tight text-editorial-text">
-                  {column.title}
-                </h3>
-
-                <p className="text-sm leading-relaxed text-neutral-700">
-                  {column.descriptionShort}
-                </p>
-              </article>
-            </Link>
-          ))}
-        </div>
-      </section>
     </main>
   );
 }
